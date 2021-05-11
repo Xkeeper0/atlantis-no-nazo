@@ -7857,7 +7857,7 @@ locret_AFC7:
     RTS
 ; ---------------------------------------------------------------------------
 FireballSpawnerPositions:
-	  .BYTE $1C,$69			     
+	  .BYTE $1C,$69
     .BYTE $24,$6D			; 2
     .BYTE $2C,$65			; 4
     .BYTE $34,$6D			; 6
@@ -7871,7 +7871,7 @@ EnemyHandler_Nothing:
     RTS
 ; ---------------------------------------------------------------------------
 ZoneEnemyTable:
-	  .WORD ZoneEnemies_TwoBats	   
+	  .WORD ZoneEnemies_TwoBats
     .WORD ZoneEnemies_TwoSnails		; 1
     .WORD ZoneEnemies_TwoSnailsOneFish	; 2
     .WORD ZoneEnemies_TwoBatsOneSkeleton; 3
@@ -7976,7 +7976,7 @@ ZoneEnemies_0:
 ZoneEnemies_TwoWorms:
 	  .BYTE Enemy_WormThing,Enemy_WormThing,Enemy_End
 ZoneEnemies_TwoFlies:
-	  .BYTE Enemy_Fly,Enemy_Fly,Enemy_End 
+	  .BYTE Enemy_Fly,Enemy_Fly,Enemy_End
 ZoneEnemies_TwoBats:
 	  .BYTE Enemy_ShitBat,Enemy_ShitBat,Enemy_End
 ZoneEnemies_TwoWormsOneSkeleton:
@@ -8028,7 +8028,7 @@ ZoneEnemies_FinalZone:
 	  .BYTE Enemy_FireballSpawner,Enemy_FireballSpawner,Enemy_FireballSpawner,Enemy_FireballSpawner,Enemy_FireballSpawner
     .BYTE Enemy_FireballSpawner,Enemy_FireballSpawner,Enemy_FireballSpawner,Enemy_End; 5
 ProbablyEnemyPointers:
-	  .WORD EnemyHandler_Nothing	  
+	  .WORD EnemyHandler_Nothing
     .WORD EnemyHandler_WormThing	; 1 ; Enemy_WormThing
     .WORD EnemyHandler_ShitBat		; 2 ; Enemy_ShitBat
     .WORD EnemyHandler_Mummy		; 3 ; Enemy_Mummy
@@ -10376,7 +10376,7 @@ locret_BEA5:
 
 ; ---------------------------------------------------------------------------
 ZoneASMPointerTable:
-	  .WORD ZoneASM_01			
+	  .WORD ZoneASM_01
     .WORD ZoneASM_0			; 1
     .WORD ZoneASM_0			; 2
     .WORD ZoneASM_0			; 3
@@ -11118,13 +11118,13 @@ locret_C359:
     RTS
 ; ---------------------------------------------------------------------------
 EndingCongratulations_YPos:
-	  .BYTE $5F,$5E,$5D,$5C,$5B,$5A,$59   
+	  .BYTE $5F,$5E,$5D,$5C,$5B,$5A,$59
     .BYTE $58,$57,$56,$55,$54,$53,$52	; 7
 EndingCongratulations_XPos:
-	  .BYTE $48,$50,$58,$60,$68,$70,$78   
+	  .BYTE $48,$50,$58,$60,$68,$70,$78
     .BYTE $80,$88,$90,$98,$A0,$A8,$B0	; 7
 EndingCongratulations_SpriteIndex:
-	  .BYTE	 $C,$18,$17,$10,$1B, $A,$1D   
+	  .BYTE	 $C,$18,$17,$10,$1B, $A,$1D
     .BYTE $1E,$15, $A,$1D,$12,$18,$17	; 7
 ; ---------------------------------------------------------------------------
 
@@ -11566,7 +11566,7 @@ byte_C577:
     .BYTE $F8
     .BYTE 0
 WriteToPPUStrings:
-	  .WORD	HighScore+1		      
+	  .WORD	HighScore+1
     .WORD PPUString_PushStartButton	; 1 ; The last three entries in	this are not used
     .WORD PPUString_HiScore		; 2
     .WORD PPUString_C1986Sunsoft	; 3
@@ -11634,7 +11634,7 @@ OrdinalSuffixes1:
 	  .BYTE $1C,$17,$1B,$1D,	$A	     ; Ordinal suffixes for the "#TH	ZONE!" messages.
 					; ST ND	RD TH AL (from FINAL)
 OrdinalSuffixes2:
-	  .BYTE $1D, $D,	$D,$11,$15	     
+	  .BYTE $1D, $D,	$D,$11,$15
 PPU_TitleScreenLogo:
 	  .BYTE $FF,$B0,$FD,$C8,$FD,$C1,$D0,$B8,$FD,$FD,$B1,$C0,$C8,$B5,$B4,$FD,$FD,$BA,$B2,$C8,$B5,$FF,$B2,$C3,$E7,$BB,$BC,$C3,$E9,$FF,$FF,$FF
     .BYTE $FF,$FF,$B0,$B1,$D0,$B8,$B1,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$B4,$B5,$FF,$FF,$B4,$B5,$BE,$BD,$BD,$BF,$CB,$CC,$D3,$D0,$D1,$FF,$FF; $20
@@ -11846,21 +11846,17 @@ loc_C84A:
     LSR	    A
     LSR	    A
     LSR	    A
-    ADC     #$FB
     TAY
 
 loc_C877:
     LSR	    byte_23
     ROR	    byte_22
-    ; DEY
-    ; BPL	    loc_C877
-    ; BMI	    loc_C88C
-    INY
-    BNE	    loc_C877
-    BEQ	    loc_C88C
+    DEY
+    BPL	    loc_C877
+    BMI	    loc_C88C
 
 loc_C882:
-    ; LDA	    #$F
+    LDA	    #$F
 
 loc_C884:
     STA	    byte_22
@@ -11950,20 +11946,20 @@ sub_C900:
 
 ; ---------------------------------------------------------------------------
 MusicNoteScale:
-    .BYTE   7,$14			; $16
-    .BYTE   7,$80			; $14
-    .BYTE   7,$F2			; $12
-    .BYTE   8,$6A			; $10
-    .BYTE   8,$EA			; $E
-    .BYTE   9,$72			; $C
-    .BYTE  $A,	2			; $A
-    .BYTE  $A,$9A			; 8
-    .BYTE  $B,$3C			; 6
-    .BYTE  $B,$E8			; 4
-    .BYTE  $C,$9C			; 2 ; probably.	idk.
-	  .BYTE  $D,$5C			   
+	.BYTE  $D,$5C
+	.BYTE  $C,$9C			; 2 ; probably.	idk.
+	.BYTE  $B,$E8			; 4
+	.BYTE  $B,$3C			; 6
+	.BYTE  $A,$9A			; 8
+	.BYTE  $A,	2			; $A
+	.BYTE   9,$72			; $C
+	.BYTE   8,$EA			; $E
+	.BYTE   8,$6A			; $10
+	.BYTE   7,$F2			; $12
+	.BYTE   7,$80			; $14
+	.BYTE   7,$14			; $16
 byte_C925:
-	  .BYTE	$7F,  1,  2,  3,  4,  5,  6,  7
+    .BYTE	$7F,  1,  2,  3,  4,  5,  6,  7
     .BYTE   8,	9, $A, $B, $C, $D, $E, $F; 8
     .BYTE   5, $A,$14,$28,$50,$1E,  7, $D; $10
     .BYTE   6, $C,$18,$30,$60,$24,  8,$10; $18
@@ -11978,7 +11974,7 @@ byte_C949:
     .BYTE $B
     .BYTE 7
 MusicPointerTable:
-	  .WORD	Music_0			      
+	  .WORD	Music_0
     .WORD Music_ZoneTheme1		; 1
     .WORD Music_ZoneTheme2		; 2
     .WORD Music_ZoneTheme3		; 3
@@ -14979,7 +14975,7 @@ byte_D3E0:
     .BYTE $80
 ; ------ Ending	here, not logged in CDL	------
 ZoneDoorTable:
-	  Door   0, $30, $20,   0 ;		  
+	  Door   0, $30, $20,   0 ;
     Door   0, $92, $30, $12 ;		; 1
     Door   5,	$C, $28,   4 ;		; 2
     Door   5, $1C, $28, $59 ;		; 3
@@ -15220,7 +15216,7 @@ ZoneDoorTable:
     Door 255,	 0,   0,   0 ;		; $EE
     Door 255,	 0, $F7,   0 ;		; $EF
 ZoneDoorFlagsTable:
-	  .BYTE DoorFlags_Hidden|$80	       
+	  .BYTE DoorFlags_Hidden|$80
     .BYTE DoorFlags_Open|$80		; 1
     .BYTE DoorFlags_Open|$80		; 2
     .BYTE DoorFlags_Closed|$80		; 3
@@ -19498,11 +19494,11 @@ ZoneBlockPointerTable:
     .WORD ZoneBlocks_91,ZoneBlocks_92,ZoneBlocks_93,ZoneBlocks_94,ZoneBlocks_95; 90
     .WORD ZoneBlocks_96,ZoneBlocks_97,ZoneBlocks_98,ZoneBlocks_99,ZoneBlocks_100; 95
 ZoneBlocks_06:
-	  .BYTE $10,$18,$11,$18,$10		  
+	  .BYTE $10,$18,$11,$18,$10
 ZoneBlocks_90:
-	  .BYTE $10,$18,$13,$18,$10		  
+	  .BYTE $10,$18,$13,$18,$10
 ZoneBlocks_25:
-	  .BYTE $10,$18,$18,$10		  
+	  .BYTE $10,$18,$18,$10
 ZoneBlocks_16:
 	  .BYTE $10,$18,$11,$12,$17,$17,$11,$14,$14,$11,$14,$15,$15,$15,$11,$16,$16,$11,$16,$15,$15,$15,$11,$14,$14,$11,$14,$17,$17,$17,$18,$10
 ZoneBlocks_87:
@@ -19542,7 +19538,7 @@ ZoneBlocks_60:
 ZoneBlocks_74:
 	  .BYTE $8A,  1,$8A,$94,$8A,$94,$8A,$95,$94,$8A,$94,$95,$8A,$95,$94,$8A,$8A,  1,$8A
 ZoneBlocks_70:
-	  .BYTE $62,$60,$62			  
+	  .BYTE $62,$60,$62
 ZoneBlocks_34:
 	  .BYTE $73,  1,$70,$71,$71,$72,$70,$73,$73,$73,$71,$73,$71,$73,  1,$73
 ZoneBlocks_81:
@@ -19572,9 +19568,9 @@ ZoneBlocks_80:
 ZoneBlocks_97:
 	  .BYTE   0,  0,  0,$69,$69,$69,$69,  0,$63,  0,  0,  0
 ZoneBlocks_39:
-	  .BYTE $81,$80,$81,$80,$81		  
+	  .BYTE $81,$80,$81,$80,$81
 ZoneBlocks_42:
-	  .BYTE   0,  0,$40,  0,  0		  
+	  .BYTE   0,  0,$40,  0,  0
 ZoneBlocks_51:
 	  .BYTE   0,  0,  0,$7E,$7F,$7F,$7C,$7C,$7D,$7E,$7F,$7D,$7E,  0,  0,  0
 ZoneBlocks_94:
@@ -19584,7 +19580,7 @@ ZoneBlocks_65:
 ZoneBlocks_98:
 	  .BYTE   0,  0,  0,  1,  1,  1,  1,  1,  1,  1,  1,  1,$7E,  0,  0,  0
 ZoneBlocks_75:
-	  .BYTE   0,$64,  0			  
+	  .BYTE   0,$64,  0
 ZoneBlocks_95:
 	  .BYTE   0,  1,$54,$56,$54,$52,$51,$51,$50,$57,  0,  0,  0
 ZoneBlocks_32:
@@ -19632,25 +19628,25 @@ ZoneBlocks_78:
 ZoneBlocks_84:
 	  .BYTE $8A,  1,$8A,$8A,$95,$8A,$8A,  1,$8A
 ZoneBlocks_93:
-	  .BYTE $1D,$88,$1D			  
+	  .BYTE $1D,$88,$1D
 ZoneBlocks_91:
-	  .BYTE $1D,$79,$1D			  
+	  .BYTE $1D,$79,$1D
 ZoneBlocks_63:
-	  .BYTE $1D,$28,$1D			  
+	  .BYTE $1D,$28,$1D
 ZoneBlocks_76:
-	  .BYTE $1D,$78,$1D			  
+	  .BYTE $1D,$78,$1D
 ZoneBlocks_59:
 	  .BYTE   0,  0,  0,  0,$87,$87,$87,$87,$87,$87,$87,$87,$87,$87,  0,  0,  0
 ZoneBlocks_24:
 	  .BYTE $8A,  1,$8A,$8A,$8A,$8A,$38,$8A,$8A,$8A,$8A,  1,$8A
 ZoneBlocks_49:
-	  .BYTE $36,  1,$36,$36,  1,$36	  
+	  .BYTE $36,  1,$36,$36,  1,$36
 ZoneBlocks_44:
 	  .BYTE   0,  1,$32,$45,$34,$44,$43,$33,$32,$45,$32,$43,$32,$45,$44,$32,  1,  0
 ZoneBlocks_66:
-	  .BYTE $1D,$37,$1D			  
+	  .BYTE $1D,$37,$1D
 ZoneBlocks_11:
-	  .BYTE $46,$46,$47			  
+	  .BYTE $46,$46,$47
 ZoneBlocks_72:
 	  .BYTE $1D,$2A,$2F,$2C,$2B,$2D,$2C,$2B,$2C,$31,$2B,$30,$2B,$2C,$2D,$31,$2F,$30,$2F,$1D
 ZoneBlocks_30:
@@ -19662,25 +19658,25 @@ ZoneBlocks_61:
 ZoneBlocks_71:
 	  .BYTE $73,  1,$72,$73,$72,$73,$73,$71,$72,$73,$73,$71,  1,$73
 ZoneBlocks_55:
-	  .BYTE   0,  0,  0,  1,  0,  0,  0	  
+	  .BYTE   0,  0,  0,  1,  0,  0,  0
 ZoneBlocks_53:
-	  .BYTE   0,  0,  0,$7F,  0,  0,  0	  
+	  .BYTE   0,  0,  0,$7F,  0,  0,  0
 ZoneBlocks_15:
-	  .BYTE $10,$18,$10			  
+	  .BYTE $10,$18,$10
 ZoneBlocks_05:
-	  .BYTE $5C,$5A,$5E,$5B,$5C		  
+	  .BYTE $5C,$5A,$5E,$5B,$5C
 ZoneBlocks_35:
-	  .BYTE $1D,$5A,$5B,$1D		  
+	  .BYTE $1D,$5A,$5B,$1D
 ZoneBlocks_22:
-	  .BYTE $5B,$5C,$5A			  
+	  .BYTE $5B,$5C,$5A
 ZoneBlocks_41:
-	  .BYTE $1D,  1,$1D			  
+	  .BYTE $1D,  1,$1D
 ZoneBlocks_31:
-	  .BYTE $55,$36,$55			  
+	  .BYTE $55,$36,$55
 ZoneBlocks_17:
-	  .BYTE $55,$56,$55			  
+	  .BYTE $55,$56,$55
 ZoneBlocks_09:
-	  .BYTE $10,$66,$10			  
+	  .BYTE $10,$66,$10
 ZoneBlocks_38:
 	  .BYTE   0,  0,  0,$56,$57,$57,$58,$56,$57,$57,$58,$56,$56,  0,  0,  0
 ZoneBlocks_28:
@@ -19694,7 +19690,7 @@ ZoneBlocks_68:
 ZoneBlocks_86:
 	  .BYTE   0,  0,  0,$56,$56,$57,$57,$57,$58,$58,$57,$58,$57,$56,$56,  0,  0,  0
 ZoneBlocks_88:
-	  .BYTE $55,$4D,$4E,$55		  
+	  .BYTE $55,$4D,$4E,$55
 ZoneBlocks_89:
 	  .BYTE   0,  0,  0,$7D,$7A,$7B,$7D,$7C,$7D,$7E,$7D,$7C,$7D,$7F,$7E,  0,  0,  0
 byte_FDE5:
@@ -19877,7 +19873,7 @@ DebugWarpTable:
     .BYTE $51, $F,$7E,$84,$52,$C0,$47,$BE,$C1,$3F; $50
     .BYTE $87,$40,$85,$5B,$5F,$7B,$56,$5D,$72,$78; $5A
 ZoneMusicTable:
-	  .BYTE MusicTrack_ZoneTheme2	   
+	  .BYTE MusicTrack_ZoneTheme2
     .BYTE MusicTrack_ZoneTheme1		; 1
     .BYTE MusicTrack_ZoneTheme2		; 2
     .BYTE MusicTrack_ZoneTheme3		; 3

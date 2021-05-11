@@ -7,7 +7,7 @@ if %ERRORLEVEL% neq 0 goto buildfail
 
 
 echo SHA1 hash check:
-echo 8b8f5266aa4be85a09a5978a3c29119da330ac2b7b1394674c291753545cc385
+echo 214ba9292d5de52d29a6e2ad3a0162caf95b94caa14b0b167915aa8fb8c3dec6
 certutil -hashfile bin\atlantis-no-nazo.nes SHA256 | findstr /V ":"
 
 goto end
