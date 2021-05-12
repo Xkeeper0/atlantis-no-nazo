@@ -151,7 +151,7 @@ TitleScreen_StartGame:
     STA	    UnknownTimer0148
     JSR	    InitGameStuffMaybe
     JSR	    CheckDebugCheatInputs
-    JSR	    sub_BCEA
+    JSR	    IntermissionScreenFirst
     JSR	    InitSoundEngine
     LDA	    #MusicTrack_ZoneStart
     JSR	    PlayMusicTrack
@@ -286,7 +286,7 @@ loc_821D:
     AND	    #$7F
     STA	    byte_19A
     JSR	    InitZoneProbably
-    JSR	    sub_BD02
+    JSR	    IntermissionScreen
     JSR	    InitSoundEngine
     LDA	    #MusicTrack_ZoneStart
     JSR	    PlayMusicTrack
@@ -710,7 +710,7 @@ loc_8481:
 
 ; ---------------------------------------------------------------------------
 byte_8489:
-	  .BYTE	$80
+    .BYTE	$80
 					; Load-bearing $80. Actually a string terminator for the PPU drawing routine
 
 ; =============== S U B	R O U T	I N E =======================================
@@ -856,7 +856,7 @@ locret_8534:
 
 ; ---------------------------------------------------------------------------
 AllNines:
-	  .BYTE	 9,  9,	 9,  9,	 9,  9,	 9   ; =============== S U B	R O U T	I N E =======================================
+    .BYTE	 9,  9,	 9,  9,	 9,  9,	 9   ; =============== S U B	R O U T	I N E =======================================
 
 UpdateHighScore:
     LDA	    HighScore
@@ -969,7 +969,7 @@ locret_85E0:
 
 ; ---------------------------------------------------------------------------
 Timer_Out:
-	  .BYTE	$18,$1E,$1D		      ; =============== S U B	R O U T	I N E =======================================
+    .BYTE	$18,$1E,$1D		      ; =============== S U B	R O U T	I N E =======================================
 
 sub_85E4:
     LDY	    #0
@@ -1071,7 +1071,7 @@ locret_8661:
 
 ; ---------------------------------------------------------------------------
 DemoStartingDoorIndexes:
-	  .BYTE 0
+    .BYTE 0
     .BYTE $49
     .BYTE $1C
     .BYTE $42
@@ -1080,7 +1080,7 @@ DemoStartingDoorIndexes:
     .BYTE $C
     .BYTE $40
 byte_866A:
-	  .BYTE	0
+    .BYTE	0
     .BYTE 0
     .BYTE $80
     .BYTE $40
@@ -1089,7 +1089,7 @@ byte_866A:
     .BYTE $40
     .BYTE 0
 byte_8672:
-	  .BYTE	$20
+    .BYTE	$20
     .BYTE $20
     .BYTE $70
     .BYTE $18
@@ -1098,7 +1098,7 @@ byte_8672:
     .BYTE $10
     .BYTE $80
 byte_867A:
-	  .BYTE	0
+    .BYTE	0
     .BYTE 1
     .BYTE $81
     .BYTE 0
@@ -1107,7 +1107,7 @@ byte_867A:
     .BYTE 1
     .BYTE 1
 byte_8682:
-	  .BYTE	$20
+    .BYTE	$20
     .BYTE $20
     .BYTE $70
     .BYTE $18
@@ -1259,29 +1259,29 @@ loc_8718:
 
 loc_87AE:
     LDA	    #0
-    STA	    byte_1B
+    STA	    word_1A+1
     LDY	    byte_25
     LDA	    (word_16),Y
     ASL	    A
-    ROL	    byte_1B
+    ROL	    word_1A+1
     ASL	    A
-    ROL	    byte_1B
+    ROL	    word_1A+1
     ADC	    #$C0
-    STA	    byte_1A
-    LDA	    byte_1B
+    STA	    word_1A
+    LDA	    word_1A+1
     ADC	    #$F3
-    STA	    byte_1B
+    STA	    word_1A+1
     LDY	    #0
-    LDA	    (byte_1A),Y
+    LDA	    (word_1A),Y
     STA	    unk_C0,X
     INY
-    LDA	    (byte_1A),Y
+    LDA	    (word_1A),Y
     STA	    unk_E0,X
     INY
-    LDA	    (byte_1A),Y
+    LDA	    (word_1A),Y
     STA	    unk_C1,X
     INY
-    LDA	    (byte_1A),Y
+    LDA	    (word_1A),Y
     STA	    unk_E1,X
     INC	    byte_25
     INX
@@ -1293,29 +1293,29 @@ loc_87AE:
 
 loc_87F4:
     LDA	    #0
-    STA	    byte_1B
+    STA	    word_1A+1
     LDY	    byte_25
     LDA	    (word_18),Y
     ASL	    A
-    ROL	    byte_1B
+    ROL	    word_1A+1
     ASL	    A
-    ROL	    byte_1B
+    ROL	    word_1A+1
     ADC	    #$C0
-    STA	    byte_1A
-    LDA	    byte_1B
+    STA	    word_1A
+    LDA	    word_1A+1
     ADC	    #$F3
-    STA	    byte_1B
+    STA	    word_1A+1
     LDY	    #0
-    LDA	    (byte_1A),Y
+    LDA	    (word_1A),Y
     STA	    unk_C0,X
     INY
-    LDA	    (byte_1A),Y
+    LDA	    (word_1A),Y
     STA	    unk_E0,X
     INY
-    LDA	    (byte_1A),Y
+    LDA	    (word_1A),Y
     STA	    unk_C1,X
     INY
-    LDA	    (byte_1A),Y
+    LDA	    (word_1A),Y
     STA	    unk_E1,X
     INC	    byte_25
     INX
@@ -1877,17 +1877,17 @@ locret_8C35:
     RTS
 ; ---------------------------------------------------------------------------
 byte_8C36:
-	  .BYTE	0
+    .BYTE	0
     .BYTE 5
     .BYTE $A
     .BYTE $F
 byte_8C3A:
-	  .BYTE	0
+    .BYTE	0
     .BYTE $50
     .BYTE $A0
     .BYTE $F0
 byte_8C3E:
-	  .BYTE	$4A
+    .BYTE	$4A
     .BYTE $5A
     .BYTE $6A
     .BYTE $5A
@@ -1896,7 +1896,7 @@ byte_8C3E:
     .BYTE $3A
     .BYTE $3A
 byte_8C46:
-	  .BYTE	$4B
+    .BYTE	$4B
     .BYTE $5B
     .BYTE $6B
     .BYTE $5B
@@ -2099,19 +2099,19 @@ loc_8DBA:
     LDY	    byte_23
     LDA	    (word_14),Y
     LDX	    #0
-    STX	    byte_1B
+    STX	    word_1A+1
     ASL	    A
-    ROL	    byte_1B
+    ROL	    word_1A+1
     ADC	    #$50
-    STA	    byte_1A
-    LDA	    byte_1B
+    STA	    word_1A
+    LDA	    word_1A+1
     ADC	    #$E8
-    STA	    byte_1B
+    STA	    word_1A+1
     LDY	    #0
-    LDA	    (byte_1A),Y
+    LDA	    (word_1A),Y
     STA	    (word_18),Y
     INY
-    LDA	    (byte_1A),Y
+    LDA	    (word_1A),Y
     STA	    (word_18),Y
     INC	    word_18
     INC	    word_18
@@ -2505,7 +2505,7 @@ LoadZoneMusic:
 
 ; ---------------------------------------------------------------------------
 byte_9068:
-	  .BYTE	1
+    .BYTE	1
     .BYTE 2
     .BYTE 4
     .BYTE 8
@@ -2522,9 +2522,9 @@ byte_9068:
     .BYTE $BF
     .BYTE $7F
 byte_9078:
-	  .BYTE	$36
+    .BYTE	$36
 byte_9079:
-	  .BYTE	$28
+    .BYTE	$28
     .BYTE 4
     .BYTE $19
     .BYTE 5
@@ -2724,9 +2724,9 @@ byte_9079:
     .BYTE 0
     .BYTE $1F
 byte_9140:
-	  .BYTE	$1A
+    .BYTE	$1A
 byte_9141:
-	  .BYTE	5
+    .BYTE	5
     .BYTE $19
     .BYTE $19
     .BYTE $1A
@@ -2926,7 +2926,7 @@ byte_9141:
     .BYTE 4
     .BYTE 8
 byte_9208:
-	  .BYTE	$29,  0,$60,$21,  0,$20,$41,  0,  0,$40
+    .BYTE	$29,  0,$60,$21,  0,$20,$41,  0,  0,$40
     .BYTE   0,$21,  1,$20,  0,$21,$60,	0,  3,	0; 10
     .BYTE   1,	3,  1,$41,$20,	0,$67,	0,  1,	3; 20
     .BYTE   1,	1,$51,$67,  0,	0,$60,$20,$40,	0; 30
@@ -2941,15 +2941,15 @@ byte_9208:
     .BYTE   0
     .BYTE   0
 byte_9270:
-	  .BYTE	$16
+    .BYTE	$16
     .BYTE $28
     .BYTE $20
 byte_9273:
-	  .BYTE	7
+    .BYTE	7
     .BYTE $27
     .BYTE $38
 byte_9276:
-	  .BYTE	$F
+    .BYTE	$F
     .BYTE $F
     .BYTE 0
     .BYTE $10
@@ -3174,7 +3174,7 @@ byte_9276:
     .BYTE $16
     .BYTE $39
 byte_9356:
-	  .BYTE	$16
+    .BYTE	$16
     .BYTE $2A
     .BYTE $3A
     .BYTE 0
@@ -4063,21 +4063,21 @@ loc_98F2:
 
 ; ---------------------------------------------------------------------------
 byte_98F8:
-	  .BYTE	$F8
+    .BYTE	$F8
     .BYTE 8
     .BYTE $FF
     .BYTE 1
     .BYTE $FF
     .BYTE 1
 byte_98FE:
-	  .BYTE	$FC
+    .BYTE	$FC
     .BYTE 4
     .BYTE 0
     .BYTE 0
     .BYTE $FE
     .BYTE 2
 byte_9904:
-	  .BYTE	$7F
+    .BYTE	$7F
     .BYTE $7C
     .BYTE $78
     .BYTE $74
@@ -4143,7 +4143,7 @@ byte_9904:
     .BYTE $84
     .BYTE $81
 byte_9945:
-	  .BYTE	0
+    .BYTE	0
     .BYTE $10
     .BYTE $20
     .BYTE  $F
@@ -4253,7 +4253,7 @@ loc_99CC:
     JMP	    loc_9AAB
 ; ---------------------------------------------------------------------------
 byte_99EA:
-	  .BYTE	$A9
+    .BYTE	$A9
     .BYTE $15
     .BYTE $20
     .BYTE $A6
@@ -4427,10 +4427,10 @@ loc_9B06:
 
 loc_9B08:
     LDA	    off_A5E8,Y
-    STA	    byte_1A
+    STA	    word_1A
     LDA	    off_A5E8+1,Y
-    STA	    byte_1B
-    JSR	    sub_B91B
+    STA	    word_1A+1
+    JSR	    DrawSpriteMaybe
     JSR	    sub_AF2D
     RTS
 ; ---------------------------------------------------------------------------
@@ -4598,10 +4598,10 @@ loc_9C19:
     LSR	    A
     TAY
     LDA	    off_A603,Y
-    STA	    byte_1A
+    STA	    word_1A
     LDA	    off_A603+1,Y
-    STA	    byte_1B
-    JSR	    sub_B91B
+    STA	    word_1A+1
+    JSR	    DrawSpriteMaybe
     JSR	    sub_AF2D
     RTS
 ; ---------------------------------------------------------------------------
@@ -4871,10 +4871,10 @@ loc_9DF2:
 
 loc_9DF4:
     LDA	    off_A611,Y
-    STA	    byte_1A
+    STA	    word_1A
     LDA	    off_A611+1,Y
-    STA	    byte_1B
-    JSR	    sub_B91B
+    STA	    word_1A+1
+    JSR	    DrawSpriteMaybe
     LDY	    #7
     LDA	    (word_A2),Y
     AND	    #$40
@@ -5205,10 +5205,10 @@ loc_A005:
     TXA
     TAY
     LDA	    off_A649,Y
-    STA	    byte_1A
+    STA	    word_1A
     LDA	    off_A649+1,Y
-    STA	    byte_1B
-    JSR	    sub_B91B
+    STA	    word_1A+1
+    JSR	    DrawSpriteMaybe
     LDY	    #7
     LDA	    (word_A2),Y
     AND	    #$40
@@ -5557,10 +5557,10 @@ loc_A250:
 loc_A264:
     LDY	    byte_20
     LDA	    off_A680,Y
-    STA	    byte_1A
+    STA	    word_1A
     LDA	    off_A680+1,Y
-    STA	    byte_1B
-    JSR	    sub_B91B
+    STA	    word_1A+1
+    JSR	    DrawSpriteMaybe
     JSR	    sub_AF2D
     RTS
 ; ---------------------------------------------------------------------------
@@ -5690,7 +5690,7 @@ loc_A34A:
     LDA	    UnknownTimer014A
     BNE	    loc_A3BC
     LDA	    PlayerState
-    AND	    #2
+    AND	    #PlayerStates_ThrowingBomb
     BEQ	    loc_A366
     LDY	    #7
     LDA	    (word_A2),Y
@@ -5821,10 +5821,10 @@ loc_A426:
 loc_A428:
     STY	    byte_20
     LDA	    off_A6AA,Y
-    STA	    byte_1A
+    STA	    word_1A
     LDA	    off_A6AA+1,Y
-    STA	    byte_1B
-    JSR	    sub_B91B
+    STA	    word_1A+1
+    JSR	    DrawSpriteMaybe
     LDY	    #7
     LDA	    (word_A2),Y
     AND	    #8
@@ -6075,31 +6075,31 @@ loc_A5D3:
 
 loc_A5D5:
     LDA	    off_A6C6,Y
-    STA	    byte_1A
+    STA	    word_1A
     LDA	    off_A6C6+1,Y
-    STA	    byte_1B
-    JSR	    sub_B91B
+    STA	    word_1A+1
+    JSR	    DrawSpriteMaybe
     JSR	    sub_AF15
     RTS
 ; ---------------------------------------------------------------------------
 off_A5E8:
-	  .WORD byte_A5EE
+    .WORD byte_A5EE
     .WORD byte_A5F3
     .WORD unk_A5F8
 byte_A5EE:
-	  .BYTE	$4E
+    .BYTE	$4E
     .BYTE $4F
     .BYTE $3E
     .BYTE $3F
     .BYTE $FF
 byte_A5F3:
-	  .BYTE	$6E
+    .BYTE	$6E
     .BYTE $6F
     .BYTE $5E
     .BYTE $5F
     .BYTE $FF
 unk_A5F8:
-	  .BYTE $9E
+    .BYTE $9E
     .BYTE $9F
     .BYTE $8E
     .BYTE $8F
@@ -6107,29 +6107,29 @@ unk_A5F8:
     .BYTE $7F
     .BYTE $FF
 byte_A5FF:
-	  .BYTE	0
+    .BYTE	0
     .BYTE $40
     .BYTE $80
     .BYTE $40
 ; ---
 off_A603:
-	  .WORD byte_A607
+    .WORD byte_A607
     .WORD byte_A60C
 byte_A607:
-	  .BYTE	$A4
+    .BYTE	$A4
     .BYTE $A5
     .BYTE $94
     .BYTE $95
     .BYTE $FF
 byte_A60C:
-	  .BYTE	$A4
+    .BYTE	$A4
     .BYTE $C5
     .BYTE $B4
     .BYTE $B5
     .BYTE $FF
 ; ---
 off_A611:
-	  .WORD byte_A61F
+    .WORD byte_A61F
     .WORD byte_A628
     .WORD byte_A631
     .WORD byte_A628
@@ -6137,7 +6137,7 @@ off_A611:
     .WORD byte_A641
     .WORD byte_A646
 byte_A61F:
-	  .BYTE	$C0
+    .BYTE	$C0
     .BYTE $C1
     .BYTE $B0
     .BYTE $B1
@@ -6147,7 +6147,7 @@ byte_A61F:
     .BYTE $91
     .BYTE $FF
 byte_A628:
-	  .BYTE	$A2
+    .BYTE	$A2
     .BYTE $A3
     .BYTE $92
     .BYTE $93
@@ -6157,7 +6157,7 @@ byte_A628:
     .BYTE $91
     .BYTE $FF
 byte_A631:
-	  .BYTE	$C2
+    .BYTE	$C2
     .BYTE $C3
     .BYTE $B2
     .BYTE $B3
@@ -6167,7 +6167,7 @@ byte_A631:
     .BYTE $91
     .BYTE $FF
 byte_A63A:
-	  .BYTE	$A2
+    .BYTE	$A2
     .BYTE $A3
     .BYTE $92
     .BYTE $93
@@ -6175,18 +6175,18 @@ byte_A63A:
     .BYTE $A1
     .BYTE $FF
 byte_A641:
-	  .BYTE	$A2
+    .BYTE	$A2
     .BYTE $A3
     .BYTE $92
     .BYTE $93
     .BYTE $FF
 byte_A646:
-	  .BYTE	$A2
+    .BYTE	$A2
     .BYTE $A3
     .BYTE $FF
 ; ---
 off_A649:
-	  .WORD byte_A657
+    .WORD byte_A657
     .WORD byte_A65E
     .WORD byte_A665
     .WORD byte_A66C
@@ -6194,7 +6194,7 @@ off_A649:
     .WORD unk_A674
     .WORD unk_A67B
 byte_A657:
-	  .BYTE	$F0
+    .BYTE	$F0
     .BYTE $F1
     .BYTE $E0
     .BYTE $E1
@@ -6202,7 +6202,7 @@ byte_A657:
     .BYTE $D1
     .BYTE $FF
 byte_A65E:
-	  .BYTE	$E4
+    .BYTE	$E4
     .BYTE $E5
     .BYTE $D4
     .BYTE $D5
@@ -6210,7 +6210,7 @@ byte_A65E:
     .BYTE $D1
     .BYTE $FF
 byte_A665:
-	  .BYTE	$D6
+    .BYTE	$D6
     .BYTE $D7
     .BYTE $F4
     .BYTE $F5
@@ -6218,17 +6218,17 @@ byte_A665:
     .BYTE $D1
     .BYTE $FF
 byte_A66C:
-	  .BYTE	$D8
+    .BYTE	$D8
     .BYTE $D9
     .BYTE $FF
 byte_A66F:
-	  .BYTE	$F8
+    .BYTE	$F8
     .BYTE $F9
     .BYTE $E8
     .BYTE $E9
     .BYTE $FF
 unk_A674:
-	  .BYTE $E6
+    .BYTE $E6
     .BYTE $E7
     .BYTE $F6
     .BYTE $F6
@@ -6236,103 +6236,103 @@ unk_A674:
     .BYTE $D1
     .BYTE $FF
 unk_A67B:
-	  .BYTE $E6
+    .BYTE $E6
     .BYTE $E7
     .BYTE $D0
     .BYTE $D1
     .BYTE $FF
 ; ---
 off_A680:
-	  .WORD byte_A68C
+    .WORD byte_A68C
     .WORD byte_A691
     .WORD byte_A696
     .WORD byte_A69B
     .WORD byte_A6A0
     .WORD byte_A6A5
 byte_A68C:
-	  .BYTE	$AE
+    .BYTE	$AE
     .BYTE $AF
     .BYTE $9C
     .BYTE $9D
     .BYTE $FF
 byte_A691:
-	  .BYTE	$9C
+    .BYTE	$9C
     .BYTE $9D
     .BYTE $AE
     .BYTE $AF
     .BYTE $FF
 byte_A696:
-	  .BYTE	$CE
+    .BYTE	$CE
     .BYTE $CF
     .BYTE $BE
     .BYTE $BF
     .BYTE $FF
 byte_A69B:
-	  .BYTE	$BE
+    .BYTE	$BE
     .BYTE $BF
     .BYTE $CE
     .BYTE $CF
     .BYTE $FF
 byte_A6A0:
-	  .BYTE	$CC
+    .BYTE	$CC
     .BYTE $CD
     .BYTE $9C
     .BYTE $9D
     .BYTE $FF
 byte_A6A5:
-	  .BYTE	$9C
+    .BYTE	$9C
     .BYTE $9D
     .BYTE $CC
     .BYTE $CD
     .BYTE $FF
 ; ---
 off_A6AA:
-	  .WORD byte_A6B2
+    .WORD byte_A6B2
     .WORD byte_A6B7
     .WORD byte_A6BC
     .WORD byte_A6C1
 byte_A6B2:
-	  .BYTE	$CA
+    .BYTE	$CA
     .BYTE $CB
     .BYTE $BA
     .BYTE $BB
     .BYTE $FF
 byte_A6B7:
-	  .BYTE	$BC
+    .BYTE	$BC
     .BYTE $BD
     .BYTE $AC
     .BYTE $AD
     .BYTE $FF
 byte_A6BC:
-	  .BYTE	$A8
+    .BYTE	$A8
     .BYTE $A9
     .BYTE $98
     .BYTE $99
     .BYTE $FF
 byte_A6C1:
-	  .BYTE	$AC
+    .BYTE	$AC
     .BYTE $AD
     .BYTE $BC
     .BYTE $BD
     .BYTE $FF
 ; ---
 off_A6C6:
-	  .WORD byte_A6CC
+    .WORD byte_A6CC
     .WORD byte_A6D1
     .WORD byte_A6D5
 byte_A6CC:
-	  .BYTE	$A6
+    .BYTE	$A6
     .BYTE $A7
     .BYTE $96
     .BYTE $97
     .BYTE $FF
 byte_A6D1:
-	  .BYTE	$C6
+    .BYTE	$C6
     .BYTE $C7
     .BYTE $B6
     .BYTE $FF
 byte_A6D5:
-	  .BYTE	$8A
+    .BYTE	$8A
     .BYTE $8B
     .BYTE $7A
     .BYTE $7B
@@ -6712,10 +6712,10 @@ loc_A8F0:
 
 loc_A924:
     LDA	    off_AB78,Y
-    STA	    byte_1A
+    STA	    word_1A
     LDA	    off_AB78+1,Y
-    STA	    byte_1B
-    JSR	    sub_B91B
+    STA	    word_1A+1
+    JSR	    DrawSpriteMaybe
     LDY	    #7
     LDA	    (word_A2),Y
     AND	    #4
@@ -6913,10 +6913,10 @@ loc_AA63:
 
 loc_AA65:
     LDA	    off_ABA0,Y
-    STA	    byte_1A
+    STA	    word_1A
     LDA	    off_ABA0+1,Y
-    STA	    byte_1B
-    JSR	    sub_B91B
+    STA	    word_1A+1
+    JSR	    DrawSpriteMaybe
     JSR	    sub_AF15
     RTS
 ; ---------------------------------------------------------------------------
@@ -7057,20 +7057,20 @@ loc_AB47:
     LSR	    A
     TAY
     LDA	    off_ABB5,Y
-    STA	    byte_1A
+    STA	    word_1A
     LDA	    off_ABB5+1,Y
-    STA	    byte_1B
-    JSR	    sub_B91B
+    STA	    word_1A+1
+    JSR	    DrawSpriteMaybe
     JSR	    sub_AF2D
     RTS
 ; ---------------------------------------------------------------------------
 off_AB78:
-	  .WORD byte_AB80
+    .WORD byte_AB80
     .WORD byte_AB87
     .WORD byte_AB90
     .WORD byte_AB99
 byte_AB80:
-	  .BYTE	$C4
+    .BYTE	$C4
     .BYTE $C5
     .BYTE $C2
     .BYTE $C3
@@ -7078,7 +7078,7 @@ byte_AB80:
     .BYTE $91
     .BYTE $FF
 byte_AB87:
-	  .BYTE	$C0
+    .BYTE	$C0
     .BYTE $C1
     .BYTE $B2
     .BYTE $B3
@@ -7088,7 +7088,7 @@ byte_AB87:
     .BYTE $93
     .BYTE $FF
 byte_AB90:
-	  .BYTE	$C0
+    .BYTE	$C0
     .BYTE $C1
     .BYTE $B0
     .BYTE $B1
@@ -7098,7 +7098,7 @@ byte_AB90:
     .BYTE $91
     .BYTE $FF
 byte_AB99:
-	  .BYTE	$C4
+    .BYTE	$C4
     .BYTE $C5
     .BYTE $A2
     .BYTE $A3
@@ -7106,38 +7106,38 @@ byte_AB99:
     .BYTE $93
     .BYTE $FF
 off_ABA0:
-	  .WORD byte_ABA6
+    .WORD byte_ABA6
     .WORD byte_ABAB
     .WORD byte_ABB0
 byte_ABA6:
-	  .BYTE	$AA
+    .BYTE	$AA
     .BYTE $AB
     .BYTE $9A
     .BYTE $9B
     .BYTE $FF
 byte_ABAB:
-	  .BYTE	$AA
+    .BYTE	$AA
     .BYTE $C9
     .BYTE $9A
     .BYTE $B9
     .BYTE $FF
 byte_ABB0:
-	  .BYTE	$A6
+    .BYTE	$A6
     .BYTE $A7
     .BYTE $96
     .BYTE $97
     .BYTE $FF
 off_ABB5:
-	  .WORD byte_ABB9
+    .WORD byte_ABB9
     .WORD byte_ABBE
 byte_ABB9:
-	  .BYTE	$98
+    .BYTE	$98
     .BYTE $99
     .BYTE $F6
     .BYTE $A8
     .BYTE $FF
 byte_ABBE:
-	  .BYTE	$98
+    .BYTE	$98
     .BYTE $B8
     .BYTE $A9
     .BYTE $B9
@@ -7857,7 +7857,7 @@ locret_AFC7:
     RTS
 ; ---------------------------------------------------------------------------
 FireballSpawnerPositions:
-	  .BYTE $1C,$69
+    .BYTE $1C,$69
     .BYTE $24,$6D			; 2
     .BYTE $2C,$65			; 4
     .BYTE $34,$6D			; 6
@@ -7871,7 +7871,7 @@ EnemyHandler_Nothing:
     RTS
 ; ---------------------------------------------------------------------------
 ZoneEnemyTable:
-	  .WORD ZoneEnemies_TwoBats
+    .WORD ZoneEnemies_TwoBats
     .WORD ZoneEnemies_TwoSnails		; 1
     .WORD ZoneEnemies_TwoSnailsOneFish	; 2
     .WORD ZoneEnemies_TwoBatsOneSkeleton; 3
@@ -7972,63 +7972,63 @@ ZoneEnemyTable:
     .WORD ZoneEnemies_ThreeMummiesTwoBats; 98
     .WORD ZoneEnemies_FinalZone		; 99
 ZoneEnemies_0:
-	  .BYTE Enemy_Nothing,Enemy_End	  ;	DATA XREF: BANK0:ZoneEnemyTableo
+    .BYTE Enemy_Nothing,Enemy_End	  ;	DATA XREF: BANK0:ZoneEnemyTableo
 ZoneEnemies_TwoWorms:
-	  .BYTE Enemy_WormThing,Enemy_WormThing,Enemy_End
+    .BYTE Enemy_WormThing,Enemy_WormThing,Enemy_End
 ZoneEnemies_TwoFlies:
-	  .BYTE Enemy_Fly,Enemy_Fly,Enemy_End
+    .BYTE Enemy_Fly,Enemy_Fly,Enemy_End
 ZoneEnemies_TwoBats:
-	  .BYTE Enemy_ShitBat,Enemy_ShitBat,Enemy_End
+    .BYTE Enemy_ShitBat,Enemy_ShitBat,Enemy_End
 ZoneEnemies_TwoWormsOneSkeleton:
-	  .BYTE Enemy_WormThing,Enemy_WormThing,Enemy_Skeleton,Enemy_End
+    .BYTE Enemy_WormThing,Enemy_WormThing,Enemy_Skeleton,Enemy_End
 ZoneEnemies_TwoWormsOneMummy:
-	  .BYTE Enemy_WormThing,Enemy_WormThing,Enemy_Mummy,Enemy_End
+    .BYTE Enemy_WormThing,Enemy_WormThing,Enemy_Mummy,Enemy_End
 ZoneEnemies_TwoScorpionsOneMummy:
-	  .BYTE Enemy_Scorpion,Enemy_Scorpion,Enemy_Mummy,Enemy_End
+    .BYTE Enemy_Scorpion,Enemy_Scorpion,Enemy_Mummy,Enemy_End
 ZoneEnemies_TwoFliesOneMummy:
-	  .BYTE Enemy_Fly,Enemy_Fly,Enemy_Mummy,Enemy_End
+    .BYTE Enemy_Fly,Enemy_Fly,Enemy_Mummy,Enemy_End
 ZoneEnemies_TwoBatsOneSkeleton:
-	  .BYTE Enemy_ShitBat,Enemy_ShitBat,Enemy_Skeleton,Enemy_End
+    .BYTE Enemy_ShitBat,Enemy_ShitBat,Enemy_Skeleton,Enemy_End
 ZoneEnemies_TwoBatsOneMummy:
-	  .BYTE Enemy_ShitBat,Enemy_ShitBat,Enemy_Mummy,Enemy_End
+    .BYTE Enemy_ShitBat,Enemy_ShitBat,Enemy_Mummy,Enemy_End
 ZoneEnemies_FourWorms:
-	  .BYTE Enemy_WormThing,Enemy_WormThing,Enemy_WormThing,Enemy_WormThing,Enemy_End
+    .BYTE Enemy_WormThing,Enemy_WormThing,Enemy_WormThing,Enemy_WormThing,Enemy_End
 ZoneEnemies_FourFlies:
-	  .BYTE Enemy_Fly,Enemy_Fly,Enemy_Fly,Enemy_Fly,Enemy_End
+    .BYTE Enemy_Fly,Enemy_Fly,Enemy_Fly,Enemy_Fly,Enemy_End
 ZoneEnemies_FourSkeletons:
-	  .BYTE	Enemy_Skeleton,Enemy_Skeleton,Enemy_Skeleton,Enemy_Skeleton,Enemy_End
+    .BYTE	Enemy_Skeleton,Enemy_Skeleton,Enemy_Skeleton,Enemy_Skeleton,Enemy_End
 ZoneEnemies_ThreeMummiesTwoBats:
-	  .BYTE Enemy_Mummy,Enemy_Mummy,Enemy_Mummy,Enemy_ShitBat,Enemy_ShitBat,Enemy_End
+    .BYTE Enemy_Mummy,Enemy_Mummy,Enemy_Mummy,Enemy_ShitBat,Enemy_ShitBat,Enemy_End
 ZoneEnemies_TwoFliesOneSkeleton:
-	  .BYTE Enemy_Fly,Enemy_Fly,Enemy_Skeleton,Enemy_End
+    .BYTE Enemy_Fly,Enemy_Fly,Enemy_Skeleton,Enemy_End
 ZoneEnemies_TwoSnails:
-	  .BYTE Enemy_Snail,Enemy_Snail,Enemy_End
+    .BYTE Enemy_Snail,Enemy_Snail,Enemy_End
 ZoneEnemies_TwoBlobs:
-	  .BYTE Enemy_GravityBlob,Enemy_GravityBlob,Enemy_End
+    .BYTE Enemy_GravityBlob,Enemy_GravityBlob,Enemy_End
 ZoneEnemies_TwoBlobsTwoSnails:
-	  .BYTE Enemy_GravityBlob,Enemy_GravityBlob,Enemy_Snail,Enemy_Snail,Enemy_End
+    .BYTE Enemy_GravityBlob,Enemy_GravityBlob,Enemy_Snail,Enemy_Snail,Enemy_End
 ZoneEnemies_TwoSnailsOneFishman:
-	  .BYTE Enemy_Snail,Enemy_Snail,Enemy_Fishman,Enemy_End
+    .BYTE Enemy_Snail,Enemy_Snail,Enemy_Fishman,Enemy_End
 ZoneEnemies_OneFishOneFishman:
-	  .BYTE Enemy_JumpingFish,Enemy_Fishman,Enemy_End
+    .BYTE Enemy_JumpingFish,Enemy_Fishman,Enemy_End
 ZoneEnemies_Unused:
-	  .BYTE Enemy_Snail,Enemy_Snail,Enemy_ShitBat,Enemy_ShitBat,Enemy_End
+    .BYTE Enemy_Snail,Enemy_Snail,Enemy_ShitBat,Enemy_ShitBat,Enemy_End
 ZoneEnemies_FourSnails:
-	  .BYTE Enemy_Snail,Enemy_Snail,Enemy_Snail,Enemy_Snail,Enemy_End
+    .BYTE Enemy_Snail,Enemy_Snail,Enemy_Snail,Enemy_Snail,Enemy_End
 ZoneEnemies_FourBlobs:
-	  .BYTE Enemy_GravityBlob,Enemy_GravityBlob,Enemy_GravityBlob,Enemy_GravityBlob,Enemy_End
+    .BYTE Enemy_GravityBlob,Enemy_GravityBlob,Enemy_GravityBlob,Enemy_GravityBlob,Enemy_End
 ZoneEnemies_TwoBlobTwoSnailTwoBat:
-	  .BYTE	Enemy_GravityBlob,Enemy_GravityBlob,Enemy_Snail,Enemy_Snail,Enemy_ShitBat,Enemy_ShitBat,Enemy_End
+    .BYTE	Enemy_GravityBlob,Enemy_GravityBlob,Enemy_Snail,Enemy_Snail,Enemy_ShitBat,Enemy_ShitBat,Enemy_End
 ZoneEnemies_ThreeFishTwoFishmanTwoSnails:
-	  .BYTE Enemy_JumpingFish,Enemy_JumpingFish,Enemy_JumpingFish,Enemy_Fishman,Enemy_Fishman,Enemy_Snail
+    .BYTE Enemy_JumpingFish,Enemy_JumpingFish,Enemy_JumpingFish,Enemy_Fishman,Enemy_Fishman,Enemy_Snail
     .BYTE Enemy_Snail,Enemy_End		; 6
 ZoneEnemies_TwoSnailsOneFish:
-	  .BYTE Enemy_Snail,Enemy_Snail,Enemy_JumpingFish,Enemy_End
+    .BYTE Enemy_Snail,Enemy_Snail,Enemy_JumpingFish,Enemy_End
 ZoneEnemies_FinalZone:
-	  .BYTE Enemy_FireballSpawner,Enemy_FireballSpawner,Enemy_FireballSpawner,Enemy_FireballSpawner,Enemy_FireballSpawner
+    .BYTE Enemy_FireballSpawner,Enemy_FireballSpawner,Enemy_FireballSpawner,Enemy_FireballSpawner,Enemy_FireballSpawner
     .BYTE Enemy_FireballSpawner,Enemy_FireballSpawner,Enemy_FireballSpawner,Enemy_End; 5
 ProbablyEnemyPointers:
-	  .WORD EnemyHandler_Nothing
+    .WORD EnemyHandler_Nothing
     .WORD EnemyHandler_WormThing	; 1 ; Enemy_WormThing
     .WORD EnemyHandler_ShitBat		; 2 ; Enemy_ShitBat
     .WORD EnemyHandler_Mummy		; 3 ; Enemy_Mummy
@@ -8045,7 +8045,7 @@ ProbablyEnemyPointers:
     .WORD EnemyHandler_Nothing		; 14
     .WORD EnemyHandler_Nothing		; 15
 off_B13A:
-	  .WORD EnemyHandler_Nothing
+    .WORD EnemyHandler_Nothing
     .WORD loc_B609
     .WORD loc_B53D
     .WORD loc_B71C
@@ -8106,11 +8106,11 @@ loc_B19C:
     INX
 
 loc_B1A3:
-    LDA	    byte_B7C1,X
-    STA	    byte_1A
-    LDA	    byte_B7C2,X
-    STA	    byte_1B
-    JSR	    sub_B91B
+    LDA	    off_B7C1,X
+    STA	    word_1A
+    LDA	    off_B7C1+1,X
+    STA	    word_1A+1
+    JSR	    DrawSpriteMaybe
     LDY	    byte_21
     LDA	    unk_230,Y
     CMP	    PlayerX
@@ -9098,126 +9098,78 @@ sub_B7A7:
 
 ; ---------------------------------------------------------------------------
 byte_B7B9:
-	  .BYTE	$C2
+    .BYTE	$C2
     .BYTE $C2
     .BYTE 2
     .BYTE 2
 byte_B7BD:
-	  .BYTE	$2D
+    .BYTE	$2D
     .BYTE $2E
     .BYTE $2D
     .BYTE $2E
-byte_B7C1:
-	  .BYTE	$D5
-byte_B7C2:
-	  .BYTE	$B7
-    .BYTE $DA
-    .BYTE $B7
-byte_B7C5:
-	  .BYTE	$DF
-byte_B7C6:
-	  .BYTE	$B7
-    .BYTE $E4
-    .BYTE $B7
-    .BYTE $E9
-    .BYTE $B7
-    .BYTE $EE
-    .BYTE $B7
-    .BYTE $F3
-    .BYTE $B7
-    .BYTE $F8
-    .BYTE $B7
-    .BYTE $FD
-    .BYTE $B7
-    .BYTE 2
-    .BYTE $B8
-    .BYTE $E2
-    .BYTE $E3
-    .BYTE $D2
-    .BYTE $D3
-    .BYTE $FF
-    .BYTE $E2
-    .BYTE $E3
-    .BYTE $F2
-    .BYTE $F3
-    .BYTE $FF
-    .BYTE $DA
-    .BYTE $DB
-    .BYTE $CA
-    .BYTE $CB
-    .BYTE $FF
-    .BYTE $FA
-    .BYTE $FB
-    .BYTE $EA
-    .BYTE $EB
-    .BYTE $FF
-    .BYTE $DE
-    .BYTE $DF
-    .BYTE $CE
-    .BYTE $CF
-    .BYTE $FF
-    .BYTE $DC
-    .BYTE $DD
-    .BYTE $CC
-    .BYTE $CD
-    .BYTE $FF
-    .BYTE $BA
-    .BYTE $BB
-    .BYTE $AA
-    .BYTE $AB
-    .BYTE $FF
-    .BYTE $BC
-    .BYTE $BD
-    .BYTE $AC
-    .BYTE $AD
-    .BYTE $FF
-    .BYTE $FC
-    .BYTE $FD
-    .BYTE $EC
-    .BYTE $ED
-    .BYTE $FF
-    .BYTE $FE
-    .BYTE $F7
-    .BYTE $EE
-    .BYTE $EF
-    .BYTE $FF
-unk_B807:
-	  .BYTE $11
-unk_B808:
-	  .BYTE $B8
-    .BYTE $16
-    .BYTE $B8
-    .BYTE $1B
-    .BYTE $B8
-    .BYTE $20
-    .BYTE $B8
-    .BYTE $25
-    .BYTE $B8
-    .BYTE $8C
-    .BYTE $8D
-    .BYTE $7C
-    .BYTE $7D
-    .BYTE $FF
-    .BYTE $BE
-    .BYTE $BF
-    .BYTE $AE
-    .BYTE $AF
-    .BYTE $FF
-    .BYTE $C8
-    .BYTE $C9
-    .BYTE $66
-    .BYTE $67
-    .BYTE $FF
-    .BYTE $B6
-    .BYTE $B7
-    .BYTE $B4
-    .BYTE $B5
-    .BYTE $FF
-    .BYTE $9C
-    .BYTE $9D
-    .BYTE $9A
-    .BYTE $9B
-    .BYTE $FF
+off_B7C1:
+    .WORD Sprite_Chest
+    .WORD Sprite_ChestOpen
+IntermissionItemSpriteTiles:
+    .WORD Sprite_ItemLightbulb
+    .WORD Sprite_Shoes			; 1 ; Pointers to the tiles for	item sprites
+    .WORD Sprite_SuperBomb		; 2 ; 02 03
+    .WORD Sprite_UpArrow		; 3 ; 00 01
+    .WORD Sprite_DoubleScore		; 4
+    .WORD Sprite_SlowTimer		; 5
+    .WORD Sprite_Microphone		; 6
+    .WORD Sprite_Invulnerable		; 7
+Sprite_Chest:
+    .BYTE $E2,$E3,$D2,$D3
+    .BYTE $FF				; 4
+Sprite_ChestOpen:
+    .BYTE $E2,$E3,$F2,$F3
+    .BYTE $FF				; 4
+Sprite_ItemLightbulb:
+    .BYTE $DA,$DB,$CA,$CB
+    .BYTE $FF				; 4
+Sprite_Shoes:
+    .BYTE $FA,$FB,$EA,$EB
+    .BYTE $FF				; 4
+Sprite_SuperBomb:
+    .BYTE $DE,$DF,$CE,$CF
+    .BYTE $FF				; 4
+Sprite_UpArrow:
+    .BYTE $DC,$DD,$CC,$CD
+    .BYTE $FF				; 4
+Sprite_DoubleScore:
+    .BYTE $BA,$BB,$AA,$AB
+    .BYTE $FF				; 4
+Sprite_SlowTimer:
+    .BYTE $BC,$BD,$AC,$AD
+    .BYTE $FF				; 4
+Sprite_Microphone:
+    .BYTE	$FC,$FD,$EC,$ED
+    .BYTE $FF				; 4
+Sprite_Invulnerable:
+    .BYTE $FE,$F7,$EE,$EF
+    .BYTE $FF				; 4 ; Uses $F7 here because $FF	is the terminator
+EndingGemSpritePointers:
+    .WORD Sprite_UnusedCoin
+    .WORD Sprite_UnusedCrown
+    .WORD Sprite_UnusedSword
+    .WORD Sprite_EndingGem
+    .WORD Sprite_UnusedRing
+Sprite_UnusedCoin:
+    .BYTE	$8C,$8D,$7C,$7D
+    .BYTE $FF				; 4 ; Shares CHR bank with the gem, so is replacable
+Sprite_UnusedCrown:
+    .BYTE $BE,$BF,$AE,$AF
+    .BYTE $FF				; 4 ; Requires alternate sprite	set
+Sprite_UnusedSword:
+    .BYTE $C8,$C9,$66,$67
+    .BYTE $FF				; 4 ; Requires alternate sprite	set
+Sprite_EndingGem:
+    .BYTE $B6,$B7,$B4,$B5
+    .BYTE $FF				; 4 ; Sprite tiles for the gem in the ending
+Sprite_UnusedRing:
+    .BYTE	$9C,$9D,$9A,$9B
+    .BYTE $FF				; 4 ; Requires alternate sprite	set
 
 ; =============== S U B	R O U T	I N E =======================================
 
@@ -9362,20 +9314,20 @@ loc_B90D:
     LDY	    #$E
 
 loc_B90F:
-    LDA	    byte_BAD7,Y
-    STA	    byte_1A
-    LDA	    byte_BAD8,Y
-    STA	    byte_1B
+    LDA	    PlayerSpritePointers,Y
+    STA	    word_1A
+    LDA	    PlayerSpritePointers+1,Y
+    STA	    word_1A+1
 ; End of function sub_B88E
 
 ; =============== S U B	R O U T	I N E =======================================
 
-sub_B91B:
+DrawSpriteMaybe:
     LDX	    byte_155
     LDY	    #0
 
 loc_B920:
-    LDA	    (byte_1A),Y
+    LDA	    (word_1A),Y
     CMP	    #$FF
     BEQ	    loc_B965
     STA	    SpriteData+1,X
@@ -9429,23 +9381,23 @@ loc_B969:
     LDY	    #0
 
 loc_B971:
-    LDA	    (byte_1A),Y
+    LDA	    (word_1A),Y
     CMP	    #$FF
     BEQ	    loc_B99B
     STA	    SpriteData+1,X
     INY
-    LDA	    (byte_1A),Y
+    LDA	    (word_1A),Y
     CLC
     ADC	    byte_29
     STA	    SpriteData,X
     INY
     INX
     INX
-    LDA	    (byte_1A),Y
+    LDA	    (word_1A),Y
     STA	    SpriteData,X
     INY
     INX
-    LDA	    (byte_1A),Y
+    LDA	    (word_1A),Y
     CLC
     ADC	    byte_28
     STA	    SpriteData,X
@@ -9456,7 +9408,7 @@ loc_B971:
 loc_B99B:
     STX	    byte_155
     RTS
-; End of function sub_B91B
+; End of function DrawSpriteMaybe
 
 ; =============== S U B	R O U T	I N E =======================================
 
@@ -9487,7 +9439,7 @@ locret_B9C4:
 
 ; ---------------------------------------------------------------------------
 byte_B9C5:
-	  .BYTE	$74
+    .BYTE	$74
     .BYTE $7C
     .BYTE $84
 
@@ -9513,7 +9465,7 @@ sub_B9C8:
     AND	    #6
     LSR	    A
     TAY
-    LDA	    byte_BB3A,Y
+    LDA	    SpriteBomb,Y
     STA	    SpriteData+1,X
     LDA	    byte_25
     ORA	    #2
@@ -9621,7 +9573,7 @@ loc_BA9D:
     SEC
     SBC	    #9
     STA	    SpriteData,X
-    LDA	    byte_BAC2,Y
+    LDA	    Sprite_x2,Y
     STA	    SpriteData+1,X
     LDA	    #2
     STA	    SpriteData+2,X
@@ -9642,14 +9594,13 @@ locret_BAC1:
 ; End of function sub_BA65
 
 ; ---------------------------------------------------------------------------
-byte_BAC2:
-	  .BYTE	$23
-    .BYTE 2
+Sprite_x2:
+    .BYTE	$23,  2
 byte_BAC4:
-	  .BYTE	$7D
+    .BYTE	$7D
     .BYTE $85
 byte_BAC6:
-	  .BYTE	$F7
+    .BYTE	$F7
     .BYTE $F7
     .BYTE $EF
     .BYTE $EF
@@ -9658,9 +9609,9 @@ byte_BAC6:
     .BYTE $DF
     .BYTE $DF
 byte_BACE:
-	  .BYTE	$F8
+    .BYTE	$F8
 byte_BACF:
-	  .BYTE	0
+    .BYTE	0
     .BYTE $F8
     .BYTE 0
     .BYTE $F8
@@ -9668,125 +9619,85 @@ byte_BACF:
     .BYTE $F8
     .BYTE 0
     .BYTE $F8
-byte_BAD7:
-	  .BYTE	$F4
-byte_BAD8:
-	  .BYTE	$BA
-    .BYTE $EB
-    .BYTE $BA
-    .BYTE $F4
-    .BYTE $BA
-    .BYTE $FD
-    .BYTE $BA
-    .BYTE 6
-    .BYTE $BB
-    .BYTE $F
-    .BYTE $BB
-    .BYTE $18
-    .BYTE $BB
-    .BYTE $1F
-    .BYTE $BB
-    .BYTE $28
-    .BYTE $BB
-    .BYTE $31
-    .BYTE $BB
-    .BYTE $60
-    .BYTE $61
-    .BYTE $50
-    .BYTE $51
-    .BYTE $40
-    .BYTE $41
-    .BYTE $30
-    .BYTE $31
-    .BYTE $FF
-    .BYTE $52
-    .BYTE $53
-    .BYTE $42
-    .BYTE $43
-    .BYTE $32
-    .BYTE $33
-    .BYTE $30
-    .BYTE $31
-    .BYTE $FF
-    .BYTE $82
-    .BYTE $83
-    .BYTE $72
-    .BYTE $73
-    .BYTE $62
-    .BYTE $63
-    .BYTE $30
-    .BYTE $31
-    .BYTE $FF
-    .BYTE $54
-    .BYTE $55
-    .BYTE $44
-    .BYTE $45
-    .BYTE $34
-    .BYTE $35
-    .BYTE $30
-    .BYTE $31
-    .BYTE $FF
-    .BYTE $84
-    .BYTE $85
-    .BYTE $74
-    .BYTE $75
-    .BYTE $64
-    .BYTE $65
-    .BYTE $30
-    .BYTE $31
-    .BYTE $FF
-    .BYTE $80
-    .BYTE $81
-    .BYTE $70
-    .BYTE $71
-    .BYTE $30
-    .BYTE $31
-    .BYTE $FF
-    .BYTE $56
-    .BYTE $57
-    .BYTE $46
-    .BYTE $47
-    .BYTE $36
-    .BYTE $37
-    .BYTE $30
-    .BYTE $31
-    .BYTE $FF
-    .BYTE $82
-    .BYTE $83
-    .BYTE $48
-    .BYTE $49
-    .BYTE $38
-    .BYTE $39
-    .BYTE $58
-    .BYTE $31
-    .BYTE $FF
-    .BYTE $88
-    .BYTE $89
-    .BYTE $78
-    .BYTE $79
-    .BYTE $68
-    .BYTE $69
-    .BYTE $30
-    .BYTE $59
-    .BYTE $FF
-byte_BB3A:
-	  .BYTE	$76
-    .BYTE $87
-    .BYTE $77
-    .BYTE $86
+PlayerSpritePointers:
+    .WORD SpritePlayer_0_Walk0
+    .WORD SpritePlayer_1_Walk1
+    .WORD SpritePlayer_0_Walk0
+    .WORD SpritePlayer_0_Walk2
+    .WORD SpritePlayer_4
+    .WORD SpritePlayer_5_Jump
+    .WORD SpritePlayer_6_Ducking
+    .WORD SpritePlayer_7_Death
+    .WORD SpritePlayer_8_Throw0
+    .WORD SpritePlayer_9_Throw1
+SpritePlayer_1_Walk1:
+    .BYTE $60,$61
+    .BYTE $50,$51			; 2
+    .BYTE $40,$41			; 4
+    .BYTE $30,$31			; 6
+    .BYTE $FF				; 8
+SpritePlayer_0_Walk0:
+    .BYTE $52,$53
+    .BYTE $42,$43			; 2
+    .BYTE $32,$33			; 4
+    .BYTE $30,$31			; 6
+    .BYTE $FF				; 8
+SpritePlayer_0_Walk2:
+    .BYTE $82,$83
+    .BYTE $72,$73			; 2
+    .BYTE $62,$63			; 4
+    .BYTE $30,$31			; 6
+    .BYTE $FF				; 8
+SpritePlayer_4:
+    .BYTE $54,$55
+    .BYTE $44,$45			; 2
+    .BYTE $34,$35			; 4
+    .BYTE $30,$31			; 6
+    .BYTE $FF				; 8
+SpritePlayer_5_Jump:
+    .BYTE $84,$85
+    .BYTE $74,$75			; 2
+    .BYTE $64,$65			; 4
+    .BYTE $30,$31			; 6
+    .BYTE $FF				; 8
+SpritePlayer_6_Ducking:
+    .BYTE $80,$81
+    .BYTE $70,$71			; 2
+    .BYTE $30,$31			; 4
+    .BYTE $FF				; 6
+SpritePlayer_7_Death:
+    .BYTE $56,$57
+    .BYTE $46,$47			; 2
+    .BYTE $36,$37			; 4
+    .BYTE $30,$31			; 6
+    .BYTE $FF				; 8
+SpritePlayer_8_Throw0:
+    .BYTE $82,$83			  ;	DATA XREF: BANK0:BAE7o
+    .BYTE $48,$49			; 2
+    .BYTE $38,$39			; 4
+    .BYTE $58,$31			; 6
+    .BYTE $FF				; 8
+SpritePlayer_9_Throw1:
+    .BYTE $88,$89			  ;	DATA XREF: BANK0:BAE9o
+    .BYTE $78,$79			; 2
+    .BYTE $68,$69			; 4
+    .BYTE $30,$59			; 6
+    .BYTE $FF				; 8
+SpriteBomb:
+    .BYTE $76,$87,$77,$86
 byte_BB3E:
-	  .BYTE	$5B
+    .BYTE	$5B
     .BYTE $36
     .BYTE $11
     .BYTE 0
 byte_BB42:
-	  .BYTE	$5D
+    .BYTE	$5D
 byte_BB43:
-	  .BYTE	$F8
+    .BYTE	$F8
 byte_BB44:
-	  .BYTE	2
+    .BYTE	2
 byte_BB45:
-	  .BYTE	$F8
+    .BYTE	$F8
     .BYTE $5D
     .BYTE 0
     .BYTE $C2
@@ -10069,7 +9980,7 @@ loc_BCC4:
     LDY	    #$F
 
 loc_BCCC:
-    LDA	    byte_BCD9,Y
+    LDA	    TitleScreenPalettes,Y
     STA	    PaletteData+4,Y
     DEY
     BPL	    loc_BCCC
@@ -10078,27 +9989,17 @@ loc_BCCC:
 ; End of function DrawTitleScreen
 
 ; ---------------------------------------------------------------------------
-byte_BCD9:
-	  .BYTE	$F
-    .BYTE 7
-    .BYTE $17
-    .BYTE $F
-    .BYTE $F
-    .BYTE $18
-    .BYTE $28
-    .BYTE $38
-    .BYTE $F
-    .BYTE $18
-    .BYTE $28
-    .BYTE $38
-    .BYTE $F
-    .BYTE $18
-    .BYTE $F
-    .BYTE 8
-    .BYTE $60
+TitleScreenPalettes:
+    .BYTE  $F,	7,$17, $F
+    .BYTE  $F,$18,$28,$38		; 4 ; Loaded as	BG palette 1-3 and sprite palette 0
+    .BYTE  $F,$18,$28,$38		; 8 ; (???)
+    .BYTE  $F,$18, $F,	8		; $C
+; ---------------------------------------------------------------------------
+    RTS					; ??? Spurious RTS
+
 ; =============== S U B	R O U T	I N E =======================================
 
-sub_BCEA:
+IntermissionScreenFirst:
     JSR	    ClearPaletteToBlack
     JSR	    ResetMostPPUStuff
     JSR	    PrintZoneNumberToPPU
@@ -10108,11 +10009,11 @@ sub_BCEA:
     LDA	    #PPUStringIndex_MysteryAdventureStart
     JSR	    PrintStringToPPU
     JMP	    EnableNMI
-; End of function sub_BCEA
+; End of function IntermissionScreenFirst
 
 ; =============== S U B	R O U T	I N E =======================================
 
-sub_BD02:
+IntermissionScreen:
     JSR	    ClearPaletteToBlack
     JSR	    ResetMostPPUStuff
     JSR	    PrintScoreToPPU
@@ -10122,29 +10023,29 @@ sub_BD02:
     STA	    byte_20
 
 loc_BD16:
-    LDX	    byte_20
+    LDX	    byte_20			; Show the items on the	intermission screen
     LDA	    PlayerItem_Lightbulb,X
     BEQ	    loc_BD41
-    LDA	    byte_C61A,X
+    LDA	    IntermissionItemXPos,X
     STA	    byte_28
-    LDA	    byte_C622,X
+    LDA	    IntermissionItemYPos,X
     STA	    byte_29
     TXA
     ASL	    A
     TAY
-    LDA	    byte_B7C5,Y
-    STA	    byte_1A
-    LDA	    byte_B7C6,Y
-    STA	    byte_1B
+    LDA	    IntermissionItemSpriteTiles,Y
+    STA	    word_1A
+    LDA	    IntermissionItemSpriteTiles+1,Y
+    STA	    word_1A+1
     LDA	    #2
     STA	    byte_2A
-    JSR	    sub_B91B
+    JSR	    DrawSpriteMaybe
 
 loc_BD41:
     DEC	    byte_20
     BPL	    loc_BD16
     JMP	    EnableNMI
-; End of function sub_BD02
+; End of function IntermissionScreen
 
 ; =============== S U B	R O U T	I N E =======================================
 
@@ -10304,11 +10205,11 @@ DrawGameOverScreen:
     STA	    byte_29
     LDA	    #3
     STA	    byte_2A
-    LDA	    byte_B7C1
-    STA	    byte_1A
-    LDA	    byte_B7C2
-    STA	    byte_1B
-    JSR	    sub_B91B
+    LDA	    off_B7C1
+    STA	    word_1A
+    LDA	    off_B7C1+1
+    STA	    word_1A+1
+    JSR	    DrawSpriteMaybe
     LDX	    #$22
     LDY	    #$C
     LDA	    #PPUStringIndex_GameOver
@@ -10376,7 +10277,7 @@ locret_BEA5:
 
 ; ---------------------------------------------------------------------------
 ZoneASMPointerTable:
-	  .WORD ZoneASM_01
+    .WORD ZoneASM_01
     .WORD ZoneASM_0			; 1
     .WORD ZoneASM_0			; 2
     .WORD ZoneASM_0			; 3
@@ -10832,17 +10733,17 @@ loc_C18D:
     LDA	    byte_3C7
     BMI	    locret_C1E9
     LDY	    #6
-    LDA	    unk_B807,Y
-    STA	    byte_1A
-    LDA	    unk_B808,Y
-    STA	    byte_1B
+    LDA	    EndingGemSpritePointers,Y
+    STA	    word_1A
+    LDA	    EndingGemSpritePointers+1,Y
+    STA	    word_1A+1
     LDA	    #0
     STA	    byte_2A
     LDA	    byte_3C4
     STA	    byte_28
     LDA	    byte_3C5
     STA	    byte_29
-    JSR	    sub_B91B
+    JSR	    DrawSpriteMaybe
     LDX	    PlayerX
     CPX	    byte_3C0
     BEQ	    loc_C1C8
@@ -10874,12 +10775,15 @@ locret_C1E9:
 
 ; ---------------------------------------------------------------------------
 byte_C1EA:
-	  .BYTE	$4C
+    .BYTE	$4C
     .BYTE 0
     .BYTE $69
     .BYTE 0
 
 ; =============== S U B	R O U T	I N E =======================================
+
+; Calls	to this	might have been	meant to go to the below
+; disabled feature, given the nature of	jumping	to a RTS
 
 JustRTS:
     RTS
@@ -10932,7 +10836,7 @@ locret_C227:
 
 ; ---------------------------------------------------------------------------
 byte_C228:
-	  .BYTE	$20
+    .BYTE	$20
     .BYTE $20
     .BYTE $F
     .BYTE 0
@@ -11068,12 +10972,12 @@ loc_C2EC:
 
 ; ---------------------------------------------------------------------------
 unk_C30D:
-	  .BYTE	$F
+    .BYTE	$F
     .BYTE $F
     .BYTE $1A
     .BYTE $37
 byte_C311:
-	  .BYTE	$49
+    .BYTE	$49
     .BYTE $20
     .BYTE $70
     .BYTE 0
@@ -11118,13 +11022,13 @@ locret_C359:
     RTS
 ; ---------------------------------------------------------------------------
 EndingCongratulations_YPos:
-	  .BYTE $5F,$5E,$5D,$5C,$5B,$5A,$59
+    .BYTE $5F,$5E,$5D,$5C,$5B,$5A,$59
     .BYTE $58,$57,$56,$55,$54,$53,$52	; 7
 EndingCongratulations_XPos:
-	  .BYTE $48,$50,$58,$60,$68,$70,$78
+    .BYTE $48,$50,$58,$60,$68,$70,$78
     .BYTE $80,$88,$90,$98,$A0,$A8,$B0	; 7
 EndingCongratulations_SpriteIndex:
-	  .BYTE	 $C,$18,$17,$10,$1B, $A,$1D
+    .BYTE	 $C,$18,$17,$10,$1B, $A,$1D
     .BYTE $1E,$15, $A,$1D,$12,$18,$17	; 7
 ; ---------------------------------------------------------------------------
 
@@ -11166,7 +11070,7 @@ locret_C3BD:
     RTS
 ; ---------------------------------------------------------------------------
 NagoyaSecretNumbers:
-	  .BYTE   7,	5,  8			; ---------------------------------------------------------------------------
+    .BYTE   7,	5,  8			; ---------------------------------------------------------------------------
 
 ZoneASM_99_DoorBackToZone6:
     LDA	    GotEndingGem
@@ -11185,7 +11089,7 @@ locret_C3D6:
     RTS
 ; ---------------------------------------------------------------------------
 Zone99DoorToBefore:
-	  .BYTE $82,$9F,$2C,  3	       ; ---------------------------------------------------------------------------
+    .BYTE $82,$9F,$2C,  3	       ; =============== S U B	R O U T	I N E =======================================
 
 ZoneASM_100_SecretArea:
     LDA	    #$90
@@ -11253,14 +11157,16 @@ loc_C40D:
 
 locret_C460:
     RTS
+; End of function ZoneASM_100_SecretArea
+
 ; ---------------------------------------------------------------------------
 byte_C461:
-	  .BYTE	$6C
+    .BYTE	$6C
     .BYTE 0
     .BYTE $5C
     .BYTE 0
 FinalZonePaletteCycle1:
-	  .BYTE 2
+    .BYTE 2
     .BYTE $12
     .BYTE $22
     .BYTE $32
@@ -11269,7 +11175,7 @@ FinalZonePaletteCycle1:
     .BYTE $12
     .BYTE 2
 FinalZonePaletteCycle2:
-	  .BYTE $26
+    .BYTE $26
     .BYTE $36
     .BYTE $36
     .BYTE $26
@@ -11278,7 +11184,7 @@ FinalZonePaletteCycle2:
     .BYTE 6
     .BYTE $16
 WaterAnimPaletteCycle1:
-	  .BYTE 1
+    .BYTE 1
     .BYTE 1
     .BYTE $11
     .BYTE $11
@@ -11287,7 +11193,7 @@ WaterAnimPaletteCycle1:
     .BYTE $11
     .BYTE $11
 WaterAnimPaletteCycle2:
-	  .BYTE $22
+    .BYTE $22
     .BYTE $12
     .BYTE $22
     .BYTE $12
@@ -11296,7 +11202,7 @@ WaterAnimPaletteCycle2:
     .BYTE $22
     .BYTE $12
 AltWaterAnimPaletteCycle1:
-	  .BYTE	$32
+    .BYTE	$32
     .BYTE $21
     .BYTE $31
     .BYTE $22
@@ -11305,7 +11211,7 @@ AltWaterAnimPaletteCycle1:
     .BYTE $31
     .BYTE $32
 AltWaterAnimPaletteCycle2:
-	  .BYTE	$16
+    .BYTE	$16
     .BYTE 6
     .BYTE 5
     .BYTE $16
@@ -11314,7 +11220,7 @@ AltWaterAnimPaletteCycle2:
     .BYTE 6
     .BYTE $16
 ObnoxiousGreenFlashingPalette:
-	  .BYTE $1A
+    .BYTE $1A
     .BYTE $2A
     .BYTE $3A
     .BYTE $3A
@@ -11323,7 +11229,7 @@ ObnoxiousGreenFlashingPalette:
     .BYTE $A
     .BYTE $A
 ObnoxiousRedFlashingPalette:
-	  .BYTE 7
+    .BYTE 7
     .BYTE $17
     .BYTE 7
     .BYTE $17
@@ -11332,12 +11238,12 @@ ObnoxiousRedFlashingPalette:
     .BYTE 7
     .BYTE $17
 byte_C4A5:
-	  .BYTE	$2F
+    .BYTE	$2F
     .BYTE $A0
     .BYTE $58
     .BYTE 0
 byte_C4A9:
-	  .BYTE	$40
+    .BYTE	$40
     .BYTE $40
     .BYTE $40
     .BYTE $40
@@ -11364,7 +11270,7 @@ byte_C4A9:
     .BYTE 8
     .BYTE 8
 byte_C4C3:
-	  .BYTE	$D7
+    .BYTE	$D7
     .BYTE $D8
     .BYTE $D9
     .BYTE $D7
@@ -11391,7 +11297,7 @@ byte_C4C3:
     .BYTE $E6
     .BYTE $E6
 byte_C4DD:
-	  .BYTE	1
+    .BYTE	1
     .BYTE 1
     .BYTE 1
     .BYTE $41
@@ -11418,7 +11324,7 @@ byte_C4DD:
     .BYTE 3
     .BYTE $43
 byte_C4F7:
-	  .BYTE	$F0
+    .BYTE	$F0
     .BYTE $F8
     .BYTE 0
     .BYTE 8
@@ -11445,65 +11351,35 @@ byte_C4F7:
     .BYTE $F8
     .BYTE 0
 byte_C511:
-	  .BYTE	$DA
-    .BYTE $DB
-    .BYTE $DC
-    .BYTE $DC
-    .BYTE $DB
-    .BYTE $DA
-    .BYTE $EA
-    .BYTE $EB
-    .BYTE $EC
-    .BYTE $EC
-    .BYTE $EB
-    .BYTE $EA
-    .BYTE $FA
-    .BYTE $FB
-    .BYTE $FC
-    .BYTE $FC
-    .BYTE $FB
-    .BYTE $FA
-    .BYTE $D4
-    .BYTE $D5
-    .BYTE $D1
-    .BYTE $D1
-    .BYTE $D5
-    .BYTE $D4
-    .BYTE $E4
-    .BYTE $E5
-    .BYTE $E1
-    .BYTE $E1
-    .BYTE $E5
-    .BYTE $E4
-    .BYTE $F4
-    .BYTE $F5
-    .BYTE $F1
-    .BYTE $F1
-    .BYTE $F5
-    .BYTE $F4
+    .BYTE	$DA,$DB,$DC,$DC,$DB,$DA
+    .BYTE $EA,$EB,$EC,$EC,$EB,$EA	; 6
+    .BYTE $FA,$FB,$FC,$FC,$FB,$FA	; $C
+    .BYTE $D4,$D5,$D1,$D1,$D5,$D4	; $12
+    .BYTE $E4,$E5,$E1,$E1,$E5,$E4	; $18
+    .BYTE $F4,$F5,$F1,$F1,$F5,$F4	; $1E
 byte_C535:
-	  .BYTE	0
+    .BYTE	0
     .BYTE 0
     .BYTE 0
     .BYTE $40
     .BYTE $40
     .BYTE $40
 byte_C53B:
-	  .BYTE	$D
+    .BYTE	$D
     .BYTE 5
     .BYTE $FD
     .BYTE $F5
     .BYTE $ED
     .BYTE $E5
 byte_C541:
-	  .BYTE	$E8
+    .BYTE	$E8
     .BYTE $F0
     .BYTE $F8
     .BYTE 0
     .BYTE 8
     .BYTE $10
 byte_C547:
-	  .BYTE	$DE
+    .BYTE	$DE
     .BYTE $EE
     .BYTE $FD
     .BYTE $FD
@@ -11512,7 +11388,7 @@ byte_C547:
     .BYTE $DD
     .BYTE $DD
 byte_C54F:
-	  .BYTE	1
+    .BYTE	1
     .BYTE $41
     .BYTE 1
     .BYTE $41
@@ -11521,7 +11397,7 @@ byte_C54F:
     .BYTE 1
     .BYTE $41
 byte_C557:
-	  .BYTE	$F8
+    .BYTE	$F8
     .BYTE $F8
     .BYTE $F0
     .BYTE $F0
@@ -11530,7 +11406,7 @@ byte_C557:
     .BYTE $E0
     .BYTE $E0
 byte_C55F:
-	  .BYTE	$F9
+    .BYTE	$F9
     .BYTE 0
     .BYTE $F9
     .BYTE 0
@@ -11539,7 +11415,7 @@ byte_C55F:
     .BYTE $F9
     .BYTE 0
 byte_C567:
-	  .BYTE	$DE
+    .BYTE	$DE
     .BYTE $DE
     .BYTE $FF
     .BYTE $FF
@@ -11548,7 +11424,7 @@ byte_C567:
     .BYTE $DF
     .BYTE $DF
 byte_C56F:
-	  .BYTE	$DE
+    .BYTE	$DE
     .BYTE $DE
     .BYTE $FF
     .BYTE $FF
@@ -11557,7 +11433,7 @@ byte_C56F:
     .BYTE $DF
     .BYTE $DF
 byte_C577:
-	  .BYTE	$F8
+    .BYTE	$F8
     .BYTE 0
     .BYTE $F8
     .BYTE 0
@@ -11566,7 +11442,7 @@ byte_C577:
     .BYTE $F8
     .BYTE 0
 WriteToPPUStrings:
-	  .WORD	HighScore+1
+    .WORD	HighScore+1
     .WORD PPUString_PushStartButton	; 1 ; The last three entries in	this are not used
     .WORD PPUString_HiScore		; 2
     .WORD PPUString_C1986Sunsoft	; 3
@@ -11581,62 +11457,48 @@ WriteToPPUStrings:
     .WORD PPUString_Out			; $C
     .WORD PPUString_Warp		; $D
 PPUString_PushStartButton:
-	  .BYTE	$26,$19,$1E,$1C,$11,$FF,$1C,$1D
+    .BYTE	$26,$19,$1E,$1C,$11,$FF,$1C,$1D
     .BYTE  $A,$1B,$1D,$FF, $B,$1E,$1D,$1D; 8 ; "-PUSH START BUTTON!-"
     .BYTE $18,$17,$25,$26,$80		; $10
 PPUString_HiScore:
-	  .BYTE	$11,$12,$26		      ; "HI-"	(falls through to SCORE)
+    .BYTE	$11,$12,$26		      ; "HI-"	(falls through to SCORE)
 PPUString_Score:
-	  .BYTE $1C, $C,$18,$1B, $E,$80	    ; "SCORE"
+    .BYTE $1C, $C,$18,$1B, $E,$80	    ; "SCORE"
 PPUString_C1986Sunsoft:
-	  .BYTE $27,$FF,  1,  9,  8,  6,$FF,$F6
+    .BYTE $27,$FF,  1,  9,  8,  6,$FF,$F6
     .BYTE $F7,$F8,$F9,$FA,$FB,$80	; 8 ; "(C) 1986	SUNSOFT"
 PPUString_SunElectronicsCorp:
-	  .BYTE $1C,$1E,$17,$FF, $E,$15, $E,	$C
+    .BYTE $1C,$1E,$17,$FF, $E,$15, $E,	$C
     .BYTE $1D,$1B,$18,$17,$12, $C,$1C,$FF; 8 ; "SUN ELECTRONICS	CORP."
     .BYTE  $C,$18,$1B,$19,$24,$80	; $10
 PPUString_GameOver:
-	  .BYTE $10, $A,$16, $E,$FF,$18,$1F, $E
+    .BYTE $10, $A,$16, $E,$FF,$18,$1F, $E
     .BYTE $1B,$80			; 8 ; "GAME OVER"
 PPUString_Zone:
-	  .BYTE $23,$18,$17, $E,$FF,$25,$80   ; "ZONE	!"
+    .BYTE $23,$18,$17, $E,$FF,$25,$80   ; "ZONE	!"
 PPUString_MysteyAdventureStart:
-	  .BYTE $16,$22,$1C,$1D, $E,$1B,$22,$FF
+    .BYTE $16,$22,$1C,$1D, $E,$1B,$22,$FF
     .BYTE  $A, $D,$1F, $E,$17,$1D,$1E,$1B; 8 ; "MYSTERY	ADVENTURE START.."
     .BYTE  $E,$FF,$1C,$1D, $A,$1B,$1D,$24; $10
     .BYTE $24,$80			; $18
 PPUString_OK:
-	  .BYTE $18,$14,$FF,$25,$80		 ; "OK !" (unused)
+    .BYTE $18,$14,$FF,$25,$80		 ; "OK !" (unused)
 PPUString_Out:
-	  .BYTE $18,$1E,$1D,$FF,$25,$80	  ;	DATA XREF: BANK0:WriteToPPUStringso
+    .BYTE $18,$1E,$1D,$FF,$25,$80	  ;	DATA XREF: BANK0:WriteToPPUStringso
 					; "OUT !" (unused)
 PPUString_Warp:
-	  .BYTE $20, $A,$1B,$19,$FF,$25,$80   ; "WARP	!" (unused)
-byte_C61A:
-	  .BYTE	$3A
-    .BYTE $4E
-    .BYTE $62
-    .BYTE $76
-    .BYTE $8A
-    .BYTE $9E
-    .BYTE $B2
-    .BYTE $C6
-byte_C622:
-	  .BYTE	$A0
-    .BYTE $9C
-    .BYTE $98
-    .BYTE $94
-    .BYTE $90
-    .BYTE $8C
-    .BYTE $88
-    .BYTE $84
+    .BYTE $20, $A,$1B,$19,$FF,$25,$80   ; "WARP	!" (unused)
+IntermissionItemXPos:
+    .BYTE $3A,$4E,$62,$76,$8A,$9E,$B2,$C6
+IntermissionItemYPos:
+    .BYTE $A0,$9C,$98,$94,$90,$8C,$88,$84
 OrdinalSuffixes1:
-	  .BYTE $1C,$17,$1B,$1D,	$A	     ; Ordinal suffixes for the "#TH	ZONE!" messages.
+    .BYTE $1C,$17,$1B,$1D,	$A	     ; Ordinal suffixes for the "#TH	ZONE!" messages.
 					; ST ND	RD TH AL (from FINAL)
 OrdinalSuffixes2:
-	  .BYTE $1D, $D,	$D,$11,$15
+    .BYTE $1D, $D,	$D,$11,$15
 PPU_TitleScreenLogo:
-	  .BYTE $FF,$B0,$FD,$C8,$FD,$C1,$D0,$B8,$FD,$FD,$B1,$C0,$C8,$B5,$B4,$FD,$FD,$BA,$B2,$C8,$B5,$FF,$B2,$C3,$E7,$BB,$BC,$C3,$E9,$FF,$FF,$FF
+    .BYTE $FF,$B0,$FD,$C8,$FD,$C1,$D0,$B8,$FD,$FD,$B1,$C0,$C8,$B5,$B4,$FD,$FD,$BA,$B2,$C8,$B5,$FF,$B2,$C3,$E7,$BB,$BC,$C3,$E9,$FF,$FF,$FF
     .BYTE $FF,$FF,$B0,$B1,$D0,$B8,$B1,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF,$B4,$B5,$FF,$FF,$B4,$B5,$BE,$BD,$BD,$BF,$CB,$CC,$D3,$D0,$D1,$FF,$FF; $20
     .BYTE $FF,$FF,$C0,$B9,$B1,$C0,$C1,$D0,$C8,$FD,$C1,$FF,$FF,$FF,$B4,$C8,$FD,$D3,$FF,$B4,$B5,$FF,$CD,$CE,$CF,$EF,$DC,$FD,$B1,$FF,$FF,$FF; $40
     .BYTE $FF,$FF,$D0,$C9,$D7,$D0,$D9,$FF,$FF,$D0,$D1,$FF,$FF,$C8,$FF,$B4,$B5,$FF,$FF,$B4,$B5,$FF,$DD,$DE,$DF,$D3,$B2,$D8,$FD,$D3,$FF,$FF; $60
@@ -11732,20 +11594,20 @@ sub_C78F:
 
 loc_C7A3:
     LDA	    #0
-    STA	    byte_1B
+    STA	    word_1A+1
     LDA	    unk_42,X
     ASL	    A
-    ROL	    byte_1B
+    ROL	    word_1A+1
     CLC
     ADC	    unk_30,X
-    STA	    byte_1A
-    LDA	    byte_1B
+    STA	    word_1A
+    LDA	    word_1A+1
     ADC	    unk_36,X
-    STA	    byte_1B
+    STA	    word_1A+1
     LDY	    #0
 
 loc_C7C1:
-    LDA	    (byte_1A),Y
+    LDA	    (word_1A),Y
     CMP	    #$FF
     BNE	    loc_C7DC
     STA	    unk_42,X
@@ -11761,7 +11623,7 @@ loc_C7C1:
 loc_C7DC:
     STA	    byte_25
     INY
-    LDA	    (byte_1A),Y
+    LDA	    (word_1A),Y
     STA	    byte_26
     LDA	    byte_25
     CMP	    #$C0
@@ -11867,7 +11729,7 @@ loc_C88C:
     LDA	    byte_26
     AND	    #$1F
     TAY
-    LDA	    byte_C925,Y
+    LDA	    MusicNoteLength,Y
     STA	    unk_54,X
     LDA	    byte_26
     TAY
@@ -11946,35 +11808,35 @@ sub_C900:
 
 ; ---------------------------------------------------------------------------
 MusicNoteScale:
-	.BYTE  $D,$5C
-	.BYTE  $C,$9C			; 2 ; probably.	idk.
-	.BYTE  $B,$E8			; 4
-	.BYTE  $B,$3C			; 6
-	.BYTE  $A,$9A			; 8
-	.BYTE  $A,	2			; $A
-	.BYTE   9,$72			; $C
-	.BYTE   8,$EA			; $E
-	.BYTE   8,$6A			; $10
-	.BYTE   7,$F2			; $12
-	.BYTE   7,$80			; $14
-	.BYTE   7,$14			; $16
-byte_C925:
-    .BYTE	$7F,  1,  2,  3,  4,  5,  6,  7
+    .BYTE  $D,$5C
+    .BYTE  $C,$9C			; 2 ; probably.	idk.
+    .BYTE  $B,$E8			; 4
+    .BYTE  $B,$3C			; 6
+    .BYTE  $A,$9A			; 8
+    .BYTE  $A,	2			; $A
+    .BYTE   9,$72			; $C
+    .BYTE   8,$EA			; $E
+    .BYTE   8,$6A			; $10
+    .BYTE   7,$F2			; $12
+    .BYTE   7,$80			; $14
+    .BYTE   7,$14			; $16
+MusicNoteLength:
+    .BYTE $7F,  1,	2,  3,	4,  5,	6,  7
     .BYTE   8,	9, $A, $B, $C, $D, $E, $F; 8
     .BYTE   5, $A,$14,$28,$50,$1E,  7, $D; $10
     .BYTE   6, $C,$18,$30,$60,$24,  8,$10; $18
 byte_C945:
-	  .BYTE	1
+    .BYTE	1
     .BYTE 2
     .BYTE 4
     .BYTE 8
 byte_C949:
-	  .BYTE	$E
+    .BYTE	$E
     .BYTE $D
     .BYTE $B
     .BYTE 7
 MusicPointerTable:
-	  .WORD	Music_0
+    .WORD	Music_0
     .WORD Music_ZoneTheme1		; 1
     .WORD Music_ZoneTheme2		; 2
     .WORD Music_ZoneTheme3		; 3
@@ -11989,7 +11851,7 @@ MusicPointerTable:
     .WORD Music_BombExplode		; $C
     .WORD Music_Pause2			; $D
 Music_0:
-	  .BYTE	6
+    .BYTE	6
     MusicSeg 5, byte_C994, 0, 0, 0, 0 ;
     MusicSeg 4, byte_C994, 1, 0, 0, 0 ;
     MusicSeg 3, byte_C994, 2, 0, 0, 0 ;
@@ -11997,88 +11859,88 @@ Music_0:
     MusicSeg 1, byte_C994, 0, 0, 0, 0 ;
     MusicSeg 0, byte_C994, 1, 0, 0, 0 ;
 byte_C994:
-	  .BYTE	$FF
+    .BYTE	$FF
 Music_ZoneTheme1:
-	  .BYTE 3
+    .BYTE 3
     MusicSeg 2, byte_CAB1, 0, 0, 0, $C4 ;
     MusicSeg 1, byte_CBBD, 1, 0, 0, $CE ;
     MusicSeg 0, byte_CC49, 2, 0, 0, $7F ;
 Music_ZoneTheme2:
-	  .BYTE 3
+    .BYTE 3
     MusicSeg 2, byte_CCBF, 0, 0, 0, $9F ;
     MusicSeg 1, byte_CDF0, 1, 0, 0, $82 ;
     MusicSeg 0, byte_CF2A, 2, 0, 0, $7F ;
 Music_ZoneTheme3:
-	  .BYTE 3
+    .BYTE 3
     MusicSeg 2, byte_CF9E, 0, 0, 0, $DF ;
     MusicSeg 1, byte_D036, 1, 0, 0, $DF ;
     MusicSeg 0, byte_D0CE, 2, 0, 0, $7F ;
 Music_TitleScreen:
-	  .BYTE	3
+    .BYTE	3
     MusicSeg 2, byte_D124, 0, 0, 0, $CA ;
     MusicSeg 1, byte_D177, 1, 0, 0, $CA ;
     MusicSeg 0, byte_D1CA, 2, 0, 0, $7F ;
 Music_ZoneStart:
-	  .BYTE 3
+    .BYTE 3
     MusicSeg 2, byte_D1E9, 0, 0, 0, $CC ;
     MusicSeg 1, byte_D21A, 1, 0, 0, $CC ;
     MusicSeg 0, byte_D24B, 2, 0, 0, $7F ;
 Music_GameOver:
-	  .BYTE 3
+    .BYTE 3
     MusicSeg 2, byte_D264, 0, 0, 0, $C2 ;
     MusicSeg 1, byte_D295, 1, 0, 0, $C2 ;
     MusicSeg 0, byte_D2C8, 2, 0, 0, $7F ;
 Music_Death:
-	  .BYTE 3
+    .BYTE 3
     MusicSeg 2, byte_D2F5, 0, 0, $EE, $9F ;
     MusicSeg 1, byte_D310, 1, 0, 0, $9F ;
     MusicSeg 0, byte_C994, 2, 0, 0, 0 ;
 Music_Pause:
-	  .BYTE 3
+    .BYTE 3
     MusicSeg 5, byte_D321, 0, 0, $BB, $9F ;
     MusicSeg 4, byte_D336, 1, 0, $BB, $9F ;
     MusicSeg 3, byte_D34B, 2, 0, 0, $7F ;
 Music_Pause2:
-	  .BYTE 3
+    .BYTE 3
     MusicSeg 5, byte_D360, 0, 0, $BB, $9F ;
     MusicSeg 4, byte_D371, 1, 0, $BB, $9F ;
     MusicSeg 3, byte_D382, 2, 0, 0, $7F ;
 Music_ExtraLife:
-	  .BYTE 3
+    .BYTE 3
     MusicSeg 5, byte_D393, 0, 0, $EE, $81 ;
     MusicSeg 4, byte_D3A4, 1, 0, $EE, $81 ;
     MusicSeg 3, byte_D3B5, 2, 0, 0, $7F ;
 Music_Treasure:
-	  .BYTE 3
+    .BYTE 3
     MusicSeg 5, byte_D3C6, 0, 0, 0, $DF ;
     MusicSeg 4, byte_D3D3, 1, 0, 0, $DF ;
     MusicSeg 3, byte_D3E0, 2, 0, 0, $7F ;
 Music_ThrowBomb:
-	  .BYTE 1
+    .BYTE 1
     MusicSeg 5, byte_CAAE, 1, 0, $8E, $BF ;
 Music_BombExplode:
-	  .BYTE	3
+    .BYTE	3
     MusicSeg 5, byte_CAA5, 1, 0, 0, $DF ;
     MusicSeg 4, byte_CAA8, 2, 0, 0, $40 ;
     MusicSeg 3, byte_CAAB, 3, 0, 0, $A ;
 byte_CAA5:
-	  .BYTE	0
+    .BYTE	0
     .BYTE $FC
     .BYTE $FF
 byte_CAA8:
-	  .BYTE	$20
+    .BYTE	$20
     .BYTE $FB
     .BYTE $FF
 byte_CAAB:
-	  .BYTE	$F
+    .BYTE	$F
     .BYTE $FC
     .BYTE $FF
 byte_CAAE:
-	  .BYTE	$40
+    .BYTE	$40
     .BYTE $EA
     .BYTE $FF
 byte_CAB1:
-	  .BYTE	$F
+    .BYTE	$F
     .BYTE $F3
     .BYTE $F
     .BYTE $F2
@@ -12347,7 +12209,7 @@ byte_CAB1:
     .BYTE $BF
     .BYTE 4
 byte_CBBD:
-	  .BYTE	$F
+    .BYTE	$F
     .BYTE $F4
     .BYTE $23
     .BYTE $F1
@@ -12488,7 +12350,7 @@ byte_CBBD:
     .BYTE $BF
     .BYTE 1
 byte_CC49:
-	  .BYTE	$F
+    .BYTE	$F
     .BYTE $F4
     .BYTE $30
     .BYTE $F1
@@ -12607,7 +12469,7 @@ byte_CC49:
     .BYTE $BF
     .BYTE 1
 byte_CCBF:
-	  .BYTE	$F
+    .BYTE	$F
     .BYTE $FC
     .BYTE $F
     .BYTE $FC
@@ -12913,7 +12775,7 @@ byte_CCBF:
     .BYTE 0
     .BYTE $FF
 byte_CDF0:
-	  .BYTE	$A0
+    .BYTE	$A0
     .BYTE $82
     .BYTE $20
     .BYTE $F8
@@ -13228,7 +13090,7 @@ byte_CDF0:
     .BYTE $BF
     .BYTE 0
 byte_CF2A:
-	  .BYTE	$30
+    .BYTE	$30
     .BYTE $F8
     .BYTE $30
     .BYTE $F8
@@ -13345,7 +13207,7 @@ byte_CF2A:
     .BYTE $BF
     .BYTE 0
 byte_CF9E:
-	  .BYTE	$2B
+    .BYTE	$2B
     .BYTE $F3
     .BYTE $2B
     .BYTE $F1
@@ -13498,7 +13360,7 @@ byte_CF9E:
     .BYTE $BF
     .BYTE 0
 byte_D036:
-	  .BYTE	$27
+    .BYTE	$27
     .BYTE $F3
     .BYTE $27
     .BYTE $F1
@@ -13651,7 +13513,7 @@ byte_D036:
     .BYTE $BF
     .BYTE 0
 byte_D0CE:
-	  .BYTE	$24
+    .BYTE	$24
     .BYTE $F0
     .BYTE $24
     .BYTE $F0
@@ -13738,7 +13600,7 @@ byte_D0CE:
     .BYTE $BF
     .BYTE 0
 byte_D124:
-	  .BYTE	$32
+    .BYTE	$32
     .BYTE $F5
     .BYTE $32
     .BYTE $F1
@@ -13822,7 +13684,7 @@ byte_D124:
     .BYTE $F3
     .BYTE $FF
 byte_D177:
-	  .BYTE	$26
+    .BYTE	$26
     .BYTE $F5
     .BYTE $26
     .BYTE $F1
@@ -13906,7 +13768,7 @@ byte_D177:
     .BYTE $F3
     .BYTE $FF
 byte_D1CA:
-	  .BYTE	$22
+    .BYTE	$22
     .BYTE $F1
     .BYTE $32
     .BYTE $F1
@@ -13938,7 +13800,7 @@ byte_D1CA:
     .BYTE $F3
     .BYTE $FF
 byte_D1E9:
-	  .BYTE	$19
+    .BYTE	$19
     .BYTE $F1
     .BYTE $19
     .BYTE $F1
@@ -13988,7 +13850,7 @@ byte_D1E9:
     .BYTE $F1
     .BYTE $FF
 byte_D21A:
-	  .BYTE	$16
+    .BYTE	$16
     .BYTE $F1
     .BYTE $16
     .BYTE $F1
@@ -14038,7 +13900,7 @@ byte_D21A:
     .BYTE $F1
     .BYTE $FF
 byte_D24B:
-	  .BYTE	$22
+    .BYTE	$22
     .BYTE $F1
     .BYTE $BA
     .BYTE 0
@@ -14064,7 +13926,7 @@ byte_D24B:
     .BYTE $F1
     .BYTE $FF
 byte_D264:
-	  .BYTE	$2B
+    .BYTE	$2B
     .BYTE $F1
     .BYTE $2B
     .BYTE $F1
@@ -14114,7 +13976,7 @@ byte_D264:
     .BYTE $FA
     .BYTE $FF
 byte_D295:
-	  .BYTE	$27
+    .BYTE	$27
     .BYTE $F1
     .BYTE $27
     .BYTE $F1
@@ -14166,7 +14028,7 @@ byte_D295:
     .BYTE $FA
     .BYTE $FF
 byte_D2C8:
-	  .BYTE	$44
+    .BYTE	$44
     .BYTE $F1
     .BYTE $44
     .BYTE $F1
@@ -14212,7 +14074,7 @@ byte_D2C8:
     .BYTE $14
     .BYTE $FF
 byte_D2F5:
-	  .BYTE	$F
+    .BYTE	$F
     .BYTE $F2
     .BYTE $2B
     .BYTE $F0
@@ -14240,7 +14102,7 @@ byte_D2F5:
     .BYTE $EF
     .BYTE $FF
 byte_D310:
-	  .BYTE	$F
+    .BYTE	$F
     .BYTE $F2
     .BYTE $27
     .BYTE $F0
@@ -14258,7 +14120,7 @@ byte_D310:
     .BYTE $EF
     .BYTE $FF
 byte_D321:
-	  .BYTE	$25
+    .BYTE	$25
     .BYTE $F0
     .BYTE $28
     .BYTE $F0
@@ -14280,7 +14142,7 @@ byte_D321:
     .BYTE 8
     .BYTE $FF
 byte_D336:
-	  .BYTE	$23
+    .BYTE	$23
     .BYTE $F0
     .BYTE $26
     .BYTE $F0
@@ -14302,7 +14164,7 @@ byte_D336:
     .BYTE 8
     .BYTE $FF
 byte_D34B:
-	  .BYTE	$22
+    .BYTE	$22
     .BYTE $F0
     .BYTE $25
     .BYTE $F0
@@ -14324,7 +14186,7 @@ byte_D34B:
     .BYTE 8
     .BYTE $FF
 byte_D360:
-	  .BYTE	$25
+    .BYTE	$25
     .BYTE $F0
     .BYTE $28
     .BYTE $F0
@@ -14342,7 +14204,7 @@ byte_D360:
     .BYTE $F0
     .BYTE $FF
 byte_D371:
-	  .BYTE	$23
+    .BYTE	$23
     .BYTE $F0
     .BYTE $26
     .BYTE $F0
@@ -14360,7 +14222,7 @@ byte_D371:
     .BYTE $F0
     .BYTE $FF
 byte_D382:
-	  .BYTE	$22
+    .BYTE	$22
     .BYTE $F0
     .BYTE $25
     .BYTE $F0
@@ -14378,7 +14240,7 @@ byte_D382:
     .BYTE $F0
     .BYTE $FF
 byte_D393:
-	  .BYTE	$29
+    .BYTE	$29
     .BYTE $F0
     .BYTE $29
     .BYTE $F0
@@ -14396,7 +14258,7 @@ byte_D393:
     .BYTE $F0
     .BYTE $FF
 byte_D3A4:
-	  .BYTE	$26
+    .BYTE	$26
     .BYTE $F0
     .BYTE $26
     .BYTE $F0
@@ -14414,7 +14276,7 @@ byte_D3A4:
     .BYTE $F0
     .BYTE $FF
 byte_D3B5:
-	  .BYTE	$22
+    .BYTE	$22
     .BYTE $F0
     .BYTE $22
     .BYTE $F0
@@ -14432,7 +14294,7 @@ byte_D3B5:
     .BYTE $F0
     .BYTE $FF
 byte_D3C6:
-	  .BYTE	$37
+    .BYTE	$37
     .BYTE $EF
     .BYTE $37
     .BYTE $F0
@@ -14446,7 +14308,7 @@ byte_D3C6:
     .BYTE $F0
     .BYTE $FF
 byte_D3D3:
-	  .BYTE	$34
+    .BYTE	$34
     .BYTE $EF
     .BYTE $34
     .BYTE $F0
@@ -14460,7 +14322,7 @@ byte_D3D3:
     .BYTE $F0
     .BYTE $FF
 byte_D3E0:
-	  .BYTE	$30
+    .BYTE	$30
     .BYTE $EF
     .BYTE $30
     .BYTE $F0
@@ -14975,7 +14837,7 @@ byte_D3E0:
     .BYTE $80
 ; ------ Ending	here, not logged in CDL	------
 ZoneDoorTable:
-	  Door   0, $30, $20,   0 ;
+    Door   0, $30, $20,   0 ;
     Door   0, $92, $30, $12 ;		; 1
     Door   5,	$C, $28,   4 ;		; 2
     Door   5, $1C, $28, $59 ;		; 3
@@ -15216,7 +15078,7 @@ ZoneDoorTable:
     Door 255,	 0,   0,   0 ;		; $EE
     Door 255,	 0, $F7,   0 ;		; $EF
 ZoneDoorFlagsTable:
-	  .BYTE DoorFlags_Hidden|$80
+    .BYTE DoorFlags_Hidden|$80
     .BYTE DoorFlags_Open|$80		; 1
     .BYTE DoorFlags_Open|$80		; 2
     .BYTE DoorFlags_Closed|$80		; 3
@@ -15457,7 +15319,7 @@ ZoneDoorFlagsTable:
     .BYTE DoorFlags_Open|$80		; $EE
     .BYTE DoorFlags_Open|$80		; $EF
 ZoneItemTable:
-	  Item   5, $19, $70, $31 ;		  ;	DATA XREF: LoadZoneItemst
+    Item   5, $19, $70, $31 ;		  ;	DATA XREF: LoadZoneItemst
     Item   5,	$F, $70, $21 ;		; 1
     Item   7, $D7, $70,   5 ;		; 2
     Item   7, $A5, $6C, $11 ;		; 3
@@ -18337,7 +18199,8 @@ ZoneItemTable:
 ; $09-$0F
 ; $42
 ; $74-$77
-    Block   0,	  0,   0,   0,	 0,   0,   0,	0,   0,	  0,   0,   0,	 0,   0,   0,	0 ;
+stru_EA50:
+    Block   0,	0,   0,	  0,   0,   0,	 0,   0,   0,	0,   0,	  0,   0,   0,	 0,   0
     Block   0,	$C5, $C0, $C6, $C0, $C6, $C2, $C8, $C3,	$C9, $C4, $CA, $C4, $CA,   0, $C5 ;; 1
     Block   0,	$BF,   1, $BF,	 2, $BF,   3, $BF,   0,	$BF,   4, $BF,	 5, $BF,   6, $BF ;; 2
     Block   7,	$BF,   0, $BF,	 8, $BF,   9, $BF,  $A,	$BF,  $B, $BF,	 0, $BF,   0, $BF ;; 3
@@ -19473,7 +19336,7 @@ ZoneItemTable:
 ;
 ; Interestingly, only one Zone uses this feature; Zone 99.
 ZoneBlockPointerTable:
-	  .WORD ZoneBlocks_01,ZoneBlocks_02,ZoneBlocks_03,ZoneBlocks_04,ZoneBlocks_05
+    .WORD ZoneBlocks_01,ZoneBlocks_02,ZoneBlocks_03,ZoneBlocks_04,ZoneBlocks_05
     .WORD ZoneBlocks_06,ZoneBlocks_07,ZoneBlocks_08,ZoneBlocks_09,ZoneBlocks_10; 5
     .WORD ZoneBlocks_11,ZoneBlocks_12,ZoneBlocks_13,ZoneBlocks_14,ZoneBlocks_15; 10
     .WORD ZoneBlocks_16,ZoneBlocks_17,ZoneBlocks_18,ZoneBlocks_19,ZoneBlocks_20; 15
@@ -19494,207 +19357,207 @@ ZoneBlockPointerTable:
     .WORD ZoneBlocks_91,ZoneBlocks_92,ZoneBlocks_93,ZoneBlocks_94,ZoneBlocks_95; 90
     .WORD ZoneBlocks_96,ZoneBlocks_97,ZoneBlocks_98,ZoneBlocks_99,ZoneBlocks_100; 95
 ZoneBlocks_06:
-	  .BYTE $10,$18,$11,$18,$10
+    .BYTE $10,$18,$11,$18,$10
 ZoneBlocks_90:
-	  .BYTE $10,$18,$13,$18,$10
+    .BYTE $10,$18,$13,$18,$10
 ZoneBlocks_25:
-	  .BYTE $10,$18,$18,$10
+    .BYTE $10,$18,$18,$10
 ZoneBlocks_16:
-	  .BYTE $10,$18,$11,$12,$17,$17,$11,$14,$14,$11,$14,$15,$15,$15,$11,$16,$16,$11,$16,$15,$15,$15,$11,$14,$14,$11,$14,$17,$17,$17,$18,$10
+    .BYTE $10,$18,$11,$12,$17,$17,$11,$14,$14,$11,$14,$15,$15,$15,$11,$16,$16,$11,$16,$15,$15,$15,$11,$14,$14,$11,$14,$17,$17,$17,$18,$10
 ZoneBlocks_87:
-	  .BYTE $25,$22,$22,$24,$21,$22,$20,$20,$21,$21,$23,$20,$23,$22,$22,$25
+    .BYTE $25,$22,$22,$24,$21,$22,$20,$20,$21,$21,$23,$20,$23,$22,$22,$25
 ZoneBlocks_19:
-	  .BYTE $25,$22,$20,$21,$22,$23,$21,$22,$20,$21,$20,$21,$24,$20,$20,$22,$21,$25,$20
+    .BYTE $25,$22,$20,$21,$22,$23,$21,$22,$20,$21,$20,$21,$24,$20,$20,$22,$21,$25,$20
 ZoneBlocks_36:
-	  .BYTE $25,$26,$22,$26,$20,$26,$21,$26,$25,$26,$25,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26
+    .BYTE $25,$26,$22,$26,$20,$26,$21,$26,$25,$26,$25,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26
 ZoneBlocks_18:
-	  .BYTE $21,$25,$24,$25,$24,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20
+    .BYTE $21,$25,$24,$25,$24,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20
 ZoneBlocks_33:
-	  .BYTE   1,$2A,$2A,$2B,$2C,$2D,$2E,$2F,$2E,$2A,$2B,$2B,$2A,$2F,$2E,$2C,$2D,$2B,$30,$31,$30,$2B,$30,$2C,$31,$2D,$2F,$2E,$2A,$2A,  1,  0
+    .BYTE   1,$2A,$2A,$2B,$2C,$2D,$2E,$2F,$2E,$2A,$2B,$2B,$2A,$2F,$2E,$2C,$2D,$2B,$30,$31,$30,$2B,$30,$2C,$31,$2D,$2F,$2E,$2A,$2A,  1,  0
 ZoneBlocks_56:
-	  .BYTE   0,  1,$2E,$2A,$2F,  0,$31,$31,$30,  1,$2B,$2C,$2D,$2E,  1,  0
+    .BYTE   0,  1,$2E,$2A,$2F,  0,$31,$31,$30,  1,$2B,$2C,$2D,$2E,  1,  0
 ZoneBlocks_08:
-	  .BYTE $46,$47,$48,$49,$47,$48,$47,$48,$47,$48,$48,$47,$48,$47,$48,$49,$4A,$4C,$49,$49,$48,$47,$47,$48,$48,$47,$48,$47,$49,$48,$47,$46
+    .BYTE $46,$47,$48,$49,$47,$48,$47,$48,$47,$48,$48,$47,$48,$47,$48,$49,$4A,$4C,$49,$49,$48,$47,$47,$48,$48,$47,$48,$47,$49,$48,$47,$46
 ZoneBlocks_37:
-	  .BYTE $46,$48,$49,$47,$4A,$48,$49,$4B,$4A,$4B,$49,$49,$48,$47,$49,$46
+    .BYTE $46,$48,$49,$47,$4A,$48,$49,$4B,$4A,$4B,$49,$49,$48,$47,$49,$46
 ZoneBlocks_43:
-	  .BYTE $46,$49,$4B,$4A,$4C,$4D,$4A,$49,$4B,$4A,$4C,$4A,$4D,$49,$49,$46
+    .BYTE $46,$49,$4B,$4A,$4C,$4D,$4A,$49,$4B,$4A,$4C,$4A,$4D,$49,$49,$46
 ZoneBlocks_77:
-	  .BYTE $46,$4D,$4B,$4A,$4B,$4D,$4C,$4B,$4C,$4D,$4D,$4E,$4B,$4A,$4F,$4F,$4E,$49,$4E,$47,$4F,$4A,$4B,$4E,$4D,$4D
+    .BYTE $46,$4D,$4B,$4A,$4B,$4D,$4C,$4B,$4C,$4D,$4D,$4E,$4B,$4A,$4F,$4F,$4E,$49,$4E,$47,$4F,$4A,$4B,$4E,$4D,$4D
 ZoneBlocks_92:
-	  .BYTE   0,  0,  0,$50,$51,$52,$53,$51,$51,$53,$52,$51,$54,$53,$53,$52,$51,$54,$53,$51,$50,  0,  0,  0
+    .BYTE   0,  0,  0,$50,$51,$52,$53,$51,$51,$53,$52,$51,$54,$53,$53,$52,$51,$54,$53,$51,$50,  0,  0,  0
 ZoneBlocks_27:
-	  .BYTE   0,  0,  0,$7D,$7B,$7A,$7C,$7B,$7B,$7A,$7D,$7D,$7F,$7D,$7E,$7E,$7D,$7E,$7F,$7F,$7A,$7B,$7B,$7C,$7C,$7A,$7B,$7C,$7A,$7F,  0,  0
+    .BYTE   0,  0,  0,$7D,$7B,$7A,$7C,$7B,$7B,$7A,$7D,$7D,$7F,$7D,$7E,$7E,$7D,$7E,$7F,$7F,$7A,$7B,$7B,$7C,$7C,$7A,$7B,$7C,$7A,$7F,  0,  0
 ZoneBlocks_03:
-	  .BYTE   0,  0,  0,$56,$57,$56,$57,$56,$58,$56,$57,$57,$58,$57,$58,$57,$56,$57,$58,$56,$56,  0,  0,  0
+    .BYTE   0,  0,  0,$56,$57,$56,$57,$56,$58,$56,$57,$57,$58,$57,$58,$57,$56,$57,$58,$56,$56,  0,  0,  0
 ZoneBlocks_82:
-	  .BYTE   0,  1,$34,$35,$34,$35,$34,$33,$35,$32,$33,$34,$32,$33,$34,$35,$32,$34,$35,  1,  0
+    .BYTE   0,  1,$34,$35,$34,$35,$34,$33,$35,$32,$33,$34,$32,$33,$34,$35,$32,$34,$35,  1,  0
 ZoneBlocks_10:
-	  .BYTE   0,  0,$62,$59,$44,$45,$43,$43,$43,$44,$44,$45,$45,$44,$43,$45,$44,$43,$45,$59,$62,  0,  0
+    .BYTE   0,  0,$62,$59,$44,$45,$43,$43,$43,$44,$44,$45,$45,$44,$43,$45,$44,$43,$45,$59,$62,  0,  0
 ZoneBlocks_69:
-	  .BYTE   1,$8A,$8A,$8A,$8B,$8A,$8A,$8B,$8C,$8A,$8A,$8A,$8A,$8A,$8C,$8B,$8D,$8B,$8A,$8A,$8A,$8A,$8B,$8C,$8A,$8A,$8A,$8B,$8B,$8A,  1,$8B
+    .BYTE   1,$8A,$8A,$8A,$8B,$8A,$8A,$8B,$8C,$8A,$8A,$8A,$8A,$8A,$8C,$8B,$8D,$8B,$8A,$8A,$8A,$8A,$8B,$8C,$8A,$8A,$8A,$8B,$8B,$8A,  1,$8B
 ZoneBlocks_60:
-	  .BYTE $1D,$78,$79,$78,$79,$78,$79,$79,$78,$78,$79,$78,$79,$78,$79,$79,$1D
+    .BYTE $1D,$78,$79,$78,$79,$78,$79,$79,$78,$78,$79,$78,$79,$78,$79,$79,$1D
 ZoneBlocks_74:
-	  .BYTE $8A,  1,$8A,$94,$8A,$94,$8A,$95,$94,$8A,$94,$95,$8A,$95,$94,$8A,$8A,  1,$8A
+    .BYTE $8A,  1,$8A,$94,$8A,$94,$8A,$95,$94,$8A,$94,$95,$8A,$95,$94,$8A,$8A,  1,$8A
 ZoneBlocks_70:
-	  .BYTE $62,$60,$62
+    .BYTE $62,$60,$62
 ZoneBlocks_34:
-	  .BYTE $73,  1,$70,$71,$71,$72,$70,$73,$73,$73,$71,$73,$71,$73,  1,$73
+    .BYTE $73,  1,$70,$71,$71,$72,$70,$73,$73,$73,$71,$73,$71,$73,  1,$73
 ZoneBlocks_81:
-	  .BYTE   0,  0,  0,  0,$63,  0,  0,  0,  0
+    .BYTE   0,  0,  0,  0,$63,  0,  0,  0,  0
 ZoneBlocks_13:
-	  .BYTE $81,$80,$82,$83,$84,$83,$85,$86,$82,$84,$86,$81,$82,$85,$83,$84,$82,$83,$86,$81,$81,$80,$83
+    .BYTE $81,$80,$82,$83,$84,$83,$85,$86,$82,$84,$86,$81,$82,$85,$83,$84,$82,$83,$86,$81,$81,$80,$83
 ZoneBlocks_02:
-	  .BYTE $5F,$5A,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5E,$5E,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5B,$5F
+    .BYTE $5F,$5A,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5E,$5E,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5B,$5F
 ZoneBlocks_50:
-	  .BYTE $5F,$5B,$5A,$5E,$5B,$5A,$5B,$5A,$5B,$5A,$5B,$5A,$5B,$5A,$5B,$5F
+    .BYTE $5F,$5B,$5A,$5E,$5B,$5A,$5B,$5A,$5B,$5A,$5B,$5A,$5B,$5A,$5B,$5F
 ZoneBlocks_73:
-	  .BYTE $5F,$5E,$5C,$5D,$5C,$5D,$5C,$5D,$5C,$5D,$5C,$5D,$5C,$5D,$5C,$5F,$5F,$5F,$1D
+    .BYTE $5F,$5E,$5C,$5D,$5C,$5D,$5C,$5D,$5C,$5D,$5C,$5D,$5C,$5D,$5C,$5F,$5F,$5F,$1D
 ZoneBlocks_01:
-	  .BYTE $62,  0,$62,$59,$59,$8A,$8E,$8F,$8A,$8F,$8E,$8A,$8E,$8F,$8F,$8F,$8A,$8E,$8E,$8A,$59,$59,  0,$62,  0
+    .BYTE $62,  0,$62,$59,$59,$8A,$8E,$8F,$8A,$8F,$8E,$8A,$8E,$8F,$8F,$8F,$8A,$8E,$8E,$8A,$59,$59,  0,$62,  0
 ZoneBlocks_04:
-	  .BYTE   0,  0,  0,$39,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3B,$39,$3A,$3B,$39,$3B,$39,$3B,$39,$3B,$39,$3A,$3B,  0,  0,  0
+    .BYTE   0,  0,  0,$39,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3B,$39,$3A,$3B,$39,$3B,$39,$3B,$39,$3B,$39,$3A,$3B,  0,  0,  0
 ZoneBlocks_21:
-	  .BYTE $63,$67,$68,$68,$67,$68,$67,$64
+    .BYTE $63,$67,$68,$68,$67,$68,$67,$64
 ZoneBlocks_12:
-	  .BYTE $10,$13,$65,$66,$11,$65,$65,$65,$66,$11,$13,$13,$13,$13,$66,$10
+    .BYTE $10,$13,$65,$66,$11,$65,$65,$65,$66,$11,$13,$13,$13,$13,$66,$10
 ZoneBlocks_07:
-	  .BYTE   0,  0,  0,$59,$3D,$3E,$3F,$3C,$3C,$3E,$3C,$3F,$3C,$3F,$3C,$3E,$3C,$3E,$3C,$3D,$59,  0,  0,  0
+    .BYTE   0,  0,  0,$59,$3D,$3E,$3F,$3C,$3C,$3E,$3C,$3F,$3C,$3F,$3C,$3E,$3C,$3E,$3C,$3D,$59,  0,  0,  0
 ZoneBlocks_62:
-	  .BYTE   0,  0,  0,$1D,$3A,$3A,$3B,  0,  0,  0
+    .BYTE   0,  0,  0,$1D,$3A,$3A,$3B,  0,  0,  0
 ZoneBlocks_80:
-	  .BYTE $1D,$1E,$1E,$1F,$1E,$1F,$1F,$1F,$1D
+    .BYTE $1D,$1E,$1E,$1F,$1E,$1F,$1F,$1F,$1D
 ZoneBlocks_97:
-	  .BYTE   0,  0,  0,$69,$69,$69,$69,  0,$63,  0,  0,  0
+    .BYTE   0,  0,  0,$69,$69,$69,$69,  0,$63,  0,  0,  0
 ZoneBlocks_39:
-	  .BYTE $81,$80,$81,$80,$81
+    .BYTE $81,$80,$81,$80,$81
 ZoneBlocks_42:
-	  .BYTE   0,  0,$40,  0,  0
+    .BYTE   0,  0,$40,  0,  0
 ZoneBlocks_51:
-	  .BYTE   0,  0,  0,$7E,$7F,$7F,$7C,$7C,$7D,$7E,$7F,$7D,$7E,  0,  0,  0
+    .BYTE   0,  0,  0,$7E,$7F,$7F,$7C,$7C,$7D,$7E,$7F,$7D,$7E,  0,  0,  0
 ZoneBlocks_94:
-	  .BYTE   0,$7F,  0,$7E,$7D,$7C,$7D,$7F,  0,  1,  0
+    .BYTE   0,$7F,  0,$7E,$7D,$7C,$7D,$7F,  0,  1,  0
 ZoneBlocks_65:
-	  .BYTE   0,$7F,$7B,$7C,$7D,$7E,$7F,$7F,  0,  0,  0
+    .BYTE   0,$7F,$7B,$7C,$7D,$7E,$7F,$7F,  0,  0,  0
 ZoneBlocks_98:
-	  .BYTE   0,  0,  0,  1,  1,  1,  1,  1,  1,  1,  1,  1,$7E,  0,  0,  0
+    .BYTE   0,  0,  0,  1,  1,  1,  1,  1,  1,  1,  1,  1,$7E,  0,  0,  0
 ZoneBlocks_75:
-	  .BYTE   0,$64,  0
+    .BYTE   0,$64,  0
 ZoneBlocks_95:
-	  .BYTE   0,  1,$54,$56,$54,$52,$51,$51,$50,$57,  0,  0,  0
+    .BYTE   0,  1,$54,$56,$54,$52,$51,$51,$50,$57,  0,  0,  0
 ZoneBlocks_32:
-	  .BYTE $3D,  1,$3D,$3F,$3C,$3C,$3F,$3C,$3F,$37,  1,$3D
+    .BYTE $3D,  1,$3D,$3F,$3C,$3C,$3F,$3C,$3F,$37,  1,$3D
 ZoneBlocks_57:
-	  .BYTE   0,  0,  0,$6A,$6F,$6B,$6C,$6D,$6C,$6E,$6D,$6A,$6F,$6F,$6F,$6F,$6B,$6D,$6C,$6C,$6E,  0,  0,  0
+    .BYTE   0,  0,  0,$6A,$6F,$6B,$6C,$6D,$6C,$6E,$6D,$6A,$6F,$6F,$6F,$6F,$6B,$6D,$6C,$6C,$6E,  0,  0,  0
 ZoneBlocks_45:
-	  .BYTE   0,  1,$6A,$6B,$6D,$6C,$6E,$6D,$6C,$6A,$6B,$6C,$6D,$6D,$6C,$1D
+    .BYTE   0,  1,$6A,$6B,$6D,$6C,$6E,$6D,$6C,$6A,$6B,$6C,$6D,$6D,$6C,$1D
 ZoneBlocks_67:
-	  .BYTE   0,  0,  0,$6C,$6F,$6C,$6A,$6B,$6E,$6F,$6F,$6B,$6E,  0,  0,  0
+    .BYTE   0,  0,  0,$6C,$6F,$6C,$6A,$6B,$6E,$6F,$6F,$6B,$6E,  0,  0,  0
 ZoneBlocks_23:
-	  .BYTE $55,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3B,$39,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$55
+    .BYTE $55,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3B,$39,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$55
 ZoneBlocks_64:
-	  .BYTE $1D,$2A,$2B,$1D,$52,$54,  0,  0,  0,  0
+    .BYTE $1D,$2A,$2B,$1D,$52,$54,  0,  0,  0,  0
 ZoneBlocks_99:
-	  .BYTE $88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$89,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88
+    .BYTE $88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$89,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88
 ZoneBlocks_79:
-	  .BYTE $91,$87,$92,$90,$91,$93,$92,$90,$93,$91,$91,$92,$90,$92,$91,$92,$92,$90,$91,$91,$90,$91,$87,$92
+    .BYTE $91,$87,$92,$90,$91,$93,$92,$90,$93,$91,$91,$92,$90,$92,$91,$92,$92,$90,$91,$91,$90,$91,$87,$92
 ZoneBlocks_52:
-	  .BYTE   0,  1,$92,$90,$72,$93,$90,$73,$91,$93,$71,$93,$73,  1,  0
+    .BYTE   0,  1,$92,$90,$72,$93,$90,$73,$91,$93,$71,$93,$73,  1,  0
 ZoneBlocks_100:
-	  .BYTE $1D,$27,$27,$19,$1B,$1A,$1B,$19,$1B,$1C,$1A,$27,$1D,$27,$1D
+    .BYTE $1D,$27,$27,$19,$1B,$1A,$1B,$19,$1B,$1C,$1A,$27,$1D,$27,$1D
 ZoneBlocks_29:
-	  .BYTE $36,  1,$36,$36,$36,$37,$36,$36,$36,$36,$37,$36,$36,$36,$37,  0,  0,  0
+    .BYTE $36,  1,$36,$36,$36,$37,$36,$36,$36,$36,$37,$36,$36,$36,$37,  0,  0,  0
 ZoneBlocks_20:
-	  .BYTE $8A,  1,$8E,$96,$41,$94,$8F,  1,$8A
+    .BYTE $8A,  1,$8E,$96,$41,$94,$8F,  1,$8A
 ZoneBlocks_85:
-	  .BYTE   0,  0,  0,$37,$61,$61,$61,$61,$61,$61,$61,$61,$61,$61,$61,$61,$61,$37,  1,  0
+    .BYTE   0,  0,  0,$37,$61,$61,$61,$61,$61,$61,$61,$61,$61,$61,$61,$61,$61,$37,  1,  0
 ZoneBlocks_46:
-	  .BYTE $55,$67,$68,$68,$67,$68,$67,$68,$68,$67,$67,$67,$55
+    .BYTE $55,$67,$68,$68,$67,$68,$67,$68,$68,$67,$67,$67,$55
 ZoneBlocks_54:
-	  .BYTE $60,$87,$69,$69,$69,  0,  0,  0
+    .BYTE $60,$87,$69,$69,$69,  0,  0,  0
 ZoneBlocks_14:
-	  .BYTE   0,  0,  0,$59,$3C,$59,  0,  0,  0
+    .BYTE   0,  0,  0,$59,$3C,$59,  0,  0,  0
 ZoneBlocks_26:
-	  .BYTE   6,  1,  6,  6,  7,  8,  8,  2,  3,  4,  5,  8,  8,  7,  6,  6,  1,  6
+    .BYTE   6,  1,  6,  6,  7,  8,  8,  2,  3,  4,  5,  8,  8,  7,  6,  6,  1,  6
 ZoneBlocks_96:
-	  .BYTE $1D,$78,$79,$28,$29,$29,$29,$29,$29,$29,$29,$29,$29,$29,$79,$78,$28,$1D
+    .BYTE $1D,$78,$79,$28,$29,$29,$29,$29,$29,$29,$29,$29,$29,$29,$79,$78,$28,$1D
 ZoneBlocks_83:
-	  .BYTE $1D,$28,$29,$78,$29,$79,$29,$28,$29,$1D
+    .BYTE $1D,$28,$29,$78,$29,$79,$29,$28,$29,$1D
 ZoneBlocks_47:
-	  .BYTE $8A,$87,$8A,$8F,$8A,$8F,$8F,$8A,$8E,$8E,$8E,$8A,$8A,$8A,$87,$8A
+    .BYTE $8A,$87,$8A,$8F,$8A,$8F,$8F,$8A,$8E,$8E,$8E,$8A,$8A,$8A,$87,$8A
 ZoneBlocks_78:
-	  .BYTE   0,  0,  0,$87,$87,  0,  0,  0
+    .BYTE   0,  0,  0,$87,$87,  0,  0,  0
 ZoneBlocks_84:
-	  .BYTE $8A,  1,$8A,$8A,$95,$8A,$8A,  1,$8A
+    .BYTE $8A,  1,$8A,$8A,$95,$8A,$8A,  1,$8A
 ZoneBlocks_93:
-	  .BYTE $1D,$88,$1D
+    .BYTE $1D,$88,$1D
 ZoneBlocks_91:
-	  .BYTE $1D,$79,$1D
+    .BYTE $1D,$79,$1D
 ZoneBlocks_63:
-	  .BYTE $1D,$28,$1D
+    .BYTE $1D,$28,$1D
 ZoneBlocks_76:
-	  .BYTE $1D,$78,$1D
+    .BYTE $1D,$78,$1D
 ZoneBlocks_59:
-	  .BYTE   0,  0,  0,  0,$87,$87,$87,$87,$87,$87,$87,$87,$87,$87,  0,  0,  0
+    .BYTE   0,  0,  0,  0,$87,$87,$87,$87,$87,$87,$87,$87,$87,$87,  0,  0,  0
 ZoneBlocks_24:
-	  .BYTE $8A,  1,$8A,$8A,$8A,$8A,$38,$8A,$8A,$8A,$8A,  1,$8A
+    .BYTE $8A,  1,$8A,$8A,$8A,$8A,$38,$8A,$8A,$8A,$8A,  1,$8A
 ZoneBlocks_49:
-	  .BYTE $36,  1,$36,$36,  1,$36
+    .BYTE $36,  1,$36,$36,  1,$36
 ZoneBlocks_44:
-	  .BYTE   0,  1,$32,$45,$34,$44,$43,$33,$32,$45,$32,$43,$32,$45,$44,$32,  1,  0
+    .BYTE   0,  1,$32,$45,$34,$44,$43,$33,$32,$45,$32,$43,$32,$45,$44,$32,  1,  0
 ZoneBlocks_66:
-	  .BYTE $1D,$37,$1D
+    .BYTE $1D,$37,$1D
 ZoneBlocks_11:
-	  .BYTE $46,$46,$47
+    .BYTE $46,$46,$47
 ZoneBlocks_72:
-	  .BYTE $1D,$2A,$2F,$2C,$2B,$2D,$2C,$2B,$2C,$31,$2B,$30,$2B,$2C,$2D,$31,$2F,$30,$2F,$1D
+    .BYTE $1D,$2A,$2F,$2C,$2B,$2D,$2C,$2B,$2C,$31,$2B,$30,$2B,$2C,$2D,$31,$2F,$30,$2F,$1D
 ZoneBlocks_30:
-	  .BYTE   0,  0,  0,$7F,$56,$57,$57,$57,$58,$57,$57,$58,$57,$56,$56,$7F,  0,  0,  0
+    .BYTE   0,  0,  0,$7F,$56,$57,$57,$57,$58,$57,$57,$58,$57,$56,$56,$7F,  0,  0,  0
 ZoneBlocks_40:
-	  .BYTE $10,$13,$13,$13,$65,$13,$66,$13,$66,$66,$13,$65,$66,$13,$13,$10
+    .BYTE $10,$13,$13,$13,$65,$13,$66,$13,$66,$66,$13,$65,$66,$13,$13,$10
 ZoneBlocks_61:
-	  .BYTE   0,  0,  0,$39,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3B,  0,  0,  0
+    .BYTE   0,  0,  0,$39,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3B,  0,  0,  0
 ZoneBlocks_71:
-	  .BYTE $73,  1,$72,$73,$72,$73,$73,$71,$72,$73,$73,$71,  1,$73
+    .BYTE $73,  1,$72,$73,$72,$73,$73,$71,$72,$73,$73,$71,  1,$73
 ZoneBlocks_55:
-	  .BYTE   0,  0,  0,  1,  0,  0,  0
+    .BYTE   0,  0,  0,  1,  0,  0,  0
 ZoneBlocks_53:
-	  .BYTE   0,  0,  0,$7F,  0,  0,  0
+    .BYTE   0,  0,  0,$7F,  0,  0,  0
 ZoneBlocks_15:
-	  .BYTE $10,$18,$10
+    .BYTE $10,$18,$10
 ZoneBlocks_05:
-	  .BYTE $5C,$5A,$5E,$5B,$5C
+    .BYTE $5C,$5A,$5E,$5B,$5C
 ZoneBlocks_35:
-	  .BYTE $1D,$5A,$5B,$1D
+    .BYTE $1D,$5A,$5B,$1D
 ZoneBlocks_22:
-	  .BYTE $5B,$5C,$5A
+    .BYTE $5B,$5C,$5A
 ZoneBlocks_41:
-	  .BYTE $1D,  1,$1D
+    .BYTE $1D,  1,$1D
 ZoneBlocks_31:
-	  .BYTE $55,$36,$55
+    .BYTE $55,$36,$55
 ZoneBlocks_17:
-	  .BYTE $55,$56,$55
+    .BYTE $55,$56,$55
 ZoneBlocks_09:
-	  .BYTE $10,$66,$10
+    .BYTE $10,$66,$10
 ZoneBlocks_38:
-	  .BYTE   0,  0,  0,$56,$57,$57,$58,$56,$57,$57,$58,$56,$56,  0,  0,  0
+    .BYTE   0,  0,  0,$56,$57,$57,$58,$56,$57,$57,$58,$56,$56,  0,  0,  0
 ZoneBlocks_28:
-	  .BYTE $10,$13,$11,$65,$11,$13,$13,$13,$65,$65,$13,$66,$10
+    .BYTE $10,$13,$11,$65,$11,$13,$13,$13,$65,$65,$13,$66,$10
 ZoneBlocks_48:
-	  .BYTE   0,  0,  0,$39,$3B,$39,$3B,$39,$3B,$39,$3B,$39,$3B,  0,  0,  0
+    .BYTE   0,  0,  0,$39,$3B,$39,$3B,$39,$3B,$39,$3B,$39,$3B,  0,  0,  0
 ZoneBlocks_58:
-	  .BYTE $1D,$37,$71,$73,$72,$73,$72,$70,$72,$37,$1D
+    .BYTE $1D,$37,$71,$73,$72,$73,$72,$70,$72,$37,$1D
 ZoneBlocks_68:
-	  .BYTE $1D,$1E,$1E,$1E,$1E,$1E,$1E,$1D
+    .BYTE $1D,$1E,$1E,$1E,$1E,$1E,$1E,$1D
 ZoneBlocks_86:
-	  .BYTE   0,  0,  0,$56,$56,$57,$57,$57,$58,$58,$57,$58,$57,$56,$56,  0,  0,  0
+    .BYTE   0,  0,  0,$56,$56,$57,$57,$57,$58,$58,$57,$58,$57,$56,$56,  0,  0,  0
 ZoneBlocks_88:
-	  .BYTE $55,$4D,$4E,$55
+    .BYTE $55,$4D,$4E,$55
 ZoneBlocks_89:
-	  .BYTE   0,  0,  0,$7D,$7A,$7B,$7D,$7C,$7D,$7E,$7D,$7C,$7D,$7F,$7E,  0,  0,  0
+    .BYTE   0,  0,  0,$7D,$7A,$7B,$7D,$7C,$7D,$7E,$7D,$7C,$7D,$7F,$7E,  0,  0,  0
 byte_FDE5:
-	  .BYTE	0
+    .BYTE	0
     .BYTE 0
     .BYTE 0
     .BYTE $20
@@ -19847,7 +19710,7 @@ byte_FDE5:
     .BYTE 0
     .BYTE   0
 ZoneCHRTable:
-	  .BYTE $36,$16,$16,$14,$14,$14,$34,$16,$14,$34
+    .BYTE $36,$16,$16,$14,$14,$14,$34,$16,$14,$34
     .BYTE $14,$14,$14,$36,$14,$14,$16,$14,$16,$34; 10
     .BYTE $14,$14,$14,$34,$14,$34,$16,$14,$14,$16; 20
     .BYTE $14,$34,$14,$36,$14,$16,$16,$14,$14,$16; 30
@@ -19862,7 +19725,7 @@ ZoneCHRTable:
     .BYTE   0
     .BYTE   0
 DebugWarpTable:
-	  .BYTE   0,$12,$14,$49,$A6,  3,$1C,  4,$AD,$42
+    .BYTE   0,$12,$14,$49,$A6,  3,$1C,  4,$AD,$42
     .BYTE $96,$17,$1B,$B0,$A4,	7,$AC,$4E,  8,$B1; $A
     .BYTE $1F,$A9,$71,$8F,$45,$B2,$22,$B4,$48,$9A; $14
     .BYTE $AB,$60, $A,$25,$A7,$28,$2C,$B6,$57,$9C; $1E
@@ -19873,7 +19736,7 @@ DebugWarpTable:
     .BYTE $51, $F,$7E,$84,$52,$C0,$47,$BE,$C1,$3F; $50
     .BYTE $87,$40,$85,$5B,$5F,$7B,$56,$5D,$72,$78; $5A
 ZoneMusicTable:
-	  .BYTE MusicTrack_ZoneTheme2
+    .BYTE MusicTrack_ZoneTheme2
     .BYTE MusicTrack_ZoneTheme1		; 1
     .BYTE MusicTrack_ZoneTheme2		; 2
     .BYTE MusicTrack_ZoneTheme3		; 3
@@ -19974,7 +19837,7 @@ ZoneMusicTable:
     .BYTE MusicTrack_ZoneTheme2		; 98
     .BYTE MusicTrack_ZoneTheme1		; 99
 UnknownData_FFAD:
-	  .BYTE $77,  2,$FF,$FE		     ; Not marked as read in CDL
+    .BYTE $77,  2,$FF,$FE		     ; Not marked as read in CDL
     .BYTE   2,$FF,  2,$FE		; 4
     .BYTE   2,$FF,  2,$FF		; 8
     .BYTE   2,$FF,$12,$FF		; 12
@@ -20000,7 +19863,6 @@ UnknownData_FFAD:
 IRQ:
     RTI
 ; End of function IRQ
-.pad $FFFA, $FF
 
 ; ---------------------------------------------------------------------------
     .WORD NMI

@@ -1,147 +1,145 @@
 
     ;.segment RAM
 PPUCtrl:
-	  .dsb 1	                      ; $0000
+    .dsb 1	                     ; $0000
 PPUMask:
-	  .dsb 1	                      ; $0001
+    .dsb 1	                     ; $0001
 byte_2:
-	  .dsb 1                       ; $0002
+    .dsb 1                      ; $0002
 byte_3:
-	  .dsb 1                       ; $0003
+    .dsb 1                      ; $0003
 byte_4:
-	  .dsb 1                       ; $0004
+    .dsb 1                      ; $0004
 PPUScrollY:
-	  .dsb 1                       ; $0005
+    .dsb 1                      ; $0005
 byte_6:
-	  .dsb 1                       ; $0006
+    .dsb 1                      ; $0006
 byte_7:
-	  .dsb 1                       ; $0007
+    .dsb 1                      ; $0007
 byte_8:
-	  .dsb 1                       ; $0008
+    .dsb 1                      ; $0008
 PPUScrollX:
-	  .dsb 1                       ; $0009
+    .dsb 1                      ; $0009
 CurrentCHRBanks:
-	  .dsb 1	                      ; $000a
+    .dsb 1	                     ; $000a
 byte_B:
-	  .dsb 1                       ; $000b
+    .dsb 1                      ; $000b
     .dsb 1                      ; $000c
     .dsb 1                      ; $000d
 byte_E:
-	  .dsb 1                       ; $000e
+    .dsb 1                      ; $000e
 byte_F:
-	  .dsb 1                       ; $000f
+    .dsb 1                      ; $000f
 byte_10:
-	  .dsb 1	                      ; $0010
+    .dsb 1	                     ; $0010
 byte_11:
-	  .dsb 1	                      ; $0011
+    .dsb 1	                     ; $0011
 byte_12:
-	  .dsb 1	                      ; $0012
+    .dsb 1	                     ; $0012
 byte_13:
-	  .dsb 1	                      ; $0013
+    .dsb 1	                     ; $0013
 word_14:
-	  .dsb 2                       ; $0014
+    .dsb 2                      ; $0014
 word_16:
-	  .dsb 2                       ; $0016
+    .dsb 2                      ; $0016
 word_18:
-	  .dsb 2                       ; $0018
-byte_1A:
-	  .dsb 1	                      ; $001a
-byte_1B:
-	  .dsb 1	                      ; $001b
+    .dsb 2                      ; $0018
+word_1A:
+    .dsb 2                      ; $001a
 word_1C:
-	  .dsb 2                       ; $001c
+    .dsb 2                      ; $001c
 word_1E:
-	  .dsb 2                       ; $001e
+    .dsb 2                      ; $001e
 byte_20:
-	  .dsb 1	                      ; $0020
+    .dsb 1	                     ; $0020
 byte_21:
-	  .dsb 1	                      ; $0021
+    .dsb 1	                     ; $0021
 byte_22:
-	  .dsb 1	                      ; $0022
+    .dsb 1	                     ; $0022
 byte_23:
-	  .dsb 1	                      ; $0023
+    .dsb 1	                     ; $0023
 byte_24:
-	  .dsb 1	                      ; $0024
+    .dsb 1	                     ; $0024
 byte_25:
-	  .dsb 1	                      ; $0025
+    .dsb 1	                     ; $0025
 byte_26:
-	  .dsb 1	                      ; $0026
+    .dsb 1	                     ; $0026
 byte_27:
-	  .dsb 1	                      ; $0027
+    .dsb 1	                     ; $0027
 byte_28:
-	  .dsb 1	                      ; $0028
+    .dsb 1	                     ; $0028
 byte_29:
-	  .dsb 1	                      ; $0029
+    .dsb 1	                     ; $0029
 byte_2A:
-	  .dsb 1	                      ; $002a
+    .dsb 1	                     ; $002a
 byte_2B:
-	  .dsb 1	                      ; $002b
+    .dsb 1	                     ; $002b
 byte_2C:
-	  .dsb 1	                      ; $002c
+    .dsb 1	                     ; $002c
 byte_2D:
-	  .dsb 1	                      ; $002d
+    .dsb 1	                     ; $002d
 byte_2E:
-	  .dsb 1	                      ; $002e
+    .dsb 1	                     ; $002e
 byte_2F:
-	  .dsb 1	                      ; $002f
+    .dsb 1	                     ; $002f
 unk_30:
-	  .dsb 1                       ; $0030
+    .dsb 1                      ; $0030
     .dsb 1                      ; $0031
     .dsb 1                      ; $0032
     .dsb 1                      ; $0033
     .dsb 1                      ; $0034
     .dsb 1                      ; $0035
 unk_36:
-	  .dsb 1                       ; $0036
+    .dsb 1                      ; $0036
     .dsb 1                      ; $0037
     .dsb 1                      ; $0038
     .dsb 1                      ; $0039
     .dsb 1                      ; $003a
     .dsb 1                      ; $003b
 unk_3C:
-	  .dsb 1                       ; $003c
+    .dsb 1                      ; $003c
     .dsb 1                      ; $003d
     .dsb 1                      ; $003e
     .dsb 1                      ; $003f
     .dsb 1                      ; $0040
     .dsb 1                      ; $0041
 unk_42:
-	  .dsb 1                       ; $0042
+    .dsb 1                      ; $0042
     .dsb 1                      ; $0043
     .dsb 1                      ; $0044
     .dsb 1                      ; $0045
     .dsb 1                      ; $0046
     .dsb 1                      ; $0047
 unk_48:
-	  .dsb 1                       ; $0048
+    .dsb 1                      ; $0048
     .dsb 1                      ; $0049
     .dsb 1                      ; $004a
     .dsb 1                      ; $004b
     .dsb 1                      ; $004c
     .dsb 1                      ; $004d
 unk_4E:
-	  .dsb 1                       ; $004e
+    .dsb 1                      ; $004e
     .dsb 1                      ; $004f
     .dsb 1                      ; $0050
     .dsb 1                      ; $0051
     .dsb 1                      ; $0052
     .dsb 1                      ; $0053
 unk_54:
-	  .dsb 1                       ; $0054
+    .dsb 1                      ; $0054
     .dsb 1                      ; $0055
     .dsb 1                      ; $0056
     .dsb 1                      ; $0057
     .dsb 1                      ; $0058
     .dsb 1                      ; $0059
 unk_5A:
-	  .dsb 1                       ; $005a
+    .dsb 1                      ; $005a
     .dsb 1                      ; $005b
     .dsb 1                      ; $005c
     .dsb 1                      ; $005d
     .dsb 1                      ; $005e
     .dsb 1                      ; $005f
 unk_60:
-	  .dsb 1                       ; $0060
+    .dsb 1                      ; $0060
     .dsb 1                      ; $0061
     .dsb 1                      ; $0062
     .dsb 1                      ; $0063
@@ -154,7 +152,7 @@ unk_60:
     .dsb 1                      ; $006a
     .dsb 1                      ; $006b
 unk_6C:
-	  .dsb 1                       ; $006c
+    .dsb 1                      ; $006c
     .dsb 1                      ; $006d
     .dsb 1                      ; $006e
     .dsb 1                      ; $006f
@@ -179,7 +177,7 @@ unk_6C:
     .dsb 1                      ; $0082
     .dsb 1                      ; $0083
 unk_84:
-	  .dsb 1                       ; $0084
+    .dsb 1                      ; $0084
     .dsb 1                      ; $0085
     .dsb 1                      ; $0086
     .dsb 1                      ; $0087
@@ -208,63 +206,63 @@ unk_84:
     .dsb 1                      ; $009e
     .dsb 1                      ; $009f
 byte_A0:
-	  .dsb 1	                      ; $00a0
+    .dsb 1	                     ; $00a0
 byte_A1:
-	  .dsb 1	                      ; $00a1
+    .dsb 1	                     ; $00a1
 word_A2:
-	  .dsb 2                       ; $00a2
+    .dsb 2                      ; $00a2
 byte_A4:
-	  .dsb 1	                      ; $00a4
+    .dsb 1	                     ; $00a4
 byte_A5:
-	  .dsb 1	                      ; $00a5
+    .dsb 1	                     ; $00a5
 byte_A6:
-	  .dsb 1	                      ; $00a6
+    .dsb 1	                     ; $00a6
 byte_A7:
-	  .dsb 1	                      ; $00a7
+    .dsb 1	                     ; $00a7
 byte_A8:
-	  .dsb 1	                      ; $00a8
+    .dsb 1	                     ; $00a8
     .dsb 1                      ; $00a9
     .dsb 1                      ; $00aa
 byte_AB:
-	  .dsb 1	                      ; $00ab
+    .dsb 1	                     ; $00ab
 byte_AC:
-	  .dsb 1	                      ; $00ac
+    .dsb 1	                     ; $00ac
 byte_AD:
-	  .dsb 1	                      ; $00ad
+    .dsb 1	                     ; $00ad
     .dsb 1                      ; $00ae
     .dsb 1                      ; $00af
 byte_B0:
-	  .dsb 1	                      ; $00b0
+    .dsb 1	                     ; $00b0
 byte_B1:
-	  .dsb 1	                      ; $00b1
+    .dsb 1	                     ; $00b1
 byte_B2:
-	  .dsb 1	                      ; $00b2
+    .dsb 1	                     ; $00b2
 byte_B3:
-	  .dsb 1	                      ; $00b3
+    .dsb 1	                     ; $00b3
 byte_B4:
-	  .dsb 1	                      ; $00b4
+    .dsb 1	                     ; $00b4
 byte_B5:
-	  .dsb 1	                      ; $00b5
+    .dsb 1	                     ; $00b5
 byte_B6:
-	  .dsb 1	                      ; $00b6
+    .dsb 1	                     ; $00b6
 byte_B7:
-	  .dsb 1	                      ; $00b7
+    .dsb 1	                     ; $00b7
 word_B8:
-	  .dsb 2                       ; $00b8
+    .dsb 2                      ; $00b8
 CurrentZoneBlockPointer:
-	  .dsb 2                       ; $00ba
+    .dsb 2                      ; $00ba
 byte_BC:
-	  .dsb 1	                      ; $00bc
+    .dsb 1	                     ; $00bc
 byte_BD:
-	  .dsb 1	                      ; $00bd
+    .dsb 1	                     ; $00bd
 byte_BE:
-	  .dsb 1	                      ; $00be
+    .dsb 1	                     ; $00be
 byte_BF:
-	  .dsb 1	                      ; $00bf
+    .dsb 1	                     ; $00bf
 unk_C0:
-	  .dsb 1                       ; $00c0
+    .dsb 1                      ; $00c0
 unk_C1:
-	  .dsb 1                       ; $00c1
+    .dsb 1                      ; $00c1
     .dsb 1                      ; $00c2
     .dsb 1                      ; $00c3
     .dsb 1                      ; $00c4
@@ -296,9 +294,9 @@ unk_C1:
     .dsb 1                      ; $00de
     .dsb 1                      ; $00df
 unk_E0:
-	  .dsb 1                       ; $00e0
+    .dsb 1                      ; $00e0
 unk_E1:
-	  .dsb 1                       ; $00e1
+    .dsb 1                      ; $00e1
     .dsb 1                      ; $00e2
     .dsb 1                      ; $00e3
     .dsb 1                      ; $00e4
@@ -394,9 +392,9 @@ unk_E1:
     .dsb 1                      ; $013e
     .dsb 1                      ; $013f
 byte_140:
-	  .dsb 1                       ; $0140
+    .dsb 1                      ; $0140
 byte_141:
-	  .dsb 1                       ; $0141
+    .dsb 1                      ; $0141
     .dsb 1                      ; $0142
     .dsb 1                      ; $0143
     .dsb 1                      ; $0144
@@ -404,52 +402,52 @@ byte_141:
     .dsb 1                      ; $0146
     .dsb 1                      ; $0147
 UnknownTimer0148:
-	  .dsb 1                       ; $0148
+    .dsb 1                      ; $0148
 PauseCooldownTimer:
-	  .dsb 1                       ; $0149
+    .dsb 1                      ; $0149
 					; Can't pause while non-zero
 UnknownTimer014A:
-	  .dsb 1                       ; $014a
+    .dsb 1                      ; $014a
 UnknownTimer014B:
-	  .dsb 1                       ; $014b
+    .dsb 1                      ; $014b
     .dsb 1                      ; $014c
     .dsb 1                      ; $014d
     .dsb 1                      ; $014e
     .dsb 1                      ; $014f
 NMIWaitFlag:
-	  .dsb 1                       ; $0150
+    .dsb 1                      ; $0150
 DemoActive:
-	  .dsb 1                       ; $0151
+    .dsb 1                      ; $0151
 					; Nonzero = demo inputs	active
 GamePaused:
-	  .dsb 1                       ; $0152
+    .dsb 1                      ; $0152
 					; Nonzero = paused, game sets FF
     .dsb 1                      ; $0153
     .dsb 1                      ; $0154
 byte_155:
-	  .dsb 1                       ; $0155
+    .dsb 1                      ; $0155
 PaletteUpdateRequest:
-	  .dsb 1                       ; $0156
+    .dsb 1                      ; $0156
 					; Nonzero when palettes	need updating
 NametableUpdateRequest:
-	  .dsb 1                       ; $0157
+    .dsb 1                      ; $0157
 					; Maybe	wrong, but causes updates to PPU data when nonzero
     .dsb 1                      ; $0158
 byte_159:
-	  .dsb 1                       ; $0159
+    .dsb 1                      ; $0159
 byte_15A:
-	  .dsb 1                       ; $015a
+    .dsb 1                      ; $015a
 DemoCounter:
-	  .dsb 1                       ; $015b
+    .dsb 1                      ; $015b
 					; Goes up by 1 when the	demo starts playing, used to pick doors
 Cheat_P2APresses:
-	  .dsb 1                       ; $015c
+    .dsb 1                      ; $015c
 Cheat_P1BPresses:
-	  .dsb 1                       ; $015d
+    .dsb 1                      ; $015d
 Cheat_SelectPresses:
-	  .dsb 1                       ; $015e
+    .dsb 1                      ; $015e
 Cheat_LastPress:
-	  .dsb 1	                      ; $015f
+    .dsb 1	                     ; $015f
     .dsb 1                      ; $0160
     .dsb 1                      ; $0161
     .dsb 1                      ; $0162
@@ -483,7 +481,7 @@ Cheat_LastPress:
     .dsb 1                      ; $017e
     .dsb 1                      ; $017f
 HighScore:
-	  .dsb 1                       ; $0180
+    .dsb 1                      ; $0180
     .dsb 1 ; 1 ; Same deal	with Score here	-- the first byte ; $0181
     .dsb 1 ; 2 ; doesn't seem to actually track the score ; $0182
     .dsb 1 ; 3                  ; $0183
@@ -492,7 +490,7 @@ HighScore:
     .dsb 1 ; 6                  ; $0186
     .dsb 1 ; 7                  ; $0187
 SoftResetSentinel:
-	  .dsb 1                       ; $0188
+    .dsb 1                      ; $0188
     .dsb 1 ; 1                  ; $0189
     .dsb 1                      ; $018a
     .dsb 1                      ; $018b
@@ -501,34 +499,34 @@ SoftResetSentinel:
     .dsb 1                      ; $018e
     .dsb 1                      ; $018f
 GotEndingGem:
-	  .dsb 1                       ; $0190
+    .dsb 1                      ; $0190
 DebugFlag_InfiniteLives:
-	  .dsb 1	                      ; $0191
+    .dsb 1	                     ; $0191
 CurrentZone:
-	  .dsb 1                       ; $0192
+    .dsb 1                      ; $0192
     .dsb 1                      ; $0193
 PlayerLives:
-	  .dsb 1                       ; $0194
+    .dsb 1                      ; $0194
     .dsb 1                      ; $0195
 LastDoorEntered:
-	  .dsb 1	                      ; $0196
+    .dsb 1	                     ; $0196
     .dsb 1                      ; $0197
     .dsb 1                      ; $0198
     .dsb 1                      ; $0199
 byte_19A:
-	  .dsb 1                       ; $019a
+    .dsb 1                      ; $019a
     .dsb 1                      ; $019b
 PlayerChestsOpened:
-	  .dsb 1                       ; $019c
+    .dsb 1                      ; $019c
 					; Count	of chests opened, shown	on game	over
 byte_19D:
-	  .dsb 1                       ; $019d
+    .dsb 1                      ; $019d
 DebugFlag_ZoneSkipNumber:
-	  .dsb 1 ;	DATA XREF: BANK0:819Ar ; $019e
+    .dsb 1 ;	DATA XREF: BANK0:819Ar ; $019e
 DebugFlag_ZoneSkip:
-	  .dsb 1                       ; $019f
+    .dsb 1                      ; $019f
 byte_1A0:
-	  .dsb 1                       ; $01a0
+    .dsb 1                      ; $01a0
     .dsb 1                      ; $01a1
     .dsb 1                      ; $01a2
     .dsb 1                      ; $01a3
@@ -545,7 +543,7 @@ byte_1A0:
     .dsb 1                      ; $01ae
     .dsb 1                      ; $01af
 PlayerScore:
-	  .dsb 1                       ; $01b0
+    .dsb 1                      ; $01b0
     .dsb 1 ; 1 ; $01B0 Seems to be	used interchangably as part of the score ; $01b1
     .dsb 1 ; 2 ; or as a flag in some places ; $01b2
     .dsb 1 ; 3 ; if $01B0 is non-zero, score will not be added ; $01b3
@@ -554,7 +552,7 @@ PlayerScore:
     .dsb 1 ; 6 ; Sometimes	addressed as if	the first byte is $01B0, ; $01b6
     .dsb 1 ; 7 ; but only $01B1-$01B7 are displayed ; $01b7
 byte_1B8:
-	  .dsb 1                       ; $01b8
+    .dsb 1                      ; $01b8
     .dsb 1                      ; $01b9
     .dsb 1                      ; $01ba
     .dsb 1                      ; $01bb
@@ -563,36 +561,36 @@ byte_1B8:
     .dsb 1                      ; $01be
     .dsb 1                      ; $01bf
 byte_1C0:
-	  .dsb 1                       ; $01c0
+    .dsb 1                      ; $01c0
 byte_1C1:
-	  .dsb 1                       ; $01c1
+    .dsb 1                      ; $01c1
 TriggerZoneChange:
-	  .dsb 1                       ; $01c2
+    .dsb 1                      ; $01c2
 					; If nonzero, will go to next zone screen based	on LastDoorEntered
 byte_1C3:
-	  .dsb 1                       ; $01c3
+    .dsb 1                      ; $01c3
 byte_1C4:
-	  .dsb 1                       ; $01c4
+    .dsb 1                      ; $01c4
 byte_1C5:
-	  .dsb 1                       ; $01c5
+    .dsb 1                      ; $01c5
 byte_1C6:
-	  .dsb 1                       ; $01c6
+    .dsb 1                      ; $01c6
 ZoneTimerTickDelay:
-	  .dsb 1                       ; $01c7
+    .dsb 1                      ; $01c7
 byte_1C8:
-	  .dsb 1                       ; $01c8
+    .dsb 1                      ; $01c8
 byte_1C9:
-	  .dsb 1                       ; $01c9
+    .dsb 1                      ; $01c9
 byte_1CA:
-	  .dsb 1                       ; $01ca
+    .dsb 1                      ; $01ca
 byte_1CB:
-	  .dsb 1                       ; $01cb
+    .dsb 1                      ; $01cb
     .dsb 1                      ; $01cc
     .dsb 1                      ; $01cd
     .dsb 1                      ; $01ce
     .dsb 1                      ; $01cf
 ZoneTimer:
-	  .dsb 1                       ; $01d0
+    .dsb 1                      ; $01d0
     .dsb 1 ; 1                  ; $01d1
     .dsb 1 ; 2                  ; $01d2
     .dsb 1                      ; $01d3
@@ -603,14 +601,14 @@ ZoneTimer:
     .dsb 1                      ; $01d8
     .dsb 1                      ; $01d9
 byte_1DA:
-	  .dsb 1                       ; $01da
+    .dsb 1                      ; $01da
     .dsb 1                      ; $01db
     .dsb 1                      ; $01dc
     .dsb 1                      ; $01dd
 CurrentZoneASM:
-	  .dsb 2                       ; $01de
+    .dsb 2                      ; $01de
 PaletteData:
-	  .dsb 1                       ; $01e0
+    .dsb 1                      ; $01e0
     .dsb 1 ; 1                  ; $01e1
     .dsb 1 ; 2                  ; $01e2
     .dsb 1 ; 3                  ; $01e3
@@ -643,29 +641,29 @@ PaletteData:
     .dsb 1 ; 30                 ; $01fe
     .dsb 1 ; 31                 ; $01ff
 Joypad1_Held:
-	  .dsb 1                       ; $0200
+    .dsb 1                      ; $0200
 Joypad2_Held:
-	  .dsb 1                       ; $0201
+    .dsb 1                      ; $0201
 Joypad1_Previous:
-	  .dsb 1                       ; $0202
+    .dsb 1                      ; $0202
 Joypad2_Previous:
-	  .dsb 1                       ; $0203
+    .dsb 1                      ; $0203
 Joypad1_Immediate:
-	  .dsb 1                       ; $0204
+    .dsb 1                      ; $0204
 					; Buttons pushed this frame only
 Joypad2_Immediate:
-	  .dsb 1                       ; $0205
+    .dsb 1                      ; $0205
 					; Buttons pushed this frame only
 Joypad_Held:
-	  .dsb 1                       ; $0206
+    .dsb 1                      ; $0206
 					; Buttons pressed (either controller)
 Joypad_Immediate:
-	  .dsb 1                       ; $0207
+    .dsb 1                      ; $0207
 					; Buttons pushed this frame only (either controller)
 JoypadMic_Current:
-	  .dsb 1                       ; $0208
+    .dsb 1                      ; $0208
 JoypadMic_Previous:
-	  .dsb 1                       ; $0209
+    .dsb 1                      ; $0209
     .dsb 1                      ; $020a
     .dsb 1                      ; $020b
     .dsb 1                      ; $020c
@@ -673,37 +671,37 @@ JoypadMic_Previous:
     .dsb 1                      ; $020e
     .dsb 1                      ; $020f
 PlayerX:
-	  .dsb 1	                      ; $0210
+    .dsb 1	                     ; $0210
 PlayerXLo:
-	  .dsb 1                       ; $0211
+    .dsb 1                      ; $0211
 PlayerY:
-	  .dsb 1	                      ; $0212
+    .dsb 1	                     ; $0212
 PlayerYLo:
-	  .dsb 1                       ; $0213
+    .dsb 1                      ; $0213
 byte_214:
-	  .dsb 1                       ; $0214
+    .dsb 1                      ; $0214
 byte_215:
-	  .dsb 1                       ; $0215
+    .dsb 1                      ; $0215
 PlayerState:
-	  .dsb 1                       ; $0216
+    .dsb 1                      ; $0216
 ProbablyZoneStatusShit:
-	  .dsb 1                       ; $0217
+    .dsb 1                      ; $0217
 					; 01 = ice physics, 80 = ???
 byte_218:
-	  .dsb 1                       ; $0218
+    .dsb 1                      ; $0218
 byte_219:
-	  .dsb 1                       ; $0219
+    .dsb 1                      ; $0219
 byte_21A:
-	  .dsb 1                       ; $021a
+    .dsb 1                      ; $021a
     .dsb 1                      ; $021b
 PlayerSpeedX:
-	  .dsb 1                       ; $021c
+    .dsb 1                      ; $021c
     .dsb 1                      ; $021d
     .dsb 1                      ; $021e
 byte_21F:
-	  .dsb 1                       ; $021f
+    .dsb 1                      ; $021f
 byte_220:
-	  .dsb 1                       ; $0220
+    .dsb 1                      ; $0220
     .dsb 1                      ; $0221
     .dsb 1                      ; $0222
     .dsb 1                      ; $0223
@@ -720,20 +718,20 @@ byte_220:
     .dsb 1                      ; $022e
     .dsb 1                      ; $022f
 unk_230:
-	  .dsb 1                       ; $0230
+    .dsb 1                      ; $0230
 unk_231:
-	  .dsb 1                       ; $0231
+    .dsb 1                      ; $0231
 unk_232:
-	  .dsb 1                       ; $0232
+    .dsb 1                      ; $0232
     .dsb 1                      ; $0233
 unk_234:
-	  .dsb 1                       ; $0234
+    .dsb 1                      ; $0234
 unk_235:
-	  .dsb 1                       ; $0235
+    .dsb 1                      ; $0235
 unk_236:
-	  .dsb 1                       ; $0236
+    .dsb 1                      ; $0236
 unk_237:
-	  .dsb 1                       ; $0237
+    .dsb 1                      ; $0237
     .dsb 1                      ; $0238
     .dsb 1                      ; $0239
     .dsb 1                      ; $023a
@@ -759,7 +757,7 @@ unk_237:
     .dsb 1                      ; $024e
     .dsb 1                      ; $024f
 ZoneDoors:
-	  .dsb 1                       ; $0250
+    .dsb 1                      ; $0250
     .dsb 1 ; 1                  ; $0251
     .dsb 1 ; 2                  ; $0252
     .dsb 1 ; 3                  ; $0253
@@ -776,50 +774,50 @@ ZoneDoors:
     .dsb 1 ; $E                 ; $025e
     .dsb 1 ; $F                 ; $025f
 byte_260:
-	  .dsb 1                       ; $0260
+    .dsb 1                      ; $0260
 byte_261:
-	  .dsb 1                       ; $0261
+    .dsb 1                      ; $0261
 byte_262:
-	  .dsb 1                       ; $0262
+    .dsb 1                      ; $0262
 byte_263:
-	  .dsb 1                       ; $0263
+    .dsb 1                      ; $0263
 byte_264:
-	  .dsb 1                       ; $0264
+    .dsb 1                      ; $0264
 byte_265:
-	  .dsb 1                       ; $0265
+    .dsb 1                      ; $0265
 byte_266:
-	  .dsb 1                       ; $0266
+    .dsb 1                      ; $0266
 byte_267:
-	  .dsb 1                       ; $0267
+    .dsb 1                      ; $0267
 byte_268:
-	  .dsb 1                       ; $0268
+    .dsb 1                      ; $0268
 byte_269:
-	  .dsb 1                       ; $0269
+    .dsb 1                      ; $0269
 byte_26A:
-	  .dsb 1                       ; $026a
+    .dsb 1                      ; $026a
 byte_26B:
-	  .dsb 1                       ; $026b
+    .dsb 1                      ; $026b
     .dsb 1                      ; $026c
     .dsb 1                      ; $026d
 byte_26E:
-	  .dsb 1                       ; $026e
+    .dsb 1                      ; $026e
 byte_26F:
-	  .dsb 1                       ; $026f
+    .dsb 1                      ; $026f
     .dsb 1                      ; $0270
     .dsb 1                      ; $0271
     .dsb 1                      ; $0272
     .dsb 1                      ; $0273
 byte_274:
-	  .dsb 1                       ; $0274
+    .dsb 1                      ; $0274
 byte_275:
-	  .dsb 1                       ; $0275
+    .dsb 1                      ; $0275
 byte_276:
-	  .dsb 1                       ; $0276
+    .dsb 1                      ; $0276
     .dsb 1                      ; $0277
 byte_278:
-	  .dsb 1                       ; $0278
+    .dsb 1                      ; $0278
 byte_279:
-	  .dsb 1                       ; $0279
+    .dsb 1                      ; $0279
     .dsb 1                      ; $027a
     .dsb 1                      ; $027b
     .dsb 1                      ; $027c
@@ -827,21 +825,21 @@ byte_279:
     .dsb 1                      ; $027e
     .dsb 1                      ; $027f
 unk_280:
-	  .dsb 1                       ; $0280
+    .dsb 1                      ; $0280
     .dsb 1                      ; $0281
     .dsb 1                      ; $0282
     .dsb 1                      ; $0283
 byte_284:
-	  .dsb 1                       ; $0284
+    .dsb 1                      ; $0284
 byte_285:
-	  .dsb 1                       ; $0285
+    .dsb 1                      ; $0285
     .dsb 1                      ; $0286
 byte_287:
-	  .dsb 1                       ; $0287
+    .dsb 1                      ; $0287
 byte_288:
-	  .dsb 1                       ; $0288
+    .dsb 1                      ; $0288
 byte_289:
-	  .dsb 1                       ; $0289
+    .dsb 1                      ; $0289
     .dsb 1                      ; $028a
     .dsb 1                      ; $028b
     .dsb 1                      ; $028c
@@ -849,14 +847,14 @@ byte_289:
     .dsb 1                      ; $028e
     .dsb 1                      ; $028f
 unk_290:
-	  .dsb 1                       ; $0290
+    .dsb 1                      ; $0290
     .dsb 1                      ; $0291
     .dsb 1                      ; $0292
     .dsb 1                      ; $0293
 byte_294:
-	  .dsb 1                       ; $0294
+    .dsb 1                      ; $0294
 byte_295:
-	  .dsb 1                       ; $0295
+    .dsb 1                      ; $0295
     .dsb 1                      ; $0296
     .dsb 1                      ; $0297
     .dsb 1                      ; $0298
@@ -867,7 +865,7 @@ byte_295:
     .dsb 1                      ; $029d
     .dsb 1                      ; $029e
 byte_29F:
-	  .dsb 1                       ; $029f
+    .dsb 1                      ; $029f
     .dsb 1                      ; $02a0
     .dsb 1                      ; $02a1
     .dsb 1                      ; $02a2
@@ -885,7 +883,7 @@ byte_29F:
     .dsb 1                      ; $02ae
     .dsb 1                      ; $02af
 EnemyPointersLo:
-	  .dsb 1                       ; $02b0
+    .dsb 1                      ; $02b0
     .dsb 1                      ; $02b1
     .dsb 1                      ; $02b2
     .dsb 1                      ; $02b3
@@ -894,7 +892,7 @@ EnemyPointersLo:
     .dsb 1                      ; $02b6
     .dsb 1                      ; $02b7
 EnemyPointersHi:
-	  .dsb 1                       ; $02b8
+    .dsb 1                      ; $02b8
     .dsb 1                      ; $02b9
     .dsb 1                      ; $02ba
     .dsb 1                      ; $02bb
@@ -903,9 +901,9 @@ EnemyPointersHi:
     .dsb 1                      ; $02be
     .dsb 1                      ; $02bf
 unk_2C0:
-	  .dsb 1                       ; $02c0
+    .dsb 1                      ; $02c0
 unk_2C1:
-	  .dsb 1                       ; $02c1
+    .dsb 1                      ; $02c1
     .dsb 1                      ; $02c2
     .dsb 1                      ; $02c3
     .dsb 1                      ; $02c4
@@ -1097,21 +1095,21 @@ unk_2C1:
     .dsb 1                      ; $037e
     .dsb 1                      ; $037f
 unk_380:
-	  .dsb 1                       ; $0380
+    .dsb 1                      ; $0380
 unk_381:
-	  .dsb 1                       ; $0381
+    .dsb 1                      ; $0381
 unk_382:
-	  .dsb 1                       ; $0382
+    .dsb 1                      ; $0382
 unk_383:
-	  .dsb 1                       ; $0383
+    .dsb 1                      ; $0383
     .dsb 1                      ; $0384
     .dsb 1                      ; $0385
     .dsb 1                      ; $0386
 unk_387:
-	  .dsb 1                       ; $0387
+    .dsb 1                      ; $0387
     .dsb 1                      ; $0388
 unk_389:
-	  .dsb 1                       ; $0389
+    .dsb 1                      ; $0389
     .dsb 1                      ; $038a
     .dsb 1                      ; $038b
     .dsb 1                      ; $038c
@@ -1167,33 +1165,33 @@ unk_389:
     .dsb 1                      ; $03be
     .dsb 1                      ; $03bf
 byte_3C0:
-	  .dsb 1                       ; $03c0
+    .dsb 1                      ; $03c0
     .dsb 1                      ; $03c1
 byte_3C2:
-	  .dsb 1                       ; $03c2
+    .dsb 1                      ; $03c2
 byte_3C3:
-	  .dsb 1                       ; $03c3
+    .dsb 1                      ; $03c3
 byte_3C4:
-	  .dsb 1                       ; $03c4
+    .dsb 1                      ; $03c4
 byte_3C5:
-	  .dsb 1                       ; $03c5
+    .dsb 1                      ; $03c5
 byte_3C6:
-	  .dsb 1                       ; $03c6
+    .dsb 1                      ; $03c6
 byte_3C7:
-	  .dsb 1                       ; $03c7
+    .dsb 1                      ; $03c7
 byte_3C8:
-	  .dsb 1                       ; $03c8
+    .dsb 1                      ; $03c8
     .dsb 1                      ; $03c9
     .dsb 1                      ; $03ca
     .dsb 1                      ; $03cb
 byte_3CC:
-	  .dsb 1                       ; $03cc
+    .dsb 1                      ; $03cc
 byte_3CD:
-	  .dsb 1                       ; $03cd
+    .dsb 1                      ; $03cd
 byte_3CE:
-	  .dsb 1                       ; $03ce
+    .dsb 1                      ; $03ce
 byte_3CF:
-	  .dsb 1                       ; $03cf
+    .dsb 1                      ; $03cf
     .dsb 1                      ; $03d0
     .dsb 1                      ; $03d1
     .dsb 1                      ; $03d2
@@ -1243,7 +1241,7 @@ byte_3CF:
     .dsb 1                      ; $03fe
     .dsb 1                      ; $03ff
 unk_400:
-	  .dsb 1                       ; $0400
+    .dsb 1                      ; $0400
     .dsb 1                      ; $0401
     .dsb 1                      ; $0402
     .dsb 1                      ; $0403
@@ -1324,28 +1322,28 @@ unk_400:
     .dsb 1                      ; $044e
     .dsb 1                      ; $044f
 PlayerItem_Lightbulb:
-	  .dsb 1                       ; $0450
+    .dsb 1                      ; $0450
 					; Bombs	temporarily light up dark areas
 PlayerItem_Shoes:
-	  .dsb 1                       ; $0451
+    .dsb 1                      ; $0451
 					; Can walk on semi-solid platforms
 PlayerItem_SuperBomb:
-	  .dsb 1                       ; $0452
+    .dsb 1                      ; $0452
 					; Bombs	hit all	enemies	on screen
 PlayerItem_UpArrow:
-	  .dsb 1                       ; $0453
+    .dsb 1                      ; $0453
 					; Gives	3 (or 6) points	when you push Up
 PlayerItem_DoubleScore:
-	  .dsb 1                       ; $0454
+    .dsb 1                      ; $0454
 					; All treasure scores are doubled
 PlayerItem_SlowTimer:
-	  .dsb 1                       ; $0455
+    .dsb 1                      ; $0455
 					; Slows	down the timer
 PlayerItem_Microphone:
-	  .dsb 1                       ; $0456
+    .dsb 1                      ; $0456
 					; Stuns	enemies, I guess
 PlayerItem_Invulnerable:
-	  .dsb 1	                      ; $0457
+    .dsb 1	                     ; $0457
 					; Invulnerability to enemies (star)
     .dsb 1                      ; $0458
     .dsb 1                      ; $0459
@@ -1388,7 +1386,7 @@ PlayerItem_Invulnerable:
     .dsb 1                      ; $047e
     .dsb 1                      ; $047f
 unk_480:
-	  .dsb 1                       ; $0480
+    .dsb 1                      ; $0480
     .dsb 1                      ; $0481
     .dsb 1                      ; $0482
     .dsb 1                      ; $0483
@@ -1397,7 +1395,7 @@ unk_480:
     .dsb 1                      ; $0486
     .dsb 1                      ; $0487
 unk_488:
-	  .dsb 1                       ; $0488
+    .dsb 1                      ; $0488
     .dsb 1                      ; $0489
     .dsb 1                      ; $048a
     .dsb 1                      ; $048b
@@ -1406,7 +1404,7 @@ unk_488:
     .dsb 1                      ; $048e
     .dsb 1                      ; $048f
 unk_490:
-	  .dsb 1                       ; $0490
+    .dsb 1                      ; $0490
     .dsb 1                      ; $0491
     .dsb 1                      ; $0492
     .dsb 1                      ; $0493
@@ -1415,7 +1413,7 @@ unk_490:
     .dsb 1                      ; $0496
     .dsb 1                      ; $0497
 unk_498:
-	  .dsb 1                       ; $0498
+    .dsb 1                      ; $0498
     .dsb 1                      ; $0499
     .dsb 1                      ; $049a
     .dsb 1                      ; $049b
@@ -1424,7 +1422,7 @@ unk_498:
     .dsb 1                      ; $049e
     .dsb 1                      ; $049f
 unk_4A0:
-	  .dsb 1                       ; $04a0
+    .dsb 1                      ; $04a0
     .dsb 1                      ; $04a1
     .dsb 1                      ; $04a2
     .dsb 1                      ; $04a3
@@ -1433,7 +1431,7 @@ unk_4A0:
     .dsb 1                      ; $04a6
     .dsb 1                      ; $04a7
 unk_4A8:
-	  .dsb 1                       ; $04a8
+    .dsb 1                      ; $04a8
     .dsb 1                      ; $04a9
     .dsb 1                      ; $04aa
     .dsb 1                      ; $04ab
@@ -1442,7 +1440,7 @@ unk_4A8:
     .dsb 1                      ; $04ae
     .dsb 1                      ; $04af
 unk_4B0:
-	  .dsb 1                       ; $04b0
+    .dsb 1                      ; $04b0
     .dsb 1                      ; $04b1
     .dsb 1                      ; $04b2
     .dsb 1                      ; $04b3
@@ -1451,7 +1449,7 @@ unk_4B0:
     .dsb 1                      ; $04b6
     .dsb 1                      ; $04b7
 unk_4B8:
-	  .dsb 1                       ; $04b8
+    .dsb 1                      ; $04b8
     .dsb 1                      ; $04b9
     .dsb 1                      ; $04ba
     .dsb 1                      ; $04bb
@@ -1524,7 +1522,7 @@ unk_4B8:
     .dsb 1                      ; $04fe
     .dsb 1                      ; $04ff
 byte_500:
-	  .dsb 1                       ; $0500
+    .dsb 1                      ; $0500
     .dsb 1                      ; $0501
     .dsb 1                      ; $0502
     .dsb 1                      ; $0503
@@ -2037,7 +2035,7 @@ byte_500:
     .dsb 1                      ; $06fe
     .dsb 1                      ; $06ff
 SpriteData:
-	  .dsb 1                       ; $0700
+    .dsb 1                      ; $0700
     .dsb 1 ; 1                  ; $0701
     .dsb 1 ; 2                  ; $0702
     .dsb 1 ; 3                  ; $0703
@@ -2294,9 +2292,4 @@ SpriteData:
     .dsb 1 ; $FE                ; $07fe
     .dsb 1 ; $FF                ; $07ff
 ; RAM:0800
-; 
-; End hidden section for deletion
-; RAM:6001
-; ---------------------------------------------------------------------------
-; ===========================================================================
-
+;
