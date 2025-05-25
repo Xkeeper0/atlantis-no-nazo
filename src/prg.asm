@@ -1215,10 +1215,10 @@ loc_8718:
     ROL	    word_14+1
     ASL	    A
     ROL	    word_14+1
-    ADC	    #$50
+    ADC	    #<BlockTable
     STA	    word_14
     LDA	    word_14+1
-    ADC	    #$EA
+    ADC	    #>BlockTable
     STA	    word_14+1
     LDA	    byte_12
     AND	    #7
@@ -1235,10 +1235,10 @@ loc_8718:
     ROL	    word_16+1
     ASL	    A
     ROL	    word_16+1
-    ADC	    #$50
+    ADC	    #<loc_DE50
     STA	    word_16
     LDA	    word_16+1
-    ADC	    #$DE
+    ADC	    #>loc_DE50
     STA	    word_16+1
     INY
     LDA	    (word_14),Y
@@ -1249,10 +1249,10 @@ loc_8718:
     ROL	    word_18+1
     ASL	    A
     ROL	    word_18+1
-    ADC	    #$50
+    ADC	    #<loc_DE50
     STA	    word_18
     LDA	    word_18+1
-    ADC	    #$DE
+    ADC	    #>loc_DE50
     STA	    word_18+1
     LDX	    #0
     STX	    byte_25
@@ -1266,10 +1266,10 @@ loc_87AE:
     ROL	    word_1A+1
     ASL	    A
     ROL	    word_1A+1
-    ADC	    #$C0
+    ADC	    #<loc_F3C0
     STA	    word_1A
     LDA	    word_1A+1
-    ADC	    #$F3
+    ADC	    #>loc_F3C0
     STA	    word_1A+1
     LDY	    #0
     LDA	    (word_1A),Y
@@ -1300,10 +1300,10 @@ loc_87F4:
     ROL	    word_1A+1
     ASL	    A
     ROL	    word_1A+1
-    ADC	    #$C0
+    ADC	    #<loc_F3C0
     STA	    word_1A
     LDA	    word_1A+1
-    ADC	    #$F3
+    ADC	    #>loc_F3C0
     STA	    word_1A+1
     LDY	    #0
     LDA	    (word_1A),Y
@@ -1349,10 +1349,10 @@ loc_8856:
     STX	    word_1E+1
     ASL	    A
     ROL	    word_1E+1
-    ADC	    #$50
+    ADC	    #<loc_E650
     STA	    word_1E
     LDA	    word_1E+1
-    ADC	    #$E6
+    ADC	    #>loc_E650
     STA	    word_1E+1
     LDY	    #0
     LDA	    (word_1E),Y
@@ -1391,10 +1391,10 @@ loc_8856:
     STX	    word_1E+1
     ASL	    A
     ROL	    word_1E+1
-    ADC	    #$50
+    ADC	    #<loc_E650
     STA	    word_1E
     LDA	    word_1E+1
-    ADC	    #$E6
+    ADC	    #>loc_E650
     STA	    word_1E+1
     LDY	    #0
     LDA	    (word_1E),Y

@@ -728,7 +728,8 @@ ZoneItemTable:
     .BYTE $BF
     .BYTE   2
     .BYTE $FF
-    .BYTE 0
+loc_DE50:
+	.BYTE 0
     .BYTE 0
     .BYTE 0
     .BYTE 0
@@ -2776,7 +2777,9 @@ ZoneItemTable:
     .BYTE $A4
     .BYTE $A4
     .BYTE $A4
-    .BYTE 0
+
+loc_E650:
+	.BYTE 0
     .BYTE 0
     .BYTE $55
     .BYTE $55
@@ -3365,7 +3368,7 @@ ZoneItemTable:
 ; $09-$0F
 ; $42
 ; $74-$77
-stru_EA50:
+BlockTable:
     Block   0,	0,   0,	  0,   0,   0,	 0,   0,   0,	0,   0,	  0,   0,   0,	 0,   0
     Block   0,	$C5, $C0, $C6, $C0, $C6, $C2, $C8, $C3,	$C9, $C4, $CA, $C4, $CA,   0, $C5 ;; 1
     Block   0,	$BF,   1, $BF,	 2, $BF,   3, $BF,   0,	$BF,   4, $BF,	 5, $BF,   6, $BF ;; 2
@@ -3532,7 +3535,9 @@ stru_EA50:
     .BYTE $EC
     .BYTE 0
     .BYTE $B0
-    .BYTE $FF
+
+loc_F3C0:
+	.BYTE $FF
     .BYTE $FF
     .BYTE $FF
     .BYTE $FF
@@ -5002,23 +5007,5 @@ ZoneMusicTable:
     .BYTE MusicTrack_ZoneTheme1		; 97
     .BYTE MusicTrack_ZoneTheme2		; 98
     .BYTE MusicTrack_ZoneTheme1		; 99
-UnknownData_FFAD:
-    .BYTE $77,  2,$FF,$FE		     ; Not marked as read in CDL
-    .BYTE   2,$FF,  2,$FE		; 4
-    .BYTE   2,$FF,  2,$FF		; 8
-    .BYTE   2,$FF,$12,$FF		; 12
-    .BYTE   0,$7F,  2,	2		; 16
-    .BYTE $FE,$2A,$FE,	2		; 20
-    .BYTE $FE,	2,$FE,	2		; 24
-    .BYTE $FE,	2,$FF,	2		; 28
-    .BYTE $FE,	2,$FF,$FE		; 32
-    .BYTE   2,$FE,  2,$FE		; 36
-    .BYTE   2,$FE,  2,$7F		; 40
-    .BYTE   2,$7E,  2,$FF		; 44
-    .BYTE   2,$FE,  2,$82		; 48
-    .BYTE $FF,$52,$7F,	2		; 52
-    .BYTE $FF,	2,$FE,$82		; 56
-    .BYTE $FF, $A,$FF,	2		; 60
-    .BYTE $7F,$52,$F7,$77		; 64
-    .BYTE   2,$FF,$10,$FE		; 68
-    .BYTE   2,$FE,  2,$FF		; 72
+
+.include "src/unused-unknown2.asm"
