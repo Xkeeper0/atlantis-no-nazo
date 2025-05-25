@@ -252,250 +252,250 @@ ELSE
 ENDIF
 
 ZoneDoorFlagsTable:
-	.BYTE DoorFlags_Hidden|$80
-	.BYTE DoorFlags_Open|$80		; 1
-	.BYTE DoorFlags_Open|$80		; 2
-	.BYTE DoorFlags_Closed|$80		; 3
-	.BYTE DoorFlags_Closed|$80		; 4
-	.BYTE DoorFlags_Open|$80		; 5
-	.BYTE DoorFlags_Open|$80		; 6
-	.BYTE DoorFlags_Open|$80		; 7
-	.BYTE DoorFlags_Open|$80		; 8
-	.BYTE DoorFlags_Open|$80		; 9
-	.BYTE DoorFlags_Open|$80		; $A
-	.BYTE DoorFlags_Open|$80		; $B
-	.BYTE DoorFlags_Open|$80		; $C
-	.BYTE DoorFlags_Open|$80		; $D
-	.BYTE DoorFlags_Open|$80		; $E
-	.BYTE DoorFlags_Open|$80		; $F
-	.BYTE DoorFlags_Invisible|$80	; $10
-	.BYTE DoorFlags_Open|$80		; $11
-	.BYTE DoorFlags_Open|$80		; $12
-	.BYTE DoorFlags_Open|$80		; $13
-	.BYTE DoorFlags_Open|$80		; $14
-	.BYTE DoorFlags_Open|$80		; $15
-	.BYTE DoorFlags_Invisible|$80	; $16
-	.BYTE DoorFlags_Open|$80		; $17
-	.BYTE DoorFlags_Closed|$80		; $18
-	.BYTE DoorFlags_Hidden|$80		; $19
-	.BYTE DoorFlags_Open|$80		; $1A
-	.BYTE DoorFlags_Open|$80		; $1B
-	.BYTE DoorFlags_Open|$80		; $1C
-	.BYTE DoorFlags_Open|$80		; $1D
-	.BYTE DoorFlags_Hidden|$80		; $1E
-	.BYTE DoorFlags_Closed|$80		; $1F
-	.BYTE DoorFlags_Invisible|$80	; $20
-	.BYTE DoorFlags_Closed|$80		; $21
-	.BYTE DoorFlags_Open|$80		; $22
-	.BYTE DoorFlags_Closed|$80		; $23
-	.BYTE DoorFlags_Closed|$80		; $24
-	.BYTE DoorFlags_Open|$80		; $25
-	.BYTE DoorFlags_Open|$80		; $26
-	.BYTE DoorFlags_Invisible|$80	; $27
-	.BYTE DoorFlags_Open|$80		; $28
-	.BYTE DoorFlags_Open|$80		; $29
-	.BYTE DoorFlags_Open|$80		; $2A
-	.BYTE DoorFlags_Hidden|$80		; $2B
-	.BYTE DoorFlags_Open|$80		; $2C
-	.BYTE DoorFlags_Closed|$80		; $2D
-	.BYTE DoorFlags_Closed|$80		; $2E
-	.BYTE DoorFlags_Open|$80		; $2F
-	.BYTE DoorFlags_Open|$80		; $30
-	.BYTE DoorFlags_Hidden|$80		; $31
-	.BYTE DoorFlags_Closed|$80		; $32
-	.BYTE DoorFlags_Open|$80		; $33
-	.BYTE DoorFlags_Closed|$80		; $34
-	.BYTE DoorFlags_Open|$80		; $35
-	.BYTE DoorFlags_Invisible|$80	; $36
-	.BYTE DoorFlags_Closed|$80		; $37
-	.BYTE DoorFlags_Open|$80		; $38
-	.BYTE DoorFlags_Open|$80		; $39
-	.BYTE DoorFlags_Open|$80		; $3A
-	.BYTE DoorFlags_Open|$80		; $3B
-	.BYTE DoorFlags_Open|$80		; $3C
-	.BYTE DoorFlags_Open|$80		; $3D
-	.BYTE DoorFlags_Open|$80		; $3E
-	.BYTE DoorFlags_Open|$80		; $3F
-	.BYTE DoorFlags_Open|$80		; $40
-	.BYTE DoorFlags_Open|$80		; $41
-	.BYTE DoorFlags_Open|$80		; $42
-	.BYTE DoorFlags_Open|$80		; $43
-	.BYTE DoorFlags_Open|$80		; $44
-	.BYTE DoorFlags_Open|$80		; $45
-	.BYTE DoorFlags_Open|$80		; $46
-	.BYTE DoorFlags_Closed|$80		; $47
-	.BYTE DoorFlags_Open|$80		; $48
-	.BYTE DoorFlags_Open|$80		; $49
-	.BYTE DoorFlags_Open|$80		; $4A
-	.BYTE DoorFlags_Closed|$80		; $4B
-	.BYTE DoorFlags_Open|$80		; $4C
-	.BYTE DoorFlags_Open|$80		; $4D
-	.BYTE DoorFlags_Open|$80		; $4E
-	.BYTE DoorFlags_Open|$80		; $4F
-	.BYTE DoorFlags_Open|$80		; $50
-	.BYTE DoorFlags_Open|$80		; $51
-	.BYTE DoorFlags_Open|$80		; $52
-	.BYTE DoorFlags_Open|$80		; $53
-	.BYTE DoorFlags_Closed|$80		; $54
-	.BYTE DoorFlags_Open|$80		; $55
-	.BYTE DoorFlags_Open|$80		; $56
-	.BYTE DoorFlags_Open|$80		; $57
-	.BYTE DoorFlags_Open|$80		; $58
-	.BYTE DoorFlags_Open|$80		; $59
-	.BYTE DoorFlags_Open|$80		; $5A
-	.BYTE DoorFlags_Open|$80		; $5B
-	.BYTE DoorFlags_Open|$80		; $5C
-	.BYTE DoorFlags_Open|$80		; $5D
-	.BYTE DoorFlags_Open|$80		; $5E
-	.BYTE DoorFlags_Open|$80		; $5F
-	.BYTE DoorFlags_Closed|$80		; $60
-	.BYTE DoorFlags_Open|$80		; $61
-	.BYTE DoorFlags_Open|$80		; $62
-	.BYTE DoorFlags_Open|$80		; $63
-	.BYTE DoorFlags_Open|$80		; $64
-	.BYTE DoorFlags_Open|$80		; $65
-	.BYTE DoorFlags_Open|$80		; $66
-	.BYTE DoorFlags_Open|$80		; $67
-	.BYTE DoorFlags_Open|$80		; $68
-	.BYTE DoorFlags_Open|$80		; $69
-	.BYTE DoorFlags_Open|$80		; $6A
-	.BYTE DoorFlags_Open|$80		; $6B
-	.BYTE DoorFlags_Open|$80		; $6C
-	.BYTE DoorFlags_Open|$80		; $6D
-	.BYTE DoorFlags_Open|$80		; $6E
-	.BYTE DoorFlags_Open|$80		; $6F
-	.BYTE DoorFlags_Open|$80		; $70
-	.BYTE DoorFlags_Open|$80		; $71
-	.BYTE DoorFlags_Open|$80		; $72
-	.BYTE DoorFlags_Hidden|$80		; $73
-	.BYTE DoorFlags_Open|$80		; $74
-	.BYTE DoorFlags_Open|$80		; $75
-	.BYTE DoorFlags_Open|$80		; $76
-	.BYTE DoorFlags_Closed|$80		; $77
-	.BYTE DoorFlags_Closed|$80		; $78
-	.BYTE DoorFlags_Open|$80		; $79
-	.BYTE DoorFlags_Open|$80		; $7A
-	.BYTE DoorFlags_Closed|$80		; $7B
-	.BYTE DoorFlags_Open|$80		; $7C
-	.BYTE DoorFlags_Open|$80		; $7D
-	.BYTE DoorFlags_Open|$80		; $7E
-	.BYTE DoorFlags_Open|$80		; $7F
-	.BYTE DoorFlags_Open|$80		; $80
-	.BYTE DoorFlags_Open|$80		; $81
-	.BYTE DoorFlags_Open|$80		; $82
-	.BYTE DoorFlags_Open|$80		; $83
-	.BYTE DoorFlags_Closed|$80		; $84
-	.BYTE DoorFlags_Hidden|$80		; $85
-	.BYTE DoorFlags_Hidden|$80		; $86
-	.BYTE DoorFlags_Open|$80		; $87
-	.BYTE DoorFlags_Open|$80		; $88
-	.BYTE DoorFlags_Open|$80		; $89
-	.BYTE DoorFlags_Hidden|$80		; $8A
-	.BYTE DoorFlags_Open|$80		; $8B
-	.BYTE DoorFlags_Invisible|$80	; $8C
-	.BYTE DoorFlags_Open|$80		; $8D
-	.BYTE DoorFlags_Hidden|$80		; $8E
-	.BYTE DoorFlags_Open|$80		; $8F
-	.BYTE DoorFlags_Open|$80		; $90
-	.BYTE DoorFlags_Open|$80		; $91
-	.BYTE DoorFlags_Open|$80		; $92
-	.BYTE DoorFlags_Open|$80		; $93
-	.BYTE DoorFlags_Open|$80		; $94
-	.BYTE DoorFlags_Open|$80		; $95
-	.BYTE DoorFlags_Open|$80		; $96
-	.BYTE DoorFlags_Open|$80		; $97
-	.BYTE DoorFlags_Closed|$80		; $98
-	.BYTE DoorFlags_Open|$80		; $99
-	.BYTE DoorFlags_Open|$80		; $9A
-	.BYTE DoorFlags_Open|$80		; $9B
-	.BYTE DoorFlags_Open|$80		; $9C
-	.BYTE DoorFlags_Open|$80		; $9D
-	.BYTE DoorFlags_Open|$80		; $9E
-	.BYTE DoorFlags_Open|$80		; $9F
-	.BYTE DoorFlags_Open|$80		; $A0
-	.BYTE DoorFlags_Open|$80		; $A1
-	.BYTE DoorFlags_Open|$80		; $A2
-	.BYTE DoorFlags_Open|$80		; $A3
-	.BYTE DoorFlags_Open|$80		; $A4
-	.BYTE DoorFlags_Open|$80		; $A5
-	.BYTE DoorFlags_Open|$80		; $A6
-	.BYTE DoorFlags_Open|$80		; $A7
-	.BYTE DoorFlags_Open|$80		; $A8
-	.BYTE DoorFlags_Open|$80		; $A9
-	.BYTE DoorFlags_Open|$80		; $AA
-	.BYTE DoorFlags_Open|$80		; $AB
-	.BYTE DoorFlags_Open|$80		; $AC
-	.BYTE DoorFlags_Open|$80		; $AD
-	.BYTE DoorFlags_Open|$80		; $AE
-	.BYTE DoorFlags_Open|$80		; $AF
-	.BYTE DoorFlags_Open|$80		; $B0
-	.BYTE DoorFlags_Open|$80		; $B1
-	.BYTE DoorFlags_Open|$80		; $B2
-	.BYTE DoorFlags_Open|$80		; $B3
-	.BYTE DoorFlags_Open|$80		; $B4
-	.BYTE DoorFlags_Open|$80		; $B5
-	.BYTE DoorFlags_Open|$80		; $B6
-	.BYTE DoorFlags_Open|$80		; $B7
-	.BYTE DoorFlags_Open|$80		; $B8
-	.BYTE DoorFlags_Open|$80		; $B9
-	.BYTE DoorFlags_Open|$80		; $BA
-	.BYTE DoorFlags_Open|$80		; $BB
-	.BYTE DoorFlags_Open|$80		; $BC
-	.BYTE DoorFlags_Open|$80		; $BD
-	.BYTE DoorFlags_Open|$80		; $BE
-	.BYTE DoorFlags_Open|$80		; $BF
-	.BYTE DoorFlags_Open|$80		; $C0
-	.BYTE DoorFlags_Open|$80		; $C1
-	.BYTE DoorFlags_Closed|$80		; $C2
-	.BYTE DoorFlags_Open|$80		; $C3
-	.BYTE DoorFlags_Hidden|$80		; $C4
-	.BYTE DoorFlags_Hidden|$80		; $C5
-	.BYTE DoorFlags_Hidden|$80		; $C6
-	.BYTE DoorFlags_Hidden|$80		; $C7
-	.BYTE DoorFlags_Open|$80		; $C8
-	.BYTE DoorFlags_Closed|$80		; $C9
-	.BYTE DoorFlags_Closed|$80		; $CA
-	.BYTE DoorFlags_Closed|$80		; $CB
-	.BYTE DoorFlags_Hidden|$80		; $CC
-	.BYTE DoorFlags_Open|$80		; $CD
-	.BYTE DoorFlags_Closed|$80		; $CE
-	.BYTE DoorFlags_Invisible|$80	; $CF
-	.BYTE DoorFlags_Closed|$80		; $D0
-	.BYTE DoorFlags_Invisible|$80	; $D1
-	.BYTE DoorFlags_Open|$80		; $D2
-	.BYTE DoorFlags_Hidden|$80		; $D3
-	.BYTE DoorFlags_Open|$80		; $D4
-	.BYTE DoorFlags_Hidden|$80		; $D5
-	.BYTE DoorFlags_Hidden|$80		; $D6
-	.BYTE DoorFlags_Hidden|$80		; $D7
-	.BYTE DoorFlags_Hidden|$80		; $D8
-	.BYTE DoorFlags_Hidden|$80		; $D9
-	.BYTE DoorFlags_Invisible|$80	; $DA
-	.BYTE DoorFlags_Invisible|$80	; $DB
-	.BYTE DoorFlags_Hidden|$80		; $DC
-	.BYTE DoorFlags_Hidden|$80		; $DD
-	.BYTE DoorFlags_Hidden|$80		; $DE
-	.BYTE DoorFlags_Hidden|$80		; $DF
-	.BYTE DoorFlags_Invisible|$80	; $E0
-	.BYTE DoorFlags_Hidden|$80		; $E1
-	.BYTE DoorFlags_Closed|$80		; $E2
-	.BYTE DoorFlags_Closed|$80		; $E3
-	.BYTE DoorFlags_Hidden|$80		; $E4
-	.BYTE DoorFlags_Invisible|$80	; $E5
-	.BYTE DoorFlags_Open|$80		; $E6
-	.BYTE DoorFlags_Hidden|$80		; $E7
-	.BYTE DoorFlags_Closed|$80		; $E8
-	.BYTE DoorFlags_Hidden|$80		; $E9
-	.BYTE DoorFlags_Hidden|$80		; $EA
-	.BYTE DoorFlags_Hidden|$80		; $EB
-	.BYTE DoorFlags_Hidden|$80		; $EC
-	.BYTE DoorFlags_Invisible|$80	; $ED
-	.BYTE DoorFlags_Open|$80		; $EE
-	.BYTE DoorFlags_Open|$80		; $EF
+	DoorFlag  DoorFlags_Hidden
+	DoorFlag  DoorFlags_Open		; 1
+	DoorFlag  DoorFlags_Open		; 2
+	DoorFlag  DoorFlags_Closed		; 3
+	DoorFlag  DoorFlags_Closed		; 4
+	DoorFlag  DoorFlags_Open		; 5
+	DoorFlag  DoorFlags_Open		; 6
+	DoorFlag  DoorFlags_Open		; 7
+	DoorFlag  DoorFlags_Open		; 8
+	DoorFlag  DoorFlags_Open		; 9
+	DoorFlag  DoorFlags_Open		; $A
+	DoorFlag  DoorFlags_Open		; $B
+	DoorFlag  DoorFlags_Open		; $C
+	DoorFlag  DoorFlags_Open		; $D
+	DoorFlag  DoorFlags_Open		; $E
+	DoorFlag  DoorFlags_Open		; $F
+	DoorFlag  DoorFlags_Invisible	; $10
+	DoorFlag  DoorFlags_Open		; $11
+	DoorFlag  DoorFlags_Open		; $12
+	DoorFlag  DoorFlags_Open		; $13
+	DoorFlag  DoorFlags_Open		; $14
+	DoorFlag  DoorFlags_Open		; $15
+	DoorFlag  DoorFlags_Invisible	; $16
+	DoorFlag  DoorFlags_Open		; $17
+	DoorFlag  DoorFlags_Closed		; $18
+	DoorFlag  DoorFlags_Hidden		; $19
+	DoorFlag  DoorFlags_Open		; $1A
+	DoorFlag  DoorFlags_Open		; $1B
+	DoorFlag  DoorFlags_Open		; $1C
+	DoorFlag  DoorFlags_Open		; $1D
+	DoorFlag  DoorFlags_Hidden		; $1E
+	DoorFlag  DoorFlags_Closed		; $1F
+	DoorFlag  DoorFlags_Invisible	; $20
+	DoorFlag  DoorFlags_Closed		; $21
+	DoorFlag  DoorFlags_Open		; $22
+	DoorFlag  DoorFlags_Closed		; $23
+	DoorFlag  DoorFlags_Closed		; $24
+	DoorFlag  DoorFlags_Open		; $25
+	DoorFlag  DoorFlags_Open		; $26
+	DoorFlag  DoorFlags_Invisible	; $27
+	DoorFlag  DoorFlags_Open		; $28
+	DoorFlag  DoorFlags_Open		; $29
+	DoorFlag  DoorFlags_Open		; $2A
+	DoorFlag  DoorFlags_Hidden		; $2B
+	DoorFlag  DoorFlags_Open		; $2C
+	DoorFlag  DoorFlags_Closed		; $2D
+	DoorFlag  DoorFlags_Closed		; $2E
+	DoorFlag  DoorFlags_Open		; $2F
+	DoorFlag  DoorFlags_Open		; $30
+	DoorFlag  DoorFlags_Hidden		; $31
+	DoorFlag  DoorFlags_Closed		; $32
+	DoorFlag  DoorFlags_Open		; $33
+	DoorFlag  DoorFlags_Closed		; $34
+	DoorFlag  DoorFlags_Open		; $35
+	DoorFlag  DoorFlags_Invisible	; $36
+	DoorFlag  DoorFlags_Closed		; $37
+	DoorFlag  DoorFlags_Open		; $38
+	DoorFlag  DoorFlags_Open		; $39
+	DoorFlag  DoorFlags_Open		; $3A
+	DoorFlag  DoorFlags_Open		; $3B
+	DoorFlag  DoorFlags_Open		; $3C
+	DoorFlag  DoorFlags_Open		; $3D
+	DoorFlag  DoorFlags_Open		; $3E
+	DoorFlag  DoorFlags_Open		; $3F
+	DoorFlag  DoorFlags_Open		; $40
+	DoorFlag  DoorFlags_Open		; $41
+	DoorFlag  DoorFlags_Open		; $42
+	DoorFlag  DoorFlags_Open		; $43
+	DoorFlag  DoorFlags_Open		; $44
+	DoorFlag  DoorFlags_Open		; $45
+	DoorFlag  DoorFlags_Open		; $46
+	DoorFlag  DoorFlags_Closed		; $47
+	DoorFlag  DoorFlags_Open		; $48
+	DoorFlag  DoorFlags_Open		; $49
+	DoorFlag  DoorFlags_Open		; $4A
+	DoorFlag  DoorFlags_Closed		; $4B
+	DoorFlag  DoorFlags_Open		; $4C
+	DoorFlag  DoorFlags_Open		; $4D
+	DoorFlag  DoorFlags_Open		; $4E
+	DoorFlag  DoorFlags_Open		; $4F
+	DoorFlag  DoorFlags_Open		; $50
+	DoorFlag  DoorFlags_Open		; $51
+	DoorFlag  DoorFlags_Open		; $52
+	DoorFlag  DoorFlags_Open		; $53
+	DoorFlag  DoorFlags_Closed		; $54
+	DoorFlag  DoorFlags_Open		; $55
+	DoorFlag  DoorFlags_Open		; $56
+	DoorFlag  DoorFlags_Open		; $57
+	DoorFlag  DoorFlags_Open		; $58
+	DoorFlag  DoorFlags_Open		; $59
+	DoorFlag  DoorFlags_Open		; $5A
+	DoorFlag  DoorFlags_Open		; $5B
+	DoorFlag  DoorFlags_Open		; $5C
+	DoorFlag  DoorFlags_Open		; $5D
+	DoorFlag  DoorFlags_Open		; $5E
+	DoorFlag  DoorFlags_Open		; $5F
+	DoorFlag  DoorFlags_Closed		; $60
+	DoorFlag  DoorFlags_Open		; $61
+	DoorFlag  DoorFlags_Open		; $62
+	DoorFlag  DoorFlags_Open		; $63
+	DoorFlag  DoorFlags_Open		; $64
+	DoorFlag  DoorFlags_Open		; $65
+	DoorFlag  DoorFlags_Open		; $66
+	DoorFlag  DoorFlags_Open		; $67
+	DoorFlag  DoorFlags_Open		; $68
+	DoorFlag  DoorFlags_Open		; $69
+	DoorFlag  DoorFlags_Open		; $6A
+	DoorFlag  DoorFlags_Open		; $6B
+	DoorFlag  DoorFlags_Open		; $6C
+	DoorFlag  DoorFlags_Open		; $6D
+	DoorFlag  DoorFlags_Open		; $6E
+	DoorFlag  DoorFlags_Open		; $6F
+	DoorFlag  DoorFlags_Open		; $70
+	DoorFlag  DoorFlags_Open		; $71
+	DoorFlag  DoorFlags_Open		; $72
+	DoorFlag  DoorFlags_Hidden		; $73
+	DoorFlag  DoorFlags_Open		; $74
+	DoorFlag  DoorFlags_Open		; $75
+	DoorFlag  DoorFlags_Open		; $76
+	DoorFlag  DoorFlags_Closed		; $77
+	DoorFlag  DoorFlags_Closed		; $78
+	DoorFlag  DoorFlags_Open		; $79
+	DoorFlag  DoorFlags_Open		; $7A
+	DoorFlag  DoorFlags_Closed		; $7B
+	DoorFlag  DoorFlags_Open		; $7C
+	DoorFlag  DoorFlags_Open		; $7D
+	DoorFlag  DoorFlags_Open		; $7E
+	DoorFlag  DoorFlags_Open		; $7F
+	DoorFlag  DoorFlags_Open		; $80
+	DoorFlag  DoorFlags_Open		; $81
+	DoorFlag  DoorFlags_Open		; $82
+	DoorFlag  DoorFlags_Open		; $83
+	DoorFlag  DoorFlags_Closed		; $84
+	DoorFlag  DoorFlags_Hidden		; $85
+	DoorFlag  DoorFlags_Hidden		; $86
+	DoorFlag  DoorFlags_Open		; $87
+	DoorFlag  DoorFlags_Open		; $88
+	DoorFlag  DoorFlags_Open		; $89
+	DoorFlag  DoorFlags_Hidden		; $8A
+	DoorFlag  DoorFlags_Open		; $8B
+	DoorFlag  DoorFlags_Invisible	; $8C
+	DoorFlag  DoorFlags_Open		; $8D
+	DoorFlag  DoorFlags_Hidden		; $8E
+	DoorFlag  DoorFlags_Open		; $8F
+	DoorFlag  DoorFlags_Open		; $90
+	DoorFlag  DoorFlags_Open		; $91
+	DoorFlag  DoorFlags_Open		; $92
+	DoorFlag  DoorFlags_Open		; $93
+	DoorFlag  DoorFlags_Open		; $94
+	DoorFlag  DoorFlags_Open		; $95
+	DoorFlag  DoorFlags_Open		; $96
+	DoorFlag  DoorFlags_Open		; $97
+	DoorFlag  DoorFlags_Closed		; $98
+	DoorFlag  DoorFlags_Open		; $99
+	DoorFlag  DoorFlags_Open		; $9A
+	DoorFlag  DoorFlags_Open		; $9B
+	DoorFlag  DoorFlags_Open		; $9C
+	DoorFlag  DoorFlags_Open		; $9D
+	DoorFlag  DoorFlags_Open		; $9E
+	DoorFlag  DoorFlags_Open		; $9F
+	DoorFlag  DoorFlags_Open		; $A0
+	DoorFlag  DoorFlags_Open		; $A1
+	DoorFlag  DoorFlags_Open		; $A2
+	DoorFlag  DoorFlags_Open		; $A3
+	DoorFlag  DoorFlags_Open		; $A4
+	DoorFlag  DoorFlags_Open		; $A5
+	DoorFlag  DoorFlags_Open		; $A6
+	DoorFlag  DoorFlags_Open		; $A7
+	DoorFlag  DoorFlags_Open		; $A8
+	DoorFlag  DoorFlags_Open		; $A9
+	DoorFlag  DoorFlags_Open		; $AA
+	DoorFlag  DoorFlags_Open		; $AB
+	DoorFlag  DoorFlags_Open		; $AC
+	DoorFlag  DoorFlags_Open		; $AD
+	DoorFlag  DoorFlags_Open		; $AE
+	DoorFlag  DoorFlags_Open		; $AF
+	DoorFlag  DoorFlags_Open		; $B0
+	DoorFlag  DoorFlags_Open		; $B1
+	DoorFlag  DoorFlags_Open		; $B2
+	DoorFlag  DoorFlags_Open		; $B3
+	DoorFlag  DoorFlags_Open		; $B4
+	DoorFlag  DoorFlags_Open		; $B5
+	DoorFlag  DoorFlags_Open		; $B6
+	DoorFlag  DoorFlags_Open		; $B7
+	DoorFlag  DoorFlags_Open		; $B8
+	DoorFlag  DoorFlags_Open		; $B9
+	DoorFlag  DoorFlags_Open		; $BA
+	DoorFlag  DoorFlags_Open		; $BB
+	DoorFlag  DoorFlags_Open		; $BC
+	DoorFlag  DoorFlags_Open		; $BD
+	DoorFlag  DoorFlags_Open		; $BE
+	DoorFlag  DoorFlags_Open		; $BF
+	DoorFlag  DoorFlags_Open		; $C0
+	DoorFlag  DoorFlags_Open		; $C1
+	DoorFlag  DoorFlags_Closed		; $C2
+	DoorFlag  DoorFlags_Open		; $C3
+	DoorFlag  DoorFlags_Hidden		; $C4
+	DoorFlag  DoorFlags_Hidden		; $C5
+	DoorFlag  DoorFlags_Hidden		; $C6
+	DoorFlag  DoorFlags_Hidden		; $C7
+	DoorFlag  DoorFlags_Open		; $C8
+	DoorFlag  DoorFlags_Closed		; $C9
+	DoorFlag  DoorFlags_Closed		; $CA
+	DoorFlag  DoorFlags_Closed		; $CB
+	DoorFlag  DoorFlags_Hidden		; $CC
+	DoorFlag  DoorFlags_Open		; $CD
+	DoorFlag  DoorFlags_Closed		; $CE
+	DoorFlag  DoorFlags_Invisible	; $CF
+	DoorFlag  DoorFlags_Closed		; $D0
+	DoorFlag  DoorFlags_Invisible	; $D1
+	DoorFlag  DoorFlags_Open		; $D2
+	DoorFlag  DoorFlags_Hidden		; $D3
+	DoorFlag  DoorFlags_Open		; $D4
+	DoorFlag  DoorFlags_Hidden		; $D5
+	DoorFlag  DoorFlags_Hidden		; $D6
+	DoorFlag  DoorFlags_Hidden		; $D7
+	DoorFlag  DoorFlags_Hidden		; $D8
+	DoorFlag  DoorFlags_Hidden		; $D9
+	DoorFlag  DoorFlags_Invisible	; $DA
+	DoorFlag  DoorFlags_Invisible	; $DB
+	DoorFlag  DoorFlags_Hidden		; $DC
+	DoorFlag  DoorFlags_Hidden		; $DD
+	DoorFlag  DoorFlags_Hidden		; $DE
+	DoorFlag  DoorFlags_Hidden		; $DF
+	DoorFlag  DoorFlags_Invisible	; $E0
+	DoorFlag  DoorFlags_Hidden		; $E1
+	DoorFlag  DoorFlags_Closed		; $E2
+	DoorFlag  DoorFlags_Closed		; $E3
+	DoorFlag  DoorFlags_Hidden		; $E4
+	DoorFlag  DoorFlags_Invisible	; $E5
+	DoorFlag  DoorFlags_Open		; $E6
+	DoorFlag  DoorFlags_Hidden		; $E7
+	DoorFlag  DoorFlags_Closed		; $E8
+	DoorFlag  DoorFlags_Hidden		; $E9
+	DoorFlag  DoorFlags_Hidden		; $EA
+	DoorFlag  DoorFlags_Hidden		; $EB
+	DoorFlag  DoorFlags_Hidden		; $EC
+	DoorFlag  DoorFlags_Invisible	; $ED
+	DoorFlag  DoorFlags_Open		; $EE
+	DoorFlag  DoorFlags_Open		; $EF
 
 
 ZoneItemTable:
-	Item   5, $19, $70, $31 ;		  ;	DATA XREF: LoadZoneItemst
+	Item   5, $19, $70, $31 ;		; 0
 	Item   5,  $F, $70, $21 ;		; 1
 	Item   7, $D7, $70,   5 ;		; 2
 	Item   7, $A5, $6C, $11 ;		; 3
@@ -1270,10 +1270,10 @@ ColumnAttributes:
 
 ; Column collision data	- two bits per 16x16 tile
 ; Not sure on the specifics, but
-; 00 - clear
-; 01 - ?
-; 10 - solid with boots	item (?)
-; 11 - solid
+; 00 __ - clear
+; 01    - (unused)
+; 10 H_ - solid with boots item (?)
+; 11 SB - solid
 ColumnCollisionTable:
 	ColumnSolidity  __,__,__,__,__,__,__,__		;   0
 	ColumnSolidity  __,__,__,__,__,__,__,__		;   1
@@ -1543,1119 +1543,401 @@ ColumnCollisionTable:
 ; $42
 ; $74-$77
 BlockTable:
-	Block   0,	0,   0,	  0,   0,   0,	 0,   0,   0,	0,   0,	  0,   0,   0,	 0,   0
-	Block   0,	$C5, $C0, $C6, $C0, $C6, $C2, $C8, $C3,	$C9, $C4, $CA, $C4, $CA,   0, $C5 ;; 1
-	Block   0,	$BF,   1, $BF,	 2, $BF,   3, $BF,   0,	$BF,   4, $BF,	 5, $BF,   6, $BF ;; 2
-	Block   7,	$BF,   0, $BF,	 8, $BF,   9, $BF,  $A,	$BF,  $B, $BF,	 0, $BF,   0, $BF ;; 3
-	Block $39,	$BF, $3A, $BF, $8F, $BF, $96, $BF, $A9,	$BF, $CB, $BF, $CC, $BF, $CD, $BF ;; 4
-	Block   0,	$BF,   0, $BF, $CE, $BF, $CF, $BF, $E8,	$BF, $E9, $BF,	 0, $BF,   0, $BF ;; 5
-	Block   0,	  0,   0, $49,	 0, $49,   0,	0,   0,	  0,   0, $49,	 0, $49,   0,	0 ;; 6
-	Block   0,	  0,   0, $4A,	 0, $4A,   0,	0,   0,	  0,   0, $4A,	 0, $4A,   0,	0 ;; 7
-	Block   0,	  0,   0, $4B,	 0, $4B,   0,	0,   0,	  0,   0, $4B,	 0, $4B,   0,	0 ;; 8
-	Block   0,	  0,   0,   0,	 0,   0,   0,	0,   0,	  0,   0,   0,	 0,   0,   0,	0 ;; 9
-	Block   0,	  0,   0,   0,	 0,   0,   0,	0,   0,	  0,   0,   0,	 0,   0,   0,	0 ;; $A
-	Block   0,	  0,   0,   0,	 0,   0,   0,	0,   0,	  0,   0,   0,	 0,   0,   0,	0 ;; $B
-	Block   0,	  0,   0,   0,	 0,   0,   0,	0,   0,	  0,   0,   0,	 0,   0,   0,	0 ;; $C
-	Block   0,	  0,   0,   0,	 0,   0,   0,	0,   0,	  0,   0,   0,	 0,   0,   0,	0 ;; $D
-	Block   0,	  0,   0,   0,	 0,   0,   0,	0,   0,	  0,   0,   0,	 0,   0,   0,	0 ;; $E
-	Block   0,	  0,   0,   0,	 0,   0,   0,	0,   0,	  0,   0,   0,	 0,   0,   0,	0 ;; $F
-	Block $1E,	$1C,  $F,  $F,	$F,  $F,  $F,  $F,  $F,	 $F,  $F,  $F,	$F,  $F, $1F, $1D ;; $10
-	Block   0,	$13,   0, $13,	 0, $13,   0, $13,   0,	$13,   0, $13,	 0, $13,   0, $13 ;; $11
-	Block   0,	$19,   0, $1A,	 0, $13,   0, $13,   0,	$13,   0, $13,	 0, $13,   0, $13 ;; $12
-	Block   0,	$13,   0, $13,	 0, $18,   0,	0,   0,	  0,   0, $17,	 0, $13,   0, $13 ;; $13
-	Block   0,	$12,   0, $12,	 0, $12,   0, $12,   0,	$12,   0, $12,	 0, $12,   0, $12 ;; $14
-	Block   0,	$13,   0, $13,	 0, $11,   0, $11,   0,	$11,   0, $11,	 0, $11,   0, $11 ;; $15
-	Block   0,	$13,   0, $13,	 0, $10,   0, $10,   0,	$10,   0, $10,	 0, $10,   0, $10 ;; $16
-	Block   0,	$13,   0, $1B,	 0, $1B,   0, $1B,   0,	$1B,   0, $1B,	 0, $1B,   0, $13 ;; $17
-	Block   0,	$13,   0, $13,	 0, $14,   0, $15,   0,	$15,   0, $15,	 0, $16,   0, $13 ;; $18
-	Block $EE,	$F5, $EE, $F5, $EE, $F5, $EE, $FA, $EE,	$FB, $EE, $F5, $EE, $F5, $EE, $F5 ;; $19
-	Block $EE,	$F5, $EE, $F5, $EE, $F5, $EE, $FC, $EE,	$FD, $EE, $F5, $EE, $F5, $EE, $F5 ;; $1A
-	Block $EE,	$F5, $EE, $F5, $EE, $F5, $EE, $F8, $EE,	$F9, $EE, $F5, $EE, $F5, $EE, $F5 ;; $1B
-	Block $EE,	$F5, $EE, $F5, $EE, $F5, $F6, $FE, $F7,	$FF, $EE, $F5, $EE, $F5, $EE, $F5 ;; $1C
-	Block $60,	$60, $60, $60, $60, $60, $60, $60, $60,	$60, $60, $60, $60, $60, $60, $60 ;; $1D
-	Block $F0,	$F0, $F0, $F0, $F1, $F1, $F1, $F1, $F0,	$F0, $F0, $F0, $F1, $F1, $F1, $F1 ;; $1E
-	Block $F4,	$F4, $F4, $F4, $F2, $F2, $F4, $F4, $F3,	$F3, $F4, $F4, $F2, $F2, $F4, $F4 ;; $1F
-	Block $21,	$27, $21, $27, $21, $27, $21, $21, $20,	$21, $20, $21, $20, $21, $23, $25 ;; $20
-	Block $20,	$21, $20, $21, $20, $21, $21, $21, $21,	$27, $21, $27, $21, $27, $21, $26 ;; $21
-	Block $21,	$21, $21, $21, $21, $21, $21, $21, $21,	$21, $21, $21, $21, $21, $21, $21 ;; $22
-	Block $21,	$21, $21, $21, $21, $21, $21, $21, $21,	$21, $21, $21, $21, $21, $22, $25 ;; $23
-	Block $21,	$21, $21, $21, $21, $21, $21, $21, $21,	$27, $21, $27, $21, $27, $22, $24 ;; $24
-	Block $21,	$21, $20, $27, $20, $27, $20, $27, $23,	$25, $20, $21, $20, $21, $20, $26 ;; $25
-	Block $21,	$21, $21, $21, $21, $21, $21, $21, $28,	$28, $21, $21, $21, $21, $21, $21 ;; $26
-	Block $EE,	$F5, $EE, $F5, $EE, $F5, $EE, $F5, $EE,	$F5, $EE, $F5, $EE, $F5, $EE, $F5 ;; $27
-	Block $9A,	$9D, $99, $9F, $99, $9F, $9A, $9E, $9B,	$9E, $98, $9D, $97, $9E, $9C, $9D ;; $28
-	Block $60,	$EF, $60, $EF, $60, $EF, $60, $EF, $60,	$EF, $60, $EF, $60, $EF, $60, $EF ;; $29
-	Block   0,	$2A,   0, $2A,	 0, $2A,   0, $2A,   0,	$2A,   0, $2A,	 0, $2B,   0, $2A ;; $2A
-	Block $31,	$2C, $32, $2D, $31, $2C, $32, $2D,   0,	$2C, $35, $2D,	 0, $2C, $35, $2D ;; $2B
-	Block $31,	$2C, $32, $2D, $31, $2C, $32, $2D, $31,	$2A, $31, $2B, $31, $2A, $32, $2D ;; $2C
-	Block   0,	$2A,   0, $2B,	 0, $2A,   0, $2B,   0,	$2A,   0, $2A,	 0, $2A,   0, $2A ;; $2D
-	Block   0,	$2A,   0, $2A,	 0, $2A,   0, $2A,   0,	$2A,   0, $2A,	 0, $2A,   0, $2A ;; $2E
-	Block   0,	$2A,   0, $2F,	 0, $30,   0, $2A,   0,	$2A, $36, $2E,	 0, $2A,   0, $2A ;; $2F
-	Block $33,	$2C, $34, $2D, $33, $2C, $32, $2E, $31,	$2A, $32, $2E, $33, $2C, $34, $2D ;; $30
-	Block $33,	$2C, $34, $2D, $33, $2C, $35, $2D, $33,	$2C, $35, $2D, $33, $2C, $34, $2D ;; $31
-	Block   0,	  0,   0,   0,	 0, $49,   0,	0,   0,	$4B,   0,   0,	 0, $4A,   0,	0 ;; $32
-	Block   0,	  0,   0,   0,	 0, $49,   0,	0,   0,	  0,   0,   0, $4C, $4A, $4D,	0 ;; $33
-	Block   0,	  0,   0, $49,	 0,   0,   0,	0,   0,	  0,   0,   0,	 0,   0,   0, $49 ;; $34
-	Block   0,	  0,   0,   0,	 0,   0,   0, $4B, $4E,	  0, $4F,   0,	 0,   0,   0, $4A ;; $35
-	Block   0,	$5D,   0, $5D,	 0, $5D,   0, $5D,   0,	$5D,   0, $5D,	 0, $5D,   0, $5D ;; $36
-	Block   0,	$60,   0,   0,	 0,   0,   0,	0,   0,	  0,   0,   0,	 0,   0,   0, $60 ;; $37
-	Block   0,	$B0,   0, $B0,	 0, $C5,   0, $5F,   0,	$C5,   0, $B0,	 0, $B0,   0, $B0 ;; $38
-	Block   0,	  0,   0,   0,	 0, $AA,   0, $AD, $AA,	$AE, $AD, $AB, $AC, $AC, $AD, $AB ;; $39
-	Block $AE,	$AC, $AB, $AD, $AE, $AE, $AD, $AB, $AC,	$AE, $AD, $AB, $AC, $AE, $AD, $AB ;; $3A
-	Block $AE,	$AC, $AD, $AB, $AC, $AC, $AD, $AD, $AF,	$AF,   0,   0,	 0,   0,   0,	0 ;; $3B
-	Block   0,	$90,   0, $90, $4C, $90, $4D, $90,   0,	$90,   0, $90,	 0, $90,   0, $90 ;; $3C
-	Block   0,	$91, $4C, $92, $4D, $93,   0, $95,   0,	$90, $4E, $90, $4F, $95,   0, $90 ;; $3D
-	Block $4E,	$90, $4F, $95,	 0, $90, $4C, $94, $4D,	$90,   0, $90,	 0, $95,   0, $95 ;; $3E
-	Block   0,	$95,   0, $95,	 0, $95,   0, $95,   0,	$95,   0, $95,	 0, $95,   0, $95 ;; $3F
-	Block   0,	  0,   0,   0,	 0,   0,   0,	0,   0,	  0,   0,   0,	 0,   0,   0, $29 ;; $40
-	Block   0,	$B1,   0, $B2, $66, $B3, $67, $B4, $68,	$B5, $69, $B6,	 0, $B7,   0, $B8 ;; $41
-	Block $4E,	$95, $4F, $90,	 0, $95, $4C, $95, $4D,	$90,   0, $90,	 0, $90,   0, $95 ;; $42
-	Block   0,	$4B,   0,   0, $4C, $4B, $4D,	0,   0,	$4B,   0,   0,	 0, $4B,   0,	0 ;; $43
-	Block   0,	  0,   0,   0,	 0, $4A,   0, $4A,   0,	  0,   0, $4A,	 0, $4A,   0,	0 ;; $44
-	Block   0,	$49,   0, $49,	 0,   0,   0, $49, $4E,	$49, $4F,   0,	 0,   0,   0, $49 ;; $45
-	Block $44,	$3F, $43, $3E, $44, $3F, $41, $3B, $43,	$3E, $42, $3C, $44, $3F, $40, $3F ;; $46
-	Block $41,	$3D, $42, $3C, $45, $3B, $44, $3B, $43,	$3C, $41, $3D, $43, $3C, $41, $3E ;; $47
-	Block $42,	$3B, $43, $3C, $41, $3E, $45, $3F, $41,	$40, $45, $3D, $42, $3E, $44, $3C ;; $48
-	Block $43,	$45, $40, $3B, $44, $3D, $45, $3F, $43,	$40, $44, $3E, $42, $3C, $41, $3B ;; $49
-	Block $42,	$3F, $45, $45, $42, $3D, $41, $3C, $42,	$45, $45, $45, $43, $3B, $44, $3C ;; $4A
-	Block $45,	$45, $45, $45, $44, $3C, $41, $3E, $43,	$3D, $41, $40, $45, $3B, $45, $45 ;; $4B
-	Block $42,	$41, $45, $42, $42, $45, $43, $3C, $43,	$45, $41, $40, $43, $3F, $45, $3E ;; $4C
-	Block $43,	$40, $44, $45, $43, $45, $40, $3C, $44,	$3C, $43, $45, $44, $45, $43, $40 ;; $4D
-	Block $44,	$3C, $45, $41, $41, $3C, $3B, $45, $45,	$42, $45, $41, $41, $3C, $40, $45 ;; $4E
-	Block $45,	$45, $44, $3F, $42, $45, $45, $40, $43,	$45, $45, $3D, $40, $45, $42, $3C ;; $4F
-	Block   0,	$51,   0, $50,	 0, $56,   0, $52,   0,	$51,   0, $50,	 0, $56,   0, $52 ;; $50
-	Block $51,	$51, $50, $50, $56, $59, $52, $52, $51,	$51, $50, $50, $56, $59, $52, $52 ;; $51
-	Block $51,	$54, $50, $53, $57, $58, $52, $55, $51,	$54, $50, $53, $57, $5A, $51, $5B ;; $52
-	Block $51,	$54, $50, $53,	 0, $58,   0, $55,   0,	$54, $50, $53, $57, $58, $52, $55 ;; $53
-	Block   0,	$51,   0, $50,	 0, $56,   0, $55,   0,	$54, $50, $5B, $57, $5A, $52, $5B ;; $54
-	Block $D0,	$D0, $D1, $D1, $D2, $D2, $D1, $D1, $D2,	$D2, $D1, $D1, $D2, $D2, $D3, $D3 ;; $55
-	Block   0,	$46,   0, $47,	 0, $47,   0, $47,   0,	$47,   0, $47,	 0, $47,   0, $48 ;; $56
-	Block   0,	  0,   0, $46,	 0, $47,   0, $48,   0,	  0,   0, $46,	 0, $47,   0, $48 ;; $57
-	Block   0,	  0,   0,   0,	 0, $46,   0, $47,   0,	$47,   0, $47,	 0, $47,   0, $48 ;; $58
-	Block   0,	$7D,   0, $6D,	 0, $7F,   0, $6C,   0,	$6D,   0, $7F,	 0, $6C,   0, $7E ;; $59
-	Block $A6,	$A0, $A7, $A1, $A8, $A2, $A4, $A3, $A3,	$A4, $A2, $A4, $A2, $A5, $A2, $A5 ;; $5A
-	Block $A2,	$A5, $A2, $A5, $A2, $A4, $A3, $A4, $A4,	$A3, $A8, $A2, $A7, $A1, $A6, $A0 ;; $5B
-	Block $A3,	$A4, $A4, $A3, $A8, $A2, $A7, $A1, $A6,	$A1, $A7, $A2, $A4, $A3, $A3, $A4 ;; $5C
-	Block $A3,	$A3, $A4, $A2, $A7, $A1, $A6, $A0, $A7,	$A1, $A4, $A2, $A3, $A3, $A2, $A3 ;; $5D
-	Block $A2,	$A5, $A3, $A5, $A4, $A4, $A3, $A3, $A2,	$A2, $A2, $A3, $A2, $A4, $A3, $A5 ;; $5E
-	Block $A8,	$A3, $A8, $A3, $A4, $A2, $A3, $A1, $A2,	$A1, $A4, $A2, $A4, $A1, $A8, $A2 ;; $5F
-	Block $60,	$60, $60, $60, $60, $60, $61, $61, $62,	$62, $60, $60, $60, $60, $60, $60 ;; $60
-	Block   0,	$7C,   0, $7C,	 0, $7C,   0, $7C,   0,	$7C,   0, $7C,	 0, $7C,   0, $7C ;; $61
-	Block   0,	  0, $4C,   0, $4D,   0,   0,	0,   0,	  0, $4E,   0, $4F,   0,   0,	0 ;; $62
-	Block $60,	$60, $60, $60, $63, $63, $61, $61, $62,	$62, $63, $63, $60, $60, $60, $60 ;; $63
-	Block $60,	$60, $60, $60, $63, $63, $61, $61, $62,	$62, $60, $60, $60, $60, $60, $60 ;; $64
-	Block   0,	$13,   0,  $C,	 0,  $D,   0,  $E,   0,	$13,   0, $13,	 0,  $C,   0,  $E ;; $65
-	Block   0,	$13,   0, $13,	 0, $13,   0, $1C,   0,	 $F,   0,  $F,	 0, $1D,   0, $13 ;; $66
-	Block $38,	$5E, $38, $5C, $38, $5C, $38, $5E, $38,	$5C, $37, $5C, $38, $5C, $37, $5E ;; $67
-	Block $38,	$5E, $38, $5C, $37, $5E, $38, $5C, $37,	$5E, $37, $5E, $37, $5C, $38, $5E ;; $68
-	Block   0,	  0,   0, $4C,	 0, $4D,   0,	0,   0,	  0,   0, $4E,	 0, $4F,   0,	0 ;; $69
-	Block   0,	  0,   0, $D7,	 0, $D8,   0, $D8,   0,	$D8,   0, $D8,	 0, $D8,   0, $D8 ;; $6A
-	Block   0,	$D8, $D4, $D8, $D5, $D8, $D5, $D8, $D6,	$D8,   0, $D9,	 0,   0,   0,	0 ;; $6B
-	Block   0,	  0,   0, $DA,	 0, $DB,   0, $DB,   0,	$DB,   0, $DB,	 0, $DC,   0,	0 ;; $6C
-	Block $D4,	  0, $D5,   0, $D5,   0, $D6,	0,   0,	$DA,   0, $DB,	 0, $DB,   0, $DC ;; $6D
-	Block   0,	  0, $D4,   0, $D5,   0, $D5,	0, $D5,	  0, $D5,   0, $D6,   0,   0,	0 ;; $6E
-	Block   0,	$D7,   0, $D8, $D7, $D8, $D8, $D8, $D8,	$D8, $D9, $D8,	 0, $D8,   0, $D9 ;; $6F
-	Block   0,	$72,   0, $72,	 0, $72,   0, $72,   0,	$72,   0, $72,	 0, $72,   0, $70 ;; $70
-	Block   0,	$70,   0, $71,	 0, $71,   0, $71,   0,	$71,   0, $71,	 0, $71,   0, $70 ;; $71
-	Block   0,	$70,   0, $70,	 0, $73,   0, $73,   0,	$70,   0, $70,	 0, $72,   0, $72 ;; $72
-	Block   0,	$70,   0, $71,	 0, $70,   0, $73,   0,	$70,   0, $70,	 0, $72,   0, $70 ;; $73
-	Block $D4,	  0, $D5, $D7, $D5, $D8, $D5, $D8, $D5,	$D8, $D5, $D8, $D5, $D9, $D6,	0 ;; $74
-	Block   0,	$75,   0, $75,	 0, $75,   0, $75,   0,	$78,   0, $75,	 0, $75, $7B, $7A ;; $75
-	Block   0,	$70,   0, $70,	 0, $76,   0, $75,   0,	$78,   0, $75,	 0, $77,   0, $79 ;; $76
-	Block $88,	$90, $8B, $90, $8C,   5, $8C, $91, $8C,	$93, $8D, $92, $8E, $94, $8F, $95 ;; $77
-	Block $99,	$9F, $98, $9E, $9A, $9D, $9B, $9D, $9C,	$9D, $9A, $9D, $9B, $9D, $9A, $97 ;; $78
-	Block $99,	$9D, $98, $9E, $98, $9F, $97, $9F, $98,	$9F, $98, $9F, $98, $9E, $99, $9D ;; $79
-	Block   0,	$81,   0, $81,	 0, $82,   0, $81,   0,	$81,   0, $83,	 0, $82,   0, $82 ;; $7A
-	Block   0,	$81,   0, $82,	 0, $83,   0, $83,   0,	$84,   0, $80,	 0, $81,   0, $82 ;; $7B
-	Block   0,	$82,   0, $82,	 0, $83,   0, $83,   0,	$84,   0,   0,	 0,   0,   0, $80 ;; $7C
-	Block   0,	$80,   0, $85,	 0, $86,   0, $87,   0,	$88,   0, $8E,	 0, $8D,   0, $8C ;; $7D
-	Block   0,	  0,   0, $85, $80, $86, $84, $88,   0,	$8E,   0, $8D,	 0, $8C,   0,	0 ;; $7E
-	Block   0,	$85,   0, $86, $80, $87, $81, $88, $82,	$89, $83, $8A, $84, $8B,   0, $8C ;; $7F
-	Block $E7,	$E7, $E7, $E7, $E7, $E7, $E7, $E7, $E5,	$E3, $E5, $E3, $E5, $E3, $E5, $E3 ;; $80
-	Block $E0,	$E5, $E0, $E5, $E0, $E5, $E0, $E5, $E3,	$E0, $E3, $E0, $E3, $E0, $E3, $E0 ;; $81
-	Block $E0,	$E7, $E2, $E7, $E2, $E7, $E0, $E7, $E7,	$E0, $E7, $E1, $E7, $E1, $E7, $E0 ;; $82
-	Block $E3,	$E0, $E3, $E0, $E4, $E2, $E4, $E2, $E0,	$E0, $E0, $E0, $E0, $E0, $E0, $E0 ;; $83
-	Block $E0,	$E5, $E0, $E6, $E0, $E6, $E0, $E5, $E5,	$E3, $E5, $E3, $E5, $E3, $E5, $E3 ;; $84
-	Block $E0,	$E0, $E0, $E2, $E0, $E2, $E0, $E0, $E0,	$E7, $E0, $E7, $E0, $E7, $E0, $E7 ;; $85
-	Block $E0,	$E5, $E0, $E6, $E0, $E6, $E0, $E5, $E4,	$E0, $E4, $E0, $E3, $E0, $E3, $E0 ;; $86
-	Block   0,	$BF,   0,   0,	 0,   0, $64, $64, $60,	$60, $65, $65,	 0,   0,   0, $BF ;; $87
-	Block $9B,	$9F, $9B, $9F, $9B, $9F, $9B, $9F, $F4,	$9F, $9B, $9F, $9B, $9F, $9B, $9F ;; $88
-	Block $9B,	$9F, $9B, $9F, $9B, $9E, $9B, $9F, $F4,	$9F, $9B, $9F, $9B, $9F, $9B, $9F ;; $89
-	Block   0,	$B0,   0, $B0,	 0, $B0,   0, $B0,   0,	$B0,   0, $B0,	 0, $B0,   0, $B0 ;; $8A
-	Block   0,	$B0,   0, $B1,	 0, $B9,   0, $BA,   0,	$B8,   0, $B0,	 0, $B0,   0, $B0 ;; $8B
-	Block   0,	$B1,   0, $B2,	 0, $BB,   0, $BC,   0,	$BD,   0, $BE,	 0, $BA,   0, $B8 ;; $8C
-	Block   0,	$B1,   0, $B2,	 0, $B3,   0, $B4,   0,	$B5,   0, $B6,	 0, $B7,   0, $B8 ;; $8D
-	Block   0,	$B0,   0, $DD,	 0, $DF,   0, $DD,   0,	$DE,   0, $DD,	 0, $DD,   0, $B0 ;; $8E
-	Block   0,	$B0,   0, $DE,	 0, $DE,   0, $DD,   0,	$DE,   0, $DF,	 0, $DF,   0, $B0 ;; $8F
-	Block   0,	$76,   0, $79, $7B, $75,   0, $6F, $7B,	$77,   0, $78,	 0, $6A,   0, $6B ;; $90
-	Block   0,	$7A,   0, $76,	 0, $76,   0, $79,   0,	$76,   0, $78,	 0, $7A,   0, $76 ;; $91
-	Block   0,	$70,   0, $76,	 0, $79,   0, $7A,   0,	$76,   0, $78,	 0, $7A,   0, $76 ;; $92
-	Block   0,	$6E,   0, $76,	 0, $79,   0, $6A,   0,	$78,   0, $6F,	 0, $79,   0, $76 ;; $93
-	Block   0,	$B0,   0, $B0,	 0, $B0,   0, $B0,   0,	$B0,   0, $EA,	 0, $EB,   0, $EC ;; $94
-	Block   0,	$EA,   0, $EB,	 0, $ED,   0, $EB,   0,	$EC,   0, $B0,	 0, $B0,   0, $B0 ;; $95
-	Block   0,  $EA,   0, $EB,   0, $ED,   0, $EB,   0, $ED,   0, $EB,   0, $EC,   0, $B0 ;; $96
+    Block    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0      ;   0
+    Block    0, $C5, $C0, $C6, $C0, $C6, $C2, $C8, $C3, $C9, $C4, $CA, $C4, $CA,   0, $C5      ;   1
+    Block    0, $BF,   1, $BF,   2, $BF,   3, $BF,   0, $BF,   4, $BF,   5, $BF,   6, $BF      ;   2
+    Block    7, $BF,   0, $BF,   8, $BF,   9, $BF,  $A, $BF,  $B, $BF,   0, $BF,   0, $BF      ;   3
+    Block  $39, $BF, $3A, $BF, $8F, $BF, $96, $BF, $A9, $BF, $CB, $BF, $CC, $BF, $CD, $BF      ;   4
+    Block    0, $BF,   0, $BF, $CE, $BF, $CF, $BF, $E8, $BF, $E9, $BF,   0, $BF,   0, $BF      ;   5
+    Block    0,   0,   0, $49,   0, $49,   0,   0,   0,   0,   0, $49,   0, $49,   0,   0      ;   6
+    Block    0,   0,   0, $4A,   0, $4A,   0,   0,   0,   0,   0, $4A,   0, $4A,   0,   0      ;   7
+    Block    0,   0,   0, $4B,   0, $4B,   0,   0,   0,   0,   0, $4B,   0, $4B,   0,   0      ;   8
+    Block    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0      ;   9
+    Block    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0      ;  $A
+    Block    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0      ;  $B
+    Block    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0      ;  $C
+    Block    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0      ;  $D
+    Block    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0      ;  $E
+    Block    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0      ;  $F
+    Block  $1E, $1C,  $F,  $F,  $F,  $F,  $F,  $F,  $F,  $F,  $F,  $F,  $F,  $F, $1F, $1D      ; $10
+    Block    0, $13,   0, $13,   0, $13,   0, $13,   0, $13,   0, $13,   0, $13,   0, $13      ; $11
+    Block    0, $19,   0, $1A,   0, $13,   0, $13,   0, $13,   0, $13,   0, $13,   0, $13      ; $12
+    Block    0, $13,   0, $13,   0, $18,   0,   0,   0,   0,   0, $17,   0, $13,   0, $13      ; $13
+    Block    0, $12,   0, $12,   0, $12,   0, $12,   0, $12,   0, $12,   0, $12,   0, $12      ; $14
+    Block    0, $13,   0, $13,   0, $11,   0, $11,   0, $11,   0, $11,   0, $11,   0, $11      ; $15
+    Block    0, $13,   0, $13,   0, $10,   0, $10,   0, $10,   0, $10,   0, $10,   0, $10      ; $16
+    Block    0, $13,   0, $1B,   0, $1B,   0, $1B,   0, $1B,   0, $1B,   0, $1B,   0, $13      ; $17
+    Block    0, $13,   0, $13,   0, $14,   0, $15,   0, $15,   0, $15,   0, $16,   0, $13      ; $18
+    Block  $EE, $F5, $EE, $F5, $EE, $F5, $EE, $FA, $EE, $FB, $EE, $F5, $EE, $F5, $EE, $F5      ; $19
+    Block  $EE, $F5, $EE, $F5, $EE, $F5, $EE, $FC, $EE, $FD, $EE, $F5, $EE, $F5, $EE, $F5      ; $1A
+    Block  $EE, $F5, $EE, $F5, $EE, $F5, $EE, $F8, $EE, $F9, $EE, $F5, $EE, $F5, $EE, $F5      ; $1B
+    Block  $EE, $F5, $EE, $F5, $EE, $F5, $F6, $FE, $F7, $FF, $EE, $F5, $EE, $F5, $EE, $F5      ; $1C
+    Block  $60, $60, $60, $60, $60, $60, $60, $60, $60, $60, $60, $60, $60, $60, $60, $60      ; $1D
+    Block  $F0, $F0, $F0, $F0, $F1, $F1, $F1, $F1, $F0, $F0, $F0, $F0, $F1, $F1, $F1, $F1      ; $1E
+    Block  $F4, $F4, $F4, $F4, $F2, $F2, $F4, $F4, $F3, $F3, $F4, $F4, $F2, $F2, $F4, $F4      ; $1F
+    Block  $21, $27, $21, $27, $21, $27, $21, $21, $20, $21, $20, $21, $20, $21, $23, $25      ; $20
+    Block  $20, $21, $20, $21, $20, $21, $21, $21, $21, $27, $21, $27, $21, $27, $21, $26      ; $21
+    Block  $21, $21, $21, $21, $21, $21, $21, $21, $21, $21, $21, $21, $21, $21, $21, $21      ; $22
+    Block  $21, $21, $21, $21, $21, $21, $21, $21, $21, $21, $21, $21, $21, $21, $22, $25      ; $23
+    Block  $21, $21, $21, $21, $21, $21, $21, $21, $21, $27, $21, $27, $21, $27, $22, $24      ; $24
+    Block  $21, $21, $20, $27, $20, $27, $20, $27, $23, $25, $20, $21, $20, $21, $20, $26      ; $25
+    Block  $21, $21, $21, $21, $21, $21, $21, $21, $28, $28, $21, $21, $21, $21, $21, $21      ; $26
+    Block  $EE, $F5, $EE, $F5, $EE, $F5, $EE, $F5, $EE, $F5, $EE, $F5, $EE, $F5, $EE, $F5      ; $27
+    Block  $9A, $9D, $99, $9F, $99, $9F, $9A, $9E, $9B, $9E, $98, $9D, $97, $9E, $9C, $9D      ; $28
+    Block  $60, $EF, $60, $EF, $60, $EF, $60, $EF, $60, $EF, $60, $EF, $60, $EF, $60, $EF      ; $29
+    Block    0, $2A,   0, $2A,   0, $2A,   0, $2A,   0, $2A,   0, $2A,   0, $2B,   0, $2A      ; $2A
+    Block  $31, $2C, $32, $2D, $31, $2C, $32, $2D,   0, $2C, $35, $2D,   0, $2C, $35, $2D      ; $2B
+    Block  $31, $2C, $32, $2D, $31, $2C, $32, $2D, $31, $2A, $31, $2B, $31, $2A, $32, $2D      ; $2C
+    Block    0, $2A,   0, $2B,   0, $2A,   0, $2B,   0, $2A,   0, $2A,   0, $2A,   0, $2A      ; $2D
+    Block    0, $2A,   0, $2A,   0, $2A,   0, $2A,   0, $2A,   0, $2A,   0, $2A,   0, $2A      ; $2E
+    Block    0, $2A,   0, $2F,   0, $30,   0, $2A,   0, $2A, $36, $2E,   0, $2A,   0, $2A      ; $2F
+    Block  $33, $2C, $34, $2D, $33, $2C, $32, $2E, $31, $2A, $32, $2E, $33, $2C, $34, $2D      ; $30
+    Block  $33, $2C, $34, $2D, $33, $2C, $35, $2D, $33, $2C, $35, $2D, $33, $2C, $34, $2D      ; $31
+    Block    0,   0,   0,   0,   0, $49,   0,   0,   0, $4B,   0,   0,   0, $4A,   0,   0      ; $32
+    Block    0,   0,   0,   0,   0, $49,   0,   0,   0,   0,   0,   0, $4C, $4A, $4D,   0      ; $33
+    Block    0,   0,   0, $49,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, $49      ; $34
+    Block    0,   0,   0,   0,   0,   0,   0, $4B, $4E,   0, $4F,   0,   0,   0,   0, $4A      ; $35
+    Block    0, $5D,   0, $5D,   0, $5D,   0, $5D,   0, $5D,   0, $5D,   0, $5D,   0, $5D      ; $36
+    Block    0, $60,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, $60      ; $37
+    Block    0, $B0,   0, $B0,   0, $C5,   0, $5F,   0, $C5,   0, $B0,   0, $B0,   0, $B0      ; $38
+    Block    0,   0,   0,   0,   0, $AA,   0, $AD, $AA, $AE, $AD, $AB, $AC, $AC, $AD, $AB      ; $39
+    Block  $AE, $AC, $AB, $AD, $AE, $AE, $AD, $AB, $AC, $AE, $AD, $AB, $AC, $AE, $AD, $AB      ; $3A
+    Block  $AE, $AC, $AD, $AB, $AC, $AC, $AD, $AD, $AF, $AF,   0,   0,   0,   0,   0,   0      ; $3B
+    Block    0, $90,   0, $90, $4C, $90, $4D, $90,   0, $90,   0, $90,   0, $90,   0, $90      ; $3C
+    Block    0, $91, $4C, $92, $4D, $93,   0, $95,   0, $90, $4E, $90, $4F, $95,   0, $90      ; $3D
+    Block  $4E, $90, $4F, $95,   0, $90, $4C, $94, $4D, $90,   0, $90,   0, $95,   0, $95      ; $3E
+    Block    0, $95,   0, $95,   0, $95,   0, $95,   0, $95,   0, $95,   0, $95,   0, $95      ; $3F
+    Block    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, $29      ; $40
+    Block    0, $B1,   0, $B2, $66, $B3, $67, $B4, $68, $B5, $69, $B6,   0, $B7,   0, $B8      ; $41
+    Block  $4E, $95, $4F, $90,   0, $95, $4C, $95, $4D, $90,   0, $90,   0, $90,   0, $95      ; $42
+    Block    0, $4B,   0,   0, $4C, $4B, $4D,   0,   0, $4B,   0,   0,   0, $4B,   0,   0      ; $43
+    Block    0,   0,   0,   0,   0, $4A,   0, $4A,   0,   0,   0, $4A,   0, $4A,   0,   0      ; $44
+    Block    0, $49,   0, $49,   0,   0,   0, $49, $4E, $49, $4F,   0,   0,   0,   0, $49      ; $45
+    Block  $44, $3F, $43, $3E, $44, $3F, $41, $3B, $43, $3E, $42, $3C, $44, $3F, $40, $3F      ; $46
+    Block  $41, $3D, $42, $3C, $45, $3B, $44, $3B, $43, $3C, $41, $3D, $43, $3C, $41, $3E      ; $47
+    Block  $42, $3B, $43, $3C, $41, $3E, $45, $3F, $41, $40, $45, $3D, $42, $3E, $44, $3C      ; $48
+    Block  $43, $45, $40, $3B, $44, $3D, $45, $3F, $43, $40, $44, $3E, $42, $3C, $41, $3B      ; $49
+    Block  $42, $3F, $45, $45, $42, $3D, $41, $3C, $42, $45, $45, $45, $43, $3B, $44, $3C      ; $4A
+    Block  $45, $45, $45, $45, $44, $3C, $41, $3E, $43, $3D, $41, $40, $45, $3B, $45, $45      ; $4B
+    Block  $42, $41, $45, $42, $42, $45, $43, $3C, $43, $45, $41, $40, $43, $3F, $45, $3E      ; $4C
+    Block  $43, $40, $44, $45, $43, $45, $40, $3C, $44, $3C, $43, $45, $44, $45, $43, $40      ; $4D
+    Block  $44, $3C, $45, $41, $41, $3C, $3B, $45, $45, $42, $45, $41, $41, $3C, $40, $45      ; $4E
+    Block  $45, $45, $44, $3F, $42, $45, $45, $40, $43, $45, $45, $3D, $40, $45, $42, $3C      ; $4F
+    Block    0, $51,   0, $50,   0, $56,   0, $52,   0, $51,   0, $50,   0, $56,   0, $52      ; $50
+    Block  $51, $51, $50, $50, $56, $59, $52, $52, $51, $51, $50, $50, $56, $59, $52, $52      ; $51
+    Block  $51, $54, $50, $53, $57, $58, $52, $55, $51, $54, $50, $53, $57, $5A, $51, $5B      ; $52
+    Block  $51, $54, $50, $53,   0, $58,   0, $55,   0, $54, $50, $53, $57, $58, $52, $55      ; $53
+    Block    0, $51,   0, $50,   0, $56,   0, $55,   0, $54, $50, $5B, $57, $5A, $52, $5B      ; $54
+    Block  $D0, $D0, $D1, $D1, $D2, $D2, $D1, $D1, $D2, $D2, $D1, $D1, $D2, $D2, $D3, $D3      ; $55
+    Block    0, $46,   0, $47,   0, $47,   0, $47,   0, $47,   0, $47,   0, $47,   0, $48      ; $56
+    Block    0,   0,   0, $46,   0, $47,   0, $48,   0,   0,   0, $46,   0, $47,   0, $48      ; $57
+    Block    0,   0,   0,   0,   0, $46,   0, $47,   0, $47,   0, $47,   0, $47,   0, $48      ; $58
+    Block    0, $7D,   0, $6D,   0, $7F,   0, $6C,   0, $6D,   0, $7F,   0, $6C,   0, $7E      ; $59
+    Block  $A6, $A0, $A7, $A1, $A8, $A2, $A4, $A3, $A3, $A4, $A2, $A4, $A2, $A5, $A2, $A5      ; $5A
+    Block  $A2, $A5, $A2, $A5, $A2, $A4, $A3, $A4, $A4, $A3, $A8, $A2, $A7, $A1, $A6, $A0      ; $5B
+    Block  $A3, $A4, $A4, $A3, $A8, $A2, $A7, $A1, $A6, $A1, $A7, $A2, $A4, $A3, $A3, $A4      ; $5C
+    Block  $A3, $A3, $A4, $A2, $A7, $A1, $A6, $A0, $A7, $A1, $A4, $A2, $A3, $A3, $A2, $A3      ; $5D
+    Block  $A2, $A5, $A3, $A5, $A4, $A4, $A3, $A3, $A2, $A2, $A2, $A3, $A2, $A4, $A3, $A5      ; $5E
+    Block  $A8, $A3, $A8, $A3, $A4, $A2, $A3, $A1, $A2, $A1, $A4, $A2, $A4, $A1, $A8, $A2      ; $5F
+    Block  $60, $60, $60, $60, $60, $60, $61, $61, $62, $62, $60, $60, $60, $60, $60, $60      ; $60
+    Block    0, $7C,   0, $7C,   0, $7C,   0, $7C,   0, $7C,   0, $7C,   0, $7C,   0, $7C      ; $61
+    Block    0,   0, $4C,   0, $4D,   0,   0,   0,   0,   0, $4E,   0, $4F,   0,   0,   0      ; $62
+    Block  $60, $60, $60, $60, $63, $63, $61, $61, $62, $62, $63, $63, $60, $60, $60, $60      ; $63
+    Block  $60, $60, $60, $60, $63, $63, $61, $61, $62, $62, $60, $60, $60, $60, $60, $60      ; $64
+    Block    0, $13,   0,  $C,   0,  $D,   0,  $E,   0, $13,   0, $13,   0,  $C,   0,  $E      ; $65
+    Block    0, $13,   0, $13,   0, $13,   0, $1C,   0,  $F,   0,  $F,   0, $1D,   0, $13      ; $66
+    Block  $38, $5E, $38, $5C, $38, $5C, $38, $5E, $38, $5C, $37, $5C, $38, $5C, $37, $5E      ; $67
+    Block  $38, $5E, $38, $5C, $37, $5E, $38, $5C, $37, $5E, $37, $5E, $37, $5C, $38, $5E      ; $68
+    Block    0,   0,   0, $4C,   0, $4D,   0,   0,   0,   0,   0, $4E,   0, $4F,   0,   0      ; $69
+    Block    0,   0,   0, $D7,   0, $D8,   0, $D8,   0, $D8,   0, $D8,   0, $D8,   0, $D8      ; $6A
+    Block    0, $D8, $D4, $D8, $D5, $D8, $D5, $D8, $D6, $D8,   0, $D9,   0,   0,   0,   0      ; $6B
+    Block    0,   0,   0, $DA,   0, $DB,   0, $DB,   0, $DB,   0, $DB,   0, $DC,   0,   0      ; $6C
+    Block  $D4,   0, $D5,   0, $D5,   0, $D6,   0,   0, $DA,   0, $DB,   0, $DB,   0, $DC      ; $6D
+    Block    0,   0, $D4,   0, $D5,   0, $D5,   0, $D5,   0, $D5,   0, $D6,   0,   0,   0      ; $6E
+    Block    0, $D7,   0, $D8, $D7, $D8, $D8, $D8, $D8, $D8, $D9, $D8,   0, $D8,   0, $D9      ; $6F
+    Block    0, $72,   0, $72,   0, $72,   0, $72,   0, $72,   0, $72,   0, $72,   0, $70      ; $70
+    Block    0, $70,   0, $71,   0, $71,   0, $71,   0, $71,   0, $71,   0, $71,   0, $70      ; $71
+    Block    0, $70,   0, $70,   0, $73,   0, $73,   0, $70,   0, $70,   0, $72,   0, $72      ; $72
+    Block    0, $70,   0, $71,   0, $70,   0, $73,   0, $70,   0, $70,   0, $72,   0, $70      ; $73
+    Block  $D4,   0, $D5, $D7, $D5, $D8, $D5, $D8, $D5, $D8, $D5, $D8, $D5, $D9, $D6,   0      ; $74
+    Block    0, $75,   0, $75,   0, $75,   0, $75,   0, $78,   0, $75,   0, $75, $7B, $7A      ; $75
+    Block    0, $70,   0, $70,   0, $76,   0, $75,   0, $78,   0, $75,   0, $77,   0, $79      ; $76
+    Block  $88, $90, $8B, $90, $8C,   5, $8C, $91, $8C, $93, $8D, $92, $8E, $94, $8F, $95      ; $77
+    Block  $99, $9F, $98, $9E, $9A, $9D, $9B, $9D, $9C, $9D, $9A, $9D, $9B, $9D, $9A, $97      ; $78
+    Block  $99, $9D, $98, $9E, $98, $9F, $97, $9F, $98, $9F, $98, $9F, $98, $9E, $99, $9D      ; $79
+    Block    0, $81,   0, $81,   0, $82,   0, $81,   0, $81,   0, $83,   0, $82,   0, $82      ; $7A
+    Block    0, $81,   0, $82,   0, $83,   0, $83,   0, $84,   0, $80,   0, $81,   0, $82      ; $7B
+    Block    0, $82,   0, $82,   0, $83,   0, $83,   0, $84,   0,   0,   0,   0,   0, $80      ; $7C
+    Block    0, $80,   0, $85,   0, $86,   0, $87,   0, $88,   0, $8E,   0, $8D,   0, $8C      ; $7D
+    Block    0,   0,   0, $85, $80, $86, $84, $88,   0, $8E,   0, $8D,   0, $8C,   0,   0      ; $7E
+    Block    0, $85,   0, $86, $80, $87, $81, $88, $82, $89, $83, $8A, $84, $8B,   0, $8C      ; $7F
+    Block  $E7, $E7, $E7, $E7, $E7, $E7, $E7, $E7, $E5, $E3, $E5, $E3, $E5, $E3, $E5, $E3      ; $80
+    Block  $E0, $E5, $E0, $E5, $E0, $E5, $E0, $E5, $E3, $E0, $E3, $E0, $E3, $E0, $E3, $E0      ; $81
+    Block  $E0, $E7, $E2, $E7, $E2, $E7, $E0, $E7, $E7, $E0, $E7, $E1, $E7, $E1, $E7, $E0      ; $82
+    Block  $E3, $E0, $E3, $E0, $E4, $E2, $E4, $E2, $E0, $E0, $E0, $E0, $E0, $E0, $E0, $E0      ; $83
+    Block  $E0, $E5, $E0, $E6, $E0, $E6, $E0, $E5, $E5, $E3, $E5, $E3, $E5, $E3, $E5, $E3      ; $84
+    Block  $E0, $E0, $E0, $E2, $E0, $E2, $E0, $E0, $E0, $E7, $E0, $E7, $E0, $E7, $E0, $E7      ; $85
+    Block  $E0, $E5, $E0, $E6, $E0, $E6, $E0, $E5, $E4, $E0, $E4, $E0, $E3, $E0, $E3, $E0      ; $86
+    Block    0, $BF,   0,   0,   0,   0, $64, $64, $60, $60, $65, $65,   0,   0,   0, $BF      ; $87
+    Block  $9B, $9F, $9B, $9F, $9B, $9F, $9B, $9F, $F4, $9F, $9B, $9F, $9B, $9F, $9B, $9F      ; $88
+    Block  $9B, $9F, $9B, $9F, $9B, $9E, $9B, $9F, $F4, $9F, $9B, $9F, $9B, $9F, $9B, $9F      ; $89
+    Block    0, $B0,   0, $B0,   0, $B0,   0, $B0,   0, $B0,   0, $B0,   0, $B0,   0, $B0      ; $8A
+    Block    0, $B0,   0, $B1,   0, $B9,   0, $BA,   0, $B8,   0, $B0,   0, $B0,   0, $B0      ; $8B
+    Block    0, $B1,   0, $B2,   0, $BB,   0, $BC,   0, $BD,   0, $BE,   0, $BA,   0, $B8      ; $8C
+    Block    0, $B1,   0, $B2,   0, $B3,   0, $B4,   0, $B5,   0, $B6,   0, $B7,   0, $B8      ; $8D
+    Block    0, $B0,   0, $DD,   0, $DF,   0, $DD,   0, $DE,   0, $DD,   0, $DD,   0, $B0      ; $8E
+    Block    0, $B0,   0, $DE,   0, $DE,   0, $DD,   0, $DE,   0, $DF,   0, $DF,   0, $B0      ; $8F
+    Block    0, $76,   0, $79, $7B, $75,   0, $6F, $7B, $77,   0, $78,   0, $6A,   0, $6B      ; $90
+    Block    0, $7A,   0, $76,   0, $76,   0, $79,   0, $76,   0, $78,   0, $7A,   0, $76      ; $91
+    Block    0, $70,   0, $76,   0, $79,   0, $7A,   0, $76,   0, $78,   0, $7A,   0, $76      ; $92
+    Block    0, $6E,   0, $76,   0, $79,   0, $6A,   0, $78,   0, $6F,   0, $79,   0, $76      ; $93
+    Block    0, $B0,   0, $B0,   0, $B0,   0, $B0,   0, $B0,   0, $EA,   0, $EB,   0, $EC      ; $94
+    Block    0, $EA,   0, $EB,   0, $ED,   0, $EB,   0, $EC,   0, $B0,   0, $B0,   0, $B0      ; $95
+    Block    0, $EA,   0, $EB,   0, $ED,   0, $EB,   0, $ED,   0, $EB,   0, $EC,   0, $B0      ; $96
 
-loc_F3C0:
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FC
-	.BYTE $FC
-	.BYTE $FC
-	.BYTE $FC
-	.BYTE $FD
-	.BYTE $FD
-	.BYTE $FD
-	.BYTE $FD
-	.BYTE $FE
-	.BYTE $FE
-	.BYTE $FE
-	.BYTE $FE
-	.BYTE $28
-	.BYTE $29
-	.BYTE $38
-	.BYTE $39
-	.BYTE $29
-	.BYTE $28
-	.BYTE $39
-	.BYTE $38
-	.BYTE $29
-	.BYTE $FF
-	.BYTE $39
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $28
-	.BYTE $FF
-	.BYTE $38 ;	8
-	.BYTE $64
-	.BYTE $65
-	.BYTE $74
-	.BYTE $75
-	.BYTE $B
-	.BYTE $FF
-	.BYTE $15
-	.BYTE $FF
-	.BYTE $E0
-	.BYTE $E1
-	.BYTE $F0
-	.BYTE $F1
-	.BYTE $A
-	.BYTE $FF
-	.BYTE $C
-	.BYTE $FF
-	.BYTE $52
-	.BYTE $53
-	.BYTE $54
-	.BYTE $55
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $5E
-	.BYTE $5F
-	.BYTE 0
-	.BYTE 1
-	.BYTE $10
-	.BYTE $11
-	.BYTE $C9
-	.BYTE $C9
-	.BYTE $C9
-	.BYTE $C9
-	.BYTE $14
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $11
-	.BYTE $FF
-	.BYTE $18
-	.BYTE $FF
-	.BYTE $15
-	.BYTE $FF
-	.BYTE $E
-	.BYTE $FF
-	.BYTE $25
-	.BYTE $14
-	.BYTE $E
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $48
-	.BYTE $49
-	.BYTE $58
-	.BYTE $59
-	.BYTE $49
-	.BYTE $48
-	.BYTE $59
-	.BYTE $58
-	.BYTE $49
-	.BYTE $FF
-	.BYTE $59
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $48
-	.BYTE $FF
-	.BYTE $58
-	.BYTE $22
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $A4
-	.BYTE $A3
-	.BYTE $B4
-	.BYTE $B3
-	.BYTE $20
-	.BYTE $18
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $AA
-	.BYTE $AB
-	.BYTE $BA
-	.BYTE $BB
-	.BYTE $56
-	.BYTE $56
-	.BYTE $57
-	.BYTE $57
-	.BYTE $6E
-	.BYTE $6F
-	.BYTE $7E
-	.BYTE $7F
-	.BYTE 2
-	.BYTE 3
-	.BYTE 2
-	.BYTE 3
-	.BYTE $D9
-	.BYTE $D8
-	.BYTE $D9
-	.BYTE $D8
-	.BYTE $2E
-	.BYTE $2F
-	.BYTE $3E
-	.BYTE $3F
-	.BYTE $1B
-	.BYTE $D
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $7B
-	.BYTE $6C
-	.BYTE $6D
-	.BYTE $7C
-	.BYTE $7D
-	.BYTE $20
-	.BYTE $21
-	.BYTE $30
-	.BYTE $31
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $22
-	.BYTE $23
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $24
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $25
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $26
-	.BYTE $17
-	.BYTE $C4
-	.BYTE $C3
-	.BYTE $B4
-	.BYTE $B3
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $A
-	.BYTE $10
-	.BYTE $CA
-	.BYTE $CB
-	.BYTE $DA
-	.BYTE $DB
-	.BYTE $14
-	.BYTE $14
-	.BYTE $57
-	.BYTE $57
-	.BYTE $8E
-	.BYTE $8F
-	.BYTE $9E
-	.BYTE $9F
-	.BYTE 2
-	.BYTE $13
-	.BYTE 4
-	.BYTE 5
-	.BYTE $D7
-	.BYTE $D6
-	.BYTE $D7
-	.BYTE $D6
-	.BYTE $4E
-	.BYTE $4F
-	.BYTE $5E
-	.BYTE $5F
-	.BYTE $4E
-	.BYTE $4F
-	.BYTE $5E
-	.BYTE $89
-	.BYTE $8A
-	.BYTE $8B
-	.BYTE $9A
-	.BYTE $9B
-	.BYTE $8C
-	.BYTE $8D
-	.BYTE $9C
-	.BYTE $9D
-	.BYTE $30
-	.BYTE $31
-	.BYTE $30
-	.BYTE $31
-	.BYTE $32
-	.BYTE $33
-	.BYTE $42
-	.BYTE $43
-	.BYTE $FF
-	.BYTE $34
-	.BYTE $26
-	.BYTE $44
-	.BYTE $35
-	.BYTE $FF
-	.BYTE $45
-	.BYTE $27
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $18
-	.BYTE $22
-	.BYTE $C4
-	.BYTE $C3
-	.BYTE $D4
-	.BYTE $D3
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $A
-	.BYTE $26
-	.BYTE $EA
-	.BYTE $EB
-	.BYTE $DA
-	.BYTE $DB
-	.BYTE $E9
-	.BYTE $F9
-	.BYTE $F9
-	.BYTE $E9
-	.BYTE $9E
-	.BYTE $9F
-	.BYTE $9E
-	.BYTE $9F
-	.BYTE $60
-	.BYTE $61
-	.BYTE $70
-	.BYTE $71
-	.BYTE $62
-	.BYTE $63
-	.BYTE $72
-	.BYTE $73
-	.BYTE $6E
-	.BYTE $6F
-	.BYTE $7E
-	.BYTE $7F
-	.BYTE $99
-	.BYTE $8F
-	.BYTE $9E
-	.BYTE $9F
-	.BYTE $1D
-	.BYTE $18
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $16
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $30
-	.BYTE $31
-	.BYTE $40
-	.BYTE $41
-	.BYTE $50
-	.BYTE $51
-	.BYTE $30
-	.BYTE $31
-	.BYTE $36
-	.BYTE $37
-	.BYTE $46
-	.BYTE $47
-	.BYTE $11
-	.BYTE $12
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $A6
-	.BYTE $A7
-	.BYTE $B6
-	.BYTE $B7
-	.BYTE $D
-	.BYTE $E
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $A7
-	.BYTE $A8
-	.BYTE $B7
-	.BYTE $B8
-	.BYTE $BD
-	.BYTE $BC
-	.BYTE $4C
-	.BYTE $4D
-	.BYTE $4C
-	.BYTE $4D
-	.BYTE $4C
-	.BYTE $4D
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $16
-	.BYTE $F
-	.BYTE $80
-	.BYTE $81
-	.BYTE $90
-	.BYTE $91
-	.BYTE $82
-	.BYTE $83
-	.BYTE $92
-	.BYTE $93
-	.BYTE $8E
-	.BYTE $8F
-	.BYTE $9E
-	.BYTE $9F
-	.BYTE $69
-	.BYTE $79
-	.BYTE $9E
-	.BYTE $9F
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $7C
-	.BYTE $FF
-	.BYTE $8C
-	.BYTE $FF
-	.BYTE $9C
-	.BYTE $8B
-	.BYTE $8C
-	.BYTE $9B
-	.BYTE $9C
-	.BYTE $8B
-	.BYTE $8B
-	.BYTE $9B
-	.BYTE $9B
-	.BYTE $84
-	.BYTE $85
-	.BYTE $94
-	.BYTE $95
-	.BYTE $A
-	.BYTE $1C
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $1C
-	.BYTE $11
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $12
-	.BYTE $25
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $22
-	.BYTE $20
-	.BYTE $AC
-	.BYTE $EC
-	.BYTE $CC
-	.BYTE $BD
-	.BYTE $EC
-	.BYTE $EC
-	.BYTE $EC
-	.BYTE $EC
-	.BYTE $EC
-	.BYTE $ED
-	.BYTE $BC
-	.BYTE $CD
-	.BYTE $BD
-	.BYTE $EC
-	.BYTE $4C
-	.BYTE $BD
-	.BYTE $EC
-	.BYTE $BC
-	.BYTE $BC
-	.BYTE $4D
-	.BYTE $7B
-	.BYTE $7B
-	.BYTE $AB
-	.BYTE $AB
-	.BYTE $AC
-	.BYTE $AC
-	.BYTE $AB
-	.BYTE $AB
-	.BYTE $AC
-	.BYTE $AC
-	.BYTE $FF
-	.BYTE $AB
-	.BYTE $AC
-	.BYTE $AC
-	.BYTE $AB
-	.BYTE $FF
-	.BYTE $E4
-	.BYTE $E5
-	.BYTE $F4
-	.BYTE $E4
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $E5
-	.BYTE $E5
-	.BYTE $97
-	.BYTE $E1
-	.BYTE $F0
-	.BYTE $7A
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $11
-	.BYTE $12
-	.BYTE $B6
-	.BYTE $B7
-	.BYTE $C6
-	.BYTE $C7
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $1B
-	.BYTE $18
-	.BYTE $B7
-	.BYTE $B8
-	.BYTE $C7
-	.BYTE $C8
-	.BYTE $CC
-	.BYTE $4C
-	.BYTE $CC
-	.BYTE $4C
-	.BYTE $30
-	.BYTE $31
-	.BYTE $40
-	.BYTE $41
-	.BYTE $4D
-	.BYTE $CD
-	.BYTE $4D
-	.BYTE $CD
-	.BYTE $4C
-	.BYTE $4C
-	.BYTE $4C
-	.BYTE $4C
-	.BYTE $4D
-	.BYTE $4D
-	.BYTE $4D
-	.BYTE $4D
-	.BYTE $36
-	.BYTE $37
-	.BYTE $46
-	.BYTE $47
-	.BYTE $38
-	.BYTE $FF
-	.BYTE $48
-	.BYTE $49
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $16
-	.BYTE $1D
-	.BYTE $FF
-	.BYTE $76
-	.BYTE $96
-	.BYTE $86
-	.BYTE $77
-	.BYTE $FF
-	.BYTE $87
-	.BYTE $88
-	.BYTE $F2
-	.BYTE $F3
-	.BYTE $E2
-	.BYTE $E3
-	.BYTE $E6
-	.BYTE $E7
-	.BYTE $FA
-	.BYTE $E9
-	.BYTE $E7
-	.BYTE $E7
-	.BYTE $F9
-	.BYTE $E9
-	.BYTE $E7
-	.BYTE $E8
-	.BYTE $E9
-	.BYTE $FB
-	.BYTE $A0
-	.BYTE $A1
-	.BYTE $B0
-	.BYTE $B1
-	.BYTE $67
-	.BYTE $68
-	.BYTE $77
-	.BYTE $78
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $16
-	.BYTE $50
-	.BYTE $51
-	.BYTE $60
-	.BYTE $61
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $AE
-	.BYTE $AF
-	.BYTE $79
-	.BYTE $7A
-	.BYTE $89
-	.BYTE $8A
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $2E
-	.BYTE $2F
-	.BYTE $56
-	.BYTE $57
-	.BYTE $66
-	.BYTE $67
-	.BYTE $58
-	.BYTE $59
-	.BYTE $68
-	.BYTE $69
-	.BYTE $FF
-	.BYTE $76
-	.BYTE $76
-	.BYTE $FE
-	.BYTE $FE
-	.BYTE $A7
-	.BYTE $FE
-	.BYTE $FE
-	.BYTE $97
-	.BYTE $98
-	.BYTE $A7
-	.BYTE $A8
-	.BYTE $88
-	.BYTE $FF
-	.BYTE $78
-	.BYTE $88
-	.BYTE $FA
-	.BYTE $E9
-	.BYTE $FA
-	.BYTE $F9
-	.BYTE $E9
-	.BYTE $F9
-	.BYTE $F9
-	.BYTE $E9
-	.BYTE $E9
-	.BYTE $FB
-	.BYTE $F9
-	.BYTE $FB
-	.BYTE $C0
-	.BYTE $C1
-	.BYTE $D0
-	.BYTE $D1
-	.BYTE $87
-	.BYTE $88
-	.BYTE $FF
-	.BYTE $98
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $22
-	.BYTE $FF
-	.BYTE $70
-	.BYTE $71
-	.BYTE $80
-	.BYTE $81
-	.BYTE $BE
-	.BYTE $BF
-	.BYTE $CE
-	.BYTE $CF
-	.BYTE $99
-	.BYTE $9A
-	.BYTE $A9
-	.BYTE $AA
-	.BYTE $3E
-	.BYTE $3F
-	.BYTE $4E
-	.BYTE $4F
-	.BYTE $16
-	.BYTE $A
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $1C
-	.BYTE $A
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $A6
-	.BYTE $FE
-	.BYTE $78
-	.BYTE $A6
-	.BYTE $78
-	.BYTE $78
-	.BYTE $78
-	.BYTE $78
-	.BYTE $FE
-	.BYTE $97
-	.BYTE $FE
-	.BYTE $A7
-	.BYTE $98
-	.BYTE $78
-	.BYTE $A8
-	.BYTE $78
-	.BYTE $FA
-	.BYTE $F9
-	.BYTE $F6
-	.BYTE $E9
-	.BYTE $E9
-	.BYTE $F9
-	.BYTE $F7
-	.BYTE $F7
-	.BYTE $E9
-	.BYTE $FB
-	.BYTE $F7
-	.BYTE $F8
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $A4
-	.BYTE $A3
-	.BYTE $17
-	.BYTE $A
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $18
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $90
-	.BYTE $91
-	.BYTE $A0
-	.BYTE $A1
-	.BYTE $DE
-	.BYTE $DF
-	.BYTE $EE
-	.BYTE $EF
-	.BYTE $7D
-	.BYTE $8D
-	.BYTE $FE
-	.BYTE $FE
-	.BYTE $AE
-	.BYTE $AF
-	.BYTE $6C
-	.BYTE $39
-	.BYTE $4C
-	.BYTE $FD
-	.BYTE $4C
-	.BYTE $FD
-	.BYTE $FD
-	.BYTE $4D
-	.BYTE $FD
-	.BYTE $4D
-	.BYTE $5C
-	.BYTE $AD
-	.BYTE $5C
-	.BYTE $AD
-	.BYTE $AD
-	.BYTE $5D
-	.BYTE $AD
-	.BYTE $5D
-	.BYTE $2C
-	.BYTE $2D
-	.BYTE $3C
-	.BYTE $3D
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $26
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $A
-	.BYTE $24
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $1D
-	.BYTE $26
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE $B4
-	.BYTE $B3
-	.BYTE $C4
-	.BYTE $C3
-	.BYTE $5D
-	.BYTE $FD
-	.BYTE $5D
-	.BYTE $FD
-	.BYTE $FD
-	.BYTE $5C
-	.BYTE $FD
-	.BYTE $5C
-	.BYTE $2E
-	.BYTE $2F
-	.BYTE $3E
-	.BYTE $3F
-	.BYTE $EE
-	.BYTE $EF
-	.BYTE $EE
-	.BYTE $EF
-	.BYTE $35
-	.BYTE $45
-	.BYTE $55
-	.BYTE $85
-	.BYTE $39
-	.BYTE $6C
-	.BYTE $6C
-	.BYTE $39
-	.BYTE $FF
-	.BYTE $32
-	.BYTE $FF
-	.BYTE $42
-	.BYTE $33
-	.BYTE $34
-	.BYTE $43
-	.BYTE $44
-	.BYTE 6
-	.BYTE 7
-	.BYTE $16
-	.BYTE $17
-	.BYTE 8
-	.BYTE 9
-	.BYTE $18
-	.BYTE $19
-	.BYTE $35
-	.BYTE $6D
-	.BYTE $45
-	.BYTE $39
-	.BYTE $6D
-	.BYTE $6D
-	.BYTE $6C
-	.BYTE $39
-	.BYTE $6D
-	.BYTE $65
-	.BYTE $39
-	.BYTE $75
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $17
-	.BYTE $66
-	.BYTE $FF
-	.BYTE $76
-	.BYTE $FF
-	.BYTE $12
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $1E
-	.BYTE $1F
-	.BYTE 8
-	.BYTE 9
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $A
-	.BYTE $14
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $12
-	.BYTE $1B
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $A
-	.BYTE $FF
-	.BYTE $14
-	.BYTE $18
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $10
-	.BYTE $18
-	.BYTE $FF
-	.BYTE $52
-	.BYTE $FF
-	.BYTE $62
-	.BYTE $53
-	.BYTE $54
-	.BYTE $63
-	.BYTE $64
-	.BYTE $A
-	.BYTE $B
-	.BYTE $1A
-	.BYTE $1B
-	.BYTE $C
-	.BYTE $D
-	.BYTE $FF
-	.BYTE $1D
-	.BYTE $45
-	.BYTE $39
-	.BYTE $55
-	.BYTE $9D
-	.BYTE $39
-	.BYTE $6C
-	.BYTE $9D
-	.BYTE $9D
-	.BYTE $6C
-	.BYTE $75
-	.BYTE $9D
-	.BYTE $85
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $16
-	.BYTE $FF
-	.BYTE $86
-	.BYTE $FF
-	.BYTE $76
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE 1
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $10
-	.BYTE $26
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $10
-	.BYTE $1D
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $E
-	.BYTE $1E
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $23
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $A
-	.BYTE $C
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $18
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $72
-	.BYTE $FF
-	.BYTE $82
-	.BYTE $73
-	.BYTE $74
-	.BYTE $83
-	.BYTE $84
-	.BYTE $E
-	.BYTE $1E
-	.BYTE $15
-	.BYTE $1C
-	.BYTE $1F
-	.BYTE $F
-	.BYTE $15
-	.BYTE $1C
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $18
-	.BYTE $14
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $12
-	.BYTE $1D
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $22
-	.BYTE $18
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $1C
-	.BYTE $11
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $12
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $14
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $E
-	.BYTE $12
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE $1D
-	.BYTE $18
-	.BYTE $24
-	.BYTE $17
-	.BYTE $FF
-	.BYTE $FF
-	.BYTE 8
-	.BYTE 9
-	.BYTE $15
-	.BYTE $1C
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE $FF
-	.BYTE $92
-	.BYTE $FF
-	.BYTE $A2
-	.BYTE $93
-	.BYTE $94
-	.BYTE $A3
-	.BYTE $A4
-	.BYTE $95
-	.BYTE $FF
-	.BYTE $A5
-	.BYTE $FF
-	.BYTE $95
-	.BYTE $92
-	.BYTE $A5
-	.BYTE $A2
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
+
+MetatileDefinitions:
+	Metatile  $FF, $FF, $FF, $FF	;   0
+	Metatile  $FC, $FC, $FC, $FC	;   1
+	Metatile  $FD, $FD, $FD, $FD	;   2
+	Metatile  $FE, $FE, $FE, $FE	;   3
+	Metatile  $28, $29, $38, $39	;   4
+	Metatile  $29, $28, $39, $38	;   5
+	Metatile  $29, $FF, $39, $FF	;   6
+	Metatile  $FF, $28, $FF, $38	;   7
+	Metatile  $64, $65, $74, $75	;   8
+	Metatile  $0B, $FF, $15, $FF	;   9
+	Metatile  $E0, $E1, $F0, $F1	;  $A
+	Metatile  $0A, $FF, $0C, $FF	;  $B
+	Metatile  $52, $53, $54, $55	;  $C
+	Metatile  $FF, $FF, $5E, $5F	;  $D
+	Metatile  $00, $01, $10, $11	;  $E
+	Metatile  $C9, $C9, $C9, $C9	;  $F
+	Metatile  $14, $FF, $FF, $11	; $10
+	Metatile  $FF, $18, $FF, $15	; $11
+	Metatile  $FF, $0E, $FF, $25	; $12
+	Metatile  $14, $0E, $FF, $FF	; $13
+	Metatile  $48, $49, $58, $59	; $14
+	Metatile  $49, $48, $59, $58	; $15
+	Metatile  $49, $FF, $59, $FF	; $16
+	Metatile  $FF, $48, $FF, $58	; $17
+	Metatile  $22, $FF, $FF, $FF	; $18
+	Metatile  $A4, $A3, $B4, $B3	; $19
+	Metatile  $20, $18, $FF, $FF	; $1A
+	Metatile  $AA, $AB, $BA, $BB	; $1B
+	Metatile  $56, $56, $57, $57	; $1C
+	Metatile  $6E, $6F, $7E, $7F	; $1D
+	Metatile  $02, $03, $02, $03	; $1E
+	Metatile  $D9, $D8, $D9, $D8	; $1F
+	Metatile  $2E, $2F, $3E, $3F	; $20
+	Metatile  $1B, $0D, $FF, $FF	; $21
+	Metatile  $FF, $FF, $FF, $7B	; $22
+	Metatile  $6C, $6D, $7C, $7D	; $23
+	Metatile  $20, $21, $30, $31	; $24
+	Metatile  $FF, $FF, $22, $23	; $25
+	Metatile  $FF, $FF, $FF, $24	; $26
+	Metatile  $FF, $FF, $25, $FF	; $27
+	Metatile  $FF, $FF, $26, $17	; $28
+	Metatile  $C4, $C3, $B4, $B3	; $29
+	Metatile  $FF, $FF, $0A, $10	; $2A
+	Metatile  $CA, $CB, $DA, $DB	; $2B
+	Metatile  $14, $14, $57, $57	; $2C
+	Metatile  $8E, $8F, $9E, $9F	; $2D
+	Metatile  $02, $13, $04, $05	; $2E
+	Metatile  $D7, $D6, $D7, $D6	; $2F
+	Metatile  $4E, $4F, $5E, $5F	; $30
+	Metatile  $4E, $4F, $5E, $89	; $31
+	Metatile  $8A, $8B, $9A, $9B	; $32
+	Metatile  $8C, $8D, $9C, $9D	; $33
+	Metatile  $30, $31, $30, $31	; $34
+	Metatile  $32, $33, $42, $43	; $35
+	Metatile  $FF, $34, $26, $44	; $36
+	Metatile  $35, $FF, $45, $27	; $37
+	Metatile  $FF, $FF, $18, $22	; $38
+	Metatile  $C4, $C3, $D4, $D3	; $39
+	Metatile  $FF, $FF, $0A, $26	; $3A
+	Metatile  $EA, $EB, $DA, $DB	; $3B
+	Metatile  $E9, $F9, $F9, $E9	; $3C
+	Metatile  $9E, $9F, $9E, $9F	; $3D
+	Metatile  $60, $61, $70, $71	; $3E
+	Metatile  $62, $63, $72, $73	; $3F
+	Metatile  $6E, $6F, $7E, $7F	; $40
+	Metatile  $99, $8F, $9E, $9F	; $41
+	Metatile  $1D, $18, $FF, $FF	; $42
+	Metatile  $16, $FF, $FF, $FF	; $43
+	Metatile  $30, $31, $40, $41	; $44
+	Metatile  $50, $51, $30, $31	; $45
+	Metatile  $36, $37, $46, $47	; $46
+	Metatile  $11, $12, $FF, $FF	; $47
+	Metatile  $A6, $A7, $B6, $B7	; $48
+	Metatile  $0D, $0E, $FF, $FF	; $49
+	Metatile  $A7, $A8, $B7, $B8	; $4A
+	Metatile  $BD, $BC, $4C, $4D	; $4B
+	Metatile  $4C, $4D, $4C, $4D	; $4C
+	Metatile  $FF, $FF, $16, $0F	; $4D
+	Metatile  $80, $81, $90, $91	; $4E
+	Metatile  $82, $83, $92, $93	; $4F
+	Metatile  $8E, $8F, $9E, $9F	; $50
+	Metatile  $69, $79, $9E, $9F	; $51
+	Metatile  $FF, $FF, $FF, $7C	; $52
+	Metatile  $FF, $8C, $FF, $9C	; $53
+	Metatile  $8B, $8C, $9B, $9C	; $54
+	Metatile  $8B, $8B, $9B, $9B	; $55
+	Metatile  $84, $85, $94, $95	; $56
+	Metatile  $0A, $1C, $FF, $FF	; $57
+	Metatile  $1C, $11, $FF, $FF	; $58
+	Metatile  $12, $25, $FF, $FF	; $59
+	Metatile  $FF, $FF, $22, $20	; $5A
+	Metatile  $AC, $EC, $CC, $BD	; $5B
+	Metatile  $EC, $EC, $EC, $EC	; $5C
+	Metatile  $EC, $ED, $BC, $CD	; $5D
+	Metatile  $BD, $EC, $4C, $BD	; $5E
+	Metatile  $EC, $BC, $BC, $4D	; $5F
+	Metatile  $7B, $7B, $AB, $AB	; $60
+	Metatile  $AC, $AC, $AB, $AB	; $61
+	Metatile  $AC, $AC, $FF, $AB	; $62
+	Metatile  $AC, $AC, $AB, $FF	; $63
+	Metatile  $E4, $E5, $F4, $E4	; $64
+	Metatile  $FF, $FF, $E5, $E5	; $65
+	Metatile  $97, $E1, $F0, $7A	; $66
+	Metatile  $FF, $FF, $11, $12	; $67
+	Metatile  $B6, $B7, $C6, $C7	; $68
+	Metatile  $FF, $FF, $1B, $18	; $69
+	Metatile  $B7, $B8, $C7, $C8	; $6A
+	Metatile  $CC, $4C, $CC, $4C	; $6B
+	Metatile  $30, $31, $40, $41	; $6C
+	Metatile  $4D, $CD, $4D, $CD	; $6D
+	Metatile  $4C, $4C, $4C, $4C	; $6E
+	Metatile  $4D, $4D, $4D, $4D	; $6F
+	Metatile  $36, $37, $46, $47	; $70
+	Metatile  $38, $FF, $48, $49	; $71
+	Metatile  $FF, $FF, $16, $1D	; $72
+	Metatile  $FF, $76, $96, $86	; $73
+	Metatile  $77, $FF, $87, $88	; $74
+	Metatile  $F2, $F3, $E2, $E3	; $75
+	Metatile  $E6, $E7, $FA, $E9	; $76
+	Metatile  $E7, $E7, $F9, $E9	; $77
+	Metatile  $E7, $E8, $E9, $FB	; $78
+	Metatile  $A0, $A1, $B0, $B1	; $79
+	Metatile  $67, $68, $77, $78	; $7A
+	Metatile  $FF, $FF, $FF, $16	; $7B
+	Metatile  $50, $51, $60, $61	; $7C
+	Metatile  $FF, $FF, $AE, $AF	; $7D
+	Metatile  $79, $7A, $89, $8A	; $7E
+	Metatile  $FF, $FF, $2E, $2F	; $7F
+	Metatile  $56, $57, $66, $67	; $80
+	Metatile  $58, $59, $68, $69	; $81
+	Metatile  $FF, $76, $76, $FE	; $82
+	Metatile  $FE, $A7, $FE, $FE	; $83
+	Metatile  $97, $98, $A7, $A8	; $84
+	Metatile  $88, $FF, $78, $88	; $85
+	Metatile  $FA, $E9, $FA, $F9	; $86
+	Metatile  $E9, $F9, $F9, $E9	; $87
+	Metatile  $E9, $FB, $F9, $FB	; $88
+	Metatile  $C0, $C1, $D0, $D1	; $89
+	Metatile  $87, $88, $FF, $98	; $8A
+	Metatile  $FF, $FF, $22, $FF	; $8B
+	Metatile  $70, $71, $80, $81	; $8C
+	Metatile  $BE, $BF, $CE, $CF	; $8D
+	Metatile  $99, $9A, $A9, $AA	; $8E
+	Metatile  $3E, $3F, $4E, $4F	; $8F
+	Metatile  $16, $0A, $FF, $FF	; $90
+	Metatile  $1C, $0A, $FF, $FF	; $91
+	Metatile  $A6, $FE, $78, $A6	; $92
+	Metatile  $78, $78, $78, $78	; $93
+	Metatile  $FE, $97, $FE, $A7	; $94
+	Metatile  $98, $78, $A8, $78	; $95
+	Metatile  $FA, $F9, $F6, $E9	; $96
+	Metatile  $E9, $F9, $F7, $F7	; $97
+	Metatile  $E9, $FB, $F7, $F8	; $98
+	Metatile  $FF, $FF, $A4, $A3	; $99
+	Metatile  $17, $0A, $FF, $FF	; $9A
+	Metatile  $18, $FF, $FF, $FF	; $9B
+	Metatile  $90, $91, $A0, $A1	; $9C
+	Metatile  $DE, $DF, $EE, $EF	; $9D
+	Metatile  $7D, $8D, $FE, $FE	; $9E
+	Metatile  $AE, $AF, $6C, $39	; $9F
+	Metatile  $4C, $FD, $4C, $FD	; $A0
+	Metatile  $FD, $4D, $FD, $4D	; $A1
+	Metatile  $5C, $AD, $5C, $AD	; $A2
+	Metatile  $AD, $5D, $AD, $5D	; $A3
+	Metatile  $2C, $2D, $3C, $3D	; $A4
+	Metatile  $FF, $FF, $FF, $26	; $A5
+	Metatile  $FF, $FF, $0A, $24	; $A6
+	Metatile  $FF, $FF, $1D, $26	; $A7
+	Metatile  $00, $00, $00, $00	; $A8
+	Metatile  $B4, $B3, $C4, $C3	; $A9
+	Metatile  $5D, $FD, $5D, $FD	; $AA
+	Metatile  $FD, $5C, $FD, $5C	; $AB
+	Metatile  $2E, $2F, $3E, $3F	; $AC
+	Metatile  $EE, $EF, $EE, $EF	; $AD
+	Metatile  $35, $45, $55, $85	; $AE
+	Metatile  $39, $6C, $6C, $39	; $AF
+	Metatile  $FF, $32, $FF, $42	; $B0
+	Metatile  $33, $34, $43, $44	; $B1
+	Metatile  $06, $07, $16, $17	; $B2
+	Metatile  $08, $09, $18, $19	; $B3
+	Metatile  $35, $6D, $45, $39	; $B4
+	Metatile  $6D, $6D, $6C, $39	; $B5
+	Metatile  $6D, $65, $39, $75	; $B6
+	Metatile  $FF, $FF, $FF, $17	; $B7
+	Metatile  $66, $FF, $76, $FF	; $B8
+	Metatile  $12, $FF, $FF, $FF	; $B9
+	Metatile  $1E, $1F, $08, $09	; $BA
+	Metatile  $FF, $FF, $0A, $14	; $BB
+	Metatile  $FF, $FF, $12, $1B	; $BC
+	Metatile  $FF, $FF, $0A, $FF	; $BD
+	Metatile  $14, $18, $FF, $FF	; $BE
+	Metatile  $FF, $FF, $10, $18	; $BF
+	Metatile  $FF, $52, $FF, $62	; $C0
+	Metatile  $53, $54, $63, $64	; $C1
+	Metatile  $0A, $0B, $1A, $1B	; $C2
+	Metatile  $0C, $0D, $FF, $1D	; $C3
+	Metatile  $45, $39, $55, $9D	; $C4
+	Metatile  $39, $6C, $9D, $9D	; $C5
+	Metatile  $6C, $75, $9D, $85	; $C6
+	Metatile  $FF, $FF, $16, $FF	; $C7
+	Metatile  $86, $FF, $76, $FF	; $C8
+	Metatile  $FF, $01, $FF, $FF	; $C9
+	Metatile  $10, $26, $FF, $FF	; $CA
+	Metatile  $10, $1D, $FF, $FF	; $CB
+	Metatile  $0E, $1E, $FF, $FF	; $CC
+	Metatile  $FF, $FF, $FF, $23	; $CD
+	Metatile  $FF, $FF, $0A, $0C	; $CE
+	Metatile  $FF, $FF, $18, $FF	; $CF
+	Metatile  $FF, $72, $FF, $82	; $D0
+	Metatile  $73, $74, $83, $84	; $D1
+	Metatile  $0E, $1E, $15, $1C	; $D2
+	Metatile  $1F, $0F, $15, $1C	; $D3
+	Metatile  $FF, $FF, $18, $14	; $D4
+	Metatile  $FF, $FF, $12, $1D	; $D5
+	Metatile  $FF, $FF, $22, $18	; $D6
+	Metatile  $FF, $FF, $1C, $11	; $D7
+	Metatile  $FF, $FF, $12, $FF	; $D8
+	Metatile  $FF, $FF, $FF, $14	; $D9
+	Metatile  $FF, $FF, $0E, $12	; $DA
+	Metatile  $FF, $FF, $1D, $18	; $DB
+	Metatile  $24, $17, $FF, $FF	; $DC
+	Metatile  $08, $09, $15, $1C	; $DD
+	Metatile  $00, $00, $00, $00	; $DE
+	Metatile  $00, $00, $00, $00	; $DF
+	Metatile  $FF, $92, $FF, $A2	; $E0
+	Metatile  $93, $94, $A3, $A4	; $E1
+	Metatile  $95, $FF, $A5, $FF	; $E2
+	Metatile  $95, $92, $A5, $A2	; $E3
+	Metatile  $00, $00, $00, $00	; $E4
+	Metatile  $00, $00, $00, $00	; $E5
+	Metatile  $00, $00, $00, $00	; $E6
+	Metatile  $00, $00, $00, $00	; $E7
+	Metatile  $00, $00, $00, $00	; $E8
+	Metatile  $00, $00, $00, $00	; $E9
+	Metatile  $00, $00, $00, $00	; $EA
+	Metatile  $00, $00, $00, $00	; $EB
+	Metatile  $00, $00, $00, $00	; $EC
+	Metatile  $00, $00, $00, $00	; $ED
+	Metatile  $00, $00, $00, $00	; $EE
+	Metatile  $00, $00, $00, $00	; $EF
+
 
 
 ; Every	zone is	comprised of 32	"blocks".
@@ -2668,507 +1950,512 @@ loc_F3C0:
 ;
 ; Interestingly, only one Zone uses this feature; Zone 99.
 ZoneBlockPointerTable:
-	.WORD ZoneBlocks_01,ZoneBlocks_02,ZoneBlocks_03,ZoneBlocks_04,ZoneBlocks_05
-	.WORD ZoneBlocks_06,ZoneBlocks_07,ZoneBlocks_08,ZoneBlocks_09,ZoneBlocks_10; 5
-	.WORD ZoneBlocks_11,ZoneBlocks_12,ZoneBlocks_13,ZoneBlocks_14,ZoneBlocks_15; 10
-	.WORD ZoneBlocks_16,ZoneBlocks_17,ZoneBlocks_18,ZoneBlocks_19,ZoneBlocks_20; 15
-	.WORD ZoneBlocks_21,ZoneBlocks_22,ZoneBlocks_23,ZoneBlocks_24,ZoneBlocks_25; 20
-	.WORD ZoneBlocks_26,ZoneBlocks_27,ZoneBlocks_28,ZoneBlocks_29,ZoneBlocks_30; 25
-	.WORD ZoneBlocks_31,ZoneBlocks_32,ZoneBlocks_33,ZoneBlocks_34,ZoneBlocks_35; 30
-	.WORD ZoneBlocks_36,ZoneBlocks_37,ZoneBlocks_38,ZoneBlocks_39,ZoneBlocks_40; 35
-	.WORD ZoneBlocks_41,ZoneBlocks_42,ZoneBlocks_43,ZoneBlocks_44,ZoneBlocks_45; 40
-	.WORD ZoneBlocks_46,ZoneBlocks_47,ZoneBlocks_48,ZoneBlocks_49,ZoneBlocks_50; 45
-	.WORD ZoneBlocks_51,ZoneBlocks_52,ZoneBlocks_53,ZoneBlocks_54,ZoneBlocks_55; 50
-	.WORD ZoneBlocks_56,ZoneBlocks_57,ZoneBlocks_58,ZoneBlocks_59,ZoneBlocks_60; 55
-	.WORD ZoneBlocks_61,ZoneBlocks_62,ZoneBlocks_63,ZoneBlocks_64,ZoneBlocks_65; 60
-	.WORD ZoneBlocks_66,ZoneBlocks_67,ZoneBlocks_68,ZoneBlocks_69,ZoneBlocks_70; 65
-	.WORD ZoneBlocks_71,ZoneBlocks_72,ZoneBlocks_73,ZoneBlocks_74,ZoneBlocks_75; 70
-	.WORD ZoneBlocks_76,ZoneBlocks_77,ZoneBlocks_78,ZoneBlocks_79,ZoneBlocks_80; 75
-	.WORD ZoneBlocks_81,ZoneBlocks_82,ZoneBlocks_83,ZoneBlocks_84,ZoneBlocks_85; 80
-	.WORD ZoneBlocks_86,ZoneBlocks_87,ZoneBlocks_88,ZoneBlocks_89,ZoneBlocks_90; 85
-	.WORD ZoneBlocks_91,ZoneBlocks_92,ZoneBlocks_93,ZoneBlocks_94,ZoneBlocks_95; 90
-	.WORD ZoneBlocks_96,ZoneBlocks_97,ZoneBlocks_98,ZoneBlocks_99,ZoneBlocks_100; 95
+	.WORD ZoneBlocks_01, ZoneBlocks_02, ZoneBlocks_03, ZoneBlocks_04, ZoneBlocks_05		;
+	.WORD ZoneBlocks_06, ZoneBlocks_07, ZoneBlocks_08, ZoneBlocks_09, ZoneBlocks_10		; 5
+	.WORD ZoneBlocks_11, ZoneBlocks_12, ZoneBlocks_13, ZoneBlocks_14, ZoneBlocks_15		; 10
+	.WORD ZoneBlocks_16, ZoneBlocks_17, ZoneBlocks_18, ZoneBlocks_19, ZoneBlocks_20		; 15
+	.WORD ZoneBlocks_21, ZoneBlocks_22, ZoneBlocks_23, ZoneBlocks_24, ZoneBlocks_25		; 20
+	.WORD ZoneBlocks_26, ZoneBlocks_27, ZoneBlocks_28, ZoneBlocks_29, ZoneBlocks_30		; 25
+	.WORD ZoneBlocks_31, ZoneBlocks_32, ZoneBlocks_33, ZoneBlocks_34, ZoneBlocks_35		; 30
+	.WORD ZoneBlocks_36, ZoneBlocks_37, ZoneBlocks_38, ZoneBlocks_39, ZoneBlocks_40		; 35
+	.WORD ZoneBlocks_41, ZoneBlocks_42, ZoneBlocks_43, ZoneBlocks_44, ZoneBlocks_45		; 40
+	.WORD ZoneBlocks_46, ZoneBlocks_47, ZoneBlocks_48, ZoneBlocks_49, ZoneBlocks_50		; 45
+	.WORD ZoneBlocks_51, ZoneBlocks_52, ZoneBlocks_53, ZoneBlocks_54, ZoneBlocks_55		; 50
+	.WORD ZoneBlocks_56, ZoneBlocks_57, ZoneBlocks_58, ZoneBlocks_59, ZoneBlocks_60		; 55
+	.WORD ZoneBlocks_61, ZoneBlocks_62, ZoneBlocks_63, ZoneBlocks_64, ZoneBlocks_65		; 60
+	.WORD ZoneBlocks_66, ZoneBlocks_67, ZoneBlocks_68, ZoneBlocks_69, ZoneBlocks_70		; 65
+	.WORD ZoneBlocks_71, ZoneBlocks_72, ZoneBlocks_73, ZoneBlocks_74, ZoneBlocks_75		; 70
+	.WORD ZoneBlocks_76, ZoneBlocks_77, ZoneBlocks_78, ZoneBlocks_79, ZoneBlocks_80		; 75
+	.WORD ZoneBlocks_81, ZoneBlocks_82, ZoneBlocks_83, ZoneBlocks_84, ZoneBlocks_85		; 80
+	.WORD ZoneBlocks_86, ZoneBlocks_87, ZoneBlocks_88, ZoneBlocks_89, ZoneBlocks_90		; 85
+	.WORD ZoneBlocks_91, ZoneBlocks_92, ZoneBlocks_93, ZoneBlocks_94, ZoneBlocks_95		; 90
+	.WORD ZoneBlocks_96, ZoneBlocks_97, ZoneBlocks_98, ZoneBlocks_99, ZoneBlocks_100	; 95
 
+		;       0   1   2   3   4   5   6   7   8   9   A   B   C   D   E   F  10  11  12  13  14  15  16  17  18  19  1A  1B  1C  1D  1E  1F
 ZoneBlocks_06:
-	.BYTE $10,$18,$11,$18,$10
+		.BYTE  $10,$18,$11,$18,$10
 ZoneBlocks_90:
-	.BYTE $10,$18,$13,$18,$10
+		.BYTE  $10,$18,$13,$18,$10
 ZoneBlocks_25:
-	.BYTE $10,$18,$18,$10
+		.BYTE  $10,$18,$18,$10
 ZoneBlocks_16:
-	.BYTE $10,$18,$11,$12,$17,$17,$11,$14,$14,$11,$14,$15,$15,$15,$11,$16,$16,$11,$16,$15,$15,$15,$11,$14,$14,$11,$14,$17,$17,$17,$18,$10
+		.BYTE  $10,$18,$11,$12,$17,$17,$11,$14,$14,$11,$14,$15,$15,$15,$11,$16,$16,$11,$16,$15,$15,$15,$11,$14,$14,$11,$14,$17,$17,$17,$18,$10
 ZoneBlocks_87:
-	.BYTE $25,$22,$22,$24,$21,$22,$20,$20,$21,$21,$23,$20,$23,$22,$22,$25
+		.BYTE  $25,$22,$22,$24,$21,$22,$20,$20,$21,$21,$23,$20,$23,$22,$22,$25
 ZoneBlocks_19:
-	.BYTE $25,$22,$20,$21,$22,$23,$21,$22,$20,$21,$20,$21,$24,$20,$20,$22,$21,$25,$20
+		.BYTE  $25,$22,$20,$21,$22,$23,$21,$22,$20,$21,$20,$21,$24,$20,$20,$22,$21,$25,$20
 ZoneBlocks_36:
-	.BYTE $25,$26,$22,$26,$20,$26,$21,$26,$25,$26,$25,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26
+		.BYTE  $25,$26,$22,$26,$20,$26,$21,$26,$25,$26,$25,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26,$26
 ZoneBlocks_18:
-	.BYTE $21,$25,$24,$25,$24,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20
+		.BYTE  $21,$25,$24,$25,$24,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20,$20
 ZoneBlocks_33:
-	.BYTE   1,$2A,$2A,$2B,$2C,$2D,$2E,$2F,$2E,$2A,$2B,$2B,$2A,$2F,$2E,$2C,$2D,$2B,$30,$31,$30,$2B,$30,$2C,$31,$2D,$2F,$2E,$2A,$2A,  1,  0
+		.BYTE    1,$2A,$2A,$2B,$2C,$2D,$2E,$2F,$2E,$2A,$2B,$2B,$2A,$2F,$2E,$2C,$2D,$2B,$30,$31,$30,$2B,$30,$2C,$31,$2D,$2F,$2E,$2A,$2A,  1,  0
 ZoneBlocks_56:
-	.BYTE   0,  1,$2E,$2A,$2F,  0,$31,$31,$30,  1,$2B,$2C,$2D,$2E,  1,  0
+		.BYTE    0,  1,$2E,$2A,$2F,  0,$31,$31,$30,  1,$2B,$2C,$2D,$2E,  1,  0
 ZoneBlocks_08:
-	.BYTE $46,$47,$48,$49,$47,$48,$47,$48,$47,$48,$48,$47,$48,$47,$48,$49,$4A,$4C,$49,$49,$48,$47,$47,$48,$48,$47,$48,$47,$49,$48,$47,$46
+		.BYTE  $46,$47,$48,$49,$47,$48,$47,$48,$47,$48,$48,$47,$48,$47,$48,$49,$4A,$4C,$49,$49,$48,$47,$47,$48,$48,$47,$48,$47,$49,$48,$47,$46
 ZoneBlocks_37:
-	.BYTE $46,$48,$49,$47,$4A,$48,$49,$4B,$4A,$4B,$49,$49,$48,$47,$49,$46
+		.BYTE  $46,$48,$49,$47,$4A,$48,$49,$4B,$4A,$4B,$49,$49,$48,$47,$49,$46
 ZoneBlocks_43:
-	.BYTE $46,$49,$4B,$4A,$4C,$4D,$4A,$49,$4B,$4A,$4C,$4A,$4D,$49,$49,$46
+		.BYTE  $46,$49,$4B,$4A,$4C,$4D,$4A,$49,$4B,$4A,$4C,$4A,$4D,$49,$49,$46
 ZoneBlocks_77:
-	.BYTE $46,$4D,$4B,$4A,$4B,$4D,$4C,$4B,$4C,$4D,$4D,$4E,$4B,$4A,$4F,$4F,$4E,$49,$4E,$47,$4F,$4A,$4B,$4E,$4D,$4D
+		.BYTE  $46,$4D,$4B,$4A,$4B,$4D,$4C,$4B,$4C,$4D,$4D,$4E,$4B,$4A,$4F,$4F,$4E,$49,$4E,$47,$4F,$4A,$4B,$4E,$4D,$4D
 ZoneBlocks_92:
-	.BYTE   0,  0,  0,$50,$51,$52,$53,$51,$51,$53,$52,$51,$54,$53,$53,$52,$51,$54,$53,$51,$50,  0,  0,  0
+		.BYTE    0,  0,  0,$50,$51,$52,$53,$51,$51,$53,$52,$51,$54,$53,$53,$52,$51,$54,$53,$51,$50,  0,  0,  0
 ZoneBlocks_27:
-	.BYTE   0,  0,  0,$7D,$7B,$7A,$7C,$7B,$7B,$7A,$7D,$7D,$7F,$7D,$7E,$7E,$7D,$7E,$7F,$7F,$7A,$7B,$7B,$7C,$7C,$7A,$7B,$7C,$7A,$7F,  0,  0
+		.BYTE    0,  0,  0,$7D,$7B,$7A,$7C,$7B,$7B,$7A,$7D,$7D,$7F,$7D,$7E,$7E,$7D,$7E,$7F,$7F,$7A,$7B,$7B,$7C,$7C,$7A,$7B,$7C,$7A,$7F,  0,  0
 ZoneBlocks_03:
-	.BYTE   0,  0,  0,$56,$57,$56,$57,$56,$58,$56,$57,$57,$58,$57,$58,$57,$56,$57,$58,$56,$56,  0,  0,  0
+		.BYTE    0,  0,  0,$56,$57,$56,$57,$56,$58,$56,$57,$57,$58,$57,$58,$57,$56,$57,$58,$56,$56,  0,  0,  0
 ZoneBlocks_82:
-	.BYTE   0,  1,$34,$35,$34,$35,$34,$33,$35,$32,$33,$34,$32,$33,$34,$35,$32,$34,$35,  1,  0
+		.BYTE    0,  1,$34,$35,$34,$35,$34,$33,$35,$32,$33,$34,$32,$33,$34,$35,$32,$34,$35,  1,  0
 ZoneBlocks_10:
-	.BYTE   0,  0,$62,$59,$44,$45,$43,$43,$43,$44,$44,$45,$45,$44,$43,$45,$44,$43,$45,$59,$62,  0,  0
+		.BYTE    0,  0,$62,$59,$44,$45,$43,$43,$43,$44,$44,$45,$45,$44,$43,$45,$44,$43,$45,$59,$62,  0,  0
 ZoneBlocks_69:
-	.BYTE   1,$8A,$8A,$8A,$8B,$8A,$8A,$8B,$8C,$8A,$8A,$8A,$8A,$8A,$8C,$8B,$8D,$8B,$8A,$8A,$8A,$8A,$8B,$8C,$8A,$8A,$8A,$8B,$8B,$8A,  1,$8B
+		.BYTE    1,$8A,$8A,$8A,$8B,$8A,$8A,$8B,$8C,$8A,$8A,$8A,$8A,$8A,$8C,$8B,$8D,$8B,$8A,$8A,$8A,$8A,$8B,$8C,$8A,$8A,$8A,$8B,$8B,$8A,  1,$8B
 ZoneBlocks_60:
-	.BYTE $1D,$78,$79,$78,$79,$78,$79,$79,$78,$78,$79,$78,$79,$78,$79,$79,$1D
+		.BYTE  $1D,$78,$79,$78,$79,$78,$79,$79,$78,$78,$79,$78,$79,$78,$79,$79,$1D
 ZoneBlocks_74:
-	.BYTE $8A,  1,$8A,$94,$8A,$94,$8A,$95,$94,$8A,$94,$95,$8A,$95,$94,$8A,$8A,  1,$8A
+		.BYTE  $8A,  1,$8A,$94,$8A,$94,$8A,$95,$94,$8A,$94,$95,$8A,$95,$94,$8A,$8A,  1,$8A
 ZoneBlocks_70:
-	.BYTE $62,$60,$62
+		.BYTE  $62,$60,$62
 ZoneBlocks_34:
-	.BYTE $73,  1,$70,$71,$71,$72,$70,$73,$73,$73,$71,$73,$71,$73,  1,$73
+		.BYTE  $73,  1,$70,$71,$71,$72,$70,$73,$73,$73,$71,$73,$71,$73,  1,$73
 ZoneBlocks_81:
-	.BYTE   0,  0,  0,  0,$63,  0,  0,  0,  0
+		.BYTE    0,  0,  0,  0,$63,  0,  0,  0,  0
 ZoneBlocks_13:
-	.BYTE $81,$80,$82,$83,$84,$83,$85,$86,$82,$84,$86,$81,$82,$85,$83,$84,$82,$83,$86,$81,$81,$80,$83
+		.BYTE  $81,$80,$82,$83,$84,$83,$85,$86,$82,$84,$86,$81,$82,$85,$83,$84,$82,$83,$86,$81,$81,$80,$83
 ZoneBlocks_02:
-	.BYTE $5F,$5A,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5E,$5E,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5B,$5F
+		.BYTE  $5F,$5A,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5E,$5E,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5B,$5A,$5E,$5B,$5F
 ZoneBlocks_50:
-	.BYTE $5F,$5B,$5A,$5E,$5B,$5A,$5B,$5A,$5B,$5A,$5B,$5A,$5B,$5A,$5B,$5F
+		.BYTE  $5F,$5B,$5A,$5E,$5B,$5A,$5B,$5A,$5B,$5A,$5B,$5A,$5B,$5A,$5B,$5F
 ZoneBlocks_73:
-	.BYTE $5F,$5E,$5C,$5D,$5C,$5D,$5C,$5D,$5C,$5D,$5C,$5D,$5C,$5D,$5C,$5F,$5F,$5F,$1D
+		.BYTE  $5F,$5E,$5C,$5D,$5C,$5D,$5C,$5D,$5C,$5D,$5C,$5D,$5C,$5D,$5C,$5F,$5F,$5F,$1D
 ZoneBlocks_01:
-	.BYTE $62,  0,$62,$59,$59,$8A,$8E,$8F,$8A,$8F,$8E,$8A,$8E,$8F,$8F,$8F,$8A,$8E,$8E,$8A,$59,$59,  0,$62,  0
+		.BYTE  $62,  0,$62,$59,$59,$8A,$8E,$8F,$8A,$8F,$8E,$8A,$8E,$8F,$8F,$8F,$8A,$8E,$8E,$8A,$59,$59,  0,$62,  0
 ZoneBlocks_04:
-	.BYTE   0,  0,  0,$39,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3B,$39,$3A,$3B,$39,$3B,$39,$3B,$39,$3B,$39,$3A,$3B,  0,  0,  0
+		.BYTE    0,  0,  0,$39,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3B,$39,$3A,$3B,$39,$3B,$39,$3B,$39,$3B,$39,$3A,$3B,  0,  0,  0
 ZoneBlocks_21:
-	.BYTE $63,$67,$68,$68,$67,$68,$67,$64
+		.BYTE  $63,$67,$68,$68,$67,$68,$67,$64
 ZoneBlocks_12:
-	.BYTE $10,$13,$65,$66,$11,$65,$65,$65,$66,$11,$13,$13,$13,$13,$66,$10
+		.BYTE  $10,$13,$65,$66,$11,$65,$65,$65,$66,$11,$13,$13,$13,$13,$66,$10
 ZoneBlocks_07:
-	.BYTE   0,  0,  0,$59,$3D,$3E,$3F,$3C,$3C,$3E,$3C,$3F,$3C,$3F,$3C,$3E,$3C,$3E,$3C,$3D,$59,  0,  0,  0
+		.BYTE    0,  0,  0,$59,$3D,$3E,$3F,$3C,$3C,$3E,$3C,$3F,$3C,$3F,$3C,$3E,$3C,$3E,$3C,$3D,$59,  0,  0,  0
 ZoneBlocks_62:
-	.BYTE   0,  0,  0,$1D,$3A,$3A,$3B,  0,  0,  0
+		.BYTE    0,  0,  0,$1D,$3A,$3A,$3B,  0,  0,  0
 ZoneBlocks_80:
-	.BYTE $1D,$1E,$1E,$1F,$1E,$1F,$1F,$1F,$1D
+		.BYTE  $1D,$1E,$1E,$1F,$1E,$1F,$1F,$1F,$1D
 ZoneBlocks_97:
-	.BYTE   0,  0,  0,$69,$69,$69,$69,  0,$63,  0,  0,  0
+		.BYTE    0,  0,  0,$69,$69,$69,$69,  0,$63,  0,  0,  0
 ZoneBlocks_39:
-	.BYTE $81,$80,$81,$80,$81
+		.BYTE  $81,$80,$81,$80,$81
 ZoneBlocks_42:
-	.BYTE   0,  0,$40,  0,  0
+		.BYTE    0,  0,$40,  0,  0
 ZoneBlocks_51:
-	.BYTE   0,  0,  0,$7E,$7F,$7F,$7C,$7C,$7D,$7E,$7F,$7D,$7E,  0,  0,  0
+		.BYTE    0,  0,  0,$7E,$7F,$7F,$7C,$7C,$7D,$7E,$7F,$7D,$7E,  0,  0,  0
 ZoneBlocks_94:
-	.BYTE   0,$7F,  0,$7E,$7D,$7C,$7D,$7F,  0,  1,  0
+		.BYTE    0,$7F,  0,$7E,$7D,$7C,$7D,$7F,  0,  1,  0
 ZoneBlocks_65:
-	.BYTE   0,$7F,$7B,$7C,$7D,$7E,$7F,$7F,  0,  0,  0
+		.BYTE    0,$7F,$7B,$7C,$7D,$7E,$7F,$7F,  0,  0,  0
 ZoneBlocks_98:
-	.BYTE   0,  0,  0,  1,  1,  1,  1,  1,  1,  1,  1,  1,$7E,  0,  0,  0
+		.BYTE    0,  0,  0,  1,  1,  1,  1,  1,  1,  1,  1,  1,$7E,  0,  0,  0
 ZoneBlocks_75:
-	.BYTE   0,$64,  0
+		.BYTE    0,$64,  0
 ZoneBlocks_95:
-	.BYTE   0,  1,$54,$56,$54,$52,$51,$51,$50,$57,  0,  0,  0
+		.BYTE    0,  1,$54,$56,$54,$52,$51,$51,$50,$57,  0,  0,  0
 ZoneBlocks_32:
-	.BYTE $3D,  1,$3D,$3F,$3C,$3C,$3F,$3C,$3F,$37,  1,$3D
+		.BYTE  $3D,  1,$3D,$3F,$3C,$3C,$3F,$3C,$3F,$37,  1,$3D
 ZoneBlocks_57:
-	.BYTE   0,  0,  0,$6A,$6F,$6B,$6C,$6D,$6C,$6E,$6D,$6A,$6F,$6F,$6F,$6F,$6B,$6D,$6C,$6C,$6E,  0,  0,  0
+		.BYTE    0,  0,  0,$6A,$6F,$6B,$6C,$6D,$6C,$6E,$6D,$6A,$6F,$6F,$6F,$6F,$6B,$6D,$6C,$6C,$6E,  0,  0,  0
 ZoneBlocks_45:
-	.BYTE   0,  1,$6A,$6B,$6D,$6C,$6E,$6D,$6C,$6A,$6B,$6C,$6D,$6D,$6C,$1D
+		.BYTE    0,  1,$6A,$6B,$6D,$6C,$6E,$6D,$6C,$6A,$6B,$6C,$6D,$6D,$6C,$1D
 ZoneBlocks_67:
-	.BYTE   0,  0,  0,$6C,$6F,$6C,$6A,$6B,$6E,$6F,$6F,$6B,$6E,  0,  0,  0
+		.BYTE    0,  0,  0,$6C,$6F,$6C,$6A,$6B,$6E,$6F,$6F,$6B,$6E,  0,  0,  0
 ZoneBlocks_23:
-	.BYTE $55,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3B,$39,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$55
+		.BYTE  $55,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3B,$39,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$55
 ZoneBlocks_64:
-	.BYTE $1D,$2A,$2B,$1D,$52,$54,  0,  0,  0,  0
+		.BYTE  $1D,$2A,$2B,$1D,$52,$54,  0,  0,  0,  0
 ZoneBlocks_99:
-	.BYTE $88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$89,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88
+		;       0   1   2   3   4   5   6   7   8   9   A   B   C   D   E   F  10  11  12  13  14  15  16  17  18  19  1A  1B  1C  1D  1E  1F
+		.BYTE  $88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$89,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88,$88
 ZoneBlocks_79:
-	.BYTE $91,$87,$92,$90,$91,$93,$92,$90,$93,$91,$91,$92,$90,$92,$91,$92,$92,$90,$91,$91,$90,$91,$87,$92
+		.BYTE  $91,$87,$92,$90,$91,$93,$92,$90,$93,$91,$91,$92,$90,$92,$91,$92,$92,$90,$91,$91,$90,$91,$87,$92
 ZoneBlocks_52:
-	.BYTE   0,  1,$92,$90,$72,$93,$90,$73,$91,$93,$71,$93,$73,  1,  0
+		.BYTE    0,  1,$92,$90,$72,$93,$90,$73,$91,$93,$71,$93,$73,  1,  0
 ZoneBlocks_100:
-	.BYTE $1D,$27,$27,$19,$1B,$1A,$1B,$19,$1B,$1C,$1A,$27,$1D,$27,$1D
+		.BYTE  $1D,$27,$27,$19,$1B,$1A,$1B,$19,$1B,$1C,$1A,$27,$1D,$27,$1D
 ZoneBlocks_29:
-	.BYTE $36,  1,$36,$36,$36,$37,$36,$36,$36,$36,$37,$36,$36,$36,$37,  0,  0,  0
+		.BYTE  $36,  1,$36,$36,$36,$37,$36,$36,$36,$36,$37,$36,$36,$36,$37,  0,  0,  0
 ZoneBlocks_20:
-	.BYTE $8A,  1,$8E,$96,$41,$94,$8F,  1,$8A
+		.BYTE  $8A,  1,$8E,$96,$41,$94,$8F,  1,$8A
 ZoneBlocks_85:
-	.BYTE   0,  0,  0,$37,$61,$61,$61,$61,$61,$61,$61,$61,$61,$61,$61,$61,$61,$37,  1,  0
+		.BYTE    0,  0,  0,$37,$61,$61,$61,$61,$61,$61,$61,$61,$61,$61,$61,$61,$61,$37,  1,  0
 ZoneBlocks_46:
-	.BYTE $55,$67,$68,$68,$67,$68,$67,$68,$68,$67,$67,$67,$55
+		.BYTE  $55,$67,$68,$68,$67,$68,$67,$68,$68,$67,$67,$67,$55
 ZoneBlocks_54:
-	.BYTE $60,$87,$69,$69,$69,  0,  0,  0
+		.BYTE  $60,$87,$69,$69,$69,  0,  0,  0
 ZoneBlocks_14:
-	.BYTE   0,  0,  0,$59,$3C,$59,  0,  0,  0
+		.BYTE    0,  0,  0,$59,$3C,$59,  0,  0,  0
 ZoneBlocks_26:
-	.BYTE   6,  1,  6,  6,  7,  8,  8,  2,  3,  4,  5,  8,  8,  7,  6,  6,  1,  6
+		.BYTE    6,  1,  6,  6,  7,  8,  8,  2,  3,  4,  5,  8,  8,  7,  6,  6,  1,  6
 ZoneBlocks_96:
-	.BYTE $1D,$78,$79,$28,$29,$29,$29,$29,$29,$29,$29,$29,$29,$29,$79,$78,$28,$1D
+		.BYTE  $1D,$78,$79,$28,$29,$29,$29,$29,$29,$29,$29,$29,$29,$29,$79,$78,$28,$1D
 ZoneBlocks_83:
-	.BYTE $1D,$28,$29,$78,$29,$79,$29,$28,$29,$1D
+		.BYTE  $1D,$28,$29,$78,$29,$79,$29,$28,$29,$1D
 ZoneBlocks_47:
-	.BYTE $8A,$87,$8A,$8F,$8A,$8F,$8F,$8A,$8E,$8E,$8E,$8A,$8A,$8A,$87,$8A
+		.BYTE  $8A,$87,$8A,$8F,$8A,$8F,$8F,$8A,$8E,$8E,$8E,$8A,$8A,$8A,$87,$8A
 ZoneBlocks_78:
-	.BYTE   0,  0,  0,$87,$87,  0,  0,  0
+		.BYTE    0,  0,  0,$87,$87,  0,  0,  0
 ZoneBlocks_84:
-	.BYTE $8A,  1,$8A,$8A,$95,$8A,$8A,  1,$8A
+		.BYTE  $8A,  1,$8A,$8A,$95,$8A,$8A,  1,$8A
 ZoneBlocks_93:
-	.BYTE $1D,$88,$1D
+		.BYTE  $1D,$88,$1D
 ZoneBlocks_91:
-	.BYTE $1D,$79,$1D
+		.BYTE  $1D,$79,$1D
 ZoneBlocks_63:
-	.BYTE $1D,$28,$1D
+		.BYTE  $1D,$28,$1D
 ZoneBlocks_76:
-	.BYTE $1D,$78,$1D
+		.BYTE  $1D,$78,$1D
 ZoneBlocks_59:
-	.BYTE   0,  0,  0,  0,$87,$87,$87,$87,$87,$87,$87,$87,$87,$87,  0,  0,  0
+		.BYTE    0,  0,  0,  0,$87,$87,$87,$87,$87,$87,$87,$87,$87,$87,  0,  0,  0
 ZoneBlocks_24:
-	.BYTE $8A,  1,$8A,$8A,$8A,$8A,$38,$8A,$8A,$8A,$8A,  1,$8A
+		.BYTE  $8A,  1,$8A,$8A,$8A,$8A,$38,$8A,$8A,$8A,$8A,  1,$8A
 ZoneBlocks_49:
-	.BYTE $36,  1,$36,$36,  1,$36
+		.BYTE  $36,  1,$36,$36,  1,$36
 ZoneBlocks_44:
-	.BYTE   0,  1,$32,$45,$34,$44,$43,$33,$32,$45,$32,$43,$32,$45,$44,$32,  1,  0
+		.BYTE    0,  1,$32,$45,$34,$44,$43,$33,$32,$45,$32,$43,$32,$45,$44,$32,  1,  0
 ZoneBlocks_66:
-	.BYTE $1D,$37,$1D
+		.BYTE  $1D,$37,$1D
 ZoneBlocks_11:
-	.BYTE $46,$46,$47
+		.BYTE  $46,$46,$47
 ZoneBlocks_72:
-	.BYTE $1D,$2A,$2F,$2C,$2B,$2D,$2C,$2B,$2C,$31,$2B,$30,$2B,$2C,$2D,$31,$2F,$30,$2F,$1D
+		.BYTE  $1D,$2A,$2F,$2C,$2B,$2D,$2C,$2B,$2C,$31,$2B,$30,$2B,$2C,$2D,$31,$2F,$30,$2F,$1D
 ZoneBlocks_30:
-	.BYTE   0,  0,  0,$7F,$56,$57,$57,$57,$58,$57,$57,$58,$57,$56,$56,$7F,  0,  0,  0
+		.BYTE    0,  0,  0,$7F,$56,$57,$57,$57,$58,$57,$57,$58,$57,$56,$56,$7F,  0,  0,  0
 ZoneBlocks_40:
-	.BYTE $10,$13,$13,$13,$65,$13,$66,$13,$66,$66,$13,$65,$66,$13,$13,$10
+		.BYTE  $10,$13,$13,$13,$65,$13,$66,$13,$66,$66,$13,$65,$66,$13,$13,$10
 ZoneBlocks_61:
-	.BYTE   0,  0,  0,$39,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3B,  0,  0,  0
+		.BYTE    0,  0,  0,$39,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3A,$3B,  0,  0,  0
 ZoneBlocks_71:
-	.BYTE $73,  1,$72,$73,$72,$73,$73,$71,$72,$73,$73,$71,  1,$73
+		.BYTE  $73,  1,$72,$73,$72,$73,$73,$71,$72,$73,$73,$71,  1,$73
 ZoneBlocks_55:
-	.BYTE   0,  0,  0,  1,  0,  0,  0
+		.BYTE    0,  0,  0,  1,  0,  0,  0
 ZoneBlocks_53:
-	.BYTE   0,  0,  0,$7F,  0,  0,  0
+		.BYTE    0,  0,  0,$7F,  0,  0,  0
 ZoneBlocks_15:
-	.BYTE $10,$18,$10
+		.BYTE  $10,$18,$10
 ZoneBlocks_05:
-	.BYTE $5C,$5A,$5E,$5B,$5C
+		.BYTE  $5C,$5A,$5E,$5B,$5C
 ZoneBlocks_35:
-	.BYTE $1D,$5A,$5B,$1D
+		.BYTE  $1D,$5A,$5B,$1D
 ZoneBlocks_22:
-	.BYTE $5B,$5C,$5A
+		.BYTE  $5B,$5C,$5A
 ZoneBlocks_41:
-	.BYTE $1D,  1,$1D
+		.BYTE  $1D,  1,$1D
 ZoneBlocks_31:
-	.BYTE $55,$36,$55
+		.BYTE  $55,$36,$55
 ZoneBlocks_17:
-	.BYTE $55,$56,$55
+		.BYTE  $55,$56,$55
 ZoneBlocks_09:
-	.BYTE $10,$66,$10
+		.BYTE  $10,$66,$10
 ZoneBlocks_38:
-	.BYTE   0,  0,  0,$56,$57,$57,$58,$56,$57,$57,$58,$56,$56,  0,  0,  0
+		.BYTE    0,  0,  0,$56,$57,$57,$58,$56,$57,$57,$58,$56,$56,  0,  0,  0
 ZoneBlocks_28:
-	.BYTE $10,$13,$11,$65,$11,$13,$13,$13,$65,$65,$13,$66,$10
+		.BYTE  $10,$13,$11,$65,$11,$13,$13,$13,$65,$65,$13,$66,$10
 ZoneBlocks_48:
-	.BYTE   0,  0,  0,$39,$3B,$39,$3B,$39,$3B,$39,$3B,$39,$3B,  0,  0,  0
+		.BYTE    0,  0,  0,$39,$3B,$39,$3B,$39,$3B,$39,$3B,$39,$3B,  0,  0,  0
 ZoneBlocks_58:
-	.BYTE $1D,$37,$71,$73,$72,$73,$72,$70,$72,$37,$1D
+		.BYTE  $1D,$37,$71,$73,$72,$73,$72,$70,$72,$37,$1D
 ZoneBlocks_68:
-	.BYTE $1D,$1E,$1E,$1E,$1E,$1E,$1E,$1D
+		.BYTE  $1D,$1E,$1E,$1E,$1E,$1E,$1E,$1D
 ZoneBlocks_86:
-	.BYTE   0,  0,  0,$56,$56,$57,$57,$57,$58,$58,$57,$58,$57,$56,$56,  0,  0,  0
+		.BYTE    0,  0,  0,$56,$56,$57,$57,$57,$58,$58,$57,$58,$57,$56,$56,  0,  0,  0
 ZoneBlocks_88:
-	.BYTE $55,$4D,$4E,$55
+		.BYTE  $55,$4D,$4E,$55
 ZoneBlocks_89:
-	.BYTE   0,  0,  0,$7D,$7A,$7B,$7D,$7C,$7D,$7E,$7D,$7C,$7D,$7F,$7E,  0,  0,  0
-byte_FDE5:
-	.BYTE	0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE 0
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $20
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE   0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE   0
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE 0
-	.BYTE 0
-	.BYTE   0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $20
-	.BYTE 0
-	.BYTE $20
-	.BYTE 0
-	.BYTE 0
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $20
-	.BYTE $20
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $20
-	.BYTE 0
-	.BYTE $20
-	.BYTE 0
-	.BYTE $20
-	.BYTE 0
-	.BYTE $20
-	.BYTE 0
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE   0
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE   0
-	.BYTE   0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE $20
-	.BYTE 0
-	.BYTE   0
-	.BYTE 0
-	.BYTE   0
+		.BYTE    0,  0,  0,$7D,$7A,$7B,$7D,$7C,$7D,$7E,$7D,$7C,$7D,$7F,$7E,  0,  0,  0
+
+
+ZoneBlockPriorityTable:
+	.BYTE    0			; 0
+	.BYTE    0			; 1
+	.BYTE    0			; 2
+	.BYTE  $20			; 3
+	.BYTE  $20			; 4
+	.BYTE  $20			; 5
+	.BYTE  $20			; 6
+	.BYTE  $20			; 7
+	.BYTE  $20			; 8
+	.BYTE  $20			; 9
+	.BYTE  $20			; $A
+	.BYTE  $20			; $B
+	.BYTE  $20			; $C
+	.BYTE  $20			; $D
+	.BYTE  $20			; $E
+	.BYTE  $20			; $F
+	.BYTE  $20			; $10
+	.BYTE  $20			; $11
+	.BYTE  $20			; $12
+	.BYTE    0			; $13
+	.BYTE  $20			; $14
+	.BYTE  $20			; $15
+	.BYTE  $20			; $16
+	.BYTE  $20			; $17
+	.BYTE    0			; $18
+	.BYTE    0			; $19
+	.BYTE    0			; $1A
+	.BYTE    0			; $1B
+	.BYTE    0			; $1C
+	.BYTE  $20			; $1D
+	.BYTE    0			; $1E
+	.BYTE    0			; $1F
+	.BYTE    0			; $20
+	.BYTE    0			; $21
+	.BYTE    0			; $22
+	.BYTE    0			; $23
+	.BYTE    0			; $24
+	.BYTE    0			; $25
+	.BYTE    0			; $26
+	.BYTE    0			; $27
+	.BYTE    0			; $28
+	.BYTE    0			; $29
+	.BYTE    0			; $2A
+	.BYTE  $20			; $2B
+	.BYTE  $20			; $2C
+	.BYTE  $20			; $2D
+	.BYTE  $20			; $2E
+	.BYTE    0			; $2F
+	.BYTE  $20			; $30
+	.BYTE  $20			; $31
+	.BYTE  $20			; $32
+	.BYTE  $20			; $33
+	.BYTE  $20			; $34
+	.BYTE  $20			; $35
+	.BYTE    0			; $36
+	.BYTE    0			; $37
+	.BYTE    0			; $38
+	.BYTE    0			; $39
+	.BYTE    0			; $3A
+	.BYTE    0			; $3B
+	.BYTE    0			; $3C
+	.BYTE  $20			; $3D
+	.BYTE    0			; $3E
+	.BYTE  $20			; $3F
+	.BYTE    0			; $40
+	.BYTE    0			; $41
+	.BYTE  $20			; $42
+	.BYTE  $20			; $43
+	.BYTE  $20			; $44
+	.BYTE  $20			; $45
+	.BYTE    0			; $46
+	.BYTE    0			; $47
+	.BYTE    0			; $48
+	.BYTE    0			; $49
+	.BYTE    0			; $4A
+	.BYTE    0			; $4B
+	.BYTE    0			; $4C
+	.BYTE    0			; $4D
+	.BYTE    0			; $4E
+	.BYTE    0			; $4F
+	.BYTE    0			; $50
+	.BYTE  $20			; $51
+	.BYTE  $20			; $52
+	.BYTE  $20			; $53
+	.BYTE  $20			; $54
+	.BYTE    0			; $55
+	.BYTE    0			; $56
+	.BYTE    0			; $57
+	.BYTE    0			; $58
+	.BYTE    0			; $59
+	.BYTE    0			; $5A
+	.BYTE    0			; $5B
+	.BYTE    0			; $5C
+	.BYTE    0			; $5D
+	.BYTE    0			; $5E
+	.BYTE    0			; $5F
+	.BYTE    0			; $60
+	.BYTE  $20			; $61
+	.BYTE  $20			; $62
+	.BYTE    0			; $63
+	.BYTE    0			; $64
+	.BYTE    0			; $65
+	.BYTE    0			; $66
+	.BYTE  $20			; $67
+	.BYTE    0			; $68
+	.BYTE  $20			; $69
+	.BYTE    0			; $6A
+	.BYTE  $20			; $6B
+	.BYTE    0			; $6C
+	.BYTE  $20			; $6D
+	.BYTE    0			; $6E
+	.BYTE  $20			; $6F
+	.BYTE  $20			; $70
+	.BYTE  $20			; $71
+	.BYTE  $20			; $72
+	.BYTE  $20			; $73
+	.BYTE    0			; $74
+	.BYTE  $20			; $75
+	.BYTE  $20			; $76
+	.BYTE  $20			; $77
+	.BYTE    0			; $78
+	.BYTE    0			; $79
+	.BYTE    0			; $7A
+	.BYTE    0			; $7B
+	.BYTE    0			; $7C
+	.BYTE    0			; $7D
+	.BYTE    0			; $7E
+	.BYTE    0			; $7F
+	.BYTE    0			; $80
+	.BYTE    0			; $81
+	.BYTE    0			; $82
+	.BYTE    0			; $83
+	.BYTE    0			; $84
+	.BYTE    0			; $85
+	.BYTE    0			; $86
+	.BYTE    0			; $87
+	.BYTE    0			; $88
+	.BYTE    0			; $89
+	.BYTE    0			; $8A
+	.BYTE    0			; $8B
+	.BYTE    0			; $8C
+	.BYTE    0			; $8D
+	.BYTE    0			; $8E
+	.BYTE  $20			; $8F
+	.BYTE  $20			; $90
+	.BYTE  $20			; $91
+	.BYTE  $20			; $92
+	.BYTE  $20			; $93
+	.BYTE    0			; $94
+	.BYTE    0			; $95
+	.BYTE    0			; $96
+	.BYTE    0			; $97
+
 ZoneCHRTable:
-	.BYTE $36,$16,$16,$14,$14,$14,$34,$16,$14,$34
-	.BYTE $14,$14,$14,$36,$14,$14,$16,$14,$16,$34; 10
-	.BYTE $14,$14,$14,$34,$14,$34,$16,$14,$14,$16; 20
-	.BYTE $14,$34,$14,$36,$14,$16,$16,$14,$14,$16; 30
-	.BYTE $14,$34,$16,$34,$16,$16,$34,$14,$14,$14; 40
-	.BYTE $16,$34,$14,$34,$34,$14,$16,$36,$14,$16; 50
-	.BYTE $16,$14,$14,$14,$16,$14,$16,$14,$34,$34; 60
-	.BYTE $34,$14,$16,$34,$14,$14,$14,$14,$36,$14; 70
-	.BYTE $14,$34,$14,$34,$16,$14,$14,$14,$16,$16; 80
-	.BYTE $14,$16,$14,$16,$16,$14,$34,$14,$14,$16; 90
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
-	.BYTE   0
+	.BYTE $36,$16,$16,$14,$14,$14,$34,$16,$14,$34	;  10
+	.BYTE $14,$14,$14,$36,$14,$14,$16,$14,$16,$34	;  20
+	.BYTE $14,$14,$14,$34,$14,$34,$16,$14,$14,$16	;  30
+	.BYTE $14,$34,$14,$36,$14,$16,$16,$14,$14,$16	;  40
+	.BYTE $14,$34,$16,$34,$16,$16,$34,$14,$14,$14	;  50
+	.BYTE $16,$34,$14,$34,$34,$14,$16,$36,$14,$16	;  60
+	.BYTE $16,$14,$14,$14,$16,$14,$16,$14,$34,$34	;  70
+	.BYTE $34,$14,$16,$34,$14,$14,$14,$14,$36,$14	;  80
+	.BYTE $14,$34,$14,$34,$16,$14,$14,$14,$16,$16	;  90
+	.BYTE $14,$16,$14,$16,$16,$14,$34,$14,$14,$16	; 100
+
+	.BYTE   0, 0, 0, 0
+
 DebugWarpTable:
-	.BYTE   0,$12,$14,$49,$A6,  3,$1C,  4,$AD,$42
-	.BYTE $96,$17,$1B,$B0,$A4,	7,$AC,$4E,  8,$B1; $A
-	.BYTE $1F,$A9,$71,$8F,$45,$B2,$22,$B4,$48,$9A; $14
-	.BYTE $AB,$60, $A,$25,$A7,$28,$2C,$B6,$57,$9C; $1E
-	.BYTE $AA,$59,$4A,$92,$6D,$79,$80,$B9,$91,$2F; $28
-	.BYTE $5A,$77,$A3,$AF,$A2,$30,$6A,$BA,$97,$37; $32
-	.BYTE $9F,$53,$89,$AE,$64,$95,$6F,$BD, $C,$38; $3C
-	.BYTE $A0,$98,$3B,$3C,$5E,$8B,$4B,$81,$74,$68; $46
-	.BYTE $51, $F,$7E,$84,$52,$C0,$47,$BE,$C1,$3F; $50
-	.BYTE $87,$40,$85,$5B,$5F,$7B,$56,$5D,$72,$78; $5A
+	.BYTE   0,$12,$14,$49,$A6,  3,$1C,  4,$AD,$42	;  10
+	.BYTE $96,$17,$1B,$B0,$A4,	7,$AC,$4E,  8,$B1	;  20
+	.BYTE $1F,$A9,$71,$8F,$45,$B2,$22,$B4,$48,$9A	;  30
+	.BYTE $AB,$60, $A,$25,$A7,$28,$2C,$B6,$57,$9C	;  40
+	.BYTE $AA,$59,$4A,$92,$6D,$79,$80,$B9,$91,$2F	;  50
+	.BYTE $5A,$77,$A3,$AF,$A2,$30,$6A,$BA,$97,$37	;  60
+	.BYTE $9F,$53,$89,$AE,$64,$95,$6F,$BD, $C,$38	;  70
+	.BYTE $A0,$98,$3B,$3C,$5E,$8B,$4B,$81,$74,$68	;  80
+	.BYTE $51, $F,$7E,$84,$52,$C0,$47,$BE,$C1,$3F	;  90
+	.BYTE $87,$40,$85,$5B,$5F,$7B,$56,$5D,$72,$78	; 100
+
 ZoneMusicTable:
-	.BYTE MusicTrack_ZoneTheme2
-	.BYTE MusicTrack_ZoneTheme1		; 1
-	.BYTE MusicTrack_ZoneTheme2		; 2
-	.BYTE MusicTrack_ZoneTheme3		; 3
-	.BYTE MusicTrack_ZoneTheme1		; 4
-	.BYTE MusicTrack_ZoneTheme3		; 5
-	.BYTE MusicTrack_ZoneTheme2		; 6
-	.BYTE MusicTrack_ZoneTheme1		; 7
-	.BYTE MusicTrack_ZoneTheme3		; 8
-	.BYTE MusicTrack_ZoneTheme2		; 9
-	.BYTE MusicTrack_ZoneTheme1		; 10
-	.BYTE MusicTrack_ZoneTheme3		; 11
-	.BYTE MusicTrack_ZoneTheme1		; 12
-	.BYTE MusicTrack_ZoneTheme2		; 13
-	.BYTE MusicTrack_ZoneTheme3		; 14
+	.BYTE MusicTrack_ZoneTheme2; 1
+	.BYTE MusicTrack_ZoneTheme1		; 2
+	.BYTE MusicTrack_ZoneTheme2		; 3
+	.BYTE MusicTrack_ZoneTheme3		; 4
+	.BYTE MusicTrack_ZoneTheme1		; 5
+	.BYTE MusicTrack_ZoneTheme3		; 6
+	.BYTE MusicTrack_ZoneTheme2		; 7
+	.BYTE MusicTrack_ZoneTheme1		; 8
+	.BYTE MusicTrack_ZoneTheme3		; 9
+	.BYTE MusicTrack_ZoneTheme2		; 10
+	.BYTE MusicTrack_ZoneTheme1		; 11
+	.BYTE MusicTrack_ZoneTheme3		; 12
+	.BYTE MusicTrack_ZoneTheme1		; 13
+	.BYTE MusicTrack_ZoneTheme2		; 14
 	.BYTE MusicTrack_ZoneTheme3		; 15
 	.BYTE MusicTrack_ZoneTheme3		; 16
-	.BYTE MusicTrack_ZoneTheme1		; 17
+	.BYTE MusicTrack_ZoneTheme3		; 17
 	.BYTE MusicTrack_ZoneTheme1		; 18
-	.BYTE MusicTrack_ZoneTheme3		; 19
+	.BYTE MusicTrack_ZoneTheme1		; 19
 	.BYTE MusicTrack_ZoneTheme3		; 20
-	.BYTE MusicTrack_ZoneTheme1		; 21
-	.BYTE MusicTrack_ZoneTheme3		; 22
-	.BYTE MusicTrack_ZoneTheme2		; 23
-	.BYTE MusicTrack_ZoneTheme3		; 24
-	.BYTE MusicTrack_ZoneTheme2		; 25
+	.BYTE MusicTrack_ZoneTheme3		; 21
+	.BYTE MusicTrack_ZoneTheme1		; 22
+	.BYTE MusicTrack_ZoneTheme3		; 23
+	.BYTE MusicTrack_ZoneTheme2		; 24
+	.BYTE MusicTrack_ZoneTheme3		; 25
 	.BYTE MusicTrack_ZoneTheme2		; 26
-	.BYTE MusicTrack_ZoneTheme1		; 27
-	.BYTE MusicTrack_ZoneTheme2		; 28
+	.BYTE MusicTrack_ZoneTheme2		; 27
+	.BYTE MusicTrack_ZoneTheme1		; 28
 	.BYTE MusicTrack_ZoneTheme2		; 29
 	.BYTE MusicTrack_ZoneTheme2		; 30
 	.BYTE MusicTrack_ZoneTheme2		; 31
-	.BYTE MusicTrack_ZoneTheme3		; 32
-	.BYTE MusicTrack_ZoneTheme1		; 33
+	.BYTE MusicTrack_ZoneTheme2		; 32
+	.BYTE MusicTrack_ZoneTheme3		; 33
 	.BYTE MusicTrack_ZoneTheme1		; 34
 	.BYTE MusicTrack_ZoneTheme1		; 35
 	.BYTE MusicTrack_ZoneTheme1		; 36
-	.BYTE MusicTrack_ZoneTheme3		; 37
-	.BYTE MusicTrack_ZoneTheme1		; 38
-	.BYTE MusicTrack_ZoneTheme3		; 39
+	.BYTE MusicTrack_ZoneTheme1		; 37
+	.BYTE MusicTrack_ZoneTheme3		; 38
+	.BYTE MusicTrack_ZoneTheme1		; 39
 	.BYTE MusicTrack_ZoneTheme3		; 40
-	.BYTE MusicTrack_Death		; 41
-	.BYTE MusicTrack_ZoneTheme1		; 42
-	.BYTE MusicTrack_ZoneTheme2		; 43
-	.BYTE MusicTrack_ZoneTheme3		; 44
+	.BYTE MusicTrack_ZoneTheme3		; 41
+	.BYTE MusicTrack_Death			; 42
+	.BYTE MusicTrack_ZoneTheme1		; 43
+	.BYTE MusicTrack_ZoneTheme2		; 44
 	.BYTE MusicTrack_ZoneTheme3		; 45
-	.BYTE MusicTrack_ZoneTheme2		; 46
-	.BYTE MusicTrack_ZoneTheme3		; 47
-	.BYTE MusicTrack_ZoneTheme2		; 48
-	.BYTE MusicTrack_ZoneTheme1		; 49
-	.BYTE MusicTrack_ZoneTheme2		; 50
-	.BYTE MusicTrack_ZoneTheme1		; 51
-	.BYTE MusicTrack_ZoneTheme2		; 52
+	.BYTE MusicTrack_ZoneTheme3		; 46
+	.BYTE MusicTrack_ZoneTheme2		; 47
+	.BYTE MusicTrack_ZoneTheme3		; 48
+	.BYTE MusicTrack_ZoneTheme2		; 49
+	.BYTE MusicTrack_ZoneTheme1		; 50
+	.BYTE MusicTrack_ZoneTheme2		; 51
+	.BYTE MusicTrack_ZoneTheme1		; 52
 	.BYTE MusicTrack_ZoneTheme2		; 53
 	.BYTE MusicTrack_ZoneTheme2		; 54
-	.BYTE MusicTrack_ZoneTheme1		; 55
-	.BYTE MusicTrack_ZoneTheme3		; 56
-	.BYTE MusicTrack_ZoneTheme1		; 57
-	.BYTE MusicTrack_ZoneTheme2		; 58
+	.BYTE MusicTrack_ZoneTheme2		; 55
+	.BYTE MusicTrack_ZoneTheme1		; 56
+	.BYTE MusicTrack_ZoneTheme3		; 57
+	.BYTE MusicTrack_ZoneTheme1		; 58
 	.BYTE MusicTrack_ZoneTheme2		; 59
-	.BYTE MusicTrack_ZoneTheme3		; 60
+	.BYTE MusicTrack_ZoneTheme2		; 60
 	.BYTE MusicTrack_ZoneTheme3		; 61
-	.BYTE MusicTrack_ZoneTheme2		; 62
-	.BYTE MusicTrack_ZoneTheme1		; 63
-	.BYTE MusicTrack_ZoneTheme2		; 64
+	.BYTE MusicTrack_ZoneTheme3		; 62
+	.BYTE MusicTrack_ZoneTheme2		; 63
+	.BYTE MusicTrack_ZoneTheme1		; 64
 	.BYTE MusicTrack_ZoneTheme2		; 65
-	.BYTE MusicTrack_ZoneTheme3		; 66
+	.BYTE MusicTrack_ZoneTheme2		; 66
 	.BYTE MusicTrack_ZoneTheme3		; 67
-	.BYTE MusicTrack_ZoneTheme2		; 68
+	.BYTE MusicTrack_ZoneTheme3		; 68
 	.BYTE MusicTrack_ZoneTheme2		; 69
-	.BYTE MusicTrack_ZoneTheme1		; 70
-	.BYTE MusicTrack_ZoneTheme3		; 71
-	.BYTE MusicTrack_ZoneTheme1		; 72
-	.BYTE MusicTrack_ZoneTheme3		; 73
-	.BYTE MusicTrack_ZoneTheme2		; 74
+	.BYTE MusicTrack_ZoneTheme2		; 70
+	.BYTE MusicTrack_ZoneTheme1		; 71
+	.BYTE MusicTrack_ZoneTheme3		; 72
+	.BYTE MusicTrack_ZoneTheme1		; 73
+	.BYTE MusicTrack_ZoneTheme3		; 74
 	.BYTE MusicTrack_ZoneTheme2		; 75
-	.BYTE MusicTrack_ZoneTheme1		; 76
-	.BYTE MusicTrack_ZoneTheme2		; 77
+	.BYTE MusicTrack_ZoneTheme2		; 76
+	.BYTE MusicTrack_ZoneTheme1		; 77
 	.BYTE MusicTrack_ZoneTheme2		; 78
-	.BYTE MusicTrack_ZoneTheme1		; 79
-	.BYTE MusicTrack_ZoneTheme2		; 80
+	.BYTE MusicTrack_ZoneTheme2		; 79
+	.BYTE MusicTrack_ZoneTheme1		; 80
 	.BYTE MusicTrack_ZoneTheme2		; 81
 	.BYTE MusicTrack_ZoneTheme2		; 82
-	.BYTE MusicTrack_ZoneTheme3		; 83
+	.BYTE MusicTrack_ZoneTheme2		; 83
 	.BYTE MusicTrack_ZoneTheme3		; 84
-	.BYTE MusicTrack_ZoneTheme1		; 85
-	.BYTE MusicTrack_ZoneTheme3		; 86
-	.BYTE MusicTrack_ZoneTheme1		; 87
-	.BYTE MusicTrack_ZoneTheme2		; 88
-	.BYTE MusicTrack_ZoneTheme3		; 89
-	.BYTE MusicTrack_ZoneTheme2		; 90
-	.BYTE MusicTrack_ZoneTheme1		; 91
-	.BYTE MusicTrack_ZoneTheme2		; 92
+	.BYTE MusicTrack_ZoneTheme3		; 85
+	.BYTE MusicTrack_ZoneTheme1		; 86
+	.BYTE MusicTrack_ZoneTheme3		; 87
+	.BYTE MusicTrack_ZoneTheme1		; 88
+	.BYTE MusicTrack_ZoneTheme2		; 89
+	.BYTE MusicTrack_ZoneTheme3		; 90
+	.BYTE MusicTrack_ZoneTheme2		; 91
+	.BYTE MusicTrack_ZoneTheme1		; 92
 	.BYTE MusicTrack_ZoneTheme2		; 93
-	.BYTE MusicTrack_ZoneTheme1		; 94
-	.BYTE MusicTrack_ZoneTheme2		; 95
+	.BYTE MusicTrack_ZoneTheme2		; 94
+	.BYTE MusicTrack_ZoneTheme1		; 95
 	.BYTE MusicTrack_ZoneTheme2		; 96
-	.BYTE MusicTrack_ZoneTheme1		; 97
-	.BYTE MusicTrack_ZoneTheme2		; 98
-	.BYTE MusicTrack_ZoneTheme1		; 99
+	.BYTE MusicTrack_ZoneTheme2		; 97
+	.BYTE MusicTrack_ZoneTheme1		; 98
+	.BYTE MusicTrack_ZoneTheme2		; 99
+	.BYTE MusicTrack_ZoneTheme1		; 100
 
 
 IFNDEF REMOVE_MAYBE_UNUSED_DATA

@@ -6,6 +6,10 @@ MACRO Item a1, a2, a3, a4
 	.db a1, a2, a3, a4
 ENDM
 
+MACRO Metatile tl, tr, bl, br
+	.db tl, tr, bl, br
+ENDM
+
 MACRO FireballSpawnerPos a1, a2
 	.db a1, a2
 ENDM
@@ -35,5 +39,9 @@ ENDM
 MACRO ColumnSolidity t1, t2, t3, t4, t5, t6, t7, t8
 	.db (t1 << 6) | (t2 << 4) | (t3 << 2) | (t4)
 	.db (t5 << 6) | (t6 << 4) | (t7 << 2) | (t8)
+ENDM
+
+MACRO DoorFlag df
+	.db df | #$80
 ENDM
 

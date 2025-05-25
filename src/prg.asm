@@ -1266,10 +1266,10 @@ loc_87AE:
 	ROL	    word_1A+1
 	ASL	    A
 	ROL	    word_1A+1
-	ADC	    #<loc_F3C0
+	ADC	    #<MetatileDefinitions
 	STA	    word_1A
 	LDA	    word_1A+1
-	ADC	    #>loc_F3C0
+	ADC	    #>MetatileDefinitions
 	STA	    word_1A+1
 	LDY	    #0
 	LDA	    (word_1A),Y
@@ -1300,10 +1300,10 @@ loc_87F4:
 	ROL	    word_1A+1
 	ASL	    A
 	ROL	    word_1A+1
-	ADC	    #<loc_F3C0
+	ADC	    #<MetatileDefinitions
 	STA	    word_1A
 	LDA	    word_1A+1
-	ADC	    #>loc_F3C0
+	ADC	    #>MetatileDefinitions
 	STA	    word_1A+1
 	LDY	    #0
 	LDA	    (word_1A),Y
@@ -4405,7 +4405,7 @@ loc_9ADE:
 	STX	    byte_2A
 	JSR	    sub_85E4
 	LDA	    byte_2A
-	ORA	    byte_FDE5,X
+	ORA	    ZoneBlockPriorityTable,X
 	ORA	    #0
 	STA	    byte_2A
 	JSR	    sub_AED5
@@ -4587,7 +4587,7 @@ loc_9C19:
 	STX	    byte_2A
 	JSR	    sub_85E4
 	LDA	    byte_2A
-	ORA	    byte_FDE5,X
+	ORA	    ZoneBlockPriorityTable,X
 	ORA	    #0
 	STA	    byte_2A
 	JSR	    sub_AED5
@@ -4830,7 +4830,7 @@ loc_9DB1:
 	STX	    byte_2A
 	JSR	    sub_85E4
 	LDA	    byte_2A
-	ORA	    byte_FDE5,X
+	ORA	    ZoneBlockPriorityTable,X
 	ORA	    #1
 	STA	    byte_2A
 	JSR	    sub_AED5
@@ -5159,7 +5159,7 @@ loc_9FB8:
 	STX	    byte_2A
 	JSR	    sub_85E4
 	LDA	    byte_2A
-	ORA	    byte_FDE5,X
+	ORA	    ZoneBlockPriorityTable,X
 	ORA	    #1
 	STA	    byte_2A
 	JSR	    sub_AED5
@@ -5524,7 +5524,7 @@ loc_A227:
 	STX	    byte_2A
 	JSR	    sub_85E4
 	LDA	    byte_2A
-	ORA	    byte_FDE5,X
+	ORA	    ZoneBlockPriorityTable,X
 	ORA	    #1
 	STA	    byte_2A
 	JSR	    sub_AED5
@@ -5786,7 +5786,7 @@ loc_A3EA:
 	STX	    byte_2A
 	JSR	    sub_85E4
 	LDA	    byte_2A
-	ORA	    byte_FDE5,X
+	ORA	    ZoneBlockPriorityTable,X
 	ORA	    #3
 	STA	    byte_2A
 	JSR	    sub_AED5
@@ -6053,7 +6053,7 @@ loc_A5AB:
 	STX	    byte_2A
 	JSR	    sub_85E4
 	LDA	    byte_2A
-	ORA	    byte_FDE5,X
+	ORA	    ZoneBlockPriorityTable,X
 	ORA	    #0
 	STA	    byte_2A
 	JSR	    sub_AED5
@@ -6689,7 +6689,7 @@ loc_A8F0:
 	STX	    byte_2A
 	JSR	    sub_85E4
 	LDA	    byte_2A
-	ORA	    byte_FDE5,X
+	ORA	    ZoneBlockPriorityTable,X
 	ORA	    #1
 	STA	    byte_2A
 	JSR	    sub_AED5
@@ -6892,7 +6892,7 @@ loc_AA3C:
 	STX	    byte_2A
 	JSR	    sub_85E4
 	LDA	    byte_2A
-	ORA	    byte_FDE5,X
+	ORA	    ZoneBlockPriorityTable,X
 	ORA	    #0
 	STA	    byte_2A
 	JSR	    sub_AED5
@@ -7045,7 +7045,7 @@ loc_AB47:
 	STX	    byte_2A
 	JSR	    sub_85E4
 	LDA	    byte_2A
-	ORA	    byte_FDE5,X
+	ORA	    ZoneBlockPriorityTable,X
 	ORA	    #0
 	STA	    byte_2A
 	JSR	    sub_AED5
@@ -8824,7 +8824,7 @@ loc_B5E1:
 	LDY	    #0
 	LDA	    (word_A2),Y
 	JSR	    sub_85E8
-	LDA	    byte_FDE5,X
+	LDA	    ZoneBlockPriorityTable,X
 	ORA	    byte_25
 	LDX	    byte_155
 	STA	    SpriteData+2,X
@@ -8895,7 +8895,7 @@ loc_B65D:
 	LDY	    #0
 	LDA	    (word_A2),Y
 	JSR	    sub_85E8
-	LDA	    byte_FDE5,X
+	LDA	    ZoneBlockPriorityTable,X
 	STA	    byte_2A
 	LDY	    #7
 	LDA	    (word_A2),Y
@@ -9051,7 +9051,7 @@ loc_B759:
 	LDY	    #0
 	LDA	    (word_A2),Y
 	JSR	    sub_85E8
-	LDA	    byte_FDE5,X
+	LDA	    ZoneBlockPriorityTable,X
 	STA	    byte_2A
 	LDX	    byte_155
 	LDY	    #5
@@ -9150,11 +9150,11 @@ Sprite_Invulnerable:
 	.BYTE $FE,$F7,$EE,$EF
 	.BYTE $FF				; 4 ; Uses $F7 here because $FF	is the terminator
 EndingGemSpritePointers:
-	.WORD Sprite_UnusedCoin
-	.WORD Sprite_UnusedCrown
-	.WORD Sprite_UnusedSword
-	.WORD Sprite_EndingGem
-	.WORD Sprite_UnusedRing
+	.WORD Sprite_UnusedCoin		; 0		POI: These are capable of being used, but aren't
+	.WORD Sprite_UnusedCrown	; 1
+	.WORD Sprite_UnusedSword	; 2
+	.WORD Sprite_EndingGem		; 3
+	.WORD Sprite_UnusedRing		; 4
 Sprite_UnusedCoin:
 	.BYTE	$8C,$8D,$7C,$7D
 	.BYTE $FF				; 4 ; Shares CHR bank with the gem, so is replacable
@@ -9251,7 +9251,7 @@ sub_B88E:
 
 loc_B8B0:
 	TYA
-	ORA	    byte_FDE5,X
+	ORA	    ZoneBlockPriorityTable,X
 	STA	    byte_2A
 	LDA	    PlayerState
 	TAY
@@ -9450,7 +9450,7 @@ sub_B9C8:
 	BEQ	    locret_B9C4
 	LDA	    byte_260
 	JSR	    sub_85E8
-	LDA	    byte_FDE5,X
+	LDA	    ZoneBlockPriorityTable,X
 	STA	    byte_25
 	LDX	    byte_155
 	LDA	    byte_267
@@ -10732,10 +10732,10 @@ loc_C18D:
 	JSR	    sub_8AB8
 	LDA	    byte_3C7
 	BMI	    locret_C1E9
-	LDY	    #6
-	LDA	    EndingGemSpritePointers,Y
-	STA	    word_1A
-	LDA	    EndingGemSpritePointers+1,Y
+	LDY	    #3 << 1							; index into table. POI: always 3 (6)
+	LDA	    EndingGemSpritePointers,Y		; this could be used to show different
+	STA	    word_1A							; items for the ending, but it only ever
+	LDA	    EndingGemSpritePointers+1,Y		; shows the gem
 	STA	    word_1A+1
 	LDA	    #0
 	STA	    byte_2A
