@@ -1235,10 +1235,10 @@ loc_8718:
 	ROL	    word_16+1
 	ASL	    A
 	ROL	    word_16+1
-	ADC	    #<loc_DE50
+	ADC	    #<ColumnTiles
 	STA	    word_16
 	LDA	    word_16+1
-	ADC	    #>loc_DE50
+	ADC	    #>ColumnTiles
 	STA	    word_16+1
 	INY
 	LDA	    (word_14),Y
@@ -1249,10 +1249,10 @@ loc_8718:
 	ROL	    word_18+1
 	ASL	    A
 	ROL	    word_18+1
-	ADC	    #<loc_DE50
+	ADC	    #<ColumnTiles
 	STA	    word_18
 	LDA	    word_18+1
-	ADC	    #>loc_DE50
+	ADC	    #>ColumnTiles
 	STA	    word_18+1
 	LDX	    #0
 	STX	    byte_25
@@ -1349,10 +1349,10 @@ loc_8856:
 	STX	    word_1E+1
 	ASL	    A
 	ROL	    word_1E+1
-	ADC	    #<loc_E650
+	ADC	    #<ColumnAttributes
 	STA	    word_1E
 	LDA	    word_1E+1
-	ADC	    #>loc_E650
+	ADC	    #>ColumnAttributes
 	STA	    word_1E+1
 	LDY	    #0
 	LDA	    (word_1E),Y
@@ -1391,10 +1391,10 @@ loc_8856:
 	STX	    word_1E+1
 	ASL	    A
 	ROL	    word_1E+1
-	ADC	    #<loc_E650
+	ADC	    #<ColumnAttributes
 	STA	    word_1E
 	LDA	    word_1E+1
-	ADC	    #>loc_E650
+	ADC	    #>ColumnAttributes
 	STA	    word_1E+1
 	LDY	    #0
 	LDA	    (word_1E),Y

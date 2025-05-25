@@ -121,4 +121,11 @@ PPUStringIndex_OK =  $B
 PPUStringIndex_Out =  $C
 PPUStringIndex_Warp =  $D
 
+
+; ---------------------------------------------------------------------------
+; collision types
+__ = 0	; empty
+H_ = 2	; "half-solid ledge" (requires boot or you fall through)
+SB = 3	; "solid block"
+
 .endinl

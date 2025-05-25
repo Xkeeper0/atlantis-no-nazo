@@ -2,17 +2,30 @@
 
 A disassembly of one of the more infamous flavors of _kusoge_.
 
-You should probably go find something else to look at, because this game is not good.
+This is a work-in-progress, but this disassembly builds a 1:1 copy of the ROM,
+and allows shifting ROM data around (there should be no hard-coded addresses).
+
+Special thanks to [りなお(rinao)](https://web.archive.org/web/20030607155301/http://refam.virtualave.net/atlantis/index.html) (archived page),
+which has a mostly-commented partial disassembly (as well as many other notes).
+
+See also:
+* [TCRF page for this game](https://tcrf.net/The_Mystery_of_Atlantis)
+
+Original game code and assets © Sunsoft.
 
 
 ----
 
 ## Building
 
-Run `build.bat`. It should spit out a copy of the ROM in the `bin/` folder.
+Run `build.bat` or `build.sh`. It should spit out a copy of the ROM in the `bin/` folder.
 
-This disassembly is designed to be built with a custom copy of **asm6f**, which is
-included in the `tools` directory.
+This disassembly is designed to be built with a custom version of **asm6f**, which is
+included in the `tools` directory. (The changes disable using "zero page" opcodes
+when possible; see below.)
+
+While it is compatible with normal builds, it will not build 1:1 ROMs. The disassembly
+would need to have _every single zero-page address_ prepended with `a:`, and I am _tired_.
 
 
 ### This game is not very good

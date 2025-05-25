@@ -748,7 +748,7 @@ ELSE
 	.BYTE $FF
 ENDIF
 
-loc_DE50:
+ColumnTiles:
 	; column metatiles
 	.byte    0,   0,   0,   0,   0,   0,   0,   0
 	.byte    0,   0,   0,   0, $42,   0,   0,   0
@@ -1009,519 +1009,265 @@ loc_DE50:
 
 
 
-loc_E650:
-	.BYTE 0
-	.BYTE 0
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $FF
-	.BYTE 0
-	.BYTE $3F
-	.BYTE 0
-	.BYTE $F
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $AA
-	.BYTE 0
-	.BYTE $AA
-	.BYTE 0
-	.BYTE $AA
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $F
-	.BYTE 0
-	.BYTE $F
-	.BYTE 0
-	.BYTE 3
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $8A
-	.BYTE $AA
-	.BYTE $8A
-	.BYTE $8A
-	.BYTE $8A
-	.BYTE $80
-	.BYTE $80
-	.BYTE 0
-	.BYTE 0
-	.BYTE $A
-	.BYTE $A
-	.BYTE $8A
-	.BYTE $80
-	.BYTE $A
-	.BYTE $AA
-	.BYTE $8A
-	.BYTE $8E
-	.BYTE $AE
-	.BYTE 0
-	.BYTE 0
-	.BYTE $AA
-	.BYTE $15
-	.BYTE $80
-	.BYTE $15
-	.BYTE $2A
-	.BYTE $15
-	.BYTE 0
-	.BYTE $15
-	.BYTE 0
-	.BYTE $15
-	.BYTE $A0
-	.BYTE $15
-	.BYTE $A0
-	.BYTE $15
-	.BYTE $AA
-	.BYTE $2A
-	.BYTE $AA
-	.BYTE 0
-	.BYTE $2A
-	.BYTE $2A
-	.BYTE 0
-	.BYTE 0
-	.BYTE $AA
-	.BYTE $A0
-	.BYTE $AA
-	.BYTE $A0
-	.BYTE 0
-	.BYTE $2A
-	.BYTE 0
-	.BYTE $2A
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $AA
-	.BYTE $80
-	.BYTE $AA
-	.BYTE 0
-	.BYTE $A8
-	.BYTE 0
-	.BYTE $A0
-	.BYTE 0
-	.BYTE $80
-	.BYTE 2
-	.BYTE 0
-	.BYTE 0
-	.BYTE $A
-	.BYTE $AA
-	.BYTE 2
-	.BYTE $AA
-	.BYTE 0
-	.BYTE $AA
-	.BYTE $80
-	.BYTE $2A
-	.BYTE $AA
-	.BYTE $AA
-	.BYTE 0
-	.BYTE $54
-	.BYTE 0
-	.BYTE $54
-	.BYTE 0
-	.BYTE $54
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $3F
-	.BYTE 0
-	.BYTE $3F
-	.BYTE 0
-	.BYTE 3
-	.BYTE $F0
-	.BYTE 3
-	.BYTE $F0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $A8
-	.BYTE 0
-	.BYTE 5
-	.BYTE 0
-	.BYTE $A8
-	.BYTE 0
-	.BYTE 0
-	.BYTE $AA
-	.BYTE $AA
-	.BYTE $AA
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $59
-	.BYTE $59
-	.BYTE $AA
-	.BYTE $AA
-	.BYTE $AA
-	.BYTE $AA
-	.BYTE 0
-	.BYTE 4
-	.BYTE 0
-	.BYTE 4
-	.BYTE 0
-	.BYTE 4
-	.BYTE 0
-	.BYTE 4
-	.BYTE $3F
-	.BYTE $15
-	.BYTE $3C
-	.BYTE $15
-	.BYTE 2
-	.BYTE $AA
-	.BYTE 2
-	.BYTE $AA
-	.BYTE 0
-	.BYTE $15
-	.BYTE $30
-	.BYTE $15
-	.BYTE 0
-	.BYTE $15
-	.BYTE 0
-	.BYTE $D5
-	.BYTE 3
-	.BYTE $D5
-	.BYTE $F
-	.BYTE $D5
-	.BYTE $3F
-	.BYTE $D5
-	.BYTE $30
-	.BYTE $15
-	.BYTE $30
-	.BYTE $15
-	.BYTE $3C
-	.BYTE $15
-	.BYTE $3F
-	.BYTE $D5
-	.BYTE $3C
-	.BYTE $15
-	.BYTE $3C
-	.BYTE $15
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $3F
-	.BYTE 2
-	.BYTE $A8
-	.BYTE 2
-	.BYTE $A8
-	.BYTE 2
-	.BYTE $A8
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $55
-	.BYTE $55
-	.BYTE 0
-	.BYTE $15
-	.BYTE 2
-	.BYTE $95
-	.BYTE 2
-	.BYTE $95
-	.BYTE 2
-	.BYTE $95
-	.BYTE 0
-	.BYTE $95
-	.BYTE 0
-	.BYTE $15
-	.BYTE $55
-	.BYTE $55
-	.BYTE 0
-	.BYTE 0
-	.BYTE $A0
-	.BYTE 0
-	.BYTE $68
-	.BYTE 0
-	.BYTE $5A
-	.BYTE 0
-	.BYTE $56
-	.BYTE $80
-	.BYTE $55
-	.BYTE $A8
-	.BYTE 0
-	.BYTE $29
-	.BYTE 0
-	.BYTE $A5
-	.BYTE 2
-	.BYTE $95
-	.BYTE $40
-	.BYTE 0
-	.BYTE $54
-	.BYTE 0
-	.BYTE $15
-	.BYTE 0
-	.BYTE 5
-	.BYTE $40
-	.BYTE 1
-	.BYTE $50
-	.BYTE 0
-	.BYTE $50
-	.BYTE 0
-	.BYTE 5
-	.BYTE 0
-	.BYTE $55
-	.BYTE 0
-	.BYTE $54
-	.BYTE $55
-	.BYTE $55
-	.BYTE 0
-	.BYTE $50
-	.BYTE $A0
-	.BYTE 5
-	.BYTE 0
-	.BYTE 5
-	.BYTE $50
-	.BYTE $A
-	.BYTE $50
-	.BYTE 0
-	.BYTE 0
-	.BYTE 5
-	.BYTE $AA
-	.BYTE $55
-	.BYTE 0
-	.BYTE $55
-	.BYTE 0
-	.BYTE $55
-	.BYTE 0
-	.BYTE $55
-	.BYTE 0
-	.BYTE $55
-	.BYTE 0
-	.BYTE $55
-	.BYTE 0
-	.BYTE $55
-	.BYTE 0
-	.BYTE $55
-	.BYTE 0
-	.BYTE $55
-	.BYTE 0
-	.BYTE $55
-	.BYTE 0
-	.BYTE $55
-	.BYTE 0
-	.BYTE $55
-	.BYTE 0
-	.BYTE $55
-	.BYTE 0
-	.BYTE $55
-	.BYTE 0
-	.BYTE $55
-	.BYTE 0
-	.BYTE $AA
-	.BYTE 0
-	.BYTE $2A
-	.BYTE   0
-	.BYTE   0
-	.BYTE 2
-	.BYTE $AA
-	.BYTE 2
-	.BYTE $AA
-	.BYTE 0
-	.BYTE $2A
-	.BYTE $A
-	.BYTE $AA
-	.BYTE $AA
-	.BYTE $AA
-	.BYTE   0
-	.BYTE   0
-	.BYTE $AA
-	.BYTE $AA
-	.BYTE $AA
-	.BYTE $AA
-	.BYTE $AA
-	.BYTE $AA
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $55
-	.BYTE 0
-	.BYTE $54
-	.BYTE 0
-	.BYTE $55
-	.BYTE 5
-	.BYTE $50
-	.BYTE 5
-	.BYTE $50
-	.BYTE 5
-	.BYTE $40
-	.BYTE $55
-	.BYTE 0
-	.BYTE $54
-	.BYTE 0
-	.BYTE $54
-	.BYTE 0
-	.BYTE $AA
-	.BYTE $55
-	.BYTE $AA
-	.BYTE $55
-	.BYTE $AA
-	.BYTE $55
-	.BYTE $20
-	.BYTE $20
-	.BYTE 0
-	.BYTE $20
-	.BYTE $20
-	.BYTE 0
-	.BYTE $A0
-	.BYTE $20
-	.BYTE $A0
-	.BYTE 0
-	.BYTE $20
-	.BYTE $2A
-	.BYTE 0
-	.BYTE $2A
-	.BYTE $2A
-	.BYTE $A0
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $55
-	.BYTE $AA
-	.BYTE $55
-	.BYTE $AA
-	.BYTE $55
-	.BYTE $AA
-	.BYTE $55
-	.BYTE $AA
-	.BYTE $55
-	.BYTE $AA
-	.BYTE 0
-	.BYTE $82
-	.BYTE $AA
-	.BYTE 8
-	.BYTE 0
-	.BYTE 0
-	.BYTE $20
-	.BYTE $A
-	.BYTE $A0
-	.BYTE $A0
-	.BYTE $A
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE $AA
-	.BYTE $AA
-	.BYTE 3
-	.BYTE $AA
-	.BYTE 3
-	.BYTE 5
-	.BYTE $AA
-	.BYTE 5
-	.BYTE $AA
-	.BYTE $14
-	.BYTE $AA
-	.BYTE $14
-	.BYTE $AA
-	.BYTE $50
-	.BYTE $AA
-	.BYTE $50
-	.BYTE $AA
-	.BYTE $C0
-	.BYTE $AA
-	.BYTE $C0
-	.BYTE $AA
+ColumnAttributes:
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ;   0
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ;   1
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ;   2
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ;   3
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ;   4
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ;   5
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ;   6
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ;   7
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ;   8
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ;   9
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ;  $A
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ;  $B
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ;  $C
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ;  $D
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ;  $E
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ;  $F
+	ColumnAttribs  3, 3, 3, 3, 0, 0, 0, 0             ; $10
+	ColumnAttribs  0, 3, 3, 3, 0, 0, 0, 0             ; $11
+	ColumnAttribs  0, 0, 3, 3, 0, 0, 0, 0             ; $12
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $13
+	ColumnAttribs  2, 2, 2, 2, 0, 0, 0, 0             ; $14
+	ColumnAttribs  2, 2, 2, 2, 0, 0, 0, 0             ; $15
+	ColumnAttribs  2, 2, 2, 2, 0, 0, 0, 0             ; $16
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $17
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $18
+	ColumnAttribs  0, 0, 3, 3, 0, 0, 0, 0             ; $19
+	ColumnAttribs  0, 0, 3, 3, 0, 0, 0, 0             ; $1A
+	ColumnAttribs  0, 0, 0, 3, 0, 0, 0, 0             ; $1B
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $1C
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $1D
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $1E
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $1F
+	ColumnAttribs  2, 0, 2, 2, 2, 2, 2, 2             ; $20
+	ColumnAttribs  2, 0, 2, 2, 2, 0, 2, 2             ; $21
+	ColumnAttribs  2, 0, 2, 2, 2, 0, 0, 0             ; $22
+	ColumnAttribs  2, 0, 0, 0, 0, 0, 0, 0             ; $23
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 2, 2             ; $24
+	ColumnAttribs  0, 0, 2, 2, 2, 0, 2, 2             ; $25
+	ColumnAttribs  2, 0, 0, 0, 0, 0, 2, 2             ; $26
+	ColumnAttribs  2, 2, 2, 2, 2, 0, 2, 2             ; $27
+	ColumnAttribs  2, 0, 3, 2, 2, 2, 3, 2             ; $28
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $29
+	ColumnAttribs  2, 2, 2, 2, 0, 1, 1, 1             ; $2A
+	ColumnAttribs  2, 0, 0, 0, 0, 1, 1, 1             ; $2B
+	ColumnAttribs  0, 2, 2, 2, 0, 1, 1, 1             ; $2C
+	ColumnAttribs  0, 0, 0, 0, 0, 1, 1, 1             ; $2D
+	ColumnAttribs  0, 0, 0, 0, 0, 1, 1, 1             ; $2E
+	ColumnAttribs  2, 2, 0, 0, 0, 1, 1, 1             ; $2F
+	ColumnAttribs  2, 2, 0, 0, 0, 1, 1, 1             ; $30
+	ColumnAttribs  2, 2, 2, 2, 0, 2, 2, 2             ; $31
+	ColumnAttribs  2, 2, 2, 2, 0, 0, 0, 0             ; $32
+	ColumnAttribs  0, 2, 2, 2, 0, 2, 2, 2             ; $33
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $34
+	ColumnAttribs  2, 2, 2, 2, 2, 2, 0, 0             ; $35
+	ColumnAttribs  2, 2, 2, 2, 2, 2, 0, 0             ; $36
+	ColumnAttribs  0, 0, 0, 0, 0, 2, 2, 2             ; $37
+	ColumnAttribs  0, 0, 0, 0, 0, 2, 2, 2             ; $38
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ; $39
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ; $3A
+	ColumnAttribs  2, 2, 2, 2, 2, 0, 0, 0             ; $3B
+	ColumnAttribs  2, 2, 2, 2, 0, 0, 0, 0             ; $3C
+	ColumnAttribs  2, 2, 2, 0, 0, 0, 0, 0             ; $3D
+	ColumnAttribs  2, 2, 0, 0, 0, 0, 0, 0             ; $3E
+	ColumnAttribs  2, 0, 0, 0, 0, 0, 0, 2             ; $3F
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $40
+	ColumnAttribs  0, 0, 2, 2, 2, 2, 2, 2             ; $41
+	ColumnAttribs  0, 0, 0, 2, 2, 2, 2, 2             ; $42
+	ColumnAttribs  0, 0, 0, 0, 2, 2, 2, 2             ; $43
+	ColumnAttribs  2, 0, 0, 0, 0, 2, 2, 2             ; $44
+	ColumnAttribs  2, 2, 2, 2, 2, 2, 2, 2             ; $45
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 0             ; $46
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 0             ; $47
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 0             ; $48
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $49
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $4A
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $4B
+	ColumnAttribs  0, 3, 3, 3, 0, 0, 0, 0             ; $4C
+	ColumnAttribs  0, 3, 3, 3, 0, 0, 0, 0             ; $4D
+	ColumnAttribs  0, 0, 0, 3, 3, 3, 0, 0             ; $4E
+	ColumnAttribs  0, 0, 0, 3, 3, 3, 0, 0             ; $4F
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $50
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $51
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $52
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $53
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $54
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $55
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $56
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $57
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $58
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $59
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $5A
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $5B
+	ColumnAttribs  2, 2, 2, 0, 0, 0, 0, 0             ; $5C
+	ColumnAttribs  0, 0, 1, 1, 0, 0, 0, 0             ; $5D
+	ColumnAttribs  2, 2, 2, 0, 0, 0, 0, 0             ; $5E
+	ColumnAttribs  0, 0, 0, 0, 2, 2, 2, 2             ; $5F
+	ColumnAttribs  2, 2, 2, 2, 2, 2, 2, 2             ; $60
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ; $61
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ; $62
+	ColumnAttribs  1, 1, 2, 1, 1, 1, 2, 1             ; $63
+	ColumnAttribs  2, 2, 2, 2, 2, 2, 2, 2             ; $64
+	ColumnAttribs  2, 2, 2, 2, 2, 2, 2, 2             ; $65
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 1, 0             ; $66
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 1, 0             ; $67
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 1, 0             ; $68
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 1, 0             ; $69
+	ColumnAttribs  0, 3, 3, 3, 0, 1, 1, 1             ; $6A
+	ColumnAttribs  0, 3, 3, 0, 0, 1, 1, 1             ; $6B
+	ColumnAttribs  0, 0, 0, 2, 2, 2, 2, 2             ; $6C
+	ColumnAttribs  0, 0, 0, 2, 2, 2, 2, 2             ; $6D
+	ColumnAttribs  0, 0, 0, 0, 0, 1, 1, 1             ; $6E
+	ColumnAttribs  0, 3, 0, 0, 0, 1, 1, 1             ; $6F
+	ColumnAttribs  0, 0, 0, 0, 0, 1, 1, 1             ; $70
+	ColumnAttribs  0, 0, 0, 0, 3, 1, 1, 1             ; $71
+	ColumnAttribs  0, 0, 0, 3, 3, 1, 1, 1             ; $72
+	ColumnAttribs  0, 0, 3, 3, 3, 1, 1, 1             ; $73
+	ColumnAttribs  0, 3, 3, 3, 3, 1, 1, 1             ; $74
+	ColumnAttribs  0, 3, 0, 0, 0, 1, 1, 1             ; $75
+	ColumnAttribs  0, 3, 0, 0, 0, 1, 1, 1             ; $76
+	ColumnAttribs  0, 3, 3, 0, 0, 1, 1, 1             ; $77
+	ColumnAttribs  0, 3, 3, 3, 3, 1, 1, 1             ; $78
+	ColumnAttribs  0, 3, 3, 0, 0, 1, 1, 1             ; $79
+	ColumnAttribs  0, 3, 3, 0, 0, 1, 1, 1             ; $7A
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $7B
+	ColumnAttribs  0, 0, 0, 0, 0, 3, 3, 3             ; $7C
+	ColumnAttribs  0, 0, 0, 2, 2, 2, 2, 0             ; $7D
+	ColumnAttribs  0, 0, 0, 2, 2, 2, 2, 0             ; $7E
+	ColumnAttribs  0, 0, 0, 2, 2, 2, 2, 0             ; $7F
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $80
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $81
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $82
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $83
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $84
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $85
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $86
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $87
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $88
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $89
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $8A
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $8B
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $8C
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $8D
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $8E
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ; $8F
+	ColumnAttribs  0, 0, 0, 0, 0, 1, 1, 1             ; $90
+	ColumnAttribs  0, 0, 0, 2, 2, 1, 1, 1             ; $91
+	ColumnAttribs  0, 0, 0, 2, 2, 1, 1, 1             ; $92
+	ColumnAttribs  0, 0, 0, 2, 2, 1, 1, 1             ; $93
+	ColumnAttribs  0, 0, 0, 0, 2, 1, 1, 1             ; $94
+	ColumnAttribs  0, 0, 0, 0, 0, 1, 1, 1             ; $95
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ; $96
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $97
+	ColumnAttribs  2, 2, 0, 0, 0, 0, 0, 0             ; $98
+	ColumnAttribs  1, 2, 2, 0, 0, 0, 0, 0             ; $99
+	ColumnAttribs  1, 1, 2, 2, 0, 0, 0, 0             ; $9A
+	ColumnAttribs  1, 1, 1, 2, 2, 0, 0, 0             ; $9B
+	ColumnAttribs  1, 1, 1, 1, 2, 2, 2, 0             ; $9C
+	ColumnAttribs  0, 0, 0, 0, 0, 2, 2, 1             ; $9D
+	ColumnAttribs  0, 0, 0, 0, 2, 2, 1, 1             ; $9E
+	ColumnAttribs  0, 0, 0, 2, 2, 1, 1, 1             ; $9F
+	ColumnAttribs  1, 0, 0, 0, 0, 0, 0, 0             ; $A0
+	ColumnAttribs  1, 1, 1, 0, 0, 0, 0, 0             ; $A1
+	ColumnAttribs  0, 1, 1, 1, 0, 0, 0, 0             ; $A2
+	ColumnAttribs  0, 0, 1, 1, 1, 0, 0, 0             ; $A3
+	ColumnAttribs  0, 0, 0, 1, 1, 1, 0, 0             ; $A4
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 0, 0             ; $A5
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 1, 1             ; $A6
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 1             ; $A7
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 0             ; $A8
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ; $A9
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 0, 0             ; $AA
+	ColumnAttribs  2, 2, 0, 0, 0, 0, 1, 1             ; $AB
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 1, 1             ; $AC
+	ColumnAttribs  1, 1, 0, 0, 0, 0, 2, 2             ; $AD
+	ColumnAttribs  1, 1, 0, 0, 0, 0, 0, 0             ; $AE
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 1, 1             ; $AF
+	ColumnAttribs  2, 2, 2, 2, 1, 1, 1, 1             ; $B0
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 1             ; $B1
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 1             ; $B2
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 1             ; $B3
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 1             ; $B4
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 1             ; $B5
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 1             ; $B6
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 1             ; $B7
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 1             ; $B8
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 1             ; $B9
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 1             ; $BA
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 1             ; $BB
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 1             ; $BC
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 1             ; $BD
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 1             ; $BE
+	ColumnAttribs  0, 0, 0, 0, 2, 2, 2, 2             ; $BF
+	ColumnAttribs  0, 0, 0, 0, 0, 2, 2, 2             ; $C0
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $C1
+	ColumnAttribs  0, 0, 0, 2, 2, 2, 2, 2             ; $C2
+	ColumnAttribs  0, 0, 0, 2, 2, 2, 2, 2             ; $C3
+	ColumnAttribs  0, 0, 0, 0, 0, 2, 2, 2             ; $C4
+	ColumnAttribs  0, 0, 2, 2, 2, 2, 2, 2             ; $C5
+	ColumnAttribs  2, 2, 2, 2, 2, 2, 2, 2             ; $C6
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $C7
+	ColumnAttribs  2, 2, 2, 2, 2, 2, 2, 2             ; $C8
+	ColumnAttribs  2, 2, 2, 2, 2, 2, 2, 2             ; $C9
+	ColumnAttribs  2, 2, 2, 2, 2, 2, 2, 2             ; $CA
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ; $CB
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ; $CC
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ; $CD
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ; $CE
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ; $CF
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $D0
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $D1
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $D2
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $D3
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 1             ; $D4
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 0             ; $D5
+	ColumnAttribs  0, 0, 0, 0, 1, 1, 1, 1             ; $D6
+	ColumnAttribs  0, 0, 1, 1, 1, 1, 0, 0             ; $D7
+	ColumnAttribs  0, 0, 1, 1, 1, 1, 0, 0             ; $D8
+	ColumnAttribs  0, 0, 1, 1, 1, 0, 0, 0             ; $D9
+	ColumnAttribs  1, 1, 1, 1, 0, 0, 0, 0             ; $DA
+	ColumnAttribs  1, 1, 1, 0, 0, 0, 0, 0             ; $DB
+	ColumnAttribs  1, 1, 1, 0, 0, 0, 0, 0             ; $DC
+	ColumnAttribs  2, 2, 2, 2, 1, 1, 1, 1             ; $DD
+	ColumnAttribs  2, 2, 2, 2, 1, 1, 1, 1             ; $DE
+	ColumnAttribs  2, 2, 2, 2, 1, 1, 1, 1             ; $DF
+	ColumnAttribs  0, 2, 0, 0, 0, 2, 0, 0             ; $E0
+	ColumnAttribs  0, 0, 0, 0, 0, 2, 0, 0             ; $E1
+	ColumnAttribs  0, 2, 0, 0, 0, 0, 0, 0             ; $E2
+	ColumnAttribs  2, 2, 0, 0, 0, 2, 0, 0             ; $E3
+	ColumnAttribs  2, 2, 0, 0, 0, 0, 0, 0             ; $E4
+	ColumnAttribs  0, 2, 0, 0, 0, 2, 2, 2             ; $E5
+	ColumnAttribs  0, 0, 0, 0, 0, 2, 2, 2             ; $E6
+	ColumnAttribs  0, 2, 2, 2, 2, 2, 0, 0             ; $E7
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ; $E8
+	ColumnAttribs  1, 1, 1, 1, 1, 1, 1, 1             ; $E9
+	ColumnAttribs  2, 2, 2, 2, 1, 1, 1, 1             ; $EA
+	ColumnAttribs  2, 2, 2, 2, 1, 1, 1, 1             ; $EB
+	ColumnAttribs  2, 2, 2, 2, 1, 1, 1, 1             ; $EC
+	ColumnAttribs  2, 2, 2, 2, 1, 1, 1, 1             ; $ED
+	ColumnAttribs  2, 2, 2, 2, 0, 0, 0, 0             ; $EE
+	ColumnAttribs  2, 0, 0, 2, 2, 2, 2, 2             ; $EF
+	ColumnAttribs  0, 0, 2, 0, 0, 0, 0, 0             ; $F0
+	ColumnAttribs  0, 0, 0, 0, 0, 2, 0, 0             ; $F1
+	ColumnAttribs  0, 0, 2, 2, 2, 2, 0, 0             ; $F2
+	ColumnAttribs  2, 2, 0, 0, 0, 0, 2, 2             ; $F3
+	ColumnAttribs  0, 0, 0, 0, 0, 0, 0, 0             ; $F4
+	ColumnAttribs  0, 0, 0, 0, 2, 2, 2, 2             ; $F5
+	ColumnAttribs  2, 2, 2, 2, 0, 0, 0, 3             ; $F6
+	ColumnAttribs  2, 2, 2, 2, 0, 0, 0, 3             ; $F7
+	ColumnAttribs  0, 0, 1, 1, 2, 2, 2, 2             ; $F8
+	ColumnAttribs  0, 0, 1, 1, 2, 2, 2, 2             ; $F9
+	ColumnAttribs  0, 1, 1, 0, 2, 2, 2, 2             ; $FA
+	ColumnAttribs  0, 1, 1, 0, 2, 2, 2, 2             ; $FB
+	ColumnAttribs  1, 1, 0, 0, 2, 2, 2, 2             ; $FC
+	ColumnAttribs  1, 1, 0, 0, 2, 2, 2, 2             ; $FD
+	ColumnAttribs  3, 0, 0, 0, 2, 2, 2, 2             ; $FE
+	ColumnAttribs  3, 0, 0, 0, 2, 2, 2, 2             ; $FF
+
+
 ; Column collision data	- two bits per 16x16 tile
 ; Not sure on the specifics, but
 ; 00 - clear
@@ -1529,70 +1275,266 @@ loc_E650:
 ; 10 - solid with boots	item (?)
 ; 11 - solid
 ColumnCollisionTable:
-	.WORD		  0,		    0,		      0,		0; Column collision	data
-	.WORD		  0,		    0,		      0,		0; 4
-	.WORD		  0,		    0,		      0,		0; 8
-	.WORD %1111111100001111,1111111100001111b,1111111100001111b,1111111111111111b; $C
-	.WORD %1111111111000000,1111111100110000b,1111111100001100b,1111111100000000b; $10
-	.WORD %1111111100000000,1111111100000000b,1111111100000000b,1111111100000000b; $14
-	.WORD %1111111100000000,1111111100000000b,1111111100000000b,1111111100000011b; $18
-	.WORD %1111111111111111,1111111111111111b,1111111111111111b,1111111111111111b; $1C
-	.WORD	    %110000,  %11000000110000,	%11111100110000,1111111100111111b; $20
-	.WORD %1111000011111111,  %11000011110000,1111000000111111b,  %11000000000000; $24
-	.WORD	    %110000,		    0,1100000000000000b,1100000000000000b; $28
-	.WORD %1100000011000000,1100000011000000b,1100000000000000b,1100000000000000b; $2C
-	.WORD %1100000000000000,1100000000000000b,1100000000000000b,	%11000000; $30
-	.WORD %1100000011000000,		    0,		      0,1100000011111111b; $34
-	.WORD %1100000011111111,		    0,		      0,  %11111100000000; $38
-	.WORD %1111111100000000,1111111100000011b,1111111100001111b,1111110000111111b; $3C
-	.WORD %1111111111111111,	    %11110000,	      %11111100,	%11111111; $40
-	.WORD %1100000000111111,		    0,1111110000000000b,1111110000000000b; $44
-	.WORD %1111110000000000,	      %111100,		  %1111,1111000000000000b; $48
-	.WORD		%10,		  %10,	%10000000000000,  %10000000000000; $4C
-	.WORD %1100000000000000,1100000000000000b,1100000000000000b,1100000011000000b; $50
-	.WORD %1100000011000000,1100000011000000b,1100000000000000b,1100000000000000b; $54
-	.WORD %1100000011000000,1100000000000000b,	      %11000000,	%11000000; $58
-	.WORD %1111111100000011,1111111100000000b,1111111100000011b,    %111100000000; $5C
-	.WORD %1111111111111111,		    0,		      0,    %110000001100; $60
-	.WORD %1100000011000000,	%110000001100,		      0,		0; $64
-	.WORD		  0,		    0,		%111111,	  %111100; $68
-	.WORD %1111110000000011,1111110000000011b,		      0,	  %110000; $6C
-	.WORD		  0,1111111100000000b,1111111100000011b,1111111100001111b; $70
-	.WORD %1111111100111111,	      %110000,		%110000,	  %111100; $74
-	.WORD %1111111100111111,	      %111100,		%111100,		0; $78
-	.WORD	    %111100,1111110000000011b,1111110000000011b,1111110000000011b; $7C
-	.WORD %1111111100000000,1111111100000000b,1111111100000000b,1111111100000000b; $80
-	.WORD %1111111100000000,1111111111111111b,1111111111111111b,1111111111111111b; $84
-	.WORD %1111111111111111,1111111111111111b,1111111111111111b,1111111111111111b; $88
-	.WORD %1111111100000011,1111111100000011b,1111111111111111b,		0; $8C
-	.WORD   %11111100000000,1111111100000011b,1111111100000011b,1111111100000011b; $90
-	.WORD %1111111100000000,  %11111100000000,		      0,		0; $94
-	.WORD	  %11110000,	    %11111100,	      %11111111,1100000011111111b; $98
-	.WORD %1111110011111111,  %11111100000000,1111111100000000b,1111111100000011b; $9C
-	.WORD %1111111100111111,1111111100000011b,1111111111000000b,  %11111111110000; $A0
-	.WORD     %111111111100,	%111111111111,1111000011111111b,	%11111111; $A4
-	.WORD	%1111111111,		    0,		  %1111,1111000000001111b; $A8
-	.WORD %1111000000001111,1111000000001111b,1111000000001111b,1111000000000000b; $AC
-	.WORD %1111111100000000,1111111100000000b,1111111100000000b,1111111100000000b; $B0
-	.WORD %1111111100000000,1111111100000000b,1111111100000000b,1111111100000000b; $B4
-	.WORD %1111111100000000,1111111100000000b,1111111100000000b,1111111100000000b; $B8
-	.WORD %1111111100000000,1111111100000000b,1111111100000000b,1111111100000000b; $BC
-	.WORD		  0,		    0,1111111100000011b,1111111100000011b; $C0
-	.WORD		  0,1111110000001111b,1111110000001111b,		0; $C4
-	.WORD %1111110011111111,1111110011111111b,1111110000001111b,		0; $C8
-	.WORD		  0,		    0,		      0,		0; $CC
-	.WORD %1111111111111111,1111111111111111b,1111111111111111b,1111111111111111b; $D0
-	.WORD %1111000000000000,1111000000000000b,1111000000000000b,	    %1111; $D4
-	.WORD	      %1111,		%1111,	      %11110000,	%11110000; $D8
-	.WORD	  %11110000,1111111100000000b,1111111100000000b,1111111100000000b; $DC
-	.WORD   %11000000110000,  %11000000000000,		%110000,  %11000011110000; $E0
-	.WORD	  %11110000,  %11111100110000,	%11111100000000,1111000000111111b; $E4
-	.WORD		  0,		    0,1111111100000000b,1111111111000000b; $E8
-	.WORD %1111111100000000,1111111100000000b,	      %11111111,1111111111000011b; $EC
-	.WORD	      %1100,  %11000000000000,1111000000001111b,    %111111110000; $F0
-	.WORD		  0,1111111100000000b,	      %11111111,	%11111111; $F4
-	.WORD %1111111100000000,1111111100000000b,1111111100000000b,1111111100000000b; $F8
-	.WORD %1111111100000000,1111111100000000b,1111111100000000b,1111111100000000b; $FC
+	ColumnSolidity  __,__,__,__,__,__,__,__		;   0
+	ColumnSolidity  __,__,__,__,__,__,__,__		;   1
+	ColumnSolidity  __,__,__,__,__,__,__,__		;   2
+	ColumnSolidity  __,__,__,__,__,__,__,__		;   3
+	ColumnSolidity  __,__,__,__,__,__,__,__		;   4
+	ColumnSolidity  __,__,__,__,__,__,__,__		;   5
+	ColumnSolidity  __,__,__,__,__,__,__,__		;   6
+	ColumnSolidity  __,__,__,__,__,__,__,__		;   7
+	ColumnSolidity  __,__,__,__,__,__,__,__		;   8
+	ColumnSolidity  __,__,__,__,__,__,__,__		;   9
+	ColumnSolidity  __,__,__,__,__,__,__,__		;  $A
+	ColumnSolidity  __,__,__,__,__,__,__,__		;  $B
+	ColumnSolidity  __,__,SB,SB,SB,SB,SB,SB		;  $C
+	ColumnSolidity  __,__,SB,SB,SB,SB,SB,SB		;  $D
+	ColumnSolidity  __,__,SB,SB,SB,SB,SB,SB		;  $E
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		;  $F
+	ColumnSolidity  SB,__,__,__,SB,SB,SB,SB		; $10
+	ColumnSolidity  __,SB,__,__,SB,SB,SB,SB		; $11
+	ColumnSolidity  __,__,SB,__,SB,SB,SB,SB		; $12
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $13
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $14
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $15
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $16
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $17
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $18
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $19
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $1A
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,SB		; $1B
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $1C
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $1D
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $1E
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $1F
+	ColumnSolidity  __,SB,__,__,__,__,__,__		; $20
+	ColumnSolidity  __,SB,__,__,__,SB,__,__		; $21
+	ColumnSolidity  __,SB,__,__,__,SB,SB,SB		; $22
+	ColumnSolidity  __,SB,SB,SB,SB,SB,SB,SB		; $23
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,__,__		; $24
+	ColumnSolidity  SB,SB,__,__,__,SB,__,__		; $25
+	ColumnSolidity  __,SB,SB,SB,SB,SB,__,__		; $26
+	ColumnSolidity  __,__,__,__,__,SB,__,__		; $27
+	ColumnSolidity  __,SB,__,__,__,__,__,__		; $28
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $29
+	ColumnSolidity  __,__,__,__,SB,__,__,__		; $2A
+	ColumnSolidity  __,__,__,__,SB,__,__,__		; $2B
+	ColumnSolidity  SB,__,__,__,SB,__,__,__		; $2C
+	ColumnSolidity  SB,__,__,__,SB,__,__,__		; $2D
+	ColumnSolidity  __,__,__,__,SB,__,__,__		; $2E
+	ColumnSolidity  __,__,__,__,SB,__,__,__		; $2F
+	ColumnSolidity  __,__,__,__,SB,__,__,__		; $30
+	ColumnSolidity  __,__,__,__,SB,__,__,__		; $31
+	ColumnSolidity  __,__,__,__,SB,__,__,__		; $32
+	ColumnSolidity  SB,__,__,__,__,__,__,__		; $33
+	ColumnSolidity  SB,__,__,__,SB,__,__,__		; $34
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $35
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $36
+	ColumnSolidity  SB,SB,SB,SB,SB,__,__,__		; $37
+	ColumnSolidity  SB,SB,SB,SB,SB,__,__,__		; $38
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $39
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $3A
+	ColumnSolidity  __,__,__,__,__,SB,SB,SB		; $3B
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $3C
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,SB		; $3D
+	ColumnSolidity  __,__,SB,SB,SB,SB,SB,SB		; $3E
+	ColumnSolidity  __,SB,SB,SB,SB,SB,SB,__		; $3F
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $40
+	ColumnSolidity  SB,SB,__,__,__,__,__,__		; $41
+	ColumnSolidity  SB,SB,SB,__,__,__,__,__		; $42
+	ColumnSolidity  SB,SB,SB,SB,__,__,__,__		; $43
+	ColumnSolidity  __,SB,SB,SB,SB,__,__,__		; $44
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $45
+	ColumnSolidity  __,__,__,__,SB,SB,SB,__		; $46
+	ColumnSolidity  __,__,__,__,SB,SB,SB,__		; $47
+	ColumnSolidity  __,__,__,__,SB,SB,SB,__		; $48
+	ColumnSolidity  __,SB,SB,__,__,__,__,__		; $49
+	ColumnSolidity  __,__,SB,SB,__,__,__,__		; $4A
+	ColumnSolidity  __,__,__,__,SB,SB,__,__		; $4B
+	ColumnSolidity  __,__,__,H_,__,__,__,__		; $4C	; POI: Only semi-solid platforms in the game
+	ColumnSolidity  __,__,__,H_,__,__,__,__		; $4D	; ""
+	ColumnSolidity  __,__,__,__,__,H_,__,__		; $4E	; ""
+	ColumnSolidity  __,__,__,__,__,H_,__,__		; $4F	; ""
+	ColumnSolidity  __,__,__,__,SB,__,__,__		; $50
+	ColumnSolidity  __,__,__,__,SB,__,__,__		; $51
+	ColumnSolidity  __,__,__,__,SB,__,__,__		; $52
+	ColumnSolidity  SB,__,__,__,SB,__,__,__		; $53
+	ColumnSolidity  SB,__,__,__,SB,__,__,__		; $54
+	ColumnSolidity  SB,__,__,__,SB,__,__,__		; $55
+	ColumnSolidity  __,__,__,__,SB,__,__,__		; $56
+	ColumnSolidity  __,__,__,__,SB,__,__,__		; $57
+	ColumnSolidity  SB,__,__,__,SB,__,__,__		; $58
+	ColumnSolidity  __,__,__,__,SB,__,__,__		; $59
+	ColumnSolidity  SB,__,__,__,__,__,__,__		; $5A
+	ColumnSolidity  SB,__,__,__,__,__,__,__		; $5B
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,SB		; $5C
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $5D
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,SB		; $5E
+	ColumnSolidity  __,__,__,__,__,__,SB,SB		; $5F
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $60
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $61
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $62
+	ColumnSolidity  __,__,SB,__,__,__,SB,__		; $63
+	ColumnSolidity  SB,__,__,__,SB,__,__,__		; $64
+	ColumnSolidity  __,__,SB,__,__,__,SB,__		; $65
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $66
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $67
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $68
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $69
+	ColumnSolidity  __,SB,SB,SB,__,__,__,__		; $6A
+	ColumnSolidity  __,SB,SB,__,__,__,__,__		; $6B
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,__		; $6C
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,__		; $6D
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $6E
+	ColumnSolidity  __,SB,__,__,__,__,__,__		; $6F
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $70
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $71
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,SB		; $72
+	ColumnSolidity  __,__,SB,SB,SB,SB,SB,SB		; $73
+	ColumnSolidity  __,SB,SB,SB,SB,SB,SB,SB		; $74
+	ColumnSolidity  __,SB,__,__,__,__,__,__		; $75
+	ColumnSolidity  __,SB,__,__,__,__,__,__		; $76
+	ColumnSolidity  __,SB,SB,__,__,__,__,__		; $77
+	ColumnSolidity  __,SB,SB,SB,SB,SB,SB,SB		; $78
+	ColumnSolidity  __,SB,SB,__,__,__,__,__		; $79
+	ColumnSolidity  __,SB,SB,__,__,__,__,__		; $7A
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $7B
+	ColumnSolidity  __,SB,SB,__,__,__,__,__		; $7C
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,__		; $7D
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,__		; $7E
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,__		; $7F
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $80
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $81
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $82
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $83
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $84
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $85
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $86
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $87
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $88
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $89
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $8A
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $8B
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,SB		; $8C
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,SB		; $8D
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $8E
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $8F
+	ColumnSolidity  __,__,__,__,__,SB,SB,SB		; $90
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,SB		; $91
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,SB		; $92
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,SB		; $93
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $94
+	ColumnSolidity  __,__,__,__,__,SB,SB,SB		; $95
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $96
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $97
+	ColumnSolidity  SB,SB,__,__,__,__,__,__		; $98
+	ColumnSolidity  SB,SB,SB,__,__,__,__,__		; $99
+	ColumnSolidity  SB,SB,SB,SB,__,__,__,__		; $9A
+	ColumnSolidity  SB,SB,SB,SB,SB,__,__,__		; $9B
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,__		; $9C
+	ColumnSolidity  __,__,__,__,__,SB,SB,SB		; $9D
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $9E
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,SB		; $9F
+	ColumnSolidity  __,SB,SB,SB,SB,SB,SB,SB		; $A0
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,SB		; $A1
+	ColumnSolidity  SB,__,__,__,SB,SB,SB,SB		; $A2
+	ColumnSolidity  SB,SB,__,__,__,SB,SB,SB		; $A3
+	ColumnSolidity  SB,SB,SB,__,__,__,SB,SB		; $A4
+	ColumnSolidity  SB,SB,SB,SB,__,__,SB,SB		; $A5
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,__,__		; $A6
+	ColumnSolidity  SB,SB,SB,SB,__,__,__,__		; $A7
+	ColumnSolidity  SB,SB,SB,SB,__,__,__,SB		; $A8
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $A9
+	ColumnSolidity  __,__,SB,SB,__,__,__,__		; $AA
+	ColumnSolidity  __,__,SB,SB,SB,SB,__,__		; $AB
+	ColumnSolidity  __,__,SB,SB,SB,SB,__,__		; $AC
+	ColumnSolidity  __,__,SB,SB,SB,SB,__,__		; $AD
+	ColumnSolidity  __,__,SB,SB,SB,SB,__,__		; $AE
+	ColumnSolidity  __,__,__,__,SB,SB,__,__		; $AF
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $B0
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $B1
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $B2
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $B3
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $B4
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $B5
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $B6
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $B7
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $B8
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $B9
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $BA
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $BB
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $BC
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $BD
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $BE
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $BF
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $C0
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $C1
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,SB		; $C2
+	ColumnSolidity  __,__,__,SB,SB,SB,SB,SB		; $C3
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $C4
+	ColumnSolidity  __,__,SB,SB,SB,SB,SB,__		; $C5
+	ColumnSolidity  __,__,SB,SB,SB,SB,SB,__		; $C6
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $C7
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,__		; $C8
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,__		; $C9
+	ColumnSolidity  __,__,SB,SB,SB,SB,SB,__		; $CA
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $CB
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $CC
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $CD
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $CE
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $CF
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $D0
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $D1
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $D2
+	ColumnSolidity  SB,SB,SB,SB,SB,SB,SB,SB		; $D3
+	ColumnSolidity  __,__,__,__,SB,SB,__,__		; $D4
+	ColumnSolidity  __,__,__,__,SB,SB,__,__		; $D5
+	ColumnSolidity  __,__,__,__,SB,SB,__,__		; $D6
+	ColumnSolidity  __,__,SB,SB,__,__,__,__		; $D7
+	ColumnSolidity  __,__,SB,SB,__,__,__,__		; $D8
+	ColumnSolidity  __,__,SB,SB,__,__,__,__		; $D9
+	ColumnSolidity  SB,SB,__,__,__,__,__,__		; $DA
+	ColumnSolidity  SB,SB,__,__,__,__,__,__		; $DB
+	ColumnSolidity  SB,SB,__,__,__,__,__,__		; $DC
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $DD
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $DE
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $DF
+	ColumnSolidity  __,SB,__,__,__,SB,__,__		; $E0
+	ColumnSolidity  __,__,__,__,__,SB,__,__		; $E1
+	ColumnSolidity  __,SB,__,__,__,__,__,__		; $E2
+	ColumnSolidity  SB,SB,__,__,__,SB,__,__		; $E3
+	ColumnSolidity  SB,SB,__,__,__,__,__,__		; $E4
+	ColumnSolidity  __,SB,__,__,__,SB,SB,SB		; $E5
+	ColumnSolidity  __,__,__,__,__,SB,SB,SB		; $E6
+	ColumnSolidity  __,SB,SB,SB,SB,SB,__,__		; $E7
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $E8
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $E9
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $EA
+	ColumnSolidity  SB,__,__,__,SB,SB,SB,SB		; $EB
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $EC
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $ED
+	ColumnSolidity  SB,SB,SB,SB,__,__,__,__		; $EE
+	ColumnSolidity  SB,__,__,SB,SB,SB,SB,SB		; $EF
+	ColumnSolidity  __,__,SB,__,__,__,__,__		; $F0
+	ColumnSolidity  __,__,__,__,__,SB,__,__		; $F1
+	ColumnSolidity  __,__,SB,SB,SB,SB,__,__		; $F2
+	ColumnSolidity  SB,SB,__,__,__,__,SB,SB		; $F3
+	ColumnSolidity  __,__,__,__,__,__,__,__		; $F4
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $F5
+	ColumnSolidity  SB,SB,SB,SB,__,__,__,__		; $F6
+	ColumnSolidity  SB,SB,SB,SB,__,__,__,__		; $F7
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $F8
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $F9
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $FA
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $FB
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $FC
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $FD
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $FE
+	ColumnSolidity  __,__,__,__,SB,SB,SB,SB		; $FF
+
+
+
+
 ; Block	definitions
 ; First	8 bytes	are the	top row
 ; Last 8 bytes are the bottom row
