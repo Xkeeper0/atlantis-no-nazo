@@ -3297,7 +3297,8 @@ loc_E650:
 ; 01 - ?
 ; 10 - solid with boots	item (?)
 ; 11 - solid
-    .WORD		  0,		    0,		      0,		0; Column collision	data
+ColumnCollisionTable:
+	.WORD		  0,		    0,		      0,		0; Column collision	data
     .WORD		  0,		    0,		      0,		0; 4
     .WORD		  0,		    0,		      0,		0; 8
     .WORD %1111111100001111,1111111100001111b,1111111100001111b,1111111111111111b; $C

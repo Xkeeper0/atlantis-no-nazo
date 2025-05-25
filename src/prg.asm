@@ -2080,10 +2080,10 @@ loc_8D7D:
     ROL	    word_14+1
     ASL	    A
     ROL	    word_14+1
-    ADC	    #$50
+    ADC	    #<BlockTable
     STA	    word_14
     LDA	    word_14+1
-    ADC	    #$EA
+    ADC	    #>BlockTable
     STA	    word_14+1
     LDA	    byte_20
     ASL	    A
@@ -2102,10 +2102,10 @@ loc_8DBA:
     STX	    word_1A+1
     ASL	    A
     ROL	    word_1A+1
-    ADC	    #$50
+    ADC	    #<ColumnCollisionTable
     STA	    word_1A
     LDA	    word_1A+1
-    ADC	    #$E8
+    ADC	    #>ColumnCollisionTable
     STA	    word_1A+1
     LDY	    #0
     LDA	    (word_1A),Y
