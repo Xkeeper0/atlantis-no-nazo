@@ -1,6 +1,9 @@
 
 .include "src/music-data.asm"
-.include "src/unused-unknown.asm"
+
+IFNDEF REMOVE_MAYBE_UNUSED_DATA
+	.include "src/unused-unknown.asm"
+ENDIF
 
 ZoneDoorTable:
     Door   0, $30, $20,   0 ;
@@ -243,6 +246,8 @@ ZoneDoorTable:
     Door  88, $48, $3C,  $C ;		; $ED
     Door 255,	 0,   0,   0 ;		; $EE
     Door 255,	 0, $F7,   0 ;		; $EF
+
+
 ZoneDoorFlagsTable:
     .BYTE DoorFlags_Hidden|$80
     .BYTE DoorFlags_Open|$80		; 1
@@ -484,6 +489,8 @@ ZoneDoorFlagsTable:
     .BYTE DoorFlags_Invisible|$80	; $ED
     .BYTE DoorFlags_Open|$80		; $EE
     .BYTE DoorFlags_Open|$80		; $EF
+
+
 ZoneItemTable:
     Item   5, $19, $70, $31 ;		  ;	DATA XREF: LoadZoneItemst
     Item   5,	$F, $70, $21 ;		; 1
@@ -3520,22 +3527,7 @@ BlockTable:
     Block   0,	$6E,   0, $76,	 0, $79,   0, $6A,   0,	$78,   0, $6F,	 0, $79,   0, $76 ;; $93
     Block   0,	$B0,   0, $B0,	 0, $B0,   0, $B0,   0,	$B0,   0, $EA,	 0, $EB,   0, $EC ;; $94
     Block   0,	$EA,   0, $EB,	 0, $ED,   0, $EB,   0,	$EC,   0, $B0,	 0, $B0,   0, $B0 ;; $95
-    .BYTE 0
-    .BYTE $EA
-    .BYTE 0
-    .BYTE $EB
-    .BYTE 0
-    .BYTE $ED
-    .BYTE 0
-    .BYTE $EB
-    .BYTE 0
-    .BYTE $ED
-    .BYTE 0
-    .BYTE $EB
-    .BYTE 0
-    .BYTE $EC
-    .BYTE 0
-    .BYTE $B0
+	Block   0,  $EA,   0, $EB,   0, $ED,   0, $EB,   0, $ED,   0, $EB,   0, $EC,   0, $B0 ;; $96
 
 loc_F3C0:
 	.BYTE $FF
@@ -4498,6 +4490,8 @@ loc_F3C0:
     .BYTE   0
     .BYTE   0
     .BYTE   0
+
+
 ; Every	zone is	comprised of 32	"blocks".
 ; The entire level data	is one long string of blocks IDs,
 ; with each Zone having	a pointer into it somewhere.
@@ -4528,6 +4522,7 @@ ZoneBlockPointerTable:
     .WORD ZoneBlocks_86,ZoneBlocks_87,ZoneBlocks_88,ZoneBlocks_89,ZoneBlocks_90; 85
     .WORD ZoneBlocks_91,ZoneBlocks_92,ZoneBlocks_93,ZoneBlocks_94,ZoneBlocks_95; 90
     .WORD ZoneBlocks_96,ZoneBlocks_97,ZoneBlocks_98,ZoneBlocks_99,ZoneBlocks_100; 95
+
 ZoneBlocks_06:
     .BYTE $10,$18,$11,$18,$10
 ZoneBlocks_90:
@@ -5009,4 +5004,7 @@ ZoneMusicTable:
     .BYTE MusicTrack_ZoneTheme2		; 98
     .BYTE MusicTrack_ZoneTheme1		; 99
 
-.include "src/unused-unknown2.asm"
+
+IFNDEF REMOVE_MAYBE_UNUSED_DATA
+	.include "src/unused-unknown2.asm"
+ENDIF

@@ -39,7 +39,7 @@
 .include "src/data.asm"
 
 
-;.pad $FFFF, $FF
+.pad $FFF9, $FF
 
 ; IRQ is stored just before vectors
 IRQ:
