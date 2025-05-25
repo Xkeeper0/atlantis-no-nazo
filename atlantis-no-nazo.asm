@@ -35,8 +35,23 @@
 .base $8000
 .include "src/prg.asm"
 
+; Mostly data
+.include "src/data.asm"
+
+
+;.pad $FFFF, $FF
+
+; IRQ is stored just before vectors
+IRQ:
+	RTI
+; ---------------------------------------------------------------------------
+; CPU vectors
+.word NMI
+.word RESET
+.word IRQ
+
+
 ; Pad empty space
-; .pad $FFFF, $FF
 
 ; -----------------------------------------
 ; Include CHR-ROM
