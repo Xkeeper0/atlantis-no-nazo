@@ -1,3 +1,6 @@
+;
+; Likely  just EPROM noise or assembler memory
+;
 
 IFDEF SAMPLE
 

@@ -14,6 +14,13 @@ See also:
 Original game code and assets © Sunsoft.
 
 
+### Notes
+
+This also builds the "sample" release of the ROM. There are very few meaningful differences.
+Most appear to be unprogrammed EPROM space or other uninitialized memory.
+
+You can specifically build the sample version by defining the `-dSAMPLE` build flag.
+
 ----
 
 ## Building

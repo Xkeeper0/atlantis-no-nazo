@@ -1,5 +1,32 @@
+;
+; Likely  just EPROM noise or assembler memory
+;
+
+IFDEF SAMPLE
+	.BYTE $FF, $00, $FF, $FF
+	.BYTE $00, $FF, $00, $FF
+	.BYTE $00, $FF, $00, $FF
+	.BYTE $00, $FF, $00, $FF
+	.BYTE $00, $FF, $00, $00
+	.BYTE $FF, $00, $FF, $00
+	.BYTE $FF, $00, $FF, $00
+	.BYTE $FF, $00, $FF, $00
+	.BYTE $FF, $00, $FF, $FF
+	.BYTE $00, $FF, $00, $FF
+	.BYTE $00, $FF, $00, $FF
+	.BYTE $00, $FF, $00, $FF
+	.BYTE $00, $FF, $00, $00
+	.BYTE $FF, $00, $FF, $00
+	.BYTE $FF, $00, $FF, $00
+	.BYTE $FF, $00, $FF, $00
+	.BYTE $FF, $00, $FF, $FF
+	.BYTE $00, $FF, $00, $FF
+	.BYTE $00, $FF, $00, $FF
+ELSE
+
 UnknownData_FFAD:
-    .BYTE $77,  2,$FF,$FE		     ; Not marked as read in CDL
+	; Not marked as read in CDL
+    .BYTE $77,  2,$FF,$FE
     .BYTE   2,$FF,  2,$FE		; 4
     .BYTE   2,$FF,  2,$FF		; 8
     .BYTE   2,$FF,$12,$FF		; 12
@@ -18,3 +45,5 @@ UnknownData_FFAD:
     .BYTE $7F,$52,$F7,$77		; 64
     .BYTE   2,$FF,$10,$FE		; 68
     .BYTE   2,$FE,  2,$FF		; 72
+
+ENDIF
