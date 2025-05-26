@@ -40,14 +40,14 @@ PPUStatus_VBlank =  %10000000
 ; ---------------------------------------------------------------------------
 
 ; enum ControllerInput (bitfield)
-ControllerInput_Right =  1
-ControllerInput_Left = 	2
-ControllerInput_Down = 	4
-ControllerInput_Up =  8
-ControllerInput_Start =  $10
-ControllerInput_Select =  $20
-ControllerInput_B =  $40
-ControllerInput_A =  $80
+JP_Right =  1
+JP_Left = 	2
+JP_Down = 	4
+JP_Up =  8
+JP_Start =  $10
+JP_Select =  $20
+JP_B =  $40
+JP_A =  $80
 
 ; ---------------------------------------------------------------------------
 
