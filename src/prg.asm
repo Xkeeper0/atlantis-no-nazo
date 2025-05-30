@@ -2129,26 +2129,22 @@ loc_8DBA:
 ; =============== S U B	R O U T	I N E =======================================
 
 LoadZonePalettesMaybe:
-	LDA CurrentZone			; A = current zone
-	ASL A				; A = current zone * 2
-	TAX					; X = current zone * 2
-	LDA ZonePaletteSetting1+1,X			; Load from table
-	; LDA #4
+	LDA CurrentZone					; A = current zone
+	ASL A							; A = current zone * 2
+	TAX								; X = current zone * 2
+	LDA ZonePaletteSetting1+1,X		; load BG1
 	ASL A
 	ASL A
 	STA byte_25
-	LDA ZonePaletteSetting2,X
-	; LDA #5
+	LDA ZonePaletteSetting2,X		; load BG2
 	ASL A
 	ASL A
 	STA byte_26
-	LDA ZonePaletteSetting2+1,X
-	; LDA #6
+	LDA ZonePaletteSetting2+1,X		; load BG3
 	ASL A
 	ASL A
 	STA byte_27
-	LDA ZonePaletteSetting1,X
-	; LDA #7
+	LDA ZonePaletteSetting1,X		; load BG0
 	ASL A
 	ASL A
 	TAX
@@ -2220,7 +2216,7 @@ loc_8E78:
 	BPL loc_8E78
 	LDX CurrentZone
 	LDA ZoneSpritePalettes,X
-	STA byte_23
+	STA byte_23					; each nybble is a palette setting
 	AND #$F0
 	LSR A
 	LSR A
@@ -2234,7 +2230,7 @@ loc_8E78:
 
 loc_8E9A:
 	LDA SpritePalettes,X
-	STA PaletteData+$10,Y
+	STA PaletteData+$10,Y		; SPR0 palette
 	INX
 	INY
 	CPY #4
@@ -2249,7 +2245,7 @@ loc_8E9A:
 
 loc_8EB5:
 	LDA SpritePalettes,X
-	STA PaletteData+$14,Y
+	STA PaletteData+$14,Y		; SPR1 palette
 	INX
 	INY
 	CPY #4
@@ -2809,18 +2805,22 @@ BackgroundPalettes:
 	.BYTE   $F, $28, $16, $39			; $37
 
 SpritePalettes:
-	.BYTE  $16, $2A, $3A,   0			;  0
-	.BYTE  $10, $20, $16, $10			;  1
-	.BYTE    0, $17, $23, $33			;  2
-	.BYTE    8, $18, $28, $20			;  3
-	.BYTE  $17, $28, $20, $16			;  4
-	.BYTE  $29, $27, $3B, $1A			;  5
-	.BYTE    7, $27, $38, $12			;  6
-	.BYTE  $16, $20, $37, $10			;  7
-	.BYTE  $20, $22, $21, $30			;  8
-	.BYTE  $28, $39, $2C, $12			;  9
-	.BYTE  $27, $38,   0, $10			; $A
-	.BYTE  $20, $20,  $F,  $F			; $B
+	.BYTE  $16, $2A, $3A				;   0
+	.BYTE    0, $10, $20				;   1
+	.BYTE  $16, $10,   0				;   2
+	.BYTE  $17, $23, $33				;   3
+	.BYTE    8, $18, $28				;   4
+	.BYTE  $20, $17, $28				;   5
+	.BYTE  $20, $16, $29				;   6
+	.BYTE  $27, $3B, $1A				;   7
+	.BYTE    7, $27, $38				;   8
+	.BYTE  $12, $16, $20				;   9
+	.BYTE  $37, $10, $20				;  $A
+	.BYTE  $22, $21, $30				;  $B
+	.BYTE  $28, $39, $2C				;  $C
+	.BYTE  $12, $27, $38				;  $D
+	.BYTE    0, $10, $20				;  $E
+	.BYTE  $20,  $F,  $F				;  $F
 
 ; ---------------------------------------------------------------------------
 
