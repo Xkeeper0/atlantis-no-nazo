@@ -2132,23 +2132,27 @@ LoadZonePalettesMaybe:
 	LDA CurrentZone			; A = current zone
 	ASL A				; A = current zone * 2
 	TAX					; X = current zone * 2
-	LDA byte_9079,X			; Load from table
+	LDA ZonePaletteSetting1+1,X			; Load from table
+	; LDA #4
 	ASL A
 	ASL A
 	STA byte_25
-	LDA byte_9140,X
+	LDA ZonePaletteSetting2,X
+	; LDA #5
 	ASL A
 	ASL A
 	STA byte_26
-	LDA byte_9141,X
+	LDA ZonePaletteSetting2+1,X
+	; LDA #6
 	ASL A
 	ASL A
 	STA byte_27
-	LDA byte_9078,X
+	LDA ZonePaletteSetting1,X
+	; LDA #7
 	ASL A
 	ASL A
 	TAX
-	LDA byte_9276,X
+	LDA BackgroundPalettes,X
 	LDY #$1F
 
 loc_8E23:
@@ -2159,7 +2163,7 @@ loc_8E23:
 
 loc_8E2B:
 	INX
-	LDA byte_9276,X
+	LDA BackgroundPalettes,X
 	STA PaletteData,Y
 	INY
 	CPY #4
@@ -2169,7 +2173,7 @@ loc_8E2B:
 
 loc_8E3C:
 	INX
-	LDA byte_9276,X
+	LDA BackgroundPalettes,X
 	STA PaletteData+4,Y
 	INY
 	CPY #4
@@ -2179,7 +2183,7 @@ loc_8E3C:
 
 loc_8E4D:
 	INX
-	LDA byte_9276,X
+	LDA BackgroundPalettes,X
 	STA PaletteData+8,Y
 	INY
 	CPY #4
@@ -2189,7 +2193,7 @@ loc_8E4D:
 
 loc_8E5E:
 	INX
-	LDA byte_9276,X
+	LDA BackgroundPalettes,X
 	STA PaletteData+$C,Y
 	INY
 	CPY #4
@@ -2203,19 +2207,19 @@ LoadZoneSpritePalettesMaybe:
 	LDX #2
 
 loc_8E6D:
-	LDA byte_9270,X
+	LDA BombPalette,X
 	STA PaletteData+$19,X
 	DEX
 	BPL loc_8E6D
 	LDX #2
 
 loc_8E78:
-	LDA byte_9273,X
+	LDA PlayerPalette,X
 	STA PaletteData+$1D,X
 	DEX
 	BPL loc_8E78
 	LDX CurrentZone
-	LDA byte_9208,X
+	LDA ZoneSpritePalettes,X
 	STA byte_23
 	AND #$F0
 	LSR A
@@ -2229,7 +2233,7 @@ loc_8E78:
 	LDY #1
 
 loc_8E9A:
-	LDA byte_9356,X
+	LDA SpritePalettes,X
 	STA PaletteData+$10,Y
 	INX
 	INY
@@ -2244,7 +2248,7 @@ loc_8E9A:
 	LDY #1
 
 loc_8EB5:
-	LDA byte_9356,X
+	LDA SpritePalettes,X
 	STA PaletteData+$14,Y
 	INX
 	INY
@@ -2521,707 +2525,302 @@ byte_9068:
 	.BYTE $DF
 	.BYTE $BF
 	.BYTE $7F
-byte_9078:
-	.BYTE	$36
-byte_9079:
-	.BYTE	$28
-	.BYTE 4
-	.BYTE $19
-	.BYTE 5
-	.BYTE $1A
-	.BYTE $12
-	.BYTE $16
-	.BYTE $16
-	.BYTE 4
-	.BYTE $19
-	.BYTE $19
-	.BYTE $25
-	.BYTE $2F
-	.BYTE $19
-	.BYTE $19
-	.BYTE $19
-	.BYTE $19
-	.BYTE $25
-	.BYTE $25
-	.BYTE 7
-	.BYTE 0
-	.BYTE 7
-	.BYTE 7
-	.BYTE $12
-	.BYTE $12
-	.BYTE $25
-	.BYTE $2F
-	.BYTE $1E
-	.BYTE $1E
-	.BYTE $D
-	.BYTE $D
-	.BYTE $19
-	.BYTE $1F
-	.BYTE $D
-	.BYTE $D
-	.BYTE 4
-	.BYTE 4
-	.BYTE $16
-	.BYTE $1F
-	.BYTE 4
-	.BYTE 4
-	.BYTE 0
-	.BYTE $1F
-	.BYTE $D
-	.BYTE $1F
-	.BYTE $1B
-	.BYTE $1B
-	.BYTE $2D
-	.BYTE $2D
-	.BYTE $28
-	.BYTE 5
-	.BYTE $1B
-	.BYTE $1B
-	.BYTE $31
-	.BYTE $31
-	.BYTE $1B
-	.BYTE 1
-	.BYTE $32
-	.BYTE $32
-	.BYTE $23
-	.BYTE 7
-	.BYTE $22
-	.BYTE $30
-	.BYTE 8
-	.BYTE $B
-	.BYTE $B
-	.BYTE $B
-	.BYTE $12
-	.BYTE $2E
-	.BYTE $31
-	.BYTE $31
-	.BYTE $12
-	.BYTE $12
-	.BYTE $31
-	.BYTE $31
-	.BYTE $B
-	.BYTE $B
-	.BYTE $32
-	.BYTE $32
-	.BYTE 0
-	.BYTE 0
-	.BYTE 4
-	.BYTE 4
-	.BYTE $B
-	.BYTE $B
-	.BYTE $26
-	.BYTE $26
-	.BYTE 0
-	.BYTE $27
-	.BYTE 0
-	.BYTE 0
-	.BYTE $1C
-	.BYTE $1C
-	.BYTE $31
-	.BYTE $31
-	.BYTE $C
-	.BYTE $1D
-	.BYTE $2D
-	.BYTE $19
-	.BYTE $32
-	.BYTE $32
-	.BYTE 0
-	.BYTE $B
-	.BYTE 0
-	.BYTE 0
-	.BYTE 6
-	.BYTE 6
-	.BYTE $2C
-	.BYTE $2C
-	.BYTE 0
-	.BYTE $27
-	.BYTE 0
-	.BYTE $19
-	.BYTE $31
-	.BYTE $31
-	.BYTE $27
-	.BYTE $27
-	.BYTE 0
-	.BYTE $27
-	.BYTE $32
-	.BYTE $32
-	.BYTE 0
-	.BYTE $24
-	.BYTE 0
-	.BYTE $19
-	.BYTE $2B
-	.BYTE $19
-	.BYTE $32
-	.BYTE $32
-	.BYTE 3
-	.BYTE 3
-	.BYTE $32
-	.BYTE $32
-	.BYTE $31
-	.BYTE $31
-	.BYTE $17
-	.BYTE $20
-	.BYTE $C
-	.BYTE $C
-	.BYTE $32
-	.BYTE $32
-	.BYTE $32
-	.BYTE $32
-	.BYTE 0
-	.BYTE $2B
-	.BYTE $19
-	.BYTE $19
-	.BYTE $19
-	.BYTE $19
-	.BYTE 0
-	.BYTE $D
-	.BYTE 0
-	.BYTE 0
-	.BYTE 4
-	.BYTE 4
-	.BYTE 0
-	.BYTE $10
-	.BYTE $D
-	.BYTE $D
-	.BYTE $2B
-	.BYTE $2B
-	.BYTE 8
-	.BYTE 8
-	.BYTE $B
-	.BYTE 0
-	.BYTE $B
-	.BYTE $B
-	.BYTE $10
-	.BYTE $10
-	.BYTE $31
-	.BYTE $31
-	.BYTE $2B
-	.BYTE $2B
-	.BYTE $31
-	.BYTE $31
-	.BYTE $31
-	.BYTE $31
-	.BYTE $2D
-	.BYTE $2D
-	.BYTE 4
-	.BYTE $27
-	.BYTE 7
-	.BYTE 7
-	.BYTE 8
-	.BYTE $10
-	.BYTE $2B
-	.BYTE $2B
-	.BYTE 0
-	.BYTE $27
-	.BYTE 0
-	.BYTE $27
-	.BYTE $10
-	.BYTE $20
-	.BYTE 4
-	.BYTE 4
-	.BYTE $B
-	.BYTE 4
-	.BYTE 0
-	.BYTE $1F
-byte_9140:
-	.BYTE	$1A
-byte_9141:
-	.BYTE	5
-	.BYTE $19
-	.BYTE $19
-	.BYTE $1A
-	.BYTE $1A
-	.BYTE $19
-	.BYTE $19
-	.BYTE 4
-	.BYTE 4
-	.BYTE 4
-	.BYTE 4
-	.BYTE $1A
-	.BYTE 5
-	.BYTE 4
-	.BYTE 4
-	.BYTE $19
-	.BYTE $19
-	.BYTE $13
-	.BYTE 5
-	.BYTE $15
-	.BYTE 0
-	.BYTE 7
-	.BYTE 7
-	.BYTE 4
-	.BYTE 4
-	.BYTE 5
-	.BYTE 5
-	.BYTE 7
-	.BYTE 7
-	.BYTE $B
-	.BYTE $1F
-	.BYTE $1F
-	.BYTE $1F
-	.BYTE $2D
-	.BYTE $2D
-	.BYTE $B
-	.BYTE $B
-	.BYTE $1F
-	.BYTE $1F
-	.BYTE $19
-	.BYTE $19
-	.BYTE $1F
-	.BYTE $1F
-	.BYTE $19
-	.BYTE $19
-	.BYTE 1
-	.BYTE 1
-	.BYTE 4
-	.BYTE 4
-	.BYTE 5
-	.BYTE 5
-	.BYTE $1B
-	.BYTE $1B
-	.BYTE $31
-	.BYTE $33
-	.BYTE $E
-	.BYTE $E
-	.BYTE $33
-	.BYTE $33
-	.BYTE 7
-	.BYTE 7
-	.BYTE 2
-	.BYTE $19
-	.BYTE $19
-	.BYTE $19
-	.BYTE $21
-	.BYTE $12
-	.BYTE $19
-	.BYTE $19
-	.BYTE $31
-	.BYTE $37
-	.BYTE $19
-	.BYTE $19
-	.BYTE $31
-	.BYTE $33
-	.BYTE 4
-	.BYTE 4
-	.BYTE $32
-	.BYTE $32
-	.BYTE 0
-	.BYTE 0
-	.BYTE 4
-	.BYTE 4
-	.BYTE 0
-	.BYTE 0
-	.BYTE $F
-	.BYTE $18
-	.BYTE 4
-	.BYTE 4
-	.BYTE $19
-	.BYTE $19
-	.BYTE $29
-	.BYTE $29
-	.BYTE $31
-	.BYTE $33
-	.BYTE 6
-	.BYTE 6
-	.BYTE $19
-	.BYTE $19
-	.BYTE $32
-	.BYTE $32
-	.BYTE 0
-	.BYTE $16
-	.BYTE 0
-	.BYTE 0
-	.BYTE $2A
-	.BYTE $35
-	.BYTE $2C
-	.BYTE $2C
-	.BYTE $2B
-	.BYTE $2B
-	.BYTE $19
-	.BYTE $19
-	.BYTE $33
-	.BYTE $33
-	.BYTE $27
-	.BYTE $27
-	.BYTE $2B
-	.BYTE $2B
-	.BYTE $32
-	.BYTE $32
-	.BYTE $19
-	.BYTE $19
-	.BYTE $1F
-	.BYTE $1F
-	.BYTE $1F
-	.BYTE $1F
-	.BYTE $32
-	.BYTE $32
-	.BYTE 7
-	.BYTE 7
-	.BYTE $32
-	.BYTE $32
-	.BYTE $31
-	.BYTE $33
-	.BYTE 5
-	.BYTE 5
-	.BYTE $A
-	.BYTE $35
-	.BYTE $32
-	.BYTE $32
-	.BYTE $32
-	.BYTE $32
-	.BYTE 0
-	.BYTE $2B
-	.BYTE 4
-	.BYTE 4
-	.BYTE $10
-	.BYTE $10
-	.BYTE $10
-	.BYTE $10
-	.BYTE $10
-	.BYTE $10
-	.BYTE $2B
-	.BYTE $2B
-	.BYTE $21
-	.BYTE $B
-	.BYTE 0
-	.BYTE 0
-	.BYTE $2D
-	.BYTE $2D
-	.BYTE $12
-	.BYTE $B
-	.BYTE 4
-	.BYTE 4
-	.BYTE 8
-	.BYTE 8
-	.BYTE 0
-	.BYTE 8
-	.BYTE $31
-	.BYTE $34
-	.BYTE 0
-	.BYTE 0
-	.BYTE $31
-	.BYTE $33
-	.BYTE $31
-	.BYTE $34
-	.BYTE $21
-	.BYTE $21
-	.BYTE $24
-	.BYTE $24
-	.BYTE 7
-	.BYTE 7
-	.BYTE $D
-	.BYTE $D
-	.BYTE $2B
-	.BYTE $2B
-	.BYTE $19
-	.BYTE $19
-	.BYTE $19
-	.BYTE $19
-	.BYTE $D
-	.BYTE 8
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 0
-	.BYTE 4
-	.BYTE 8
-byte_9208:
-	.BYTE	$29,  0,$60,$21,  0,$20,$41,  0,  0,$40
-	.BYTE   0,$21,  1,$20,  0,$21,$60,	0,  3,	0; 10
-	.BYTE   1,	3,  1,$41,$20,	0,$67,	0,  1,	3; 20
-	.BYTE   1,	1,$51,$67,  0,	0,$60,$20,$40,	0; 30
-	.BYTE   0,	0,  3,$40,  0,	0,$41,	0,  1,	0; 40
-	.BYTE $60,$40,$20,$40,  0,$51,  3,$67,$20,	3; 50
-	.BYTE   3,	1,  0,	0,$67,	0,  0,	0,$40,$40; 60
-	.BYTE   0,$21,$60,	1,$40,	0,  0,$40,$67,	0; 70
-	.BYTE $20,$40,$21,	1,$67,$51,$41,	0,  0,$67; 80
-	.BYTE   0,	3,  0,$67,$23,$51,$40,	0,$21,$BE; 90
+ZonePaletteSetting1:
+	.BYTE  $36, $28
+	.BYTE    4, $19
+	.BYTE    5, $1A
+	.BYTE  $12, $16
+	.BYTE  $16,   4
+	.BYTE  $19, $19
+	.BYTE  $25, $2F
+	.BYTE  $19, $19
+	.BYTE  $19, $19
+	.BYTE  $25, $25
+	.BYTE    7,   0
+	.BYTE    7,   7
+	.BYTE  $12, $12
+	.BYTE  $25, $2F
+	.BYTE  $1E, $1E
+	.BYTE   $D,  $D
+	.BYTE  $19, $1F
+	.BYTE   $D,  $D
+	.BYTE    4,   4
+	.BYTE  $16, $1F
+	.BYTE    4,   4
+	.BYTE    0, $1F
+	.BYTE   $D, $1F
+	.BYTE  $1B, $1B
+	.BYTE  $2D, $2D
+	.BYTE  $28,   5
+	.BYTE  $1B, $1B
+	.BYTE  $31, $31
+	.BYTE  $1B,   1
+	.BYTE  $32, $32
+	.BYTE  $23,   7
+	.BYTE  $22, $30
+	.BYTE    8,  $B
+	.BYTE   $B,  $B
+	.BYTE  $12, $2E
+	.BYTE  $31, $31
+	.BYTE  $12, $12
+	.BYTE  $31, $31
+	.BYTE   $B,  $B
+	.BYTE  $32, $32
+	.BYTE    0,   0
+	.BYTE    4,   4
+	.BYTE   $B,  $B
+	.BYTE  $26, $26
+	.BYTE    0, $27
+	.BYTE    0,   0
+	.BYTE  $1C, $1C
+	.BYTE  $31, $31
+	.BYTE   $C, $1D
+	.BYTE  $2D, $19
+	.BYTE  $32, $32
+	.BYTE    0,  $B
+	.BYTE    0,   0
+	.BYTE    6,   6
+	.BYTE  $2C, $2C
+	.BYTE    0, $27
+	.BYTE    0, $19
+	.BYTE  $31, $31
+	.BYTE  $27, $27
+	.BYTE    0, $27
+	.BYTE  $32, $32
+	.BYTE    0, $24
+	.BYTE    0, $19
+	.BYTE  $2B, $19
+	.BYTE  $32, $32
+	.BYTE    3,   3
+	.BYTE  $32, $32
+	.BYTE  $31, $31
+	.BYTE  $17, $20
+	.BYTE   $C,  $C
+	.BYTE  $32, $32
+	.BYTE  $32, $32
+	.BYTE    0, $2B
+	.BYTE  $19, $19
+	.BYTE  $19, $19
+	.BYTE    0,  $D
+	.BYTE    0,   0
+	.BYTE    4,   4
+	.BYTE    0, $10
+	.BYTE   $D,  $D
+	.BYTE  $2B, $2B
+	.BYTE    8,   8
+	.BYTE   $B,   0
+	.BYTE   $B,  $B
+	.BYTE  $10, $10
+	.BYTE  $31, $31
+	.BYTE  $2B, $2B
+	.BYTE  $31, $31
+	.BYTE  $31, $31
+	.BYTE  $2D, $2D
+	.BYTE    4, $27
+	.BYTE    7,   7
+	.BYTE    8, $10
+	.BYTE  $2B, $2B
+	.BYTE    0, $27
+	.BYTE    0, $27
+	.BYTE  $10, $20
+	.BYTE    4,   4
+	.BYTE   $B,   4
+	.BYTE    0, $1F
+ZonePaletteSetting2:
+	.BYTE  $1A,   5
+	.BYTE  $19, $19
+	.BYTE  $1A, $1A
+	.BYTE  $19, $19
+	.BYTE    4,   4
+	.BYTE    4,   4
+	.BYTE  $1A,   5
+	.BYTE    4,   4
+	.BYTE  $19, $19
+	.BYTE  $13,   5
+	.BYTE  $15,   0
+	.BYTE    7,   7
+	.BYTE    4,   4
+	.BYTE    5,   5
+	.BYTE    7,   7
+	.BYTE   $B, $1F
+	.BYTE  $1F, $1F
+	.BYTE  $2D, $2D
+	.BYTE   $B,  $B
+	.BYTE  $1F, $1F
+	.BYTE  $19, $19
+	.BYTE  $1F, $1F
+	.BYTE  $19, $19
+	.BYTE    1,   1
+	.BYTE    4,   4
+	.BYTE    5,   5
+	.BYTE  $1B, $1B
+	.BYTE  $31, $33
+	.BYTE   $E,  $E
+	.BYTE  $33, $33
+	.BYTE    7,   7
+	.BYTE    2, $19
+	.BYTE  $19, $19
+	.BYTE  $21, $12
+	.BYTE  $19, $19
+	.BYTE  $31, $37
+	.BYTE  $19, $19
+	.BYTE  $31, $33
+	.BYTE    4,   4
+	.BYTE  $32, $32
+	.BYTE    0,   0
+	.BYTE    4,   4
+	.BYTE    0,   0
+	.BYTE   $F, $18
+	.BYTE    4,   4
+	.BYTE  $19, $19
+	.BYTE  $29, $29
+	.BYTE  $31, $33
+	.BYTE    6,   6
+	.BYTE  $19, $19
+	.BYTE  $32, $32
+	.BYTE    0, $16
+	.BYTE    0,   0
+	.BYTE  $2A, $35
+	.BYTE  $2C, $2C
+	.BYTE  $2B, $2B
+	.BYTE  $19, $19
+	.BYTE  $33, $33
+	.BYTE  $27, $27
+	.BYTE  $2B, $2B
+	.BYTE  $32, $32
+	.BYTE  $19, $19
+	.BYTE  $1F, $1F
+	.BYTE  $1F, $1F
+	.BYTE  $32, $32
+	.BYTE    7,   7
+	.BYTE  $32, $32
+	.BYTE  $31, $33
+	.BYTE    5,   5
+	.BYTE   $A, $35
+	.BYTE  $32, $32
+	.BYTE  $32, $32
+	.BYTE    0, $2B
+	.BYTE    4,   4
+	.BYTE  $10, $10
+	.BYTE  $10, $10
+	.BYTE  $10, $10
+	.BYTE  $2B, $2B
+	.BYTE  $21,  $B
+	.BYTE    0,   0
+	.BYTE  $2D, $2D
+	.BYTE  $12,  $B
+	.BYTE    4,   4
+	.BYTE    8,   8
+	.BYTE    0,   8
+	.BYTE  $31, $34
+	.BYTE    0,   0
+	.BYTE  $31, $33
+	.BYTE  $31, $34
+	.BYTE  $21, $21
+	.BYTE  $24, $24
+	.BYTE    7,   7
+	.BYTE   $D,  $D
+	.BYTE  $2B, $2B
+	.BYTE  $19, $19
+	.BYTE  $19, $19
+	.BYTE   $D,   8
+	.BYTE    0,   0
+	.BYTE    0,   0
+	.BYTE    4,   8
+
+ZoneSpritePalettes:
+	.BYTE  $29,   0, $60, $21,   0, $20, $41,   0,   0, $40		;  1-10
+	.BYTE    0, $21,   1, $20,   0, $21, $60,   0,   3,   0		; 11-20
+	.BYTE    1,   3,   1, $41, $20,   0, $67,   0,   1,   3		; 21-30
+	.BYTE    1,   1, $51, $67,   0,   0, $60, $20, $40,   0		; 31-40
+	.BYTE    0,   0,   3, $40,   0,   0, $41,   0,   1,   0		; 41-50
+	.BYTE  $60, $40, $20, $40,   0, $51,   3, $67, $20,   3		; 51-60
+	.BYTE    3,   1,   0,   0, $67,   0,   0,   0, $40, $40		; 61-70
+	.BYTE    0, $21, $60,   1, $40,   0,   0, $40, $67,   0		; 71-80
+	.BYTE  $20, $40, $21,   1, $67, $51, $41,   0,   0, $67		; 81-90
+	.BYTE    0,   3,   0, $67, $23, $51, $40,   0, $21, $BE		; 91-100
+
 	.BYTE   0
 	.BYTE   0
 	.BYTE   0
 	.BYTE   0
-byte_9270:
-	.BYTE	$16
-	.BYTE $28
-	.BYTE $20
-byte_9273:
-	.BYTE	7
-	.BYTE $27
-	.BYTE $38
-byte_9276:
-	.BYTE	$F
-	.BYTE $F
-	.BYTE 0
-	.BYTE $10
-	.BYTE   3
-	.BYTE $F
-	.BYTE 0
-	.BYTE $10
-	.BYTE $35 ;	5
-	.BYTE $F
-	.BYTE 0
-	.BYTE $10
-	.BYTE 8
-	.BYTE $F
-	.BYTE 0
-	.BYTE $10
-	.BYTE $F
-	.BYTE 0
-	.BYTE $10
-	.BYTE $20
-	.BYTE $22
-	.BYTE 0
-	.BYTE $10
-	.BYTE $20
-	.BYTE $16
-	.BYTE $F
-	.BYTE 0
-	.BYTE $10
-	.BYTE 8
-	.BYTE 0
-	.BYTE $10
-	.BYTE $20
-	.BYTE $F
-	.BYTE $12
-	.BYTE $22
-	.BYTE $32
-	.BYTE $22
-	.BYTE $12
-	.BYTE $22
-	.BYTE $32 ;	2
-	.BYTE $16
-	.BYTE $12
-	.BYTE $22
-	.BYTE $32
-	.BYTE $F
-	.BYTE $F
-	.BYTE 3
-	.BYTE $13
-	.BYTE $16
-	.BYTE $F
-	.BYTE 3
-	.BYTE $13
-	.BYTE $F
-	.BYTE 4
-	.BYTE $14
-	.BYTE $24
-	.BYTE   3
-	.BYTE 4
-	.BYTE $14
-	.BYTE $24
-	.BYTE $35 ;	5
-	.BYTE 4
-	.BYTE $14
-	.BYTE $24
-	.BYTE $F
-	.BYTE $16
-	.BYTE $26
-	.BYTE $36
-	.BYTE $22
-	.BYTE $16
-	.BYTE $26
-	.BYTE $36 ;	6
-	.BYTE $F
-	.BYTE 7
-	.BYTE $17
-	.BYTE $27
-	.BYTE $22
-	.BYTE 7
-	.BYTE $17
-	.BYTE $27
-	.BYTE $16
-	.BYTE   7
-	.BYTE $17
-	.BYTE $27
-	.BYTE   8
-	.BYTE 7
-	.BYTE $17
-	.BYTE $27
-	.BYTE $F
-	.BYTE $17
-	.BYTE $27
-	.BYTE $37
-	.BYTE $22
-	.BYTE $17
-	.BYTE $27
-	.BYTE $37
-	.BYTE $35 ;	5
-	.BYTE $17
-	.BYTE $27
-	.BYTE $37
-	.BYTE $F
-	.BYTE 8
-	.BYTE $18
-	.BYTE $28
-	.BYTE $22
-	.BYTE 8
-	.BYTE $18
-	.BYTE $28
-	.BYTE 3
-	.BYTE 8
-	.BYTE $18
-	.BYTE $28
-	.BYTE $35
-	.BYTE 8
-	.BYTE $18
-	.BYTE $28
-	.BYTE $16
-	.BYTE 8
-	.BYTE $18
-	.BYTE $28
-	.BYTE 8
-	.BYTE 8
-	.BYTE $18
-	.BYTE $28
-	.BYTE  $F
-	.BYTE $18
-	.BYTE $28
-	.BYTE $38
-	.BYTE $22
-	.BYTE $18
-	.BYTE $28
-	.BYTE $38
-	.BYTE  $F
-	.BYTE 9
-	.BYTE $19
-	.BYTE $29
-	.BYTE $35
-	.BYTE 9
-	.BYTE $19
-	.BYTE $29
-	.BYTE 8
-	.BYTE 9
-	.BYTE $19
-	.BYTE $29
-	.BYTE  $F
-	.BYTE $19
-	.BYTE $29
-	.BYTE $39
-	.BYTE $22
-	.BYTE $19
-	.BYTE $29
-	.BYTE $39
-	.BYTE $35
-	.BYTE $19
-	.BYTE $29
-	.BYTE $39
-	.BYTE $F
-	.BYTE $A
-	.BYTE $1A
-	.BYTE $2A
-	.BYTE $22
-	.BYTE $A
-	.BYTE $1A
-	.BYTE $2A
-	.BYTE $35 ;	5
-	.BYTE $A
-	.BYTE $1A
-	.BYTE $2A
-	.BYTE $16
-	.BYTE $A
-	.BYTE $1A
-	.BYTE $2A
-	.BYTE $F
-	.BYTE $1C
-	.BYTE $2C
-	.BYTE $3C
-	.BYTE $16
-	.BYTE $1C
-	.BYTE $2C
-	.BYTE $3C
-	.BYTE $F
-	.BYTE 7
-	.BYTE $1A
-	.BYTE $37
-	.BYTE  $F
-	.BYTE 8
-	.BYTE $18
-	.BYTE $29
-	.BYTE $22
-	.BYTE 8
-	.BYTE $18
-	.BYTE $29
-	.BYTE $35 ;	5
-	.BYTE 8
-	.BYTE $18
-	.BYTE $29
-	.BYTE $F
-	.BYTE $F
-	.BYTE $F
-	.BYTE $F
-	.BYTE $30
-	.BYTE $11
-	.BYTE $21
-	.BYTE $31
-	.BYTE  $F
-	.BYTE $F
-	.BYTE $F
-	.BYTE 5
-	.BYTE  $F
-	.BYTE $F
-	.BYTE $F
-	.BYTE 2
-	.BYTE $16
-	.BYTE $16
-	.BYTE $26
-	.BYTE $36
-	.BYTE $22
-	.BYTE $22
-	.BYTE $22
-	.BYTE $22
-	.BYTE  $F
-	.BYTE $28
-	.BYTE $16
-	.BYTE $39
-byte_9356:
-	.BYTE	$16
-	.BYTE $2A
-	.BYTE $3A
-	.BYTE 0
-	.BYTE $10
-	.BYTE $20
-	.BYTE $16
-	.BYTE $10
-	.BYTE 0
-	.BYTE $17
-	.BYTE $23
-	.BYTE $33
-	.BYTE 8
-	.BYTE $18
-	.BYTE $28
-	.BYTE $20
-	.BYTE $17
-	.BYTE $28
-	.BYTE $20
-	.BYTE $16
-	.BYTE $29
-	.BYTE $27
-	.BYTE $3B
-	.BYTE $1A
-	.BYTE   7
-	.BYTE $27
-	.BYTE $38 ;	8
-	.BYTE $12
-	.BYTE $16
-	.BYTE $20
-	.BYTE $37 ;	7
-	.BYTE $10
-	.BYTE $20
-	.BYTE $22
-	.BYTE $21
-	.BYTE $30
-	.BYTE $28
-	.BYTE $39 ;	9
-	.BYTE $2C
-	.BYTE $12
-	.BYTE $27
-	.BYTE $38 ;	8
-	.BYTE 0
-	.BYTE $10
-	.BYTE $20
-	.BYTE $20
-	.BYTE  $F
-	.BYTE  $F
+BombPalette:	; SPR2 - also the HUD, explosions, bombs...
+	.BYTE $16, $28, $20
+PlayerPalette:	; SPR3 - also chests, items
+	.BYTE	7, $27, $38
+
+BackgroundPalettes:
+	.BYTE   $F,  $F,   0, $10           ; 0
+	.BYTE    3,  $F,   0, $10           ; 4
+	.BYTE  $35,  $F,   0, $10           ; 8
+	.BYTE    8,  $F,   0, $10           ; $C
+	.BYTE   $F,   0, $10, $20           ; $10
+	.BYTE  $22,   0, $10, $20           ; $14
+	.BYTE  $16,  $F,   0, $10           ; $18
+	.BYTE    8,   0, $10, $20           ; $1C
+	.BYTE   $F, $12, $22, $32           ; $20
+	.BYTE  $22, $12, $22, $32           ; $24
+	.BYTE  $16, $12, $22, $32           ; $28
+	.BYTE   $F,  $F,   3, $13           ; $2C
+	.BYTE  $16,  $F,   3, $13           ; $30
+	.BYTE   $F,   4, $14, $24           ; $34
+	.BYTE    3,   4, $14, $24           ; $38
+	.BYTE  $35,   4, $14, $24           ; $3C
+	.BYTE   $F, $16, $26, $36           ; $40
+	.BYTE  $22, $16, $26, $36           ; $44
+	.BYTE   $F,   7, $17, $27           ; $48
+	.BYTE  $22,   7, $17, $27           ; $4C
+	.BYTE  $16,   7, $17, $27           ; $50
+	.BYTE    8,   7, $17, $27           ; $54
+	.BYTE   $F, $17, $27, $37           ; $58
+	.BYTE  $22, $17, $27, $37           ; $5C
+	.BYTE  $35, $17, $27, $37           ; $60
+	.BYTE   $F,   8, $18, $28           ; $64
+	.BYTE  $22,   8, $18, $28           ; $68
+	.BYTE    3,   8, $18, $28           ; $6C
+	.BYTE  $35,   8, $18, $28           ; $70
+	.BYTE  $16,   8, $18, $28           ; $74
+	.BYTE    8,   8, $18, $28           ; $78
+	.BYTE   $F, $18, $28, $38           ; $7C
+	.BYTE  $22, $18, $28, $38           ; $80
+	.BYTE   $F,   9, $19, $29           ; $84
+	.BYTE  $35,   9, $19, $29           ; $88
+	.BYTE    8,   9, $19, $29           ; $8C
+	.BYTE   $F, $19, $29, $39           ; $90
+	.BYTE  $22, $19, $29, $39           ; $94
+	.BYTE  $35, $19, $29, $39           ; $98
+	.BYTE   $F,  $A, $1A, $2A           ; $9C
+	.BYTE  $22,  $A, $1A, $2A           ; $A0
+	.BYTE  $35,  $A, $1A, $2A           ; $A4
+	.BYTE  $16,  $A, $1A, $2A           ; $A8
+	.BYTE   $F, $1C, $2C, $3C           ; $AC
+	.BYTE  $16, $1C, $2C, $3C           ; $B0
+	.BYTE   $F,   7, $1A, $37           ; $B4
+	.BYTE   $F,   8, $18, $29           ; $B8
+	.BYTE  $22,   8, $18, $29           ; $BC
+	.BYTE  $35,   8, $18, $29           ; $C0
+	.BYTE   $F,  $F,  $F,  $F           ; $C4
+	.BYTE  $30, $11, $21, $31           ; $C8
+	.BYTE   $F,  $F,  $F,   5           ; $CC
+	.BYTE   $F,  $F,  $F,   2           ; $D0
+	.BYTE  $16, $16, $26, $36           ; $D4
+	.BYTE  $22, $22, $22, $22           ; $D8
+	.BYTE   $F, $28, $16, $39           ; $DC
+
+SpritePalettes:
+	.BYTE  $16, $2A, $3A,   0
+	.BYTE  $10, $20, $16, $10
+	.BYTE    0, $17, $23, $33
+	.BYTE    8, $18, $28, $20
+	.BYTE  $17, $28, $20, $16
+	.BYTE  $29, $27, $3B, $1A
+	.BYTE    7, $27, $38, $12
+	.BYTE  $16, $20, $37, $10
+	.BYTE  $20, $22, $21, $30
+	.BYTE  $28, $39, $2C, $12
+	.BYTE  $27, $38,   0, $10
+	.BYTE  $20, $20,  $F,  $F
+
 ; ---------------------------------------------------------------------------
 
 locret_9386:
@@ -3783,7 +3382,7 @@ loc_971D:
 	LDY #2
 
 loc_972C:
-	LDA byte_9273,Y
+	LDA PlayerPalette,Y
 	STA PaletteData+$19,Y
 	DEY
 	BPL loc_972C
