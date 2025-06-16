@@ -6,6 +6,7 @@ IFNDEF REMOVE_MAYBE_UNUSED_DATA
 ENDIF
 
 ZoneDoorTable:
+	; zone-1   x    y   to id
 	Door   0, $30, $20,   0 ;
 	Door   0, $92, $30, $12 ;		; 1
 	Door   5,  $C, $28,   4 ;		; 2
