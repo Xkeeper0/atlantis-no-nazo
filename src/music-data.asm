@@ -17,16 +17,16 @@ MusicNoteLength:
 	.BYTE   8,	9, $A, $B, $C, $D, $E, $F; 8
 	.BYTE   5, $A,$14,$28,$50,$1E,  7, $D; $10
 	.BYTE   6, $C,$18,$30,$60,$24,  8,$10; $18
-byte_C945:
-	.BYTE	1
-	.BYTE 2
-	.BYTE 4
-	.BYTE 8
-byte_C949:
-	.BYTE	$E
-	.BYTE $D
-	.BYTE $B
-	.BYTE 7
+ChannelOnMasks:
+	.BYTE	$01	; bit 0 = square 1
+	.BYTE	$02	; bit 1 = square 2
+	.BYTE	$04	; bit 2 = triangle
+	.BYTE	$08	; bit 3 = noise
+ChannelOffMasks:
+	.BYTE	$0E	; bit 0 clear
+	.BYTE	$0D	; bit 1 clear
+	.BYTE	$0B	; bit 2 clear
+	.BYTE	$07	; bit 3 clear
 MusicPointerTable:
 	.WORD	Music_0
 	.WORD Music_ZoneTheme1		; 1

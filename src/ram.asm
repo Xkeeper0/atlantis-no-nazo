@@ -22,7 +22,7 @@ PPUScrollX:
 	.dsb 1                      ; $0009
 CurrentCHRBanks:
 	.dsb 1	                     ; $000a
-byte_B:
+APUSoundChn:
 	.dsb 1                      ; $000b
 	.dsb 1                      ; $000c
 	.dsb 1                      ; $000d
@@ -82,80 +82,31 @@ byte_2E:
 	.dsb 1	                     ; $002e
 byte_2F:
 	.dsb 1	                     ; $002f
-unk_30:
-	.dsb 1                      ; $0030
-	.dsb 1                      ; $0031
-	.dsb 1                      ; $0032
-	.dsb 1                      ; $0033
-	.dsb 1                      ; $0034
-	.dsb 1                      ; $0035
-unk_36:
-	.dsb 1                      ; $0036
-	.dsb 1                      ; $0037
-	.dsb 1                      ; $0038
-	.dsb 1                      ; $0039
-	.dsb 1                      ; $003a
-	.dsb 1                      ; $003b
-unk_3C:
-	.dsb 1                      ; $003c
-	.dsb 1                      ; $003d
-	.dsb 1                      ; $003e
-	.dsb 1                      ; $003f
-	.dsb 1                      ; $0040
-	.dsb 1                      ; $0041
-unk_42:
-	.dsb 1                      ; $0042
-	.dsb 1                      ; $0043
-	.dsb 1                      ; $0044
-	.dsb 1                      ; $0045
-	.dsb 1                      ; $0046
-	.dsb 1                      ; $0047
-unk_48:
-	.dsb 1                      ; $0048
-	.dsb 1                      ; $0049
-	.dsb 1                      ; $004a
-	.dsb 1                      ; $004b
-	.dsb 1                      ; $004c
-	.dsb 1                      ; $004d
-unk_4E:
-	.dsb 1                      ; $004e
-	.dsb 1                      ; $004f
-	.dsb 1                      ; $0050
-	.dsb 1                      ; $0051
-	.dsb 1                      ; $0052
-	.dsb 1                      ; $0053
-unk_54:
-	.dsb 1                      ; $0054
-	.dsb 1                      ; $0055
-	.dsb 1                      ; $0056
-	.dsb 1                      ; $0057
-	.dsb 1                      ; $0058
-	.dsb 1                      ; $0059
-unk_5A:
-	.dsb 1                      ; $005a
-	.dsb 1                      ; $005b
-	.dsb 1                      ; $005c
-	.dsb 1                      ; $005d
-	.dsb 1                      ; $005e
-	.dsb 1                      ; $005f
-unk_60:
-	.dsb 1                      ; $0060
-	.dsb 1                      ; $0061
-	.dsb 1                      ; $0062
-	.dsb 1                      ; $0063
-	.dsb 1                      ; $0064
-	.dsb 1                      ; $0065
-	.dsb 1                      ; $0066
-	.dsb 1                      ; $0067
-	.dsb 1                      ; $0068
-	.dsb 1                      ; $0069
-	.dsb 1                      ; $006a
-	.dsb 1                      ; $006b
-unk_6C:
-	.dsb 1                      ; $006c
-	.dsb 1                      ; $006d
-	.dsb 1                      ; $006e
-	.dsb 1                      ; $006f
+
+SoundRamArea: ; $40 bytes total
+InstLoPtr:
+	.dsb 6                      ; $0030
+InstHiPtr:
+	.dsb 6                      ; $0036
+InstChannel:
+	.dsb 6                      ; $003c
+InstCursor:
+	.dsb 6                      ; $0042
+InstReg1:
+	.dsb 6                      ; $0048
+InstReg0:
+	.dsb 6                      ; $004e
+InstTimer:
+	.dsb 6                      ; $0054
+InstLoop:
+	.dsb 6                      ; $005a
+InstCtrlRegsChanged:
+	.dsb 6                      ; $0060
+InstUnused:
+	.dsb 6                      ; $0066
+ChannelsInUse:
+	.dsb 4                      ; $006c
+
 	.dsb 1                      ; $0070
 	.dsb 1                      ; $0071
 	.dsb 1                      ; $0072

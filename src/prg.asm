@@ -11112,11 +11112,11 @@ InitSoundEngine:
 	LDX #$40
 	LDA #$FF
 
-loc_C738:
-	STA byte_2F,X
+@loop:
+	STA SoundRamArea-1,X
 	DEX
-	BNE loc_C738
-	STX byte_B
+	BNE @loop
+	STX APUSoundChn
 	STX SND_CHN
 	RTS
 ; End of function InitSoundEngine
@@ -11131,30 +11131,30 @@ PlayMusicTrack:
 	LDA MusicPointerTable+1,X
 	STA word_1E+1
 	LDY #0
-	LDA (word_1E),Y
+	LDA (word_1E),Y	; number of instruments
 	STA byte_2E
 
-loc_C75A:
+@initInstData:
 	INY
 	LDA (word_1E),Y
 	TAX
-	LDA #1
-	STA unk_54,X
-	LDA #$FF
-	STA unk_60,X
+	LDA #1	; force command load
+	STA InstTimer,X
+	LDA #$FF	; force control reg update
+	STA InstCtrlRegsChanged,X
 
-loc_C768:
+@copyInstData:
 	INY
 	LDA (word_1E),Y
-	STA unk_30,X
+	STA InstLoPtr,X
 	TXA
 	CLC
 	ADC #6
 	TAX
 	CPX #$24
-	BCC loc_C768
+	BCC @copyInstData
 	DEC byte_2E
-	BNE loc_C75A
+	BNE @initInstData
 
 locret_C77C:
 	RTS
@@ -11166,135 +11166,156 @@ RunMusicEngine:
 	LDA #0
 	LDX #3
 
-loc_C781:
-	STA unk_6C,X
+@clear:
+	STA ChannelsInUse,X
 	DEX
-	BPL loc_C781
-	LDX #5
+	BPL @clear
+	LDX #5	; instrument 5 = highest priority, 0 = lowest priority
 
-loc_C789:
-	JSR sub_C78F
+@instLoop:
+	JSR RunInstrument
 	DEX
-	BNE loc_C789
+	BNE @instLoop	; fall through after loop ends (6 instruments total)
 ; End of function RunMusicEngine
 
 ; =============== S U B	R O U T	I N E =======================================
 
-sub_C78F:
-	LDA unk_42,X
-	CMP #$FF
-	BEQ locret_C77C
-	DEC unk_54,X
-	BEQ loc_C7A3
-	LDA #$F
+RunInstrument:
+	LDA InstCursor,X
+	CMP #$FF	; check for "instrument not playing" flag
+	BEQ locret_C77C	; not playing? return
+	DEC InstTimer,X	; timer ran out? read from sound data
+	BEQ @setupCmdPtr
+	LDA #$F	; set "already playing a note" flag
 	STA byte_22
-	JMP loc_C8AE
+	JMP @playInstChannel
 ; ---------------------------------------------------------------------------
 
-loc_C7A3:
+@setupCmdPtr:
 	LDA #0
 	STA word_1A+1
-	LDA unk_42,X
+	LDA InstCursor,X
 	ASL A
 	ROL word_1A+1
 	CLC
-	ADC unk_30,X
+	ADC InstLoPtr,X
 	STA word_1A
 	LDA word_1A+1
-	ADC unk_36,X
+	ADC InstHiPtr,X
 	STA word_1A+1
 	LDY #0
 
-loc_C7C1:
+@fetchCmd:
 	LDA (word_1A),Y
-	CMP #$FF
-	BNE loc_C7DC
-	STA unk_42,X
-	STA unk_5A,X
-	LDA unk_3C,X
+	CMP #$FF	; have we hit the end?
+	BNE @processCmd
+
+; FF: end of instrument data
+	STA InstCursor,X
+	STA InstLoop,X
+	LDA InstChannel,X
 	TAY
 	LDA #0
-	STA unk_6C,Y
-	JSR sub_C8F3
-	JMP loc_C8ED
+	STA ChannelsInUse,Y
+	JSR DisableAPUChannel
+	JMP @lostAPUChannel
 ; ---------------------------------------------------------------------------
 
-loc_C7DC:
-	STA byte_25
+@processCmd:
+	STA byte_25	; $25 = command byte
 	INY
 	LDA (word_1A),Y
-	STA byte_26
+	STA byte_26	; $26 = parameter byte
 	LDA byte_25
 	CMP #$C0
-	BCS loc_C84A
+	BCS @noteCmd
 	CMP #$B0
-	BCS loc_C813
+	BCS @ctrlCmd
 	CMP #$A0
-	BCC loc_C84A
+	BCC @noteCmd
 	AND #1
-	BNE loc_C801
-	LDA byte_26
-	STA unk_4E,X
-	JMP loc_C807
+	BNE @reg1Cmd
+
+; A0-AF: Set APU register
+@reg0Cmd:
+	LDA byte_26	; even low command nybble: Set APU channel register 0 (channel num * 4 + $4000) to param
+	STA InstReg0,X
+	JMP @markRegsChanged
 ; ---------------------------------------------------------------------------
 
-loc_C801:
-	LDA byte_26
-	STA unk_48,X
+@reg1Cmd:
+	LDA byte_26	; odd low command nybble: Set APU channel register 1 (channel num * 4 + $4001) to param
+	STA InstReg1,X
 
-loc_C807:
+@markRegsChanged:
 	INY
-	INC unk_42,X
+	INC InstCursor,X
 	LDA #$FF
-	STA unk_60,X
-	JMP loc_C7C1
+	STA InstCtrlRegsChanged,X
+	JMP @fetchCmd
 ; ---------------------------------------------------------------------------
 
-loc_C813:
+; B0-BF: Looping/jumping
+@ctrlCmd:
 	CMP #$BF
-	BNE loc_C820
+	BNE @loopCmd
+; BF: set instrument cursor to param.
 	LDA byte_26
-	STA unk_42,X
-	JMP loc_C7A3
+	STA InstCursor,X
+	JMP @setupCmdPtr
 ; ---------------------------------------------------------------------------
 
-loc_C820:
-	LDA unk_5A,X
-	BEQ loc_C840
+@loopCmd:
+	LDA InstLoop,X
+	BEQ @loopDone
 	CMP #$FF
-	BEQ loc_C82F
-	DEC unk_5A,X
-	JMP loc_C837
+	BEQ @loopSetup
+	DEC InstLoop,X
+	JMP @loopInProgress
 ; ---------------------------------------------------------------------------
 
-loc_C82F:
+@loopSetup:
+; B0-BE: Set up instrument loop (the way this is structured, you should use it after the notes you want to loop).
+; Low nybble of command = # of times to loop - 1.
+; Param = point to set the cursor to when you hit the loop command.
 	LDA byte_25
 	AND #$F
-	STA unk_5A,X
+	STA InstLoop,X
 
-loc_C837:
+@loopInProgress:
 	LDA byte_26
-	STA unk_42,X
-	JMP loc_C7A3
+	STA InstCursor,X
+	JMP @setupCmdPtr
 ; ---------------------------------------------------------------------------
 
-loc_C840:
-	DEC unk_5A,X
-	INC unk_42,X
+@loopDone:
+	DEC InstLoop,X	; loop over? set to $FF (no loop) and move on
+	INC InstCursor,X
 	INY
-	JMP loc_C7C1
+	JMP @fetchCmd
 ; ---------------------------------------------------------------------------
 
-loc_C84A:
-	INC unk_42,X
-	LDA unk_3C,X
-	CMP #3
-	BEQ loc_C884
+; >= C0 or < A0: Play note.
+; If the instrument is for the noise channel, the command byte is the value to write to NOISE_LO.
+; For all other channels, the low nybble of the command byte is the note, and the high nybble is the octave.
+; Notes are mapped from $0 = c to $B = b. $C or higher means "rest".
+; The parameter byte is the note duration. The length counter for the instrument channel is set to (param & 0xf << 1),
+; and the LSB is set if the upper 4 bits of the parameter byte are not set. Basically this means that valid durations work like this:
+; 00   : 127 frames
+; 01-0F: n frames
+; F0-F7: sixteenth, eighth, quarter, half, whole, dotted quarter, eighth note triplet, quarter note triplet (4/4 at 90 bpm)
+; F8-FF: sixteenth, eighth, quarter, half, whole, dotted quarter, eighth note triplet, quarter note triplet (4/4 at 75 bpm)
+
+@noteCmd:
+	INC InstCursor,X
+	LDA InstChannel,X
+	CMP #3	; noise channel: set NOISE_LO directly from command byte
+	BEQ @noiseChanNoteCmd
 	LDA byte_25
 	AND #$F
-	CMP #$C
-	BCS loc_C882
-	ASL A
+	CMP #$C	; >= $C? rest
+	BCS @restNoteCmd
+	ASL A	; sound frequency = MusicNoteScale[note] >> octave
 	TAY
 	LDA MusicNoteScale+1,Y
 	STA byte_22
@@ -11309,99 +11330,104 @@ loc_C84A:
 	LSR A
 	TAY
 
-loc_C877:
+@freqShiftLoop:
 	LSR byte_23
 	ROR byte_22
 	DEY
-	BPL loc_C877
-	BMI loc_C88C
+	BPL @freqShiftLoop
+	BMI @setupNoteDuration
 
-loc_C882:
+@restNoteCmd:
 	LDA #$F
 
-loc_C884:
+@noiseChanNoteCmd:
 	STA byte_22
 	LDA #0
 	STA byte_23
 
-loc_C88C:
-	LDA byte_26
+@setupNoteDuration:
+	LDA byte_26	; set timer from frames table
 	AND #$1F
 	TAY
 	LDA MusicNoteLength,Y
-	STA unk_54,X
-	LDA byte_26
+	STA InstTimer,X
+	LDA byte_26	; convert parameter to APU length counter value
 	TAY
 	AND #$F
 	ASL A
 	ASL A
 	ASL A
 	ASL A
-	ORA byte_23
+	ORA byte_23	; combine with bits from frequency value
 	CPY #$F0
-	BCS loc_C8AB
+	BCS @nonlinearNoteLength
 	ORA #8
 
-loc_C8AB:
+@nonlinearNoteLength:
 	STA byte_23
 
-loc_C8AE:
-	LDA unk_3C,X
+@playInstChannel:
+	LDA InstChannel,X	; trying to use a channel that's already in use by a higher priority instrument?
 	TAY
-	LDA unk_6C,Y
-	BNE loc_C8ED
+	LDA ChannelsInUse,Y
+	BNE @lostAPUChannel
 	LDA #$FF
-	STA unk_6C,Y
-	LDA byte_22
+	STA ChannelsInUse,Y
+	LDA byte_22	; if we're already playing a note or this is a rest, return
 	CMP #$F
-	BEQ locret_C8EC
-	JSR sub_C900
+	BEQ @doneSetAPURegs
+	JSR EnableAPUChannel
 	TYA
 	ASL A
 	ASL A
 	TAY
-	LDA unk_60,X
-	BEQ loc_C8DB
-	LDA unk_48,X
+	LDA InstCtrlRegsChanged,X
+	BEQ @setAPUNoteRegs	; if we don't need to set up the regs for this instrument, just set the regs that change per note
+	LDA InstReg1,X
 	STA SQ1_SWEEP,Y
-	LDA unk_4E,X
+	LDA InstReg0,X
 	STA SQ1_VOL,Y
 
-loc_C8DB:
+@setAPUNoteRegs:
 	LDA byte_22
 	STA SQ1_LO,Y
 	LDA byte_23
 	STA SQ1_HI,Y
 	LDA #0
-	STA unk_60,X
+	STA InstCtrlRegsChanged,X
 
-locret_C8EC:
+@doneSetAPURegs:
 	RTS
 ; ---------------------------------------------------------------------------
 
-loc_C8ED:
+@lostAPUChannel:
+; if the instrument lost access to its channel, it needs to reset its control registers when it regains access
 	LDA #$FF
-	STA unk_60,X
+	STA InstCtrlRegsChanged,X
 	RTS
-; End of function sub_C78F
+; End of function RunInstrument
 
 ; =============== S U B	R O U T	I N E =======================================
 
-sub_C8F3:
-	LDA byte_B
-	AND byte_C949,Y
-	STA byte_B
+; In: Y - Channel number to disable
+
+DisableAPUChannel:
+	LDA APUSoundChn
+	AND ChannelOffMasks,Y
+	STA APUSoundChn
 	STA SND_CHN
 	RTS
-; End of function sub_C8F3
+; End of function DisableAPUChannel
 
 ; =============== S U B	R O U T	I N E =======================================
 
-sub_C900:
-	LDA byte_B
-	ORA byte_C945,Y
-	STA byte_B
+; In: Y - Channel number to enable
+
+EnableAPUChannel:
+	LDA APUSoundChn
+	ORA ChannelOnMasks,Y
+	STA APUSoundChn
 	STA SND_CHN
 	RTS
-; End of function sub_C900
+; End of function EnableAPUChannel
 
