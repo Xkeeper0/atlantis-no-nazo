@@ -11315,7 +11315,7 @@ RunInstrument:
 	AND #$F
 	CMP #$C	; >= $C? rest
 	BCS @restNoteCmd
-	ASL A	; sound frequency = MusicNoteScale[note] >> octave
+	ASL A	; sound frequency = MusicNoteScale[note] >> (octave + 1)
 	TAY
 	LDA MusicNoteScale+1,Y
 	STA byte_22
