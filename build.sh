@@ -17,13 +17,14 @@ build() {
 }
 
 
+build bin/atlantis-no-nazo-sample.nes -dSAMPLE "$@"
+if compareHash $REVJPSAMPLE 'bin/atlantis-no-nazo-sample.nes' -eq 0 ; then
+	echo 'Matched sample ROM.'
+fi
+
 build bin/atlantis-no-nazo.nes "$@"
 if compareHash $REVJP 'bin/atlantis-no-nazo.nes' -eq 0 ; then
 	echo 'Matched JP ROM.'
 fi
 
-build bin/atlantis-no-nazo-sample.nes -dSAMPLE "$@"
-if compareHash $REVJPSAMPLE 'bin/atlantis-no-nazo-sample.nes' -eq 0 ; then
-	echo 'Matched sample ROM.'
-fi
 
