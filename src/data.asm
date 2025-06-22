@@ -498,10 +498,18 @@ ZoneDoorFlagsTable:
 
 
 ZoneItemTable:
-	Item   5, $19, $70, $31 ;		; 0
-	Item   5,  $F, $70, $21 ;		; 1
-	Item   7, $D7, $70,   5 ;		; 2
-	Item   7, $A5, $6C, $11 ;		; 3
+	; zone-1, x,   y,   type
+	; type:
+	;  if high bit set:
+	;    0 lightbulb   1 boot        2 superbombs  3 up arrow
+	;    4 2x score    5 slow timer  6 microphone  7 invincible star
+	;  otherwise, a chest:
+	;    high nybble: number of 0s
+	;    low nybble:  value x (10^high)
+	Item   5, $19, $70, $31 ;		; 0   1000 pts
+	Item   5,  $F, $70, $21 ;		; 1    100 pts
+	Item   7, $D7, $70,   5 ;		; 2	     5 pts
+	Item   7, $A5, $6C, $11 ;		; 3	    10 pts
 	Item  15, $1A, $70,   5 ;		; 4
 	Item  15, $81, $70, $21 ;		; 5
 	Item  18, $20, $74, $32 ;		; 6
@@ -700,7 +708,7 @@ ZoneItemTable:
 	Item   0, $1A, $6C, $25 ;		; $C7
 	Item   4, $17, $54, $82 ;		; $C8
 	Item   3, $6D, $5A, $80 ;		; $C9
-	Item   5, $15, $61, $81 ;		; $CA
+	Item   5, $15, $61, $81 ;		; $CA  boot item
 	Item  24,  $F, $60, $85 ;		; $CB
 	Item   8,  $A, $50, $83 ;		; $CC
 	Item  14,  $C, $24, $86 ;		; $CD
