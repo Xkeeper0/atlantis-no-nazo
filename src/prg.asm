@@ -9546,25 +9546,27 @@ loc_BC32:
 	LDX #$23
 	LDY #$46
 	JSR PrintStringToPPU
+	; $23C0 -> attribute tables
 	LDX #$23
 	LDY #$C0
 	JSR SetPPUAddrAndUpdateScroll
 	LDA #$55
 	LDY #$20
-
+	; $20 bytes of #$55 to attribute tables (title screen logo)
 loc_BCA6:
 	STA PPUDATA
 	DEY
 	BNE loc_BCA6
 	LDA #$AA
 	LDY #$10
-
+	; $10 bytes of #$AA
 loc_BCB0:
 	STA PPUDATA
 	DEY
 	BNE loc_BCB0
 	LDA #$FF
 	LDY #$10
+	; #$10 bytes of #$FF
 
 loc_BCBA:
 	STA PPUDATA
@@ -9590,10 +9592,13 @@ loc_BCCC:
 
 ; ---------------------------------------------------------------------------
 TitleScreenPalettes:
-	.BYTE  $F,	7,$17, $F
-	.BYTE  $F,$18,$28,$38		; 4 ; Loaded as	BG palette 1-3 and sprite palette 0
-	.BYTE  $F,$18,$28,$38		; 8 ; (???)
-	.BYTE  $F,$18, $F,	8		; $C
+	; Loaded as BG 1-3 and SPR 0
+	; POI: palettes 2 and 3 are the same here,
+	; but changing one reveals that the text was highlighted
+	.BYTE  $F,	7,$17, $F		; BG 1 (logo)
+	.BYTE  $F,$18,$28,$38		; BG 2 (press start/high score)
+	.BYTE  $F,$18,$28,$38		; BG 3 (copyright info)
+	.BYTE  $F,$18, $F,	8		; SPR 0 ('no' sprite)
 ; ---------------------------------------------------------------------------
 	RTS					; ??? Spurious RTS
 
